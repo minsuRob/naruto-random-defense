@@ -1,23 +1,33 @@
 import { CameraRig } from '@/game/camera/CameraRig';
 import type { CameraRig as Rig } from '@/game/camera/camera-rig';
-import type { Lane } from '@/game/engine/lane';
+import type { Engine } from '@/game/engine/engine';
 import type { InputController } from '@/game/input/types';
+import type { SimClock } from '@/game/runtime/clock';
+import type { HudSync } from '@/game/runtime/hud-sync';
 import { Ground } from './Ground';
 import { LaneMesh } from './LaneMesh';
 import { Markers } from './Markers';
+import { MobInstances } from './MobInstances';
 import { PlotGrid } from './PlotGrid';
+import { SimDriver } from './SimDriver';
 import { UnitPreview } from './UnitPreview';
 
-/** Scene graph root. Mobs and units join here in M2/M3. */
+/** Scene graph root. */
 export function Scene({
-  lane,
+  engine,
+  clock,
+  hudSync,
   rig,
   input,
 }: {
-  lane: Lane;
+  engine: Engine;
+  clock: SimClock;
+  hudSync: HudSync;
   rig: Rig;
   input: InputController;
 }) {
+  const lane = engine.state.plots[0].lane;
+
   return (
     <>
       <color attach="background" args={['#0b0d10']} />
@@ -31,7 +41,9 @@ export function Scene({
       <PlotGrid />
       <Markers lane={lane} />
       <UnitPreview />
+      <MobInstances engine={engine} clock={clock} />
 
+      <SimDriver engine={engine} clock={clock} hudSync={hudSync} />
       <CameraRig rig={rig} input={input} />
     </>
   );

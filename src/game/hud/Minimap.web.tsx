@@ -55,7 +55,33 @@ export function Minimap({ lane, plotCount = 1 }: { lane: Lane; plotCount?: numbe
       ctx.clearRect(0, 0, SIZE, SIZE);
       ctx.drawImage(staticLayer, 0, 0, SIZE, SIZE);
 
-      const { camera } = getViewHandle();
+      const { camera, engine } = getViewHandle();
+
+      // Mobs, straight off the engine's typed arrays — no React in the path.
+      if (engine) {
+        const mobs = engine.state.mobs;
+        for (let i = 0; i < mobs.count; i++) {
+          if (!mobs.active[i]) continue;
+          const [px, py] = proj.worldToMap(mobs.x[i], mobs.z[i]);
+          const boss = mobs.isBoss[i] === 1;
+          ctx.beginPath();
+          ctx.arc(px, py, boss ? 4 : 2, 0, Math.PI * 2);
+          ctx.fillStyle = boss ? '#ffb020' : '#d94b3c';
+          ctx.fill();
+          if (boss) {
+            ctx.lineWidth = 1;
+            ctx.strokeStyle = '#ffe3a8';
+            ctx.stroke();
+          }
+        }
+
+        for (const unit of engine.state.units.values()) {
+          const [px, py] = proj.worldToMap(unit.x, unit.z);
+          ctx.fillStyle = '#4aa3ff';
+          ctx.fillRect(px - 1.5, py - 1.5, 3, 3);
+        }
+      }
+
       if (camera) {
         groundFrustum(camera, frustum);
         // Zoomed out, the view can be wider than the map — keep it in the widget.

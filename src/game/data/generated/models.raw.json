@@ -11,8 +11,11 @@
         "우즈마키-나루토-선인모드__h001",
         "나루토-나선수리검__h023"
       ],
-      "bytes": 264168,
-      "geosets": 6
+      "bytes": 261528,
+      "geosets": 5,
+      "warnings": [
+        "dropped geoset: replaceable texture 2"
+      ]
     },
     {
       "asset": "war3mapimported-sasuke-long",
@@ -22,8 +25,11 @@
         "우치하-사스케__h004",
         "우치하-사스케-2년-후__h01V"
       ],
-      "bytes": 259132,
-      "geosets": 7
+      "bytes": 256388,
+      "geosets": 6,
+      "warnings": [
+        "dropped geoset: replaceable texture 2"
+      ]
     },
     {
       "asset": "war3mapimported-sasuke-juin",
@@ -32,7 +38,7 @@
       "unitIds": [
         "우치하-사스케-주인2__h005"
       ],
-      "bytes": 766228,
+      "bytes": 765176,
       "geosets": 5
     },
     {
@@ -43,7 +49,7 @@
         "사이__h006",
         "사이-뿌리닌자__h09P"
       ],
-      "bytes": 585052,
+      "bytes": 584260,
       "geosets": 6
     },
     {
@@ -53,7 +59,7 @@
       "unitIds": [
         "우치하-이타치-암부__h007"
       ],
-      "bytes": 279868,
+      "bytes": 279124,
       "geosets": 5
     },
     {
@@ -63,8 +69,11 @@
       "unitIds": [
         "데이다라-아카츠키__h008"
       ],
-      "bytes": 72896,
-      "geosets": 2
+      "bytes": 71820,
+      "geosets": 1,
+      "warnings": [
+        "dropped geoset: replaceable texture 2"
+      ]
     },
     {
       "asset": "war3mapimported-temari",
@@ -73,7 +82,7 @@
       "unitIds": [
         "테마리__h009"
       ],
-      "bytes": 251772,
+      "bytes": 251756,
       "geosets": 3
     },
     {
@@ -84,7 +93,7 @@
         "야마토__h00A",
         "야마토-호카게-직속암부__h04B"
       ],
-      "bytes": 193356,
+      "bytes": 193340,
       "geosets": 1
     },
     {
@@ -94,7 +103,7 @@
       "unitIds": [
         "하타케-카카시-암부__h00B"
       ],
-      "bytes": 274496,
+      "bytes": 273952,
       "geosets": 3
     },
     {
@@ -104,7 +113,7 @@
       "unitIds": [
         "하루노-사쿠라__h00C"
       ],
-      "bytes": 462732,
+      "bytes": 462424,
       "geosets": 4
     },
     {
@@ -114,8 +123,11 @@
       "unitIds": [
         "스이게츠-아카츠키__h00F"
       ],
-      "bytes": 95852,
-      "geosets": 3
+      "bytes": 94512,
+      "geosets": 2,
+      "warnings": [
+        "dropped geoset: replaceable texture 2"
+      ]
     },
     {
       "asset": "war3mapimported-hiruko",
@@ -125,7 +137,7 @@
         "사소리__h00H",
         "사소리-히루코__h161"
       ],
-      "bytes": 197380,
+      "bytes": 195556,
       "geosets": 8
     },
     {
@@ -135,8 +147,11 @@
       "unitIds": [
         "센쥬-하시라마-1대-호카게__h00K"
       ],
-      "bytes": 115976,
-      "geosets": 2
+      "bytes": 114564,
+      "geosets": 1,
+      "warnings": [
+        "dropped geoset: replaceable texture 2"
+      ]
     },
     {
       "asset": "war3mapimported-tobirama-edo",
@@ -145,7 +160,7 @@
       "unitIds": [
         "센쥬-토비라마-2대-호카게__h00N"
       ],
-      "bytes": 438624,
+      "bytes": 438096,
       "geosets": 4
     },
     {
@@ -155,7 +170,7 @@
       "unitIds": [
         "시무라-단조__h00O"
       ],
-      "bytes": 513564,
+      "bytes": 512280,
       "geosets": 9
     },
     {
@@ -165,8 +180,11 @@
       "unitIds": [
         "킬러-비-8미의-인주력__h00P"
       ],
-      "bytes": 279304,
-      "geosets": 10
+      "bytes": 276320,
+      "geosets": 9,
+      "warnings": [
+        "dropped geoset: replaceable texture 2"
+      ]
     },
     {
       "asset": "war3mapimported-gamabunta",
@@ -175,7 +193,7 @@
       "unitIds": [
         "가마분타-두꺼비-두목__h00R"
       ],
-      "bytes": 132936,
+      "bytes": 132152,
       "geosets": 4
     },
     {
@@ -185,7 +203,7 @@
       "unitIds": [
         "가아라__h00S"
       ],
-      "bytes": 369664,
+      "bytes": 368864,
       "geosets": 5
     },
     {
@@ -196,7 +214,7 @@
         "코난-아카츠키__h00V",
         "코난-천사__h05C"
       ],
-      "bytes": 568320,
+      "bytes": 568288,
       "geosets": 3
     },
     {
@@ -206,7 +224,7 @@
       "unitIds": [
         "우치하-마다라__h00Y"
       ],
-      "bytes": 148328,
+      "bytes": 147012,
       "geosets": 6
     },
     {
@@ -216,10 +234,11 @@
       "unitIds": [
         "8미-규우키__h010"
       ],
-      "bytes": 146632,
-      "geosets": 2,
+      "bytes": 144628,
+      "geosets": 1,
       "warnings": [
-        "missing texture Textures\\AcidSplash1.blp"
+        "missing texture Textures\\AcidSplash1.blp",
+        "dropped geoset: unreadable texture Textures\\AcidSplash1.blp"
       ]
     },
     {
@@ -229,7 +248,7 @@
       "unitIds": [
         "사소리-완전변형__h013"
       ],
-      "bytes": 154084,
+      "bytes": 153556,
       "geosets": 3
     },
     {
@@ -239,7 +258,7 @@
       "unitIds": [
         "카린__h014"
       ],
-      "bytes": 228436,
+      "bytes": 227648,
       "geosets": 4
     },
     {
@@ -250,7 +269,7 @@
         "쥬고__h01C",
         "쥬고-주인화__h07R"
       ],
-      "bytes": 248160,
+      "bytes": 246880,
       "geosets": 6
     },
     {
@@ -260,7 +279,7 @@
       "unitIds": [
         "토비__h01F"
       ],
-      "bytes": 212084,
+      "bytes": 211828,
       "geosets": 3
     },
     {
@@ -272,7 +291,7 @@
         "지라이야-전설의3닌자__h01H",
         "지라이야-선인모드__h08G"
       ],
-      "bytes": 292880,
+      "bytes": 291280,
       "geosets": 9
     },
     {
@@ -282,7 +301,7 @@
       "unitIds": [
         "카츠유__h01I"
       ],
-      "bytes": 19884,
+      "bytes": 19868,
       "geosets": 1
     },
     {
@@ -295,7 +314,7 @@
         "도박광-츠나데__h08H",
         "도박광-츠나데-인생을-건-도박사__h08U"
       ],
-      "bytes": 318300,
+      "bytes": 316728,
       "geosets": 7
     },
     {
@@ -305,7 +324,7 @@
       "unitIds": [
         "우치하-오비토-윤회안__h01Q"
       ],
-      "bytes": 187768,
+      "bytes": 187460,
       "geosets": 5
     },
     {
@@ -315,7 +334,7 @@
       "unitIds": [
         "키사메-아카츠키__h01S"
       ],
-      "bytes": 164272,
+      "bytes": 162944,
       "geosets": 6
     },
     {
@@ -326,7 +345,7 @@
         "우치하-이타치-스사노오-1단계__h01X",
         "우치하-이타치-아카츠키__h02C"
       ],
-      "bytes": 119640,
+      "bytes": 118348,
       "geosets": 6
     },
     {
@@ -336,7 +355,7 @@
       "unitIds": [
         "제츠-아카츠키__h01Z"
       ],
-      "bytes": 161264,
+      "bytes": 160752,
       "geosets": 3
     },
     {
@@ -347,7 +366,7 @@
         "토비-아카츠키__h020",
         "토비-달의-눈-계획__h04F"
       ],
-      "bytes": 149652,
+      "bytes": 148612,
       "geosets": 5
     },
     {
@@ -357,7 +376,7 @@
       "unitIds": [
         "암부__h021"
       ],
-      "bytes": 117904,
+      "bytes": 117100,
       "geosets": 5
     },
     {
@@ -367,7 +386,7 @@
       "unitIds": [
         "오로치마루-전설의3닌자__h024"
       ],
-      "bytes": 147476,
+      "bytes": 147460,
       "geosets": 1
     },
     {
@@ -377,7 +396,7 @@
       "unitIds": [
         "야쿠시-카부토__h027"
       ],
-      "bytes": 231560,
+      "bytes": 231528,
       "geosets": 3
     },
     {
@@ -388,10 +407,11 @@
         "아스마__h029",
         "사루토비-아스마-제10반-대장__h081"
       ],
-      "bytes": 227916,
-      "geosets": 2,
+      "bytes": 224852,
+      "geosets": 1,
       "warnings": [
-        "missing texture Textures\\RibbonNE1_blue.blp"
+        "missing texture Textures\\RibbonNE1_blue.blp",
+        "dropped geoset: unreadable texture Textures\\RibbonNE1_blue.blp"
       ]
     },
     {
@@ -401,7 +421,7 @@
       "unitIds": [
         "가아라-반수화-상태__h02B"
       ],
-      "bytes": 425780,
+      "bytes": 425488,
       "geosets": 3
     },
     {
@@ -411,7 +431,7 @@
       "unitIds": [
         "하타케-카카시-만화경사륜안__h02D"
       ],
-      "bytes": 108112,
+      "bytes": 107824,
       "geosets": 3
     },
     {
@@ -432,11 +452,13 @@
         "나미카제-미나토-금빛섬광__h028",
         "나미카제-미나토-미수화__h02X"
       ],
-      "bytes": 1821208,
-      "geosets": 21,
+      "bytes": 1727072,
+      "geosets": 18,
       "warnings": [
         "missing texture ReplaceableTextures\\TeamColor\\TeamColor09.blp",
-        "missing texture Textures\\white.blp"
+        "dropped geoset: unreadable texture ReplaceableTextures\\TeamColor\\TeamColor09.blp",
+        "missing texture Textures\\white.blp",
+        "dropped geoset: unreadable texture Textures\\white.blp"
       ]
     },
     {
@@ -446,7 +468,7 @@
       "unitIds": [
         "만다__h017"
       ],
-      "bytes": 36404,
+      "bytes": 36388,
       "geosets": 1
     },
     {
@@ -456,7 +478,7 @@
       "unitIds": [
         "야마나카-이노__h02Q"
       ],
-      "bytes": 250344,
+      "bytes": 250328,
       "geosets": 1
     },
     {
@@ -467,7 +489,7 @@
         "우타카타-6미의-인주력__h02R",
         "우타카타-6미의-인주력__h02Z"
       ],
-      "bytes": 150320,
+      "bytes": 150024,
       "geosets": 3
     },
     {
@@ -477,7 +499,7 @@
       "unitIds": [
         "6미-사이켄__h02S"
       ],
-      "bytes": 134192,
+      "bytes": 133924,
       "geosets": 2
     },
     {
@@ -487,7 +509,7 @@
       "unitIds": [
         "텐텐__h01P"
       ],
-      "bytes": 204864,
+      "bytes": 204848,
       "geosets": 3
     },
     {
@@ -497,10 +519,12 @@
       "unitIds": [
         "우즈마키-나루토-꼬리4개-해방__h02V"
       ],
-      "bytes": 235688,
-      "geosets": 4,
+      "bytes": 217540,
+      "geosets": 1,
       "warnings": [
-        "missing texture TerrainArt\\Dungeon\\Cave_LavaCracks.blp"
+        "missing texture TerrainArt\\Dungeon\\Cave_LavaCracks.blp",
+        "dropped geoset: unreadable texture TerrainArt\\Dungeon\\Cave_LavaCracks.blp",
+        "dropped geoset: replaceable texture 2"
       ]
     },
     {
@@ -510,7 +534,7 @@
       "unitIds": [
         "2미-마타타비__h00D"
       ],
-      "bytes": 192856,
+      "bytes": 192604,
       "geosets": 2
     },
     {
@@ -521,8 +545,11 @@
         "아키미치-쵸지__h02Y",
         "아키미치-쵸지-각성모드__h01U"
       ],
-      "bytes": 250744,
-      "geosets": 3
+      "bytes": 249380,
+      "geosets": 2,
+      "warnings": [
+        "dropped geoset: replaceable texture 2"
+      ]
     },
     {
       "asset": "war3mapimported-kiba",
@@ -531,10 +558,11 @@
       "unitIds": [
         "이누즈카-키바__h00U"
       ],
-      "bytes": 89864,
-      "geosets": 4,
+      "bytes": 84888,
+      "geosets": 2,
       "warnings": [
-        "missing texture Textures\\RibbonNE1_blue.blp"
+        "missing texture Textures\\RibbonNE1_blue.blp",
+        "dropped geoset: unreadable texture Textures\\RibbonNE1_blue.blp"
       ]
     },
     {
@@ -544,7 +572,7 @@
       "unitIds": [
         "우치하-사스케-스사노오-1단계__h036"
       ],
-      "bytes": 317560,
+      "bytes": 316504,
       "geosets": 8
     },
     {
@@ -554,7 +582,7 @@
       "unitIds": [
         "호시가키-키사메-완전변형__h037"
       ],
-      "bytes": 82756,
+      "bytes": 81964,
       "geosets": 5
     },
     {
@@ -565,8 +593,11 @@
         "록-리__h039",
         "록-리-연화__h0AQ"
       ],
-      "bytes": 186176,
-      "geosets": 3
+      "bytes": 184724,
+      "geosets": 2,
+      "warnings": [
+        "dropped geoset: replaceable texture 2"
+      ]
     },
     {
       "asset": "war3mapimported-hidan",
@@ -575,7 +606,7 @@
       "unitIds": [
         "히단-아카츠키__h03A"
       ],
-      "bytes": 367156,
+      "bytes": 365872,
       "geosets": 6
     },
     {
@@ -585,7 +616,7 @@
       "unitIds": [
         "쵸주로-닌자도-7인방__h03D"
       ],
-      "bytes": 107316,
+      "bytes": 106764,
       "geosets": 4
     },
     {
@@ -595,7 +626,7 @@
       "unitIds": [
         "사소리-아카츠키__h03E"
       ],
-      "bytes": 460856,
+      "bytes": 460596,
       "geosets": 4
     },
     {
@@ -605,7 +636,7 @@
       "unitIds": [
         "휴우가-히나타__h03V"
       ],
-      "bytes": 444960,
+      "bytes": 443376,
       "geosets": 10
     },
     {
@@ -616,7 +647,7 @@
         "휴우가-네지__h03W",
         "휴우가-네지-백안__h05O"
       ],
-      "bytes": 222748,
+      "bytes": 222460,
       "geosets": 3
     },
     {
@@ -626,8 +657,11 @@
       "unitIds": [
         "우치하-마다라-윤회천생__h03X"
       ],
-      "bytes": 111004,
-      "geosets": 8
+      "bytes": 109564,
+      "geosets": 7,
+      "warnings": [
+        "dropped geoset: replaceable texture 2"
+      ]
     },
     {
       "asset": "war3mapimported-deidaraa-edoo",
@@ -636,7 +670,7 @@
       "unitIds": [
         "데이다라-예토전생__h04D"
       ],
-      "bytes": 149872,
+      "bytes": 149340,
       "geosets": 4
     },
     {
@@ -647,7 +681,7 @@
         "10미-불명__h04I",
         "완전체-10미__h05G"
       ],
-      "bytes": 288272,
+      "bytes": 285452,
       "geosets": 12
     },
     {
@@ -657,7 +691,7 @@
       "unitIds": [
         "5미-코쿠오__h04P"
       ],
-      "bytes": 123260,
+      "bytes": 122992,
       "geosets": 2
     },
     {
@@ -667,7 +701,7 @@
       "unitIds": [
         "3미-이소부__h04Q"
       ],
-      "bytes": 160108,
+      "bytes": 160092,
       "geosets": 1
     },
     {
@@ -677,11 +711,13 @@
       "unitIds": [
         "9미-쿠라마__h04R"
       ],
-      "bytes": 137600,
-      "geosets": 3,
+      "bytes": 134960,
+      "geosets": 1,
       "warnings": [
         "missing texture UI\\Widgets\\Glues\\GlueScreen-RadioButton-ButtonDisabled.blp",
-        "missing texture Textures\\Shockwave10.blp"
+        "dropped geoset: unreadable texture UI\\Widgets\\Glues\\GlueScreen-RadioButton-ButtonDisabled.blp",
+        "missing texture Textures\\Shockwave10.blp",
+        "dropped geoset: unreadable texture Textures\\Shockwave10.blp"
       ]
     },
     {
@@ -691,7 +727,7 @@
       "unitIds": [
         "7미-쵸우메이__h04S"
       ],
-      "bytes": 125516,
+      "bytes": 123996,
       "geosets": 8
     },
     {
@@ -711,7 +747,7 @@
       "unitIds": [
         "하쿠__h04U"
       ],
-      "bytes": 282028,
+      "bytes": 279704,
       "geosets": 13
     },
     {
@@ -721,8 +757,11 @@
       "unitIds": [
         "쿠레나이__h04W"
       ],
-      "bytes": 309048,
-      "geosets": 4
+      "bytes": 307508,
+      "geosets": 3,
+      "warnings": [
+        "dropped geoset: replaceable texture 2"
+      ]
     },
     {
       "asset": "war3mapimported-zabuza",
@@ -731,7 +770,7 @@
       "unitIds": [
         "자부자__h04X"
       ],
-      "bytes": 173508,
+      "bytes": 172976,
       "geosets": 3
     },
     {
@@ -741,8 +780,11 @@
       "unitIds": [
         "미타라시-앙코__h04Y"
       ],
-      "bytes": 100312,
-      "geosets": 4
+      "bytes": 98972,
+      "geosets": 3,
+      "warnings": [
+        "dropped geoset: replaceable texture 2"
+      ]
     },
     {
       "asset": "war3mapimported-samui",
@@ -751,7 +793,7 @@
       "unitIds": [
         "사무이__h04Z"
       ],
-      "bytes": 134800,
+      "bytes": 134288,
       "geosets": 3
     },
     {
@@ -761,7 +803,7 @@
       "unitIds": [
         "우즈마키-나루토-미수화__h050"
       ],
-      "bytes": 834984,
+      "bytes": 833684,
       "geosets": 10
     },
     {
@@ -771,7 +813,7 @@
       "unitIds": [
         "엔마-원후왕__h003"
       ],
-      "bytes": 442904,
+      "bytes": 442128,
       "geosets": 6
     },
     {
@@ -781,7 +823,7 @@
       "unitIds": [
         "호즈키-만게츠-예토전생__h04O"
       ],
-      "bytes": 178704,
+      "bytes": 178428,
       "geosets": 2
     },
     {
@@ -791,7 +833,7 @@
       "unitIds": [
         "이누즈카-키바-수인화__h058"
       ],
-      "bytes": 311904,
+      "bytes": 311888,
       "geosets": 3
     },
     {
@@ -802,8 +844,11 @@
         "사루토비-히루젠-3대-호카게__h059",
         "사루토비-히루젠-예토전생__h08M"
       ],
-      "bytes": 158772,
-      "geosets": 4
+      "bytes": 157356,
+      "geosets": 3,
+      "warnings": [
+        "dropped geoset: replaceable texture 2"
+      ]
     },
     {
       "asset": "war3mapimported-kimimaro",
@@ -813,7 +858,7 @@
         "키미마로__h05B",
         "키미마로-주인해방__h09X"
       ],
-      "bytes": 391836,
+      "bytes": 391316,
       "geosets": 4
     },
     {
@@ -823,7 +868,7 @@
       "unitIds": [
         "하쿠-예토전생__h05F"
       ],
-      "bytes": 529432,
+      "bytes": 528900,
       "geosets": 6
     },
     {
@@ -834,7 +879,7 @@
         "마이트-가이__h05K",
         "마이트-가이-경문해제__h04E"
       ],
-      "bytes": 99852,
+      "bytes": 99072,
       "geosets": 4
     },
     {
@@ -844,7 +889,7 @@
       "unitIds": [
         "우치하-사스케-스사노오-3단계__h05V"
       ],
-      "bytes": 469640,
+      "bytes": 468564,
       "geosets": 8
     },
     {
@@ -855,7 +900,7 @@
         "칸쿠로__h05W",
         "칸쿠로-흑비기-인형술사__h060"
       ],
-      "bytes": 110016,
+      "bytes": 110000,
       "geosets": 1
     },
     {
@@ -865,7 +910,7 @@
       "unitIds": [
         "오로치마루-선인모드__h061"
       ],
-      "bytes": 159904,
+      "bytes": 159624,
       "geosets": 2
     },
     {
@@ -875,7 +920,7 @@
       "unitIds": [
         "한조-예토전생__h05I"
       ],
-      "bytes": 185636,
+      "bytes": 184296,
       "geosets": 7
     },
     {
@@ -885,7 +930,7 @@
       "unitIds": [
         "하타케-카카시-닌자연합군-1대장__h05J"
       ],
-      "bytes": 303612,
+      "bytes": 302820,
       "geosets": 6
     },
     {
@@ -895,7 +940,7 @@
       "unitIds": [
         "우치하-사스케-기린__h06E"
       ],
-      "bytes": 250900,
+      "bytes": 250356,
       "geosets": 4
     },
     {
@@ -905,7 +950,7 @@
       "unitIds": [
         "야마토-암부__h076"
       ],
-      "bytes": 374572,
+      "bytes": 373984,
       "geosets": 7
     },
     {
@@ -925,8 +970,11 @@
       "unitIds": [
         "치요할멈__h07G"
       ],
-      "bytes": 189736,
-      "geosets": 5
+      "bytes": 187880,
+      "geosets": 4,
+      "warnings": [
+        "dropped geoset: replaceable texture 2"
+      ]
     },
     {
       "asset": "war3mapimported-shizune",
@@ -935,7 +983,7 @@
       "unitIds": [
         "시즈네__h07Y"
       ],
-      "bytes": 278500,
+      "bytes": 277432,
       "geosets": 6
     },
     {
@@ -945,7 +993,7 @@
       "unitIds": [
         "야쿠시-카부토-전장의-지배자__h086"
       ],
-      "bytes": 307508,
+      "bytes": 307036,
       "geosets": 4
     },
     {
@@ -955,7 +1003,7 @@
       "unitIds": [
         "휴우가-히나타-백안__h080"
       ],
-      "bytes": 556980,
+      "bytes": 556148,
       "geosets": 8
     },
     {
@@ -965,7 +1013,7 @@
       "unitIds": [
         "우즈마키-나루토-꼬리6개-해방__h094"
       ],
-      "bytes": 78648,
+      "bytes": 78616,
       "geosets": 2
     },
     {
@@ -975,7 +1023,7 @@
       "unitIds": [
         "센쥬-하시라마-선인모드__h097"
       ],
-      "bytes": 527532,
+      "bytes": 527516,
       "geosets": 2
     },
     {
@@ -985,7 +1033,7 @@
       "unitIds": [
         "외도마상-미수차크라__h06L"
       ],
-      "bytes": 597536,
+      "bytes": 596440,
       "geosets": 6
     },
     {
@@ -995,7 +1043,7 @@
       "unitIds": [
         "우치하-이타치-스사노오-3단계__h09H"
       ],
-      "bytes": 563316,
+      "bytes": 562752,
       "geosets": 5
     },
     {
@@ -1005,10 +1053,12 @@
       "unitIds": [
         "육도-페인-천도__h06R"
       ],
-      "bytes": 169432,
-      "geosets": 6,
+      "bytes": 165020,
+      "geosets": 3,
       "warnings": [
-        "missing texture UI\\Widgets\\Glues\\GlueScreen-RadioButton-ButtonDisabled.blp"
+        "missing texture UI\\Widgets\\Glues\\GlueScreen-RadioButton-ButtonDisabled.blp",
+        "dropped geoset: unreadable texture UI\\Widgets\\Glues\\GlueScreen-RadioButton-ButtonDisabled.blp",
+        "dropped geoset: replaceable texture 2"
       ]
     },
     {
@@ -1018,8 +1068,11 @@
       "unitIds": [
         "쥬고-완전-주인화__h06S"
       ],
-      "bytes": 167828,
-      "geosets": 2
+      "bytes": 166616,
+      "geosets": 1,
+      "warnings": [
+        "dropped geoset: replaceable texture 2"
+      ]
     },
     {
       "asset": "war3mapimported-nagato",
@@ -1028,10 +1081,12 @@
       "unitIds": [
         "우즈마키-나가토__h09N"
       ],
-      "bytes": 165144,
-      "geosets": 7,
+      "bytes": 160468,
+      "geosets": 4,
       "warnings": [
-        "missing texture UI\\Widgets\\Glues\\GlueScreen-RadioButton-ButtonDisabled.blp"
+        "missing texture UI\\Widgets\\Glues\\GlueScreen-RadioButton-ButtonDisabled.blp",
+        "dropped geoset: unreadable texture UI\\Widgets\\Glues\\GlueScreen-RadioButton-ButtonDisabled.blp",
+        "dropped geoset: replaceable texture 2"
       ]
     },
     {
@@ -1041,8 +1096,11 @@
       "unitIds": [
         "우치하-사스케-주인1__h07U"
       ],
-      "bytes": 349068,
-      "geosets": 7
+      "bytes": 346596,
+      "geosets": 6,
+      "warnings": [
+        "dropped geoset: replaceable texture 2"
+      ]
     },
     {
       "asset": "war3mapimported-orochimaru-u",
@@ -1051,7 +1109,7 @@
       "unitIds": [
         "오로치마루-아카츠키__h09Y"
       ],
-      "bytes": 234320,
+      "bytes": 233248,
       "geosets": 5
     },
     {
@@ -1061,7 +1119,7 @@
       "unitIds": [
         "오오노키-3대-츠치카게__h0A0"
       ],
-      "bytes": 181000,
+      "bytes": 180468,
       "geosets": 3
     },
     {
@@ -1071,7 +1129,7 @@
       "unitIds": [
         "테마리-풍둔술사__h0A1"
       ],
-      "bytes": 445460,
+      "bytes": 444428,
       "geosets": 6
     },
     {
@@ -1081,7 +1139,7 @@
       "unitIds": [
         "가마켄__h0AE"
       ],
-      "bytes": 137848,
+      "bytes": 137612,
       "geosets": 2
     },
     {
@@ -1091,7 +1149,7 @@
       "unitIds": [
         "자부자-예토전생__h0AF"
       ],
-      "bytes": 67512,
+      "bytes": 66972,
       "geosets": 3
     },
     {
@@ -1102,7 +1160,7 @@
         "우즈마키-쿠시나__h08R",
         "우즈마키-쿠시나__h07S"
       ],
-      "bytes": 351860,
+      "bytes": 350032,
       "geosets": 9
     },
     {
@@ -1112,7 +1170,7 @@
       "unitIds": [
         "킬러-비-미수화__h07L"
       ],
-      "bytes": 194400,
+      "bytes": 192088,
       "geosets": 10
     },
     {
@@ -1122,7 +1180,7 @@
       "unitIds": [
         "가아라-닌자연합군-연대장__h08A"
       ],
-      "bytes": 148208,
+      "bytes": 148192,
       "geosets": 1
     },
     {
@@ -1132,7 +1190,7 @@
       "unitIds": [
         "다루이-혈계한계-람둔__h069"
       ],
-      "bytes": 113356,
+      "bytes": 112584,
       "geosets": 4
     },
     {
@@ -1142,7 +1200,7 @@
       "unitIds": [
         "테루미메이-5대-미즈카게__h085"
       ],
-      "bytes": 145008,
+      "bytes": 144736,
       "geosets": 3
     },
     {
@@ -1152,7 +1210,7 @@
       "unitIds": [
         "킬러-에이-4대-라이카게__h089"
       ],
-      "bytes": 738324,
+      "bytes": 737800,
       "geosets": 3
     },
     {
@@ -1162,7 +1220,7 @@
       "unitIds": [
         "야쿠시-카부토-선인모드__h679"
       ],
-      "bytes": 92904,
+      "bytes": 92624,
       "geosets": 2
     },
     {
@@ -1172,7 +1230,7 @@
       "unitIds": [
         "미후네-사무라이-군주__h574"
       ],
-      "bytes": 155560,
+      "bytes": 154272,
       "geosets": 6
     },
     {
@@ -1182,7 +1240,7 @@
       "unitIds": [
         "구렌-정둔술사__h05D"
       ],
-      "bytes": 602532,
+      "bytes": 601984,
       "geosets": 5
     },
     {
@@ -1192,7 +1250,7 @@
       "unitIds": [
         "오로치마루-야마타의-술__h06M"
       ],
-      "bytes": 228504,
+      "bytes": 227412,
       "geosets": 5
     },
     {
@@ -1202,7 +1260,7 @@
       "unitIds": [
         "쿠로츠치-츠치카게의-손녀__h0AC"
       ],
-      "bytes": 134624,
+      "bytes": 134608,
       "geosets": 1
     },
     {
@@ -1212,7 +1270,7 @@
       "unitIds": [
         "휴우가-히나타-유보쌍사권__h0B8"
       ],
-      "bytes": 556980,
+      "bytes": 556148,
       "geosets": 8
     },
     {
@@ -1222,7 +1280,7 @@
       "unitIds": [
         "하루노-사쿠라-백호의-술__h0B9"
       ],
-      "bytes": 270228,
+      "bytes": 269672,
       "geosets": 4
     },
     {
@@ -1232,7 +1290,7 @@
       "unitIds": [
         "하루노-사쿠라-백호의술__n001"
       ],
-      "bytes": 524928,
+      "bytes": 524912,
       "geosets": 1
     },
     {
@@ -1246,43 +1304,14 @@
       "geosets": 1
     },
     {
-      "asset": "war3mapimported-gamakichi-boom",
-      "file": "assets/models/generated/war3mapimported-gamakichi-boom.glb",
-      "mdxPath": "war3mapImported\\@Gamakichi_Boom.mdx",
-      "unitIds": [
-        "가마키치-묘목산두꺼비__n04L"
-      ],
-      "bytes": 14364,
-      "geosets": 4,
-      "warnings": [
-        "missing texture Textures\\star32.blp",
-        "missing texture Textures\\white.blp",
-        "missing texture Textures\\Shockwave1White.blp",
-        "missing texture Textures\\GenericGlow64.blp"
-      ]
-    },
-    {
       "asset": "war3mapimported-shisui-koto",
       "file": "assets/models/generated/war3mapimported-shisui-koto.glb",
       "mdxPath": "war3mapImported\\@Shisui_Koto.mdx",
       "unitIds": [
         "우치하-시스이-스사노오-3단계__n04Q"
       ],
-      "bytes": 121372,
+      "bytes": 121336,
       "geosets": 2
-    },
-    {
-      "asset": "war3mapimported-kinkaku-tornado",
-      "file": "assets/models/generated/war3mapimported-kinkaku-tornado.glb",
-      "mdxPath": "war3mapImported\\@Kinkaku_Tornado.mdx",
-      "unitIds": [
-        "금은형제-킨카쿠__n04Y"
-      ],
-      "bytes": 5340,
-      "geosets": 2,
-      "warnings": [
-        "missing texture Textures\\firering1A.blp"
-      ]
     },
     {
       "asset": "war3mapimported-shika-black",
@@ -1291,7 +1320,7 @@
       "unitIds": [
         "나라-시카마루-타고난-천재__n054"
       ],
-      "bytes": 3488,
+      "bytes": 3468,
       "geosets": 1
     },
     {
@@ -1301,7 +1330,7 @@
       "unitIds": [
         "가마키치-묘목산-두꺼비__h002"
       ],
-      "bytes": 161252,
+      "bytes": 160704,
       "geosets": 3
     },
     {
@@ -1311,22 +1340,8 @@
       "unitIds": [
         "히단-사신화__n05D"
       ],
-      "bytes": 13056,
+      "bytes": 13020,
       "geosets": 2
-    },
-    {
-      "asset": "war3mapimported-naruto-laser-2",
-      "file": "assets/models/generated/war3mapimported-naruto-laser-2.glb",
-      "mdxPath": "war3mapImported\\@Naruto_Laser-2.mdx",
-      "unitIds": [
-        "메카-나루토-7610__n05I"
-      ],
-      "bytes": 3796,
-      "geosets": 2,
-      "warnings": [
-        "missing texture Textures\\Green_Glow2.blp",
-        "missing texture Textures\\GenericGlowX.blp"
-      ]
     },
     {
       "asset": "war3mapimported-kisame",
@@ -1335,8 +1350,11 @@
       "unitIds": [
         "호시가키-키사메-꼬리없는-미수__h02G"
       ],
-      "bytes": 200704,
-      "geosets": 8
+      "bytes": 188172,
+      "geosets": 6,
+      "warnings": [
+        "dropped geoset: replaceable texture 2"
+      ]
     },
     {
       "asset": "war3mapimported-himawari",
@@ -1355,7 +1373,7 @@
       "unitIds": [
         "후우-7미의-인주력__h02M"
       ],
-      "bytes": 231188,
+      "bytes": 231172,
       "geosets": 2
     },
     {
@@ -1365,7 +1383,7 @@
       "unitIds": [
         "니이-유기토-2미의-인주력__h02O"
       ],
-      "bytes": 859440,
+      "bytes": 858652,
       "geosets": 5
     },
     {
@@ -1375,8 +1393,11 @@
       "unitIds": [
         "야구라-3미의-인주력__h02P"
       ],
-      "bytes": 193864,
-      "geosets": 3
+      "bytes": 191824,
+      "geosets": 1,
+      "warnings": [
+        "dropped geoset: replaceable texture 2"
+      ]
     },
     {
       "asset": "war3mapimported-4mi-roushi",
@@ -1395,7 +1416,7 @@
       "unitIds": [
         "한-5미의-인주력__h02W"
       ],
-      "bytes": 291676,
+      "bytes": 291660,
       "geosets": 2
     },
     {
@@ -1405,7 +1426,7 @@
       "unitIds": [
         "나루토-양의-힘-쿠라마__n05X"
       ],
-      "bytes": 531732,
+      "bytes": 528320,
       "geosets": 14
     },
     {
@@ -1415,7 +1436,7 @@
       "unitIds": [
         "우치하-사스케-완성체-스사노오__n061"
       ],
-      "bytes": 17500,
+      "bytes": 17468,
       "geosets": 2
     },
     {
@@ -1435,7 +1456,7 @@
       "unitIds": [
         "우치하-이타치-완성체-스사노오__n06S"
       ],
-      "bytes": 2009912,
+      "bytes": 2009896,
       "geosets": 5
     },
     {
@@ -1445,34 +1466,8 @@
       "unitIds": [
         "하타케-카카시-완성체-스사노오__n06X"
       ],
-      "bytes": 2047184,
+      "bytes": 2046920,
       "geosets": 5
-    },
-    {
-      "asset": "war3mapimported-zetsu-ep-spell1",
-      "file": "assets/models/generated/war3mapimported-zetsu-ep-spell1.glb",
-      "mdxPath": "war3mapImported\\@Zetsu_Ep_Spell1.mdx",
-      "unitIds": [
-        "소용돌이-제츠-아카츠키__n071"
-      ],
-      "bytes": 5796,
-      "geosets": 2,
-      "warnings": [
-        "missing texture Textures\\EQ_Rock2.blp"
-      ]
-    },
-    {
-      "asset": "war3mapimported-tobirama-ep-dark",
-      "file": "assets/models/generated/war3mapimported-tobirama-ep-dark.glb",
-      "mdxPath": "war3mapImported\\@Tobirama_Ep_Dark.mdx",
-      "unitIds": [
-        "센쥬-토비라마-예토전생__n072"
-      ],
-      "bytes": 7184,
-      "geosets": 6,
-      "warnings": [
-        "missing texture abilities\\Spells\\Human\\Banish\\GenericGlow2bA.blp"
-      ]
     },
     {
       "asset": "war3mapimported-danzo-wind-1",
@@ -1481,7 +1476,7 @@
       "unitIds": [
         "시무라-단조-뿌리의-수장__n078"
       ],
-      "bytes": 55476,
+      "bytes": 55440,
       "geosets": 2
     },
     {
@@ -1491,7 +1486,7 @@
       "unitIds": [
         "오오츠츠키-모모시키-단을-흡수-한-자__n07A"
       ],
-      "bytes": 569948,
+      "bytes": 565240,
       "geosets": 20
     },
     {
@@ -1501,7 +1496,7 @@
       "unitIds": [
         "사스케-스사노오-미수-차크라__n07C"
       ],
-      "bytes": 1543492,
+      "bytes": 1542856,
       "geosets": 8
     },
     {
@@ -1511,7 +1506,7 @@
       "unitIds": [
         "휴우가-하나비-꽃불의-회천__n07D"
       ],
-      "bytes": 319532,
+      "bytes": 318976,
       "geosets": 3
     },
     {
@@ -1521,10 +1516,11 @@
       "unitIds": [
         "육도선인-십미의-인주력__n07H"
       ],
-      "bytes": 66492,
-      "geosets": 2,
+      "bytes": 34464,
+      "geosets": 1,
       "warnings": [
-        "missing texture Textures\\LavaLump2.blp"
+        "missing texture Textures\\LavaLump2.blp",
+        "dropped geoset: unreadable texture Textures\\LavaLump2.blp"
       ]
     },
     {
@@ -1534,7 +1530,7 @@
       "unitIds": [
         "록-리-취권__n07M"
       ],
-      "bytes": 124756,
+      "bytes": 124740,
       "geosets": 1
     },
     {
@@ -1545,7 +1541,7 @@
         "하고로모의-차크라__h03O",
         "음양둔__h06V"
       ],
-      "bytes": 466308,
+      "bytes": 466048,
       "geosets": 5
     },
     {
@@ -1565,7 +1561,7 @@
       "unitIds": [
         "이타치의-동력__h03Q"
       ],
-      "bytes": 64808,
+      "bytes": 64776,
       "geosets": 2
     },
     {
@@ -1575,7 +1571,7 @@
       "unitIds": [
         "시스이의-동력__h03R"
       ],
-      "bytes": 68980,
+      "bytes": 68948,
       "geosets": 2
     },
     {
@@ -1585,8 +1581,11 @@
       "unitIds": [
         "이노시카쵸__h045"
       ],
-      "bytes": 622076,
-      "geosets": 6
+      "bytes": 620116,
+      "geosets": 5,
+      "warnings": [
+        "dropped geoset: replaceable texture 2"
+      ]
     },
     {
       "asset": "war3mapimported-sai-e",
@@ -1595,7 +1594,7 @@
       "unitIds": [
         "사이-호시탐탄__h046"
       ],
-      "bytes": 155424,
+      "bytes": 154124,
       "geosets": 6
     },
     {
@@ -1605,7 +1604,7 @@
       "unitIds": [
         "무우-2대-츠치카게__h047"
       ],
-      "bytes": 145540,
+      "bytes": 145524,
       "geosets": 1
     },
     {
@@ -1615,10 +1614,11 @@
       "unitIds": [
         "우치하-오비토-육도모드__h048"
       ],
-      "bytes": 1057232,
-      "geosets": 9,
+      "bytes": 1043296,
+      "geosets": 7,
       "warnings": [
-        "missing texture ReplaceableTextures\\TeamGlow\\TeamGlow03.blp"
+        "missing texture ReplaceableTextures\\TeamGlow\\TeamGlow03.blp",
+        "dropped geoset: unreadable texture ReplaceableTextures\\TeamGlow\\TeamGlow03.blp"
       ]
     },
     {
@@ -1628,50 +1628,8 @@
       "unitIds": [
         "오오츠츠키-카구야-윤회사륜안__h049"
       ],
-      "bytes": 678688,
+      "bytes": 678164,
       "geosets": 4
-    },
-    {
-      "asset": "war3mapimported-oonoki-jinton-big",
-      "file": "assets/models/generated/war3mapimported-oonoki-jinton-big.glb",
-      "mdxPath": "war3mapImported\\@Oonoki_Jinton_Big.mdx",
-      "unitIds": [
-        "무우-2대-츠치카게-분열의-술__n07X"
-      ],
-      "bytes": 21892,
-      "geosets": 6,
-      "warnings": [
-        "missing texture Textures\\GenericGlowX.blp",
-        "missing texture Textures\\Shockwave1White.blp",
-        "missing texture Textures\\Shockwave10.blp",
-        "missing texture Textures\\firering1A.blp"
-      ]
-    },
-    {
-      "asset": "war3mapimported-sandpyraid",
-      "file": "assets/models/generated/war3mapimported-sandpyraid.glb",
-      "mdxPath": "war3mapImported\\@sandpyraid.mdx",
-      "unitIds": [
-        "라사-4대-카제카게__n08G"
-      ],
-      "bytes": 1744,
-      "geosets": 1,
-      "warnings": [
-        "missing texture TerrainArt\\Ruins\\Ruins_Sand.blp"
-      ]
-    },
-    {
-      "asset": "war3mapimported-killera-slash",
-      "file": "assets/models/generated/war3mapimported-killera-slash.glb",
-      "mdxPath": "war3mapImported\\@KillerA_Slash.mdx",
-      "unitIds": [
-        "킬러-에이-3대-라이카게__n08L"
-      ],
-      "bytes": 4488,
-      "geosets": 3,
-      "warnings": [
-        "missing texture Textures\\Flare.blp"
-      ]
     },
     {
       "asset": "war3mapimported-sai-e-effect-summon",
@@ -1680,7 +1638,7 @@
       "unitIds": [
         "사이-호시탐탄-인법-초신위화__h04C"
       ],
-      "bytes": 206464,
+      "bytes": 205944,
       "geosets": 4
     },
     {
@@ -1690,7 +1648,7 @@
       "unitIds": [
         "우치하-마다라-육도모드-윤묘-변옥__h05H"
       ],
-      "bytes": 1246940,
+      "bytes": 1246828,
       "geosets": 7
     },
     {
@@ -1701,7 +1659,7 @@
         "카쿠즈-완전변형-지원구-화둔__h05N",
         "카쿠즈-완전변형-지원구-풍둔__h05P"
       ],
-      "bytes": 362776,
+      "bytes": 358352,
       "geosets": 17
     },
     {
@@ -1711,7 +1669,7 @@
       "unitIds": [
         "카쿠즈-완전변형-지원구-뇌둔__h05Q"
       ],
-      "bytes": 506764,
+      "bytes": 505376,
       "geosets": 6
     },
     {
@@ -1721,48 +1679,8 @@
       "unitIds": [
         "오오츠츠키-토네리-전생안__n099"
       ],
-      "bytes": 8704,
+      "bytes": 8684,
       "geosets": 1
-    },
-    {
-      "asset": "war3mapimported-terumi-sp-sp2",
-      "file": "assets/models/generated/war3mapimported-terumi-sp-sp2.glb",
-      "mdxPath": "war3mapImported\\@Terumi_SP_Sp2.mdx",
-      "unitIds": [
-        "테루미메이-노처녀-히스테리__n09C"
-      ],
-      "bytes": 5628,
-      "geosets": 1,
-      "warnings": [
-        "missing texture Textures\\Wirlwinds.blp"
-      ]
-    },
-    {
-      "asset": "war3mapimported-sasuke-ep-kirin",
-      "file": "assets/models/generated/war3mapimported-sasuke-ep-kirin.glb",
-      "mdxPath": "war3mapImported\\@Sasuke_Ep_Kirin.mdx",
-      "unitIds": [
-        "우치하-사스케-영원한만화경사륜안__n09D"
-      ],
-      "bytes": 12796,
-      "geosets": 5,
-      "warnings": [
-        "missing texture abilities\\Spells\\Other\\Monsoon\\Lightning2b.blp"
-      ]
-    },
-    {
-      "asset": "war3mapimported-pakura-4",
-      "file": "assets/models/generated/war3mapimported-pakura-4.glb",
-      "mdxPath": "war3mapImported\\@Pakura_4.mdx",
-      "unitIds": [
-        "파쿠라-혈계한계-작둔__n09K"
-      ],
-      "bytes": 8356,
-      "geosets": 2,
-      "warnings": [
-        "missing texture Textures\\LightningBall.blp",
-        "missing texture Textures\\grad2d.blp"
-      ]
     },
     {
       "asset": "war3mapimported-hanabi",
@@ -1771,7 +1689,7 @@
       "unitIds": [
         "하나비의-백안__h065"
       ],
-      "bytes": 444504,
+      "bytes": 442148,
       "geosets": 12
     },
     {
@@ -1781,7 +1699,7 @@
       "unitIds": [
         "우즈마키-쿠시나-9미의-인주력__h06Z"
       ],
-      "bytes": 386560,
+      "bytes": 385496,
       "geosets": 5
     },
     {
@@ -1791,7 +1709,7 @@
       "unitIds": [
         "사폭의-가아라-5대-카제카게__h073"
       ],
-      "bytes": 544796,
+      "bytes": 544764,
       "geosets": 3
     },
     {
@@ -1801,10 +1719,11 @@
       "unitIds": [
         "칸쿠로-닌자연합군-기습부대장__n09Y"
       ],
-      "bytes": 13492,
-      "geosets": 3,
+      "bytes": 11696,
+      "geosets": 2,
       "warnings": [
-        "missing texture Textures\\GenericGlowX_Mod2.blp"
+        "missing texture Textures\\GenericGlowX_Mod2.blp",
+        "dropped geoset: unreadable texture Textures\\GenericGlowX_Mod2.blp"
       ]
     },
     {
@@ -1814,12 +1733,15 @@
       "unitIds": [
         "우치하-마다라-스사노오-쿠라마__n0A2"
       ],
-      "bytes": 31024,
-      "geosets": 4,
+      "bytes": 17148,
+      "geosets": 1,
       "warnings": [
         "missing texture Textures\\grad2d.blp",
+        "dropped geoset: unreadable texture Textures\\grad2d.blp",
         "missing texture Textures\\firering4.blp",
-        "missing texture UI\\MiniMap\\ping4.blp"
+        "dropped geoset: unreadable texture Textures\\firering4.blp",
+        "missing texture UI\\MiniMap\\ping4.blp",
+        "dropped geoset: unreadable texture UI\\MiniMap\\ping4.blp"
       ]
     },
     {
@@ -1829,25 +1751,15 @@
       "unitIds": [
         "하타케-카카시-호카게-직속-암부__n0A6"
       ],
-      "bytes": 171444,
-      "geosets": 8,
+      "bytes": 132096,
+      "geosets": 5,
       "warnings": [
         "missing texture Textures\\white.blp",
+        "dropped geoset: unreadable texture Textures\\white.blp",
         "missing texture Textures\\Shockwave10.blp",
-        "missing texture Textures\\GenericGlow5.blp"
-      ]
-    },
-    {
-      "asset": "war3mapimported-madara-ep-susa-5",
-      "file": "assets/models/generated/war3mapimported-madara-ep-susa-5.glb",
-      "mdxPath": "war3mapImported\\@Madara_Ep_Susa_5.mdx",
-      "unitIds": [
-        "우치하-마다라-스사노오__n0A7"
-      ],
-      "bytes": 18576,
-      "geosets": 3,
-      "warnings": [
-        "missing texture ReplaceableTextures\\NorthrendTree\\NorthTreeBlight.blp"
+        "dropped geoset: unreadable texture Textures\\Shockwave10.blp",
+        "missing texture Textures\\GenericGlow5.blp",
+        "dropped geoset: unreadable texture Textures\\GenericGlow5.blp"
       ]
     },
     {
@@ -1857,7 +1769,7 @@
       "unitIds": [
         "야마나카-이노-심전신술__h074"
       ],
-      "bytes": 295528,
+      "bytes": 295236,
       "geosets": 3
     },
     {
@@ -1867,7 +1779,7 @@
       "unitIds": [
         "휴우가-히나타-바캉스__h075"
       ],
-      "bytes": 196744,
+      "bytes": 196484,
       "geosets": 2
     },
     {
@@ -1877,7 +1789,7 @@
       "unitIds": [
         "우치하-사라다-사스케의-딸__h079"
       ],
-      "bytes": 529264,
+      "bytes": 529004,
       "geosets": 3
     },
     {
@@ -1887,7 +1799,7 @@
       "unitIds": [
         "오오츠츠키-킨시키-열매-단__h07E"
       ],
-      "bytes": 129228,
+      "bytes": 129212,
       "geosets": 1
     },
     {
@@ -1911,21 +1823,6 @@
       "geosets": 1
     },
     {
-      "asset": "war3mapimported-pain-sura-slam",
-      "file": "assets/models/generated/war3mapimported-pain-sura-slam.glb",
-      "mdxPath": "war3mapImported\\@Pain_Sura_Slam.mdx",
-      "unitIds": [
-        "우즈마키-나가토-예토전생__n0AU"
-      ],
-      "bytes": 10072,
-      "geosets": 4,
-      "warnings": [
-        "missing texture Textures\\Shadow.blp",
-        "missing texture Textures\\Black32.blp",
-        "missing texture Textures\\FelwoodRocks.blp"
-      ]
-    },
-    {
       "asset": "war3mapimported-rikudo-sennin-sp",
       "file": "assets/models/generated/war3mapimported-rikudo-sennin-sp.glb",
       "mdxPath": "war3mapImported\\Rikudo_Sennin_SP.mdx",
@@ -1943,7 +1840,7 @@
       "unitIds": [
         "하타케-카카시-the-last__h0BH"
       ],
-      "bytes": 1265988,
+      "bytes": 1265760,
       "geosets": 14
     },
     {
@@ -1953,7 +1850,7 @@
       "unitIds": [
         "우즈마키-나루토-바람의-신__h0BK"
       ],
-      "bytes": 1194248,
+      "bytes": 1194216,
       "geosets": 2
     },
     {
@@ -1963,7 +1860,7 @@
       "unitIds": [
         "오오츠츠키-인드라__h01R"
       ],
-      "bytes": 1463516,
+      "bytes": 1461700,
       "geosets": 10
     },
     {
@@ -1973,7 +1870,7 @@
       "unitIds": [
         "오오츠츠키-아수라__h01T"
       ],
-      "bytes": 977960,
+      "bytes": 975648,
       "geosets": 11
     },
     {
@@ -1983,7 +1880,7 @@
       "unitIds": [
         "위장-스사노오-유일무이__h09A"
       ],
-      "bytes": 1068408,
+      "bytes": 1067884,
       "geosets": 5
     },
     {
@@ -1993,7 +1890,7 @@
       "unitIds": [
         "우치하-시스이-순신__h09D"
       ],
-      "bytes": 234768,
+      "bytes": 232948,
       "geosets": 10
     },
     {
@@ -2003,7 +1900,7 @@
       "unitIds": [
         "우치하-오비토-지옥의-난__n0C5"
       ],
-      "bytes": 1272812,
+      "bytes": 1272588,
       "geosets": 3
     },
     {
@@ -2013,8 +1910,11 @@
       "unitIds": [
         "오오츠츠키-모모시키-천인__h08D"
       ],
-      "bytes": 503904,
-      "geosets": 10
+      "bytes": 501044,
+      "geosets": 9,
+      "warnings": [
+        "dropped geoset: replaceable texture 2"
+      ]
     },
     {
       "asset": "war3mapimported-slam-hinata-inf",
@@ -2023,10 +1923,11 @@
       "unitIds": [
         "휴우가-히나타-the-last__n0CC"
       ],
-      "bytes": 207176,
-      "geosets": 3,
+      "bytes": 200808,
+      "geosets": 2,
       "warnings": [
-        "missing texture Textures\\RibbonNE1_White.blp"
+        "missing texture Textures\\RibbonNE1_White.blp",
+        "dropped geoset: unreadable texture Textures\\RibbonNE1_White.blp"
       ]
     },
     {
@@ -2036,7 +1937,7 @@
       "unitIds": [
         "오오츠츠키-하고로모-인술의-시조__n0CJ"
       ],
-      "bytes": 1165156,
+      "bytes": 1165120,
       "geosets": 2
     },
     {
@@ -2046,7 +1947,7 @@
       "unitIds": [
         "오오츠츠키-하무라-휴우가의-선조__h09O"
       ],
-      "bytes": 397580,
+      "bytes": 396512,
       "geosets": 8
     },
     {
@@ -2056,7 +1957,7 @@
       "unitIds": [
         "미츠키-선인모드-어둠을-비추는-자__n0CW"
       ],
-      "bytes": 552780,
+      "bytes": 552716,
       "geosets": 4
     },
     {
@@ -2066,7 +1967,7 @@
       "unitIds": [
         "하루노-사쿠라-the-last__h0AI"
       ],
-      "bytes": 728608,
+      "bytes": 728084,
       "geosets": 4
     },
     {
@@ -2076,7 +1977,7 @@
       "unitIds": [
         "지라이야-두꺼비-선인__h0AJ"
       ],
-      "bytes": 290016,
+      "bytes": 288380,
       "geosets": 10
     },
     {
@@ -2086,7 +1987,7 @@
       "unitIds": [
         "미츠키-제-7반-멤버__h0AR"
       ],
-      "bytes": 510500,
+      "bytes": 510236,
       "geosets": 2
     },
     {
@@ -2096,7 +1997,7 @@
       "unitIds": [
         "오오츠츠키-우라시키-금색의-윤회안__n0D4"
       ],
-      "bytes": 77216,
+      "bytes": 77168,
       "geosets": 3
     },
     {
@@ -2106,7 +2007,7 @@
       "unitIds": [
         "오오츠츠키-우라시키-시간을-다루는-자__n0D5"
       ],
-      "bytes": 59868,
+      "bytes": 59816,
       "geosets": 3
     },
     {
@@ -2116,7 +2017,7 @@
       "unitIds": [
         "우치하-마다라-윤회천생-개안__h0AV"
       ],
-      "bytes": 1081032,
+      "bytes": 1078932,
       "geosets": 11
     },
     {
@@ -2126,7 +2027,7 @@
       "unitIds": [
         "휴유가-네지__h0AX"
       ],
-      "bytes": 1346600,
+      "bytes": 1344004,
       "geosets": 12
     },
     {
@@ -2136,7 +2037,7 @@
       "unitIds": [
         "우치하-사스케-아카츠키__h0B5"
       ],
-      "bytes": 807504,
+      "bytes": 806984,
       "geosets": 5
     },
     {
@@ -2146,7 +2047,7 @@
       "unitIds": [
         "오오츠츠키-킨시키-충성의-철벽__h0BB"
       ],
-      "bytes": 694752,
+      "bytes": 693684,
       "geosets": 6
     }
   ],
@@ -2156,7 +2057,19 @@
       "reason": "no geosets"
     },
     {
+      "mdxPath": "war3mapImported\\@Gamakichi_Boom.mdx",
+      "reason": "no geosets"
+    },
+    {
       "mdxPath": "war3mapImported\\@Ginkaku_Attack.mdx",
+      "reason": "no geosets"
+    },
+    {
+      "mdxPath": "war3mapImported\\@Kinkaku_Tornado.mdx",
+      "reason": "no geosets"
+    },
+    {
+      "mdxPath": "war3mapImported\\@Naruto_Laser-2.mdx",
       "reason": "no geosets"
     },
     {
@@ -2172,6 +2085,26 @@
       "reason": "no geosets"
     },
     {
+      "mdxPath": "war3mapImported\\@Zetsu_Ep_Spell1.mdx",
+      "reason": "no geosets"
+    },
+    {
+      "mdxPath": "war3mapImported\\@Tobirama_Ep_Dark.mdx",
+      "reason": "no geosets"
+    },
+    {
+      "mdxPath": "war3mapImported\\@Oonoki_Jinton_Big.mdx",
+      "reason": "no geosets"
+    },
+    {
+      "mdxPath": "war3mapImported\\@sandpyraid.mdx",
+      "reason": "no geosets"
+    },
+    {
+      "mdxPath": "war3mapImported\\@KillerA_Slash.mdx",
+      "reason": "no geosets"
+    },
+    {
       "mdxPath": "war3mapImported\\Guy_INF_Mat.mdx",
       "reason": "no geosets"
     },
@@ -2180,7 +2113,27 @@
       "reason": "no geosets"
     },
     {
+      "mdxPath": "war3mapImported\\@Terumi_SP_Sp2.mdx",
+      "reason": "no geosets"
+    },
+    {
+      "mdxPath": "war3mapImported\\@Sasuke_Ep_Kirin.mdx",
+      "reason": "no geosets"
+    },
+    {
+      "mdxPath": "war3mapImported\\@Pakura_4.mdx",
+      "reason": "no geosets"
+    },
+    {
+      "mdxPath": "war3mapImported\\@Madara_Ep_Susa_5.mdx",
+      "reason": "no geosets"
+    },
+    {
       "mdxPath": "war3mapImported\\@Bubble.mdx",
+      "reason": "no geosets"
+    },
+    {
+      "mdxPath": "war3mapImported\\@Pain_Sura_Slam.mdx",
       "reason": "no geosets"
     }
   ]

@@ -58,37 +58,57 @@ function trianglesOf(geoset) {
   return Uint32Array.from(geoset.faces);
 }
 
+/**
+ * Warcraft layer filter modes -> glTF alpha modes. Additive and modulate have
+ * no glTF equivalent; blending them is the closest honest approximation.
+ */
+const ALPHA_MODE_BY_FILTER = ['OPAQUE', 'MASK', 'BLEND', 'BLEND', 'BLEND', 'BLEND', 'BLEND'];
+
 function convertModel(model, resolveTexture, name) {
   const builder = createGlbBuilder();
   const textureCache = new Map();
   const warnings = [];
+  const materialCache = new Map();
 
+  /** Resolve a material, or null when it has no usable texture. */
   const materialIndexFor = (materialId) => {
+    if (materialCache.has(materialId)) return materialCache.get(materialId);
+
     const material = model.materials[materialId];
     const layer = material?.layers?.[0];
-    let textureIndex;
-    let unlit = false;
+    let result = null;
 
     if (layer) {
-      unlit = (layer.flags & 1) !== 0; // Unshaded
       const texture = model.textures[layer.textureId];
       const texPath = texture?.path;
+
+      // A layer with no path is a replaceable (team colour, shadow) texture we
+      // do not ship. Rendering it untextured turns it into an opaque white
+      // quad over the model, so the geoset is dropped instead.
       if (texPath) {
         if (!textureCache.has(texPath)) {
           const png = resolveTexture(texPath);
           textureCache.set(texPath, png ? builder.addTexture(png) : null);
           if (!png) warnings.push(`missing texture ${texPath}`);
         }
-        textureIndex = textureCache.get(texPath) ?? undefined;
+        const textureIndex = textureCache.get(texPath);
+        if (textureIndex !== null && textureIndex !== undefined) {
+          result = builder.addMaterial({
+            name: `${name}_mat${materialId}`,
+            textureIndex,
+            unlit: (layer.flags & 1) !== 0, // Unshaded
+            alphaMode: ALPHA_MODE_BY_FILTER[layer.filterMode] ?? 'MASK',
+          });
+        } else {
+          warnings.push(`dropped geoset: unreadable texture ${texPath}`);
+        }
+      } else {
+        warnings.push(`dropped geoset: replaceable texture ${texture?.replaceableId ?? '?'}`);
       }
     }
-    return builder.addMaterial({
-      name: `${name}_mat${materialId}`,
-      textureIndex,
-      unlit,
-      // Warcraft leans on alpha-tested foliage/hair planes.
-      alphaMode: 'MASK',
-    });
+
+    materialCache.set(materialId, result);
+    return result;
   };
 
   const primitives = [];
@@ -106,6 +126,9 @@ function convertModel(model, resolveTexture, name) {
       normals[i * 3 + 2] = -geoset.normals[i * 3 + 1];
     }
 
+    const material = materialIndexFor(geoset.materialId);
+    if (material === null) continue;
+
     const uvSet = geoset.uvSets?.[0];
     const uvs = uvSet ? Float32Array.from(uvSet) : null;
 
@@ -114,7 +137,7 @@ function convertModel(model, resolveTexture, name) {
       normals,
       uvs,
       indices: trianglesOf(geoset),
-      material: materialIndexFor(geoset.materialId),
+      material,
     });
   }
 
