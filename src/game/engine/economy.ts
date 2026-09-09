@@ -20,7 +20,7 @@ import type { EngineEvent, GameState, UnitInstance } from './types';
 
 /** Gacha pools, built once from the unit table. */
 const POOLS: Record<string, string[]> = {};
-for (const grade of ['normal', 'magic', 'rare', 'unique', 'special'] as Grade[]) {
+for (const grade of ['normal', 'magic', 'rare', 'unique', 'special', 'jinchuriki'] as Grade[]) {
   POOLS[grade] = UNITS.filter((u) => u.grade === grade).map((u) => u.id);
 }
 
@@ -260,7 +260,13 @@ export function sell(
   return sold;
 }
 
-/** 5라운드마다 랭크 임무. S는 게임당 한 번만 나온다. */
+/**
+ * 5라운드마다 랭크 임무. S는 게임당 한 번만 나온다.
+ *
+ * S랭크는 목재와 함께 랜덤 인주력을 준다. 원본 맵에서 인주력은 조합으로
+ * 만들 수 없고 특별 보상 뽑기로만 나오는 등급이라, 이 경로가 없으면
+ * 로스터에서 영영 볼 수 없다.
+ */
 export function rollMission(
   state: GameState,
   round: number,
@@ -278,7 +284,14 @@ export function rollMission(
       cumulative += entry.chance;
       if (roll < cumulative) {
         const granted = usable ? entry : MISSION_TABLE[1];
-        if (granted.oncePerGame) player.sMissionUsed = true;
+        if (granted.oncePerGame) {
+          player.sMissionUsed = true;
+          const jinchuriki = drawFrom(state, [{ grade: 'jinchuriki', weight: 1 }]);
+          if (jinchuriki) {
+            addUnit(state, player.id, jinchuriki, 'gacha', emit);
+            emit({ e: 'log', text: '랜덤 인주력 뽑기 획득' });
+          }
+        }
         player.wood += granted.wood;
         emit({ e: 'mission', rank: granted.rank, wood: granted.wood });
         break;

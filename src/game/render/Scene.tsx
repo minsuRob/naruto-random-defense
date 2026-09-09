@@ -9,6 +9,7 @@ import { Ground } from './Ground';
 import { GroundPicker } from './GroundPicker';
 import { LaneMesh } from './LaneMesh';
 import { Markers } from './Markers';
+import { MobHealthBars } from './MobHealthBars';
 import { MobInstances } from './MobInstances';
 import { PlotGrid } from './PlotGrid';
 import { SimDriver } from './SimDriver';
@@ -52,6 +53,7 @@ export function Scene({
       <GroundPicker onCommand={onGroundCommand} active={moveMode} />
       <Units onSelect={onSelectUnit} />
       <MobInstances engine={engine} clock={clock} />
+      <MobHealthBars engine={engine} clock={clock} />
       <HitFlashes engine={engine} />
 
       <SimDriver engine={engine} clock={clock} hudSync={hudSync} />

@@ -10,9 +10,11 @@ import { CommandCard } from '@/game/hud/CommandCard';
 import { EventLog } from '@/game/hud/EventLog';
 import { GameOverOverlay } from '@/game/hud/GameOverOverlay';
 import { Minimap } from '@/game/hud/Minimap';
+import { PauseMenu } from '@/game/hud/PauseMenu';
 import { SelectionPanel } from '@/game/hud/SelectionPanel';
 import { TopBar } from '@/game/hud/TopBar';
 import { ComboBookModal } from '@/game/hud/combo-book/ComboBookModal';
+import { GestureHost } from '@/game/input/GestureHost';
 import { createInputController } from '@/game/input/input-controller';
 import { GameCanvas } from '@/game/render/GameCanvas';
 import { Scene } from '@/game/render/Scene';
@@ -72,6 +74,7 @@ function Run({
 
   const comboBookOpen = useGameStore((s) => s.comboBook.open);
   const moveMode = useGameStore((s) => s.uiMode === 'move');
+  const settings = useGameStore((s) => s.settings);
 
   useEffect(() => {
     useGameStore.getState().reset();
@@ -114,6 +117,16 @@ function Run({
     input.setEnabled(!comboBookOpen);
   }, [comboBookOpen, input]);
 
+  useEffect(() => {
+    input.setSettings(settings);
+  }, [input, settings]);
+
+  const togglePause = useCallback(() => {
+    const paused = !clock.paused;
+    clock.setPaused(paused);
+    useGameStore.getState().setPaused(paused);
+  }, [clock]);
+
   const selectUnit = useCallback((unitId: number, additive: boolean) => {
     const store = useGameStore.getState();
     const current = store.selection;
@@ -141,18 +154,20 @@ function Run({
 
   return (
     <View ref={hostRef} style={styles.root}>
-      <GameCanvas>
-        <Scene
-          engine={engine}
-          clock={clock}
-          hudSync={hudSync}
-          rig={rig}
-          input={input}
-          onSelectUnit={selectUnit}
-          onGroundCommand={groundCommand}
-          moveMode={moveMode}
-        />
-      </GameCanvas>
+      <GestureHost input={input}>
+        <GameCanvas>
+          <Scene
+            engine={engine}
+            clock={clock}
+            hudSync={hudSync}
+            rig={rig}
+            input={input}
+            onSelectUnit={selectUnit}
+            onGroundCommand={groundCommand}
+            moveMode={moveMode}
+          />
+        </GameCanvas>
+      </GestureHost>
 
       <View style={styles.hud}>
         <TopBar difficulty={difficulty} />
@@ -174,6 +189,7 @@ function Run({
         </View>
 
         <ComboBookModal engine={engine} />
+        <PauseMenu onResume={togglePause} />
         <GameOverOverlay onRestart={onRestart} />
       </View>
     </View>

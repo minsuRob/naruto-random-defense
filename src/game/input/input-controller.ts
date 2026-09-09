@@ -11,12 +11,22 @@ import {
 /**
  * Native input controller.
  *
- * M1 ships the shape only: the camera and HUD already talk to this interface, so
- * wiring react-native-gesture-handler (two-finger pan, pinch, tap) in M5 is a
- * change confined to this file. Gestures run on the UI thread and will push
- * small deltas in via the setters below.
+ * Gestures are captured on the UI thread by the GestureHost component in
+ * ./GestureHost.tsx and pushed in here as small deltas; the camera reads them
+ * in useFrame exactly as it does on web. Everything above the InputController
+ * interface is identical across platforms.
  */
-export function createInputController(): InputController {
+
+export interface NativeInputController extends InputController {
+  /** Two-finger drag, in screen pixels since the last frame. */
+  pushDragPan(dx: number, dy: number): void;
+  /** Pinch scale delta; > 1 zooms out. */
+  pushZoom(factor: number): void;
+  pushPointer(event: PointerInput): void;
+  emitHotkey(key: Hotkey): void;
+}
+
+export function createInputController(): NativeInputController {
   let enabled = true;
   let settings: InputSettings = { ...DEFAULT_INPUT_SETTINGS };
 
@@ -34,7 +44,7 @@ export function createInputController(): InputController {
       return () => {};
     },
     update(_dt: number, _viewport: Viewport) {
-      // Native pans come from gestures, not held keys, so panAxis stays zero.
+      // Native panning comes from gestures, not held keys, so panAxis stays 0.
     },
     panAxis,
     consumeDragPan() {
@@ -63,9 +73,8 @@ export function createInputController(): InputController {
       pointerHandlers.add(cb);
       return () => pointerHandlers.delete(cb);
     },
-    setEnabled(v) {
-      enabled = v;
-      void enabled;
+    setEnabled(value) {
+      enabled = value;
     },
     setSettings(next) {
       settings = next;
@@ -74,6 +83,23 @@ export function createInputController(): InputController {
     dispose() {
       hotkeyHandlers.clear();
       pointerHandlers.clear();
+    },
+
+    pushDragPan(dx, dy) {
+      if (!enabled) return;
+      dragPanX += dx;
+      dragPanY += dy;
+    },
+    pushZoom(factor) {
+      if (!enabled) return;
+      zoomFactor *= factor;
+    },
+    pushPointer(event) {
+      if (!enabled) return;
+      pointerHandlers.forEach((cb) => cb(event));
+    },
+    emitHotkey(key) {
+      hotkeyHandlers.forEach((cb) => cb(key));
     },
   };
 }
