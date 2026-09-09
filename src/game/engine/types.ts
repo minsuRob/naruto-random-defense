@@ -1,5 +1,6 @@
 import type { DifficultyDef } from '@/game/config/difficulty';
 import type { Grade } from '@/game/data/units';
+import type { DraftState } from './draft';
 import type { Lane } from './lane';
 import type { Rng } from './rng';
 
@@ -116,7 +117,7 @@ export interface Player {
   alive: boolean;
 }
 
-export type RoundPhase = 'prep' | 'wave' | 'ended';
+export type RoundPhase = 'draft' | 'prep' | 'wave' | 'ended';
 
 export interface SpawnEntry {
   at: number;
@@ -153,6 +154,7 @@ export interface GameState {
   rosterVersion: number;
   round: RoundState;
   aliveOnLane: Uint16Array;
+  draft: DraftState;
 }
 
 export type Command =
@@ -161,7 +163,8 @@ export type Command =
   | { t: 'HIRE'; player: number; grade: 'normal' | 'magic' }
   | { t: 'SELL'; player: number; unitIds: number[] }
   | { t: 'MOVE'; player: number; unitId: number; cell: { cx: number; cy: number } }
-  | { t: 'COMBINE'; player: number; recipeId: string; preferIds?: number[] };
+  | { t: 'COMBINE'; player: number; recipeId: string; preferIds?: number[] }
+  | { t: 'DRAFT_PICK'; player: number; optionIndex: number };
 
 export type EngineEvent =
   | { e: 'roundStart'; round: number }
@@ -172,4 +175,6 @@ export type EngineEvent =
   | { e: 'unitRemove'; unitId: number; defId: string }
   | { e: 'mission'; rank: 'S' | 'A' | 'B' | 'C'; wood: number }
   | { e: 'log'; text: string }
+  | { e: 'draftPick'; rankKo: string; defId: string; auto: boolean }
+  | { e: 'draftDone' }
   | { e: 'gameOver'; outcome: 'win' | 'lose' };

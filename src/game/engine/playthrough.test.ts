@@ -4,7 +4,7 @@ import { TICK_RATE } from '@/game/config/balance';
 import { DIFFICULTIES, type DifficultyId } from '@/game/config/difficulty';
 import { RECIPES } from '@/game/data/recipes';
 import { availability, countsFor } from './combine';
-import { createEngine, type Engine } from './engine';
+import { completeDraft, createEngine, type Engine } from './engine';
 
 /**
  * Balance smoke test: play the game the way a person would and see how far it
@@ -42,6 +42,7 @@ function playRound(engine: Engine) {
 
 function playUntilOver(difficultyId: DifficultyId, seed: number, maxRounds = 40) {
   const engine = createEngine({ difficulty: DIFFICULTIES[difficultyId], seed });
+  completeDraft(engine);
   let lastRound = 0;
   const maxTicks = TICK_RATE * 60 * 60; // an hour of game time is plenty
 
@@ -66,6 +67,10 @@ describe('playthrough', () => {
 
   it('doing nothing loses, and playing well survives longer', () => {
     const idle = createEngine({ difficulty: DIFFICULTIES.easy, seed: 5 });
+    completeDraft(idle);
+    // Sell the draft picks: this is the do-nothing baseline.
+    idle.state.units.clear();
+    idle.state.plots[0].occupancy.fill(0);
     for (let i = 0; i < TICK_RATE * 60 * 30 && !idle.state.over; i++) idle.tick();
     expect(idle.state.over).toBe(true);
 

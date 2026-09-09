@@ -8,6 +8,7 @@ import {
 import type { DifficultyDef } from '@/game/config/difficulty';
 import { plotOrigin } from '@/game/config/map';
 import { BOSSES, WAVES, waveFor } from '@/game/data/waves';
+import { createDraft } from './draft';
 import { createOccupancy } from './grid';
 import { createLane } from './lane';
 import { createMobPool } from './mobs';
@@ -82,11 +83,12 @@ export function createInitialState(config: GameConfig): { state: GameState; tabl
     });
   }
 
+  const rng = createRng(config.seed);
   const state: GameState = {
     tick: 0,
     time: 0,
     seed: config.seed,
-    rng: createRng(config.seed),
+    rng,
     difficulty: config.difficulty,
     over: false,
     outcome: null,
@@ -104,9 +106,11 @@ export function createInitialState(config: GameConfig): { state: GameState; tabl
     units: new Map(),
     nextUnitId: 1,
     rosterVersion: 0,
+    // The opening draft runs before any wave; rounds only start once it is done.
+    draft: createDraft(rng),
     round: {
       number: 0,
-      phase: 'prep',
+      phase: 'draft',
       elapsed: 0,
       duration: 0,
       hardLimit: null,

@@ -7,11 +7,17 @@ import { UNIT_BY_ID } from '@/game/data/units';
 import { RECIPES, RECIPE_BY_ID } from '@/game/data/recipes';
 import { availability, countsFor, findSatisfiable } from './combine';
 import { addUnit, gamble, hire, pakkunDown, pakkunUp, pakkunWood, sell } from './economy';
-import { createEngine } from './engine';
+import { completeDraft, createEngine } from './engine';
 import type { EngineEvent } from './types';
 
+/** Past the opening draft, and with its picks cleared off the plot. */
 function newEngine(seed = 1) {
-  return createEngine({ difficulty: DIFFICULTIES.easy, seed });
+  const engine = createEngine({ difficulty: DIFFICULTIES.easy, seed });
+  completeDraft(engine);
+  engine.drainEvents();
+  engine.state.units.clear();
+  engine.state.plots[0].occupancy.fill(0);
+  return engine;
 }
 
 /** Collect events without touching the engine's own queue. */

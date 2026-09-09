@@ -150,17 +150,56 @@ export function sheetToAbilities(sheet: AbilitySheet): Ability[] {
   return abilities;
 }
 
+/**
+ * Warcraft object files only record fields that *differ* from the base unit, so
+ * a lot of rows carry no damage or cooldown at all — those values live in the
+ * game's own unit data, which is not in the map.
+ *
+ * The stated values are strongly grouped by grade (every 노말 is 19, every 매직
+ * is 99, and so on), so the gap is filled with the median of what that grade
+ * does state. That is derived from the map rather than invented, and it fixes
+ * itself if the extraction ever learns to resolve inheritance.
+ */
+function median(values: number[]): number {
+  if (!values.length) return 0;
+  const sorted = [...values].sort((a, b) => a - b);
+  return sorted[Math.floor(sorted.length / 2)];
+}
+
+const GRADE_FALLBACK = new Map<Grade, { damage: number; cooldown: number; range: number }>();
+{
+  const byGrade = new Map<Grade, RawUnit[]>();
+  for (const unit of UNITS) {
+    const list = byGrade.get(unit.grade) ?? [];
+    list.push(unit);
+    byGrade.set(unit.grade, list);
+  }
+  for (const [grade, units] of byGrade) {
+    GRADE_FALLBACK.set(grade, {
+      damage: median(units.map((u) => u.attack.base).filter((v) => v > 0)),
+      cooldown: median(units.map((u) => u.attack.cooldown).filter((v) => v > 0)),
+      range: median(units.map((u) => u.attack.range).filter((v) => v > 0)),
+    });
+  }
+}
+
 function toUnitDef(unit: RawUnit): UnitDef {
   const sheet = sheetFor(unit);
+  const fallback = GRADE_FALLBACK.get(unit.grade);
+
   // Warcraft rolls base + dice d sides; the average is what the engine uses.
-  const averageDamage = unit.attack.base + (unit.attack.dice * (unit.attack.sides + 1)) / 2;
+  const stated = unit.attack.base + (unit.attack.dice * (unit.attack.sides + 1)) / 2;
+  const damage = unit.attack.base > 0 ? stated : (fallback?.damage ?? 1);
+  const cooldown = unit.attack.cooldown > 0 ? unit.attack.cooldown : (fallback?.cooldown ?? 1);
+  const range = unit.attack.range > 0 ? unit.attack.range : (fallback?.range ?? 700);
+
   return {
     id: unit.id,
     nameKo: unit.nameKo,
     grade: unit.grade,
-    damage: Math.max(1, averageDamage * UNIT_DAMAGE_SCALE),
-    cooldown: unit.attack.cooldown > 0 ? unit.attack.cooldown : 1,
-    range: Math.max(1.5, rangeToWorld(unit.attack.range)),
+    damage: Math.max(1, damage * UNIT_DAMAGE_SCALE),
+    cooldown: cooldown > 0 ? cooldown : 1,
+    range: Math.max(1.5, rangeToWorld(range)),
     damageType: sheet.damageType ?? 'phys',
     abilities: sheetToAbilities(sheet),
   };

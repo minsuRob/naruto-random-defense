@@ -7,10 +7,12 @@ import { mapBounds } from '@/game/config/map';
 import { createEngine } from '@/game/engine/engine';
 import { localToCell, type Cell } from '@/game/engine/grid';
 import { CommandCard } from '@/game/hud/CommandCard';
+import { DraftOverlay } from '@/game/hud/DraftOverlay';
 import { EventLog } from '@/game/hud/EventLog';
 import { GameOverOverlay } from '@/game/hud/GameOverOverlay';
 import { Minimap } from '@/game/hud/Minimap';
 import { PauseMenu } from '@/game/hud/PauseMenu';
+import { PlayerPanel } from '@/game/hud/PlayerPanel';
 import { SelectionBox } from '@/game/hud/SelectionBox';
 import { SelectionPanel } from '@/game/hud/SelectionPanel';
 import { TopBar } from '@/game/hud/TopBar';
@@ -234,7 +236,13 @@ function Run({
       </GestureHost>
 
       <View style={styles.hud}>
-        <TopBar difficulty={difficulty} />
+        <View style={styles.topRow}>
+          <TopBar difficulty={difficulty} />
+          <View style={styles.spacer} />
+          <View style={styles.topRight}>
+            <PlayerPanel />
+          </View>
+        </View>
 
         {/* One bottom bar rather than three floating corners, so the panels
             cannot overlap each other on a narrow window. */}
@@ -259,6 +267,7 @@ function Run({
         </View>
 
         <SelectionBox input={input} />
+        <DraftOverlay engine={engine} />
         <ComboBookModal engine={engine} />
         <PauseMenu onResume={togglePause} />
         <GameOverOverlay onRestart={onRestart} />
@@ -270,6 +279,9 @@ function Run({
 const styles = StyleSheet.create({
   root: { flex: 1, backgroundColor: '#0b0d10' },
   hud: { position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, pointerEvents: 'box-none' },
+  topRow: { flexDirection: 'row', alignItems: 'flex-start', pointerEvents: 'box-none' },
+  spacer: { flex: 1 },
+  topRight: { margin: 12 },
   bottomBar: {
     position: 'absolute',
     left: 12,

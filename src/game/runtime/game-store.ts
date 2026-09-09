@@ -13,7 +13,7 @@ import { DEFAULT_INPUT_SETTINGS, type InputSettings } from '@/game/input/types';
 
 export interface HudSnapshot {
   round: number;
-  phase: 'prep' | 'wave' | 'ended';
+  phase: 'draft' | 'prep' | 'wave' | 'ended';
   /** Whole seconds, so the top bar only re-renders once a second. */
   timeLeft: number;
   aliveOnLane: number;

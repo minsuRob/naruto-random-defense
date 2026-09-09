@@ -7,6 +7,7 @@ import {
 } from '@/game/config/balance';
 import { updateAuras, updateCombat, updateTargeting } from './combat';
 import {
+  addUnit,
   gamble,
   hire,
   moveUnit,
@@ -19,6 +20,7 @@ import {
   updateUnitWalks,
 } from './economy';
 import { applyCombine } from './combine';
+import { autoChoose, choose, currentPick } from './draft';
 import { despawnMob, spawnMob } from './mobs';
 import { isFinalRound, roundTimeUp, startRound } from './rounds';
 import { createInitialState, deathCountFor, type GameConfig, type GameTables } from './state';
@@ -39,6 +41,23 @@ export interface Engine {
   tick(): void;
   /** Take the events produced since the last drain. */
   drainEvents(): EngineEvent[];
+}
+
+/**
+ * Take every remaining draft pick, so callers that only care about the defense
+ * can get to round 1. Used by the tests and the balance harness; the game
+ * itself goes through the selection window.
+ *
+ * Deliberately stops the moment the draft is done — round 1 starts on the
+ * caller's next tick, so nothing has spawned yet and the caller can still set
+ * the board up.
+ */
+export function completeDraft(engine: Engine, optionIndex = 0): void {
+  let guard = 0;
+  while (engine.state.draft.active && guard++ < 64) {
+    engine.enqueue({ t: 'DRAFT_PICK', player: 0, optionIndex });
+    engine.tick();
+  }
 }
 
 export function createEngine(config: GameConfig): Engine {
@@ -82,13 +101,51 @@ export function createEngine(config: GameConfig): Engine {
         case 'COMBINE':
           applyCombine(state, command.player, command.recipeId, emit, command.preferIds);
           break;
+        case 'DRAFT_PICK':
+          takeDraftPick(command.optionIndex, false);
+          break;
       }
     }
     commands.length = 0;
   }
 
+  /**
+   * Resolve one draft pick and place the unit. When the draft runs out of picks
+   * the first wave starts on the next tick.
+   */
+  function takeDraftPick(optionIndex: number, auto: boolean) {
+    const pick = currentPick(state.draft);
+    if (!pick) return;
+    const rankKo = pick.rankKo;
+
+    const defId = auto ? autoChoose(state) : choose(state, optionIndex);
+    if (!defId) return;
+
+    emit({ e: 'draftPick', rankKo, defId, auto });
+    addUnit(state, 0, defId, 'gacha', emit);
+
+    // The phase is left alone here on purpose: advanceDraft flips it to 'prep'
+    // on the next tick, so the first wave never spawns inside the same tick
+    // that closed the draft.
+    if (!state.draft.active) emit({ e: 'draftDone' });
+  }
+
+  function advanceDraft(dt: number) {
+    const draft = state.draft;
+    if (!draft.active) {
+      state.round.phase = 'prep';
+      return;
+    }
+    draft.timeLeft -= dt;
+    if (draft.timeLeft <= 0) takeDraftPick(0, true);
+  }
+
   function advanceRound(dt: number) {
     const round = state.round;
+    if (round.phase === 'draft') {
+      advanceDraft(dt);
+      return;
+    }
     if (round.phase === 'prep') {
       startRound(state, tables, 1);
       emit({ e: 'roundStart', round: 1 });

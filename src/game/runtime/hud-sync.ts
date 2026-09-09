@@ -1,7 +1,7 @@
 import { UNIT_BY_ID } from '@/game/data/units';
 import type { Engine } from '@/game/engine/engine';
 import { deathCountFor } from '@/game/engine/state';
-import type { EngineEvent } from '@/game/engine/types';
+import type { EngineEvent, RoundPhase } from '@/game/engine/types';
 import { hudEquals, useGameStore, type HudSnapshot, type RosterEntry } from './game-store';
 
 /**
