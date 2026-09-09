@@ -32,16 +32,22 @@ describe('grid', () => {
     expect(localToCell(0, -PLOT_HALF - 0.1)).toBeNull();
   });
 
-  it('fills outward from the centre', () => {
+  it('fills from the outside in, where the lane is reachable', () => {
     const occ = createOccupancy();
-    const mid = Math.floor(PLOT_CELLS / 2);
-    const first = findFreeCell(occ);
-    expect(first).toEqual({ cx: mid, cy: mid });
+    expect(findFreeCell(occ)).toEqual({ cx: 0, cy: 0 });
 
-    // Claiming the centre pushes the next pick onto the surrounding ring.
-    occ[cellIndex(mid, mid)] = 1;
-    const second = findFreeCell(occ)!;
-    expect(Math.max(Math.abs(second.cx - mid), Math.abs(second.cy - mid))).toBe(1);
+    // The whole outer ring is used before anything steps inward.
+    const outerRing = PLOT_CELLS * 4 - 4;
+    for (let i = 0; i < outerRing; i++) {
+      const cell = findFreeCell(occ)!;
+      const onEdge =
+        cell.cx === 0 || cell.cy === 0 || cell.cx === PLOT_CELLS - 1 || cell.cy === PLOT_CELLS - 1;
+      expect(onEdge).toBe(true);
+      occ[cellIndex(cell.cx, cell.cy)] = 1;
+    }
+    const next = findFreeCell(occ)!;
+    expect(next.cx).toBe(1);
+    expect(next.cy).toBe(1);
   });
 
   it('returns null when the plot is full', () => {

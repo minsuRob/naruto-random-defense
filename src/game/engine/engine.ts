@@ -5,6 +5,19 @@ import {
   TICK_DT,
   killBounty,
 } from '@/game/config/balance';
+import { updateAuras, updateCombat, updateTargeting } from './combat';
+import {
+  gamble,
+  hire,
+  moveUnit,
+  pakkunDown,
+  pakkunGold,
+  pakkunUp,
+  pakkunWood,
+  rollMission,
+  sell,
+} from './economy';
+import { applyCombine } from './combine';
 import { despawnMob, spawnMob } from './mobs';
 import { isFinalRound, roundTimeUp, startRound } from './rounds';
 import { createInitialState, deathCountFor, type GameConfig, type GameTables } from './state';
@@ -34,9 +47,42 @@ export function createEngine(config: GameConfig): Engine {
 
   const emit = (event: EngineEvent) => events.push(event);
 
+  /**
+   * All queued commands apply at the top of a tick, in the order they arrived,
+   * so the simulation stays deterministic no matter when the UI enqueued them.
+   */
   function applyCommands() {
-    // Command handling lands with the economy in M3; queueing already works so
-    // the ordering guarantee (all commands apply at the top of a tick) holds.
+    for (const command of commands) {
+      switch (command.t) {
+        case 'PAKKUN_DOWN':
+          pakkunDown(state, command.player, emit);
+          break;
+        case 'PAKKUN_UP':
+          pakkunUp(state, command.player, emit);
+          break;
+        case 'PAKKUN_GOLD':
+          pakkunGold(state, command.player, emit);
+          break;
+        case 'PAKKUN_WOOD':
+          pakkunWood(state, command.player, emit);
+          break;
+        case 'GAMBLE':
+          gamble(state, command.player, command.tier, emit);
+          break;
+        case 'HIRE':
+          hire(state, command.player, command.grade, emit);
+          break;
+        case 'SELL':
+          sell(state, command.player, command.unitIds, emit);
+          break;
+        case 'MOVE':
+          moveUnit(state, command.unitId, command.cell);
+          break;
+        case 'COMBINE':
+          applyCombine(state, command.player, command.recipeId, emit, command.preferIds);
+          break;
+      }
+    }
     commands.length = 0;
   }
 
@@ -185,6 +231,8 @@ export function createEngine(config: GameConfig): Engine {
       if (player.alive) player.pakkun += PAKKUN_PER_ROUND;
     }
 
+    rollMission(state, finished, emit);
+
     if (isFinalRound(finished)) {
       endGame('win');
       return;
@@ -202,6 +250,9 @@ export function createEngine(config: GameConfig): Engine {
     flushSpawns();
     updateStatus();
     updateMovement(dt);
+    updateAuras(state);
+    updateTargeting(state);
+    updateCombat(state, dt, emit);
     updateDeaths();
     checkDeathCount();
     checkRoundEnd();

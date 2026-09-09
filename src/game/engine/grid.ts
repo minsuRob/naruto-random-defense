@@ -41,16 +41,22 @@ export function localToCell(x: number, z: number): Cell | null {
 }
 
 /**
- * First free cell, searched in rings outward from the plot centre so new units
- * cluster where they can actually reach the lane. Returns null when full.
+ * First free cell, filling from the outside in.
+ *
+ * The lane runs around the plot, so the outer ring is the only place a new unit
+ * can reach it — a centre cell is more than an attack range away from the
+ * nearest lane point. Players still reposition freely; this just makes the
+ * default placement useful.
  */
 export function findFreeCell(occupancy: Uint8Array): Cell | null {
-  const mid = Math.floor(PLOT_CELLS / 2);
-  for (let ring = 0; ring <= PLOT_CELLS; ring++) {
-    for (let cy = mid - ring; cy <= mid + ring; cy++) {
-      for (let cx = mid - ring; cx <= mid + ring; cx++) {
-        // Only the perimeter of this ring is new.
-        const onRing = Math.abs(cx - mid) === ring || Math.abs(cy - mid) === ring;
+  const maxRing = Math.floor((PLOT_CELLS - 1) / 2);
+  for (let inset = 0; inset <= maxRing; inset++) {
+    const lo = inset;
+    const hi = PLOT_CELLS - 1 - inset;
+    for (let cy = lo; cy <= hi; cy++) {
+      for (let cx = lo; cx <= hi; cx++) {
+        // Only this ring's perimeter is new.
+        const onRing = cx === lo || cx === hi || cy === lo || cy === hi;
         if (!onRing || !isInsidePlot(cx, cy)) continue;
         if (occupancy[cellIndex(cx, cy)] === 0) return { cx, cy };
       }
