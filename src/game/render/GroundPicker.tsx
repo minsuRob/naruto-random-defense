@@ -14,9 +14,11 @@ import { cellToLocal, localToCell, type Cell } from '@/game/engine/grid';
  */
 export function GroundPicker({
   onCommand,
+  onClearSelection,
   active,
 }: {
   onCommand: (cell: Cell) => void;
+  onClearSelection: () => void;
   active: boolean;
 }) {
   const [hover, setHover] = useState<Cell | null>(null);
@@ -33,12 +35,11 @@ export function GroundPicker({
         onPointerMove={(event) => setHover(cellAt(event))}
         onPointerOut={() => setHover(null)}
         onClick={(event) => {
-          if (!active) return;
           const cell = cellAt(event);
-          if (cell) {
-            event.stopPropagation();
-            onCommand(cell);
-          }
+          if (!cell) return;
+          event.stopPropagation();
+          if (active) onCommand(cell);
+          else onClearSelection();
         }}
         onContextMenu={(event) => {
           const cell = cellAt(event);

@@ -73,6 +73,10 @@ export function createInputController(): NativeInputController {
       pointerHandlers.add(cb);
       return () => pointerHandlers.delete(cb);
     },
+    onBoxSelect() {
+      // Touch has no drag-box yet; tap-to-select covers it.
+      return () => {};
+    },
     setEnabled(value) {
       enabled = value;
     },

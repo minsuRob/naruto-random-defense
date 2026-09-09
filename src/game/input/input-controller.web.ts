@@ -47,6 +47,7 @@ export function createInputController(): InputController {
 
   const hotkeyHandlers = new Set<(k: Hotkey) => void>();
   const pointerHandlers = new Set<(p: PointerInput) => void>();
+  const boxHandlers = new Set<(box: BoxSelect, additive: boolean) => void>();
 
   const emitHotkey = (k: Hotkey) => hotkeyHandlers.forEach((cb) => cb(k));
   const emitPointer = (p: PointerInput) => pointerHandlers.forEach((cb) => cb(p));
@@ -125,7 +126,10 @@ export function createInputController(): InputController {
       const p = rectPoint(e);
       pointerX = p.x;
       pointerY = p.y;
-      if (e.button === 0) leftDownAt = { ...p };
+      // HUD panels sit above the canvas and bubble their events up here; a drag
+      // that starts on one of them must not turn into a selection box.
+      const onCanvas = (e.target as Element | null)?.tagName === 'CANVAS';
+      if (e.button === 0 && onCanvas) leftDownAt = { ...p };
       if (e.button === 1) {
         middleDown = true;
         e.preventDefault();
@@ -162,7 +166,11 @@ export function createInputController(): InputController {
         const wasBox = boxSelect;
         leftDownAt = null;
         boxSelect = null;
-        if (enabled && !wasBox) {
+        if (!enabled) {
+          // nothing
+        } else if (wasBox) {
+          boxHandlers.forEach((cb) => cb(wasBox, e.shiftKey));
+        } else {
           emitPointer({ kind: 'click', ...p, button: 0, ...modifierSnapshot(e) });
         }
       }
@@ -301,6 +309,10 @@ export function createInputController(): InputController {
       pointerHandlers.add(cb);
       return () => pointerHandlers.delete(cb);
     },
+    onBoxSelect(cb) {
+      boxHandlers.add(cb);
+      return () => boxHandlers.delete(cb);
+    },
     setEnabled(v) {
       enabled = v;
       if (!v) onBlur();
@@ -311,6 +323,7 @@ export function createInputController(): InputController {
     dispose() {
       hotkeyHandlers.clear();
       pointerHandlers.clear();
+      boxHandlers.clear();
       onBlur();
     },
   };

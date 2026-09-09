@@ -6,15 +6,17 @@ import { LANE_CORNER_RADIUS, LANE_HALF } from '@/game/config/map';
  * the death count.
  *
  * The centreline is a rounded rectangle parameterised by arc length s in [0, L).
- * Segments alternate straight / quarter-arc starting at the top-left end of the
- * north edge, heading +x (east):
+ * Mobs leave the start gate heading west and come round the far side:
  *
- *      s=0 ────────►────────┐  arc TR
- *          │   north        │
- *   arc TL │                │ east (+z)
- *          │                │
- *          └────────◄───────┘  arc BR
- *              south (-x)
+ *              north
+ *          ┌───────◄─────── s=0   arc TR
+ *   arc TL │                │
+ *          ▼                ▲ east
+ *          └───────►────────┘  arc BR
+ *              south
+ *
+ * The shape is built anticlockwise and then walked backwards, so the gate stays
+ * where it is and only the travel direction flips.
  */
 
 export interface Vec2 {
@@ -46,6 +48,8 @@ export interface LaneConfig {
   half?: number;
   radius?: number;
   sampleCount?: number;
+  /** Walk the loop the other way. Defaults to true — mobs head west. */
+  reversed?: boolean;
 }
 
 /** Positive modulo — JS `%` keeps the sign of the dividend. */
@@ -58,6 +62,7 @@ export function createLane(config: LaneConfig = {}): Lane {
   const half = config.half ?? LANE_HALF;
   const r = config.radius ?? LANE_CORNER_RADIUS;
   const sampleCount = config.sampleCount ?? 256;
+  const reversed = config.reversed ?? true;
 
   const straight = 2 * (half - r);
   const arc = (Math.PI / 2) * r;
@@ -95,8 +100,16 @@ export function createLane(config: LaneConfig = {}): Lane {
     return segments[0];
   }
 
+  /**
+   * Walking backwards along the same curve reverses travel while keeping the
+   * gate, the corners and the arc length identical.
+   */
+  function toBase(sIn: number): number {
+    return reversed ? wrapS(-sIn, length) : wrapS(sIn, length);
+  }
+
   function positionAt(sIn: number, out: Vec2 = { x: 0, z: 0 }): Vec2 {
-    const sw = wrapS(sIn, length);
+    const sw = toBase(sIn);
     const seg = segmentAt(sw);
     const t = sw - seg.start;
     if (seg.kind === 'straight') {
@@ -111,7 +124,7 @@ export function createLane(config: LaneConfig = {}): Lane {
   }
 
   function tangentAt(sIn: number, out: Vec2 = { x: 0, z: 0 }): Vec2 {
-    const sw = wrapS(sIn, length);
+    const sw = toBase(sIn);
     const seg = segmentAt(sw);
     if (seg.kind === 'straight') {
       out.x = seg.dx;
@@ -121,7 +134,16 @@ export function createLane(config: LaneConfig = {}): Lane {
       out.x = -Math.sin(a);
       out.z = Math.cos(a);
     }
+    if (reversed) {
+      out.x = -out.x;
+      out.z = -out.z;
+    }
     return out;
+  }
+
+  /** Base arc length -> this lane's parameterisation. */
+  function toLaneS(baseS: number): number {
+    return reversed ? wrapS(-baseS, length) : wrapS(baseS, length);
   }
 
   const samples = new Float32Array(sampleCount * 2);
@@ -137,9 +159,10 @@ export function createLane(config: LaneConfig = {}): Lane {
     half,
     radius: r,
     spawnS: 0,
-    // Mid of the west edge / mid of the east edge.
-    leftBossS: segments[6].start + straight / 2,
-    rightBossS: segments[2].start + straight / 2,
+    // Mid of the west edge / mid of the east edge, mapped into this
+    // parameterisation so the gates stay physically put.
+    leftBossS: toLaneS(segments[6].start + straight / 2),
+    rightBossS: toLaneS(segments[2].start + straight / 2),
     samples,
     positionAt,
     tangentAt,

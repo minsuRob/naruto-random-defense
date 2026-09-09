@@ -25,6 +25,7 @@ export function Scene({
   input,
   onSelectUnit,
   onGroundCommand,
+  onClearSelection,
   moveMode,
 }: {
   engine: Engine;
@@ -34,6 +35,7 @@ export function Scene({
   input: InputController;
   onSelectUnit: (unitId: number, additive: boolean) => void;
   onGroundCommand: (cell: Cell) => void;
+  onClearSelection: () => void;
   moveMode: boolean;
 }) {
   const lane = engine.state.plots[0].lane;
@@ -50,7 +52,11 @@ export function Scene({
       <LaneMesh lane={lane} />
       <PlotGrid />
       <Markers lane={lane} />
-      <GroundPicker onCommand={onGroundCommand} active={moveMode} />
+      <GroundPicker
+        onCommand={onGroundCommand}
+        onClearSelection={onClearSelection}
+        active={moveMode}
+      />
       <Units onSelect={onSelectUnit} />
       <MobInstances engine={engine} clock={clock} />
       <MobHealthBars engine={engine} clock={clock} />

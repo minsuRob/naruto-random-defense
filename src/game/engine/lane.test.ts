@@ -19,12 +19,27 @@ describe('lane geometry', () => {
     expect(b.z).toBeCloseTo(a.z, 10);
   });
 
-  it('starts at the north edge heading east', () => {
+  it('starts at the north edge heading west', () => {
     const p = lane.positionAt(lane.spawnS);
     expect(p.z).toBeCloseTo(-LANE_HALF, 10);
     const t = lane.tangentAt(lane.spawnS);
-    expect(t.x).toBeCloseTo(1, 10);
+    expect(t.x).toBeCloseTo(-1, 10);
     expect(t.z).toBeCloseTo(0, 10);
+  });
+
+  it('can be built the other way round', () => {
+    const clockwise = createLane({ reversed: false });
+    const t = clockwise.tangentAt(clockwise.spawnS);
+    expect(t.x).toBeCloseTo(1, 10);
+    // Same shape either way.
+    expect(clockwise.length).toBeCloseTo(lane.length, 10);
+  });
+
+  it('reaches the west corner before the east one', () => {
+    // A short step from the gate must move west, not east.
+    const start = lane.positionAt(lane.spawnS);
+    const stepped = lane.positionAt(lane.spawnS + 1);
+    expect(stepped.x).toBeLessThan(start.x);
   });
 
   it('is continuous across every segment boundary', () => {

@@ -11,6 +11,7 @@ import { EventLog } from '@/game/hud/EventLog';
 import { GameOverOverlay } from '@/game/hud/GameOverOverlay';
 import { Minimap } from '@/game/hud/Minimap';
 import { PauseMenu } from '@/game/hud/PauseMenu';
+import { SelectionBox } from '@/game/hud/SelectionBox';
 import { SelectionPanel } from '@/game/hud/SelectionPanel';
 import { TopBar } from '@/game/hud/TopBar';
 import { ComboBookModal } from '@/game/hud/combo-book/ComboBookModal';
@@ -21,9 +22,17 @@ import { Scene } from '@/game/render/Scene';
 import { createSimClock } from '@/game/runtime/clock';
 import { useGameStore } from '@/game/runtime/game-store';
 import { createHudSync } from '@/game/runtime/hud-sync';
+import {
+  applySelection,
+  cycleSelection,
+  moveSelection,
+  selectAll,
+  toggleSelection,
+  unitsInBox,
+} from '@/game/runtime/selection';
 import { LOCAL_PLAYER, handleHotkey } from '@/game/runtime/ui-actions';
 import { useConstant } from '@/game/runtime/use-constant';
-import { clearViewHandle, setViewHandle } from '@/game/runtime/view-handle';
+import { clearViewHandle, getViewHandle, setViewHandle } from '@/game/runtime/view-handle';
 
 /**
  * Owns one run: the engine, the clock, the camera rig and the input controller,
@@ -99,12 +108,32 @@ function Run({
           useGameStore.getState().setPaused(paused);
           break;
         }
+        case 'CYCLE':
+          cycleSelection(engine, LOCAL_PLAYER);
+          break;
+        case 'SELECT_ALL':
+          selectAll(engine, LOCAL_PLAYER);
+          break;
         default:
           handleHotkey(engine, key);
       }
     });
 
+    // Drag-box select, resolved against the live camera on release.
+    const offBox = input.onBoxSelect((box, additive) => {
+      const { camera } = getViewHandle();
+      const host = hostRef.current as unknown as HTMLElement | null;
+      if (!camera || !host?.getBoundingClientRect) return;
+      const rect = host.getBoundingClientRect();
+      const ids = unitsInBox(engine, camera, box, {
+        width: rect.width,
+        height: rect.height,
+      });
+      applySelection(ids, additive);
+    });
+
     return () => {
+      offBox();
       offHotkey();
       detach();
       input.dispose();
@@ -128,27 +157,19 @@ function Run({
   }, [clock]);
 
   const selectUnit = useCallback((unitId: number, additive: boolean) => {
-    const store = useGameStore.getState();
-    const current = store.selection;
-    if (additive) {
-      store.setSelection(
-        current.includes(unitId) ? current.filter((id) => id !== unitId) : [...current, unitId]
-      );
-    } else {
-      store.setSelection([unitId]);
-    }
+    toggleSelection(unitId, additive);
   }, []);
 
   const groundCommand = useCallback(
     (cell: Cell) => {
-      const store = useGameStore.getState();
-      const [unitId] = store.selection;
-      if (unitId === undefined) return;
-      engine.enqueue({ t: 'MOVE', player: LOCAL_PLAYER, unitId, cell });
-      store.setUiMode('idle');
+      moveSelection(engine, LOCAL_PLAYER, cell);
     },
     [engine]
   );
+
+  const clearSelection = useCallback(() => {
+    useGameStore.getState().setSelection([]);
+  }, []);
 
   const lane = engine.state.plots[0].lane;
 
@@ -164,6 +185,7 @@ function Run({
             input={input}
             onSelectUnit={selectUnit}
             onGroundCommand={groundCommand}
+            onClearSelection={clearSelection}
             moveMode={moveMode}
           />
         </GameCanvas>
@@ -172,22 +194,28 @@ function Run({
       <View style={styles.hud}>
         <TopBar difficulty={difficulty} />
 
-        <View style={styles.bottomLeft}>
-          <EventLog />
-          <Minimap lane={lane} />
+        {/* One bottom bar rather than three floating corners, so the panels
+            cannot overlap each other on a narrow window. */}
+        <View style={styles.bottomBar}>
+          <View style={styles.bottomLeft}>
+            <EventLog />
+            <Minimap lane={lane} />
+          </View>
+
+          <View style={styles.bottomCenter}>
+            <SelectionPanel />
+          </View>
+
+          <View style={styles.bottomRight}>
+            <CommandCard engine={engine} />
+            <Text style={styles.hint}>
+              좌클릭/드래그 선택 (Shift 추가) · 우클릭 이동 · Tab 순환 · F1 전체{'\n'}
+              방향키·가장자리 이동 · 휠 줌 · Space 복귀 · P 일시정지
+            </Text>
+          </View>
         </View>
 
-        <View style={styles.bottomCenter}>
-          <SelectionPanel />
-        </View>
-
-        <View style={styles.bottomRight}>
-          <CommandCard engine={engine} />
-          <Text style={styles.hint}>
-            방향키·가장자리 이동 · 휠 줌 · 좌클릭 선택 · 우클릭 이동 · Space 복귀 · P 일시정지
-          </Text>
-        </View>
-
+        <SelectionBox input={input} />
         <ComboBookModal engine={engine} />
         <PauseMenu onResume={togglePause} />
         <GameOverOverlay onRestart={onRestart} />
@@ -199,8 +227,18 @@ function Run({
 const styles = StyleSheet.create({
   root: { flex: 1, backgroundColor: '#0b0d10' },
   hud: { position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, pointerEvents: 'box-none' },
-  bottomLeft: { position: 'absolute', left: 12, bottom: 12, gap: 8, alignItems: 'flex-start' },
-  bottomCenter: { position: 'absolute', left: 0, right: 0, bottom: 12, alignItems: 'center' },
-  bottomRight: { position: 'absolute', right: 12, bottom: 12, gap: 6, alignItems: 'flex-end' },
-  hint: { color: '#6d757f', fontSize: 10, maxWidth: 320, textAlign: 'right' },
+  bottomBar: {
+    position: 'absolute',
+    left: 12,
+    right: 12,
+    bottom: 12,
+    flexDirection: 'row',
+    alignItems: 'flex-end',
+    gap: 12,
+    pointerEvents: 'box-none',
+  },
+  bottomLeft: { gap: 8, alignItems: 'flex-start' },
+  bottomCenter: { flex: 1, alignItems: 'center', justifyContent: 'flex-end' },
+  bottomRight: { gap: 6, alignItems: 'flex-end' },
+  hint: { color: '#6d757f', fontSize: 10, maxWidth: 330, textAlign: 'right', lineHeight: 14 },
 });

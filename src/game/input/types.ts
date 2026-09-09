@@ -83,6 +83,8 @@ export interface InputController {
 
   onHotkey(cb: (key: Hotkey) => void): () => void;
   onPointer(cb: (p: PointerInput) => void): () => void;
+  /** Fires once, on release, with the rectangle that was dragged. */
+  onBoxSelect(cb: (box: BoxSelect, additive: boolean) => void): () => void;
 
   /** Disabled while a modal owns the keyboard. */
   setEnabled(enabled: boolean): void;
