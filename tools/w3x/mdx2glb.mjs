@@ -20,7 +20,8 @@ const require = createRequire(import.meta.url);
  * unit per placement cell, hence the axis swap and MODEL_SCALE below.
  */
 
-const MODEL_SCALE = 1 / 64;
+// A Warcraft terrain cell is 128 map units; ours is 1 world unit.
+const MODEL_SCALE = 1 / 128;
 const MAX_TEXTURE = 512;
 const OUT_MODELS = path.join(ROOT, 'assets/models/generated');
 
