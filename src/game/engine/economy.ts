@@ -1,5 +1,6 @@
 import {
   GAMBLE_COST,
+  UNIT_WALK_SPEED,
   HIRE_COST,
   MISSION_INTERVAL,
   MISSION_TABLE,
@@ -60,6 +61,7 @@ export function addUnit(
     targetMob: -1,
     buffAtkSpeedPct: 0,
     buffAtkPct: 0,
+    walk: null,
   };
   plot.occupancy[cellIndex(cell.cx, cell.cy)] = 1;
   state.units.set(unit.id, unit);
@@ -83,6 +85,11 @@ export function removeUnit(
   return true;
 }
 
+/**
+ * Order a unit to a cell. The destination is claimed immediately — otherwise a
+ * second order could send two units to the same square — but the unit walks
+ * there, and holds fire until it arrives, as in Warcraft.
+ */
 export function moveUnit(
   state: GameState,
   unitId: number,
@@ -97,12 +104,49 @@ export function moveUnit(
   plot.occupancy[cellIndex(unit.cell.cx, unit.cell.cy)] = 0;
   plot.occupancy[target] = 1;
   unit.cell = cell;
+
   const local = cellToLocal(cell.cx, cell.cy);
-  unit.x = local.x + plot.origin.x;
-  unit.z = local.z + plot.origin.z;
+  const toX = local.x + plot.origin.x;
+  const toZ = local.z + plot.origin.z;
+  const distance = Math.hypot(toX - unit.x, toZ - unit.z);
+
+  if (distance < 1e-4) {
+    unit.x = toX;
+    unit.z = toZ;
+    unit.walk = null;
+  } else {
+    unit.walk = {
+      fromX: unit.x,
+      fromZ: unit.z,
+      toX,
+      toZ,
+      elapsed: 0,
+      duration: distance / UNIT_WALK_SPEED,
+    };
+  }
+
   unit.targetMob = -1;
   state.rosterVersion++;
   return true;
+}
+
+/** Advance every walking unit; arrivals snap exactly onto their cell. */
+export function updateUnitWalks(state: GameState, dt: number): void {
+  for (const unit of state.units.values()) {
+    const walk = unit.walk;
+    if (!walk) continue;
+
+    walk.elapsed += dt;
+    const t = walk.duration > 0 ? Math.min(1, walk.elapsed / walk.duration) : 1;
+    unit.x = walk.fromX + (walk.toX - walk.fromX) * t;
+    unit.z = walk.fromZ + (walk.toZ - walk.fromZ) * t;
+
+    if (t >= 1) {
+      unit.x = walk.toX;
+      unit.z = walk.toZ;
+      unit.walk = null;
+    }
+  }
 }
 
 function drawFrom(state: GameState, grades: { grade: Grade; weight: number }[]): string | null {

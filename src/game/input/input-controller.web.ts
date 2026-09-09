@@ -1,5 +1,6 @@
 import {
   GAMBLE_SUBMENU,
+  controlGroupSlot,
   PAN_KEYS,
   PREVENT_DEFAULT_CODES,
   WASD_PAN_KEYS,
@@ -48,6 +49,9 @@ export function createInputController(): InputController {
   const hotkeyHandlers = new Set<(k: Hotkey) => void>();
   const pointerHandlers = new Set<(p: PointerInput) => void>();
   const boxHandlers = new Set<(box: BoxSelect, additive: boolean) => void>();
+  const groupHandlers = new Set<
+    (slot: number, mode: 'assign' | 'recall' | 'append') => void
+  >();
 
   const emitHotkey = (k: Hotkey) => hotkeyHandlers.forEach((cb) => cb(k));
   const emitPointer = (p: PointerInput) => pointerHandlers.forEach((cb) => cb(p));
@@ -64,6 +68,14 @@ export function createInputController(): InputController {
     held.add(e.code);
     if (PREVENT_DEFAULT_CODES.has(e.code)) e.preventDefault();
     if (e.repeat) return;
+
+    const slot = controlGroupSlot(e.code);
+    if (slot !== null) {
+      const mode = e.ctrlKey || e.metaKey ? 'assign' : e.shiftKey ? 'append' : 'recall';
+      e.preventDefault();
+      groupHandlers.forEach((cb) => cb(slot, mode));
+      return;
+    }
 
     if (gambleSubmenu) {
       const sub = GAMBLE_SUBMENU[e.code];
@@ -313,6 +325,10 @@ export function createInputController(): InputController {
       boxHandlers.add(cb);
       return () => boxHandlers.delete(cb);
     },
+    onControlGroup(cb) {
+      groupHandlers.add(cb);
+      return () => groupHandlers.delete(cb);
+    },
     setEnabled(v) {
       enabled = v;
       if (!v) onBlur();
@@ -324,6 +340,7 @@ export function createInputController(): InputController {
       hotkeyHandlers.clear();
       pointerHandlers.clear();
       boxHandlers.clear();
+      groupHandlers.clear();
       onBlur();
     },
   };

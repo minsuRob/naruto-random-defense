@@ -5,7 +5,7 @@ import { DEFAULT_RIG_CONFIG, createCameraRig } from '@/game/camera/camera-rig';
 import type { DifficultyDef } from '@/game/config/difficulty';
 import { mapBounds } from '@/game/config/map';
 import { createEngine } from '@/game/engine/engine';
-import type { Cell } from '@/game/engine/grid';
+import { localToCell, type Cell } from '@/game/engine/grid';
 import { CommandCard } from '@/game/hud/CommandCard';
 import { EventLog } from '@/game/hud/EventLog';
 import { GameOverOverlay } from '@/game/hud/GameOverOverlay';
@@ -18,15 +18,20 @@ import { ComboBookModal } from '@/game/hud/combo-book/ComboBookModal';
 import { GestureHost } from '@/game/input/GestureHost';
 import { createInputController } from '@/game/input/input-controller';
 import { GameCanvas } from '@/game/render/GameCanvas';
+import type { MoveMarkerHandle } from '@/game/render/MoveMarker';
+import { screenToGround } from '@/game/render/picking';
 import { Scene } from '@/game/render/Scene';
 import { createSimClock } from '@/game/runtime/clock';
 import { useGameStore } from '@/game/runtime/game-store';
 import { createHudSync } from '@/game/runtime/hud-sync';
 import {
   applySelection,
+  assignControlGroup,
   cycleSelection,
   moveSelection,
+  recallControlGroup,
   selectAll,
+  selectSameType,
   toggleSelection,
   unitsInBox,
 } from '@/game/runtime/selection';
@@ -70,6 +75,7 @@ function Run({
   onRestart: () => void;
 }) {
   const hostRef = useRef<View | null>(null);
+  const moveMarkerRef = useRef<MoveMarkerHandle | null>(null);
 
   // These own identity (listeners, smoothed state, typed arrays), so they must
   // be created exactly once — see useConstant on why useMemo is not enough.
@@ -132,7 +138,36 @@ function Run({
       applySelection(ids, additive);
     });
 
+    // Right-click move orders. React Three Fiber has no contextmenu event, so
+    // the pointer position is raycast onto the ground here instead.
+    const offPointer = input.onPointer((event) => {
+      if (event.kind !== 'contextmenu') return;
+      const { camera } = getViewHandle();
+      const host = hostRef.current as unknown as HTMLElement | null;
+      if (!camera || !host?.getBoundingClientRect) return;
+      if (!useGameStore.getState().selection.length) return;
+
+      const rect = host.getBoundingClientRect();
+      const ground = screenToGround(camera, event.x, event.y, {
+        width: rect.width,
+        height: rect.height,
+      });
+      if (!ground) return;
+      const cell = localToCell(ground.x, ground.z);
+      if (!cell) return;
+
+      moveSelection(engine, LOCAL_PLAYER, cell);
+      moveMarkerRef.current?.show(ground.x, ground.z);
+    });
+
+    const offGroup = input.onControlGroup((slot, mode) => {
+      if (mode === 'assign') assignControlGroup(slot);
+      else recallControlGroup(engine, slot, mode === 'append');
+    });
+
     return () => {
+      offPointer();
+      offGroup();
       offBox();
       offHotkey();
       detach();
@@ -156,13 +191,19 @@ function Run({
     useGameStore.getState().setPaused(paused);
   }, [clock]);
 
-  const selectUnit = useCallback((unitId: number, additive: boolean) => {
-    toggleSelection(unitId, additive);
-  }, []);
+  const selectUnit = useCallback(
+    (unitId: number, additive: boolean, sameType: boolean) => {
+      if (sameType) selectSameType(engine, unitId, additive);
+      else toggleSelection(unitId, additive);
+    },
+    [engine]
+  );
 
   const groundCommand = useCallback(
-    (cell: Cell) => {
+    (cell: Cell, point: { x: number; z: number }) => {
+      if (!useGameStore.getState().selection.length) return;
       moveSelection(engine, LOCAL_PLAYER, cell);
+      moveMarkerRef.current?.show(point.x, point.z);
     },
     [engine]
   );
@@ -184,6 +225,7 @@ function Run({
             rig={rig}
             input={input}
             onSelectUnit={selectUnit}
+            moveMarkerRef={moveMarkerRef}
             onGroundCommand={groundCommand}
             onClearSelection={clearSelection}
             moveMode={moveMode}
@@ -209,7 +251,8 @@ function Run({
           <View style={styles.bottomRight}>
             <CommandCard engine={engine} />
             <Text style={styles.hint}>
-              좌클릭/드래그 선택 (Shift 추가) · 우클릭 이동 · Tab 순환 · F1 전체{'\n'}
+              좌클릭·드래그 선택 · Shift 추가 · Ctrl 동일유닛 · 우클릭 이동{'\n'}
+              Ctrl+숫자 부대지정 · 숫자 호출 · Tab 순환 · F1 전체{'\n'}
               방향키·가장자리 이동 · 휠 줌 · Space 복귀 · P 일시정지
             </Text>
           </View>

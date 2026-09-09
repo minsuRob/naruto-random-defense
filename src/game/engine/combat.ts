@@ -48,6 +48,11 @@ export function updateTargeting(state: GameState): void {
   for (const unit of state.units.values()) {
     const def = defOf(unit);
     if (!def) continue;
+    // A unit walking to a new position holds fire until it gets there.
+    if (unit.walk) {
+      unit.targetMob = -1;
+      continue;
+    }
     const rangeSq = def.range * def.range;
 
     // Hold the current target while it is still roughly in range; this stops
@@ -156,7 +161,7 @@ export function updateCombat(
 ): void {
   for (const unit of state.units.values()) {
     const def = defOf(unit);
-    if (!def) continue;
+    if (!def || unit.walk) continue;
 
     const rate = 1 + unit.buffAtkSpeedPct / 100;
     unit.cooldown -= dt * rate;

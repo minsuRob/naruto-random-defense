@@ -64,6 +64,16 @@ export function resolveHotkey(
   return BASE_KEYMAP[code] ?? null;
 }
 
+/**
+ * Digit keys are control groups, Warcraft style: Ctrl assigns, a bare press
+ * recalls, Shift appends. They are handled separately from the hotkey table
+ * because the modifier changes the meaning rather than the binding.
+ */
+export function controlGroupSlot(code: string): number | null {
+  const match = code.match(/^Digit([1-9])$/);
+  return match ? Number(match[1]) : null;
+}
+
 /** Gamble submenu remaps Q/W/E to the three wood tiers. */
 export const GAMBLE_SUBMENU: Record<string, Hotkey> = {
   KeyQ: 'GAMBLE_1',

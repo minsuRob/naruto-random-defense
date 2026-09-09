@@ -77,6 +77,10 @@ export function createInputController(): NativeInputController {
       // Touch has no drag-box yet; tap-to-select covers it.
       return () => {};
     },
+    onControlGroup() {
+      // No keyboard on touch.
+      return () => {};
+    },
     setEnabled(value) {
       enabled = value;
     },

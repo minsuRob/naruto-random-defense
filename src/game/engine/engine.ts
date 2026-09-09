@@ -16,6 +16,7 @@ import {
   pakkunWood,
   rollMission,
   sell,
+  updateUnitWalks,
 } from './economy';
 import { applyCombine } from './combine';
 import { despawnMob, spawnMob } from './mobs';
@@ -250,6 +251,7 @@ export function createEngine(config: GameConfig): Engine {
     flushSpawns();
     updateStatus();
     updateMovement(dt);
+    updateUnitWalks(state, dt);
     updateAuras(state);
     updateTargeting(state);
     updateCombat(state, dt, emit);

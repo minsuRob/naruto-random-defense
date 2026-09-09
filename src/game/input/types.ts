@@ -85,6 +85,10 @@ export interface InputController {
   onPointer(cb: (p: PointerInput) => void): () => void;
   /** Fires once, on release, with the rectangle that was dragged. */
   onBoxSelect(cb: (box: BoxSelect, additive: boolean) => void): () => void;
+  /** Digit keys: assign with ctrl, append with shift, otherwise recall. */
+  onControlGroup(
+    cb: (slot: number, mode: 'assign' | 'recall' | 'append') => void
+  ): () => void;
 
   /** Disabled while a modal owns the keyboard. */
   setEnabled(enabled: boolean): void;

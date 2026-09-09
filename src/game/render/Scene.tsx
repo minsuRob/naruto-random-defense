@@ -13,6 +13,7 @@ import { MobHealthBars } from './MobHealthBars';
 import { MobInstances } from './MobInstances';
 import { PlotGrid } from './PlotGrid';
 import { SimDriver } from './SimDriver';
+import { MoveMarker, type MoveMarkerHandle } from './MoveMarker';
 import { Units } from './Units';
 import { HitFlashes } from './effects/HitFlashes';
 
@@ -24,6 +25,7 @@ export function Scene({
   rig,
   input,
   onSelectUnit,
+  moveMarkerRef,
   onGroundCommand,
   onClearSelection,
   moveMode,
@@ -33,8 +35,9 @@ export function Scene({
   hudSync: HudSync;
   rig: Rig;
   input: InputController;
-  onSelectUnit: (unitId: number, additive: boolean) => void;
-  onGroundCommand: (cell: Cell) => void;
+  onSelectUnit: (unitId: number, additive: boolean, sameType: boolean) => void;
+  moveMarkerRef: { current: MoveMarkerHandle | null };
+  onGroundCommand: (cell: Cell, point: { x: number; z: number }) => void;
   onClearSelection: () => void;
   moveMode: boolean;
 }) {
@@ -57,7 +60,8 @@ export function Scene({
         onClearSelection={onClearSelection}
         active={moveMode}
       />
-      <Units onSelect={onSelectUnit} />
+      <Units engine={engine} onSelect={onSelectUnit} />
+      <MoveMarker handleRef={moveMarkerRef} />
       <MobInstances engine={engine} clock={clock} />
       <MobHealthBars engine={engine} clock={clock} />
       <HitFlashes engine={engine} />

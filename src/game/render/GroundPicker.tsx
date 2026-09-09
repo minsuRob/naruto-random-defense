@@ -9,15 +9,16 @@ import { cellToLocal, localToCell, type Cell } from '@/game/engine/grid';
 /**
  * Invisible plane over the plot that turns pointer positions into cells.
  *
- * Left click issues the move order while in move mode; right click is the
- * Warcraft habit and always moves the selection.
+ * Left click issues the move order while in move mode, and clears the selection
+ * otherwise. The Warcraft right-click order is raycast in GameScreen instead:
+ * React Three Fiber has no contextmenu event, so a mesh handler never fires.
  */
 export function GroundPicker({
   onCommand,
   onClearSelection,
   active,
 }: {
-  onCommand: (cell: Cell) => void;
+  onCommand: (cell: Cell, point: { x: number; z: number }) => void;
   onClearSelection: () => void;
   active: boolean;
 }) {
@@ -38,15 +39,8 @@ export function GroundPicker({
           const cell = cellAt(event);
           if (!cell) return;
           event.stopPropagation();
-          if (active) onCommand(cell);
+          if (active) onCommand(cell, { x: event.point.x, z: event.point.z });
           else onClearSelection();
-        }}
-        onContextMenu={(event) => {
-          const cell = cellAt(event);
-          if (cell) {
-            event.stopPropagation();
-            onCommand(cell);
-          }
         }}
       >
         <planeGeometry args={[PLOT_CELLS, PLOT_CELLS]} />

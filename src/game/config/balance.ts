@@ -24,6 +24,9 @@ export function rangeToWorld(mapUnits: number): number {
 export const MOB_SPEED = 2.5;
 export const BOSS_SPEED = 2.0;
 
+/** How fast a repositioned unit walks, in cells per second. */
+export const UNIT_WALK_SPEED = 3;
+
 /** Round timing, from the original: 30s for rounds 1-9, 42s from 10 on. */
 export function roundDuration(round: number): number {
   return round < 10 ? 30 : 42;

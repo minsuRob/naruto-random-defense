@@ -52,6 +52,34 @@ export function applySelection(ids: number[], additive: boolean): void {
   store.setSelection([...merged]);
 }
 
+/**
+ * Ctrl-click / double-click in Warcraft grabs every unit of the same type.
+ * Here that means every unit sharing the clicked unit's definition.
+ */
+export function selectSameType(engine: Engine, unitId: number, additive: boolean): void {
+  const clicked = engine.state.units.get(unitId);
+  if (!clicked) return;
+  const ids = [...engine.state.units.values()]
+    .filter((u) => u.owner === clicked.owner && u.defId === clicked.defId)
+    .map((u) => u.id);
+  applySelection(ids, additive);
+}
+
+/** Ctrl+1..9 assigns, 1..9 recalls, Shift+1..9 appends. */
+export function assignControlGroup(slot: number): void {
+  const store = useGameStore.getState();
+  const groups = store.controlGroups.map((g, i) => (i === slot ? [...store.selection] : g));
+  useGameStore.setState({ controlGroups: groups });
+}
+
+export function recallControlGroup(engine: Engine, slot: number, additive: boolean): void {
+  const store = useGameStore.getState();
+  // Units die and get combined away, so a group can hold stale ids.
+  const ids = (store.controlGroups[slot] ?? []).filter((id) => engine.state.units.has(id));
+  if (!ids.length) return;
+  applySelection(ids, additive);
+}
+
 export function toggleSelection(unitId: number, additive: boolean): void {
   const store = useGameStore.getState();
   if (!additive) {

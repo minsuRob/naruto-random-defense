@@ -9,9 +9,12 @@ import { cellIndex } from '@/game/engine/grid';
 import { useGameStore } from './game-store';
 import {
   applySelection,
+  assignControlGroup,
   cycleSelection,
   moveSelection,
+  recallControlGroup,
   selectAll,
+  selectSameType,
   toggleSelection,
 } from './selection';
 
@@ -25,8 +28,7 @@ import {
 
 const PLAYER = 0;
 
-function seed(engine: Engine, count: number) {
-  const defId = [...UNIT_BY_ID.keys()][0];
+function seed(engine: Engine, count: number, defId = [...UNIT_BY_ID.keys()][0]) {
   const ids: number[] = [];
   for (let i = 0; i < count; i++) {
     const unit = addUnit(engine.state, PLAYER, defId, 'gacha', () => {});
@@ -96,6 +98,66 @@ describe('selecting', () => {
   });
 });
 
+describe('same-type selection', () => {
+  it('grabs every copy of the clicked unit and nothing else', () => {
+    const engine = newEngine();
+    const [a, b] = [...UNIT_BY_ID.keys()];
+    const sameIds = seed(engine, 3, a);
+    const otherIds = seed(engine, 2, b);
+
+    selectSameType(engine, sameIds[0], false);
+    const selection = useGameStore.getState().selection.sort((x, y) => x - y);
+    expect(selection).toEqual(sameIds);
+    for (const id of otherIds) expect(selection).not.toContain(id);
+  });
+
+  it('appends when additive', () => {
+    const engine = newEngine();
+    const [a, b] = [...UNIT_BY_ID.keys()];
+    const sameIds = seed(engine, 2, a);
+    const otherIds = seed(engine, 2, b);
+
+    applySelection(otherIds, false);
+    selectSameType(engine, sameIds[0], true);
+    expect(useGameStore.getState().selection.sort((x, y) => x - y)).toEqual(
+      [...otherIds, ...sameIds].sort((x, y) => x - y)
+    );
+  });
+});
+
+describe('control groups', () => {
+  it('assigns and recalls', () => {
+    const engine = newEngine();
+    const ids = seed(engine, 4);
+
+    applySelection(ids.slice(0, 2), false);
+    assignControlGroup(1);
+    applySelection([], false);
+
+    recallControlGroup(engine, 1, false);
+    expect(useGameStore.getState().selection).toEqual(ids.slice(0, 2));
+  });
+
+  it('drops units that no longer exist', () => {
+    const engine = newEngine();
+    const ids = seed(engine, 3);
+    applySelection(ids, false);
+    assignControlGroup(2);
+
+    engine.state.units.delete(ids[0]);
+    recallControlGroup(engine, 2, false);
+    expect(useGameStore.getState().selection).toEqual(ids.slice(1));
+  });
+
+  it('leaves the selection alone when the group is empty', () => {
+    const engine = newEngine();
+    const ids = seed(engine, 1);
+    applySelection(ids, false);
+    recallControlGroup(engine, 5, false);
+    expect(useGameStore.getState().selection).toEqual(ids);
+  });
+});
+
 describe('group movement', () => {
   it('puts the first unit on the clicked cell and fans the rest out', () => {
     const engine = newEngine();
@@ -106,6 +168,7 @@ describe('group movement', () => {
     moveSelection(engine, PLAYER, target);
     engine.tick();
 
+    // The cell is claimed immediately; the unit then walks to it.
     const cells = ids.map((id) => engine.state.units.get(id)!.cell);
     expect(cells).toContainEqual(target);
 
@@ -154,6 +217,31 @@ describe('group movement', () => {
     for (const unit of engine.state.units.values()) {
       expect(unit.cell.cx === 4 && unit.cell.cy === 4).toBe(false);
     }
+  });
+
+  it('walks to the destination instead of teleporting, and holds fire', () => {
+    const engine = newEngine();
+    const [id] = seed(engine, 1);
+    const unit = engine.state.units.get(id)!;
+    const start = { x: unit.x, z: unit.z };
+
+    applySelection([id], false);
+    moveSelection(engine, PLAYER, { cx: 9, cy: 9 });
+    engine.tick();
+
+    // One tick in, it has left the start but covered almost none of the way.
+    expect(unit.walk).not.toBeNull();
+    const travelled = Math.hypot(unit.x - start.x, unit.z - start.z);
+    const total = Math.hypot(unit.walk!.toX - start.x, unit.walk!.toZ - start.z);
+    expect(travelled).toBeGreaterThan(0);
+    expect(travelled / total).toBeLessThan(0.05);
+    expect(unit.targetMob).toBe(-1);
+
+    // A couple of seconds later it has arrived and can shoot again.
+    for (let i = 0; i < 20 * 5; i++) engine.tick();
+    expect(unit.walk).toBeNull();
+    const cell = unit.cell;
+    expect(cell).toEqual({ cx: 9, cy: 9 });
   });
 
   it('handles a full plot without losing anyone', () => {

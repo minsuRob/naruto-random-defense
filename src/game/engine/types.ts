@@ -77,6 +77,7 @@ export interface UnitInstance {
   defId: string;
   owner: number;
   plot: number;
+  /** The cell the unit owns. Set the moment a move is ordered, not on arrival. */
   cell: { cx: number; cy: number };
   x: number;
   z: number;
@@ -84,6 +85,18 @@ export interface UnitInstance {
   targetMob: number;
   buffAtkSpeedPct: number;
   buffAtkPct: number;
+  /**
+   * Warcraft units walk to where you send them, and hold fire until they get
+   * there. Non-null while a unit is in transit.
+   */
+  walk: {
+    fromX: number;
+    fromZ: number;
+    toX: number;
+    toZ: number;
+    elapsed: number;
+    duration: number;
+  } | null;
 }
 
 export interface Plot {
