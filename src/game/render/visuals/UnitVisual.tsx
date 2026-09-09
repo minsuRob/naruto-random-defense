@@ -1,23 +1,29 @@
 'use no memo';
 
-import { useGLTF } from '@react-three/drei';
+import { useAnimations, useGLTF } from '@react-three/drei';
 import { Asset } from 'expo-asset';
-import { Suspense, useMemo } from 'react';
+import { Suspense, useEffect, useMemo, useRef } from 'react';
+import type { Group } from 'three';
+import { clone as cloneSkinned } from 'three/examples/jsm/utils/SkeletonUtils.js';
 
 import { getVisual } from './registry';
+import type { UnitAnimation } from './unit-animation';
 
 /**
  * Draws one unit: its converted model when the asset pipeline has produced one,
  * a graded primitive otherwise. Swapping in better art never touches callers.
  */
+
 export function UnitVisual({
   unitId,
   grade,
   scale = 1,
+  animation = 'stand',
 }: {
   unitId: string;
   grade: string;
   scale?: number;
+  animation?: UnitAnimation;
 }) {
   const visual = getVisual(unitId, grade);
 
@@ -26,18 +32,45 @@ export function UnitVisual({
   }
   return (
     <Suspense fallback={<Placeholder shape="capsule" color="#3d444d" scale={scale} />}>
-      <GltfModel module={visual.module} scale={scale} />
+      <GltfModel module={visual.module} scale={scale} animation={animation} />
     </Suspense>
   );
 }
 
-function GltfModel({ module, scale }: { module: number; scale: number }) {
+function GltfModel({
+  module,
+  scale,
+  animation,
+}: {
+  module: number;
+  scale: number;
+  animation: UnitAnimation;
+}) {
   // Metro hands back an asset module id; expo-asset turns it into a URL both
   // the DOM loader and expo-gl can fetch.
   const uri = useMemo(() => Asset.fromModule(module).uri, [module]);
   const gltf = useGLTF(uri);
-  const scene = useMemo(() => gltf.scene.clone(true), [gltf]);
-  return <primitive object={scene} scale={scale} />;
+
+  // Every unit needs its own skeleton — a plain clone shares bones, so all
+  // copies of a model would animate in lockstep.
+  const scene = useMemo(() => cloneSkinned(gltf.scene) as Group, [gltf]);
+  const group = useRef<Group>(null);
+  const { actions } = useAnimations(gltf.animations, scene);
+
+  useEffect(() => {
+    const clip = actions[animation] ?? actions.stand;
+    if (!clip) return;
+    clip.reset().fadeIn(0.15).play();
+    return () => {
+      clip.fadeOut(0.15);
+    };
+  }, [actions, animation]);
+
+  return (
+    <group ref={group} scale={scale}>
+      <primitive object={scene} />
+    </group>
+  );
 }
 
 function Placeholder({

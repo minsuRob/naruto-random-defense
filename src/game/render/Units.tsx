@@ -9,6 +9,7 @@ import type { Engine } from '@/game/engine/engine';
 import { GRADE_COLORS } from '@/game/hud/hud-theme';
 import { useGameStore } from '@/game/runtime/game-store';
 import { UnitVisual } from './visuals/UnitVisual';
+import { useUnitAnimation } from './visuals/use-unit-animation';
 
 /**
  * The player's units.
@@ -61,7 +62,7 @@ export function Units({
               else groups.current.delete(unit.id);
             }}
           >
-            <UnitVisual unitId={unit.defId} grade={def?.grade ?? 'normal'} />
+            <AnimatedUnit engine={engine} unitId={unit.id} defId={unit.defId} grade={def?.grade ?? 'normal'} />
 
             {/* Grade ring always, plus the green Warcraft selection circle. */}
             <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, 0.05, 0]}>
@@ -91,4 +92,20 @@ export function Units({
       })}
     </group>
   );
+}
+
+/** Splits the per-unit animation subscription out of the list render. */
+function AnimatedUnit({
+  engine,
+  unitId,
+  defId,
+  grade,
+}: {
+  engine: Engine;
+  unitId: number;
+  defId: string;
+  grade: string;
+}) {
+  const animation = useUnitAnimation(engine, unitId);
+  return <UnitVisual unitId={defId} grade={grade} animation={animation} />;
 }

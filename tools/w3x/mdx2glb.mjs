@@ -5,24 +5,32 @@ import path from 'node:path';
 import { createGlbBuilder } from './glb.mjs';
 import { GENERATED_DIR, ROOT, openMap, parseArgs, readBytes, writeJson } from './lib.mjs';
 import { encodePng, resizeRgba } from './png.mjs';
+import {
+  buildChannels,
+  collectJoints,
+  inverseBindMatrices,
+  selectSequences,
+  skinAttributes,
+} from './skeleton.mjs';
 
 const require = createRequire(import.meta.url);
 
 /**
- * Convert the map's MDX models to glb.
+ * Convert the map's MDX models to glb, with their skeletons and animations.
  *
- * Phase 1 (this file): static bind pose with the first texture layer per
- * material. That is enough to replace the placeholder capsules; skinned
- * Stand/Walk/Attack clips are the M5 follow-up, and the visual registry falls
- * back to a primitive for anything that fails here.
- *
- * Warcraft is Z-up with ~100 units per terrain cell; the game is Y-up with one
- * unit per placement cell, hence the axis swap and MODEL_SCALE below.
+ * Warcraft models are Z-up at 128 units per terrain cell; the game is Y-up with
+ * one unit per placement cell. Rather than baking that into every vertex, bone
+ * pivot and animation key, the whole model hangs off a single root node that
+ * carries the rotation and the scale. That keeps the skinning maths trivial —
+ * bind rotations are identity in MDX, so the inverse bind matrices are plain
+ * translations — and quaternion tracks pass through untouched.
  */
 
-// A Warcraft terrain cell is 128 map units; ours is 1 world unit.
+/** A Warcraft terrain cell is 128 map units; ours is 1 world unit. */
 const MODEL_SCALE = 1 / 128;
 const MAX_TEXTURE = 512;
+/** -90 degrees about X, as (x, y, z, w): turns Z-up into Y-up. */
+const Z_UP_TO_Y_UP = [-Math.SQRT1_2, 0, 0, Math.SQRT1_2];
 const OUT_MODELS = path.join(ROOT, 'assets/models/generated');
 
 /** BlpImage.getMipmap builds an ImageData; node has no such global. */
@@ -53,11 +61,6 @@ function decodeBlp(bytes) {
   return { rgba: new Uint8Array(mip.data.buffer ?? mip.data), width: mip.width, height: mip.height };
 }
 
-/** MDX faces are grouped; v800 models in this map are all triangle lists. */
-function trianglesOf(geoset) {
-  return Uint32Array.from(geoset.faces);
-}
-
 /**
  * Warcraft layer filter modes -> glTF alpha modes. Additive and modulate have
  * no glTF equivalent; blending them is the closest honest approximation.
@@ -67,8 +70,8 @@ const ALPHA_MODE_BY_FILTER = ['OPAQUE', 'MASK', 'BLEND', 'BLEND', 'BLEND', 'BLEN
 function convertModel(model, resolveTexture, name) {
   const builder = createGlbBuilder();
   const textureCache = new Map();
-  const warnings = [];
   const materialCache = new Map();
+  const warnings = [];
 
   /** Resolve a material, or null when it has no usable texture. */
   const materialIndexFor = (materialId) => {
@@ -83,8 +86,8 @@ function convertModel(model, resolveTexture, name) {
       const texPath = texture?.path;
 
       // A layer with no path is a replaceable (team colour, shadow) texture we
-      // do not ship. Rendering it untextured turns it into an opaque white
-      // quad over the model, so the geoset is dropped instead.
+      // do not ship. Rendering it untextured turns it into an opaque white quad
+      // over the model, so the geoset is dropped instead.
       if (texPath) {
         if (!textureCache.has(texPath)) {
           const png = resolveTexture(texPath);
@@ -111,39 +114,95 @@ function convertModel(model, resolveTexture, name) {
     return result;
   };
 
-  const primitives = [];
-  for (const geoset of model.geosets) {
-    const count = geoset.vertices.length / 3;
-    const positions = new Float32Array(count * 3);
-    const normals = new Float32Array(count * 3);
-    for (let i = 0; i < count; i++) {
-      // Z-up -> Y-up: (x, y, z) becomes (x, z, -y).
-      positions[i * 3] = geoset.vertices[i * 3] * MODEL_SCALE;
-      positions[i * 3 + 1] = geoset.vertices[i * 3 + 2] * MODEL_SCALE;
-      positions[i * 3 + 2] = -geoset.vertices[i * 3 + 1] * MODEL_SCALE;
-      normals[i * 3] = geoset.normals[i * 3];
-      normals[i * 3 + 1] = geoset.normals[i * 3 + 2];
-      normals[i * 3 + 2] = -geoset.normals[i * 3 + 1];
-    }
+  const { joints, indexById } = collectJoints(model);
+  const skinned = joints.length > 0;
 
+  const primitives = [];
+  let unboundVertices = 0;
+  for (const geoset of model.geosets) {
     const material = materialIndexFor(geoset.materialId);
     if (material === null) continue;
 
     const uvSet = geoset.uvSets?.[0];
-    const uvs = uvSet ? Float32Array.from(uvSet) : null;
-
-    primitives.push({
-      positions,
-      normals,
-      uvs,
-      indices: trianglesOf(geoset),
+    const primitive = {
+      // Raw MDX space; the root node handles axes and scale.
+      positions: Float32Array.from(geoset.vertices),
+      normals: Float32Array.from(geoset.normals),
+      uvs: uvSet ? Float32Array.from(uvSet) : null,
+      indices: Uint32Array.from(geoset.faces),
       material,
+    };
+
+    if (skinned) {
+      const skin = skinAttributes(geoset, indexById);
+      primitive.joints = skin.joints;
+      primitive.weights = skin.weights;
+      unboundVertices += skin.skipped;
+    }
+
+    primitives.push(primitive);
+  }
+  if (!primitives.length) return null;
+  if (unboundVertices) warnings.push(`${unboundVertices} vertices had no bone group`);
+
+  const meshIndex = builder.addMesh(name, primitives);
+
+  if (!skinned) {
+    const meshNode = builder.addNode({ name, mesh: meshIndex });
+    const rootNode = builder.addNode({
+      name: `${name}_root`,
+      rotation: Z_UP_TO_Y_UP,
+      scale: [MODEL_SCALE, MODEL_SCALE, MODEL_SCALE],
+      children: [meshNode],
     });
+    return {
+      glb: builder.build({ roots: [rootNode] }),
+      warnings,
+      geosets: primitives.length,
+      clips: [],
+      joints: 0,
+    };
   }
 
-  if (!primitives.length) return null;
-  builder.addMesh(name, primitives);
-  return { glb: builder.build(), warnings, geosets: primitives.length };
+  // Every joint gets a node with an empty child list, then the hierarchy is
+  // wired by pushing into those lists, so a parent may precede or follow a child.
+  const jointNodes = joints.map((joint) =>
+    builder.addNode({ name: joint.name, translation: joint.bindTranslation, children: [] })
+  );
+  const skeletonRoots = [];
+  joints.forEach((joint, index) => {
+    if (joint.parentIndex < 0) {
+      skeletonRoots.push(jointNodes[index]);
+      return;
+    }
+    builder.childrenOf(jointNodes[joint.parentIndex]).push(jointNodes[index]);
+  });
+
+  const skinIndex = builder.addSkin(jointNodes, inverseBindMatrices(joints));
+  const meshNode = builder.addNode({ name, mesh: meshIndex, skin: skinIndex });
+
+  const rootNode = builder.addNode({
+    name: `${name}_root`,
+    rotation: Z_UP_TO_Y_UP,
+    scale: [MODEL_SCALE, MODEL_SCALE, MODEL_SCALE],
+    children: [meshNode, ...skeletonRoots],
+  });
+
+  const clips = [];
+  for (const { clip, sequence } of selectSequences(model)) {
+    const channels = buildChannels(joints, sequence, (index) => jointNodes[index]);
+    if (!channels.length) continue;
+    builder.addAnimation(clip, channels);
+    clips.push(clip);
+  }
+
+  return {
+    glb: builder.build({ roots: [rootNode] }),
+    warnings,
+    geosets: primitives.length,
+    clips,
+    joints: joints.length,
+  };
 }
 
 function main() {
@@ -226,6 +285,8 @@ function main() {
         unitIds,
         bytes: result.glb.length,
         geosets: result.geosets,
+        joints: result.joints,
+        clips: result.clips,
         warnings: result.warnings,
       });
     } catch (error) {
@@ -244,10 +305,17 @@ function main() {
   });
 
   const totalBytes = converted.reduce((a, c) => a + c.bytes, 0);
+  const clipCounts = {};
+  for (const entry of converted) {
+    for (const clip of entry.clips) clipCounts[clip] = (clipCounts[clip] ?? 0) + 1;
+  }
+
   console.log(`models referenced by units: ${targets.length}`);
   console.log(`converted: ${converted.length} (${(totalBytes / 1e6).toFixed(1)} MB)`);
+  console.log(`animated: ${converted.filter((c) => c.clips.length).length}`);
+  console.log('clips:', clipCounts);
   console.log(`failed: ${failed.length}`);
-  for (const f of failed.slice(0, 10)) console.log(`   ${f.mdxPath}: ${f.reason}`);
+  for (const f of failed.slice(0, 8)) console.log(`   ${f.mdxPath}: ${f.reason}`);
 }
 
 main();
