@@ -6,6 +6,7 @@ import { RECIPES_BY_MATERIAL, type Recipe } from '@/game/data/recipes';
 import type { Availability } from '@/game/engine/combine';
 import { UnitPreviewCanvas } from '@/game/render/visuals/UnitPreviewCanvas';
 import { GRADE_COLORS, HudColors, hudStyles } from '../hud-theme';
+import { describeAbility } from '../SelectionPanel';
 
 /**
  * Detail pane: a live 3D preview of what the recipe produces, its ability sheet,
@@ -52,10 +53,7 @@ export function RecipeDetail({
             <Text style={hudStyles.label}>능력</Text>
             {def.abilities.map((ability, i) => (
               <Text key={i} style={styles.line}>
-                • {ability.kind}
-                {'chance' in ability ? ` ${(ability.chance * 100).toFixed(1)}%` : ''}
-                {'amount' in ability ? ` ${ability.amount}` : ''}
-                {'pct' in ability ? ` ${ability.pct}%` : ''}
+                • {describeAbility(ability)}
               </Text>
             ))}
           </View>

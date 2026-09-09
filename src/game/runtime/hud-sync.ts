@@ -2,6 +2,7 @@ import { UNIT_BY_ID } from '@/game/data/units';
 import type { Engine } from '@/game/engine/engine';
 import { deathCountFor } from '@/game/engine/state';
 import type { EngineEvent, RoundPhase } from '@/game/engine/types';
+import { emitSkillCast } from './effect-bus';
 import { hudEquals, useGameStore, type HudSnapshot, type RosterEntry } from './game-store';
 
 /**
@@ -62,6 +63,13 @@ export function createHudSync(engine: Engine): HudSync {
         return event.outcome === 'win' ? '클리어!' : '패배';
       case 'mission':
         return `${event.rank}랭크 임무 성공 — 목재 +${event.wood}`;
+      case 'draftPick': {
+        const def = UNIT_BY_ID.get(event.defId);
+        const how = event.auto ? '자동 선택' : '선택';
+        return `[비급서] ${event.rankKo} — ${def?.nameKo ?? event.defId} ${how}`;
+      }
+      case 'draftDone':
+        return '비급서 선택 완료 — 라운드 시작';
       case 'unitAdd': {
         const def = UNIT_BY_ID.get(event.defId);
         return def ? `${def.nameKo} 획득` : null;
@@ -78,6 +86,12 @@ export function createHudSync(engine: Engine): HudSync {
       const store = useGameStore.getState();
 
       for (const event of events) {
+        // Skill casts are a one-frame visual, so they go to the renderer
+        // directly rather than through the store.
+        if (event.e === 'skill') {
+          emitSkillCast({ unitId: event.unitId, skill: event.skill, x: event.x, z: event.z });
+          continue;
+        }
         const text = describe(event);
         if (text) store.pushLog(text);
       }

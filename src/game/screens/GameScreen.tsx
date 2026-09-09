@@ -25,6 +25,7 @@ import { screenToGround } from '@/game/render/picking';
 import { Scene } from '@/game/render/Scene';
 import { createSimClock } from '@/game/runtime/clock';
 import { useGameStore } from '@/game/runtime/game-store';
+import { clearEffectBus } from '@/game/runtime/effect-bus';
 import { createHudSync } from '@/game/runtime/hud-sync';
 import {
   applySelection,
@@ -174,6 +175,7 @@ function Run({
       offHotkey();
       detach();
       input.dispose();
+      clearEffectBus();
       clearViewHandle();
     };
   }, [clock, engine, input, rig]);

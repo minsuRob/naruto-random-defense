@@ -115,3 +115,14 @@ export const DEFAULT_STUN_SECONDS = 1;
 export const ARMOR_REDUCE_SECONDS = 4;
 export const ARMOR_REDUCE_MAX_STACKS = 3;
 export const AURA_RADIUS = 4;
+
+/** Mana skills: what a filled bar actually does. */
+export const MANA_SKILL = {
+  /** 노바 — a burst around the caster. */
+  novaRadius: 3,
+  novaPct: 1.5,
+  /** 처형 — finishes a target already below this share of its health. */
+  executeThreshold: 0.2,
+  /** 강타 — one oversized hit on the current target. */
+  bigHitPct: 4,
+} as const;

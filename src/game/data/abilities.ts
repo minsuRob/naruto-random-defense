@@ -8,7 +8,7 @@ import {
   UNIT_DAMAGE_SCALE,
   rangeToWorld,
 } from '@/game/config/balance';
-import type { Ability, UnitDef } from '@/game/engine/types';
+import type { Ability, ManaSkill, UnitDef } from '@/game/engine/types';
 import { UNITS, type Grade, type RawUnit } from './units';
 
 /**
@@ -43,6 +43,22 @@ export interface AbilitySheet {
   percentDmgPct?: number;
   /** 삭제 — instant-kill chance in percent. Bosses are immune. */
   deletePct?: number;
+  /** 스플래시 — radius in cells, and the share of the hit it carries. */
+  splashRadius?: number;
+  splashPct?: number;
+  /** 멀티샷 — extra targets struck by the same attack. */
+  multishot?: number;
+  multishotPct?: number;
+  /** 크리티컬 — chance in percent, and the multiplier. */
+  critPct?: number;
+  critMultiplier?: number;
+  /** 넉백 — chance in percent, and how far back along the lane it shoves. */
+  knockbackPct?: number;
+  knockbackDistance?: number;
+  /** 마나 — how much a bar holds, how much a hit adds, and what it casts. */
+  mana?: number;
+  manaPerHit?: number;
+  manaSkill?: ManaSkill;
   damageType?: 'phys' | 'magic';
 }
 
@@ -58,7 +74,7 @@ const SHEETS_BY_NAME: Record<string, AbilitySheet> = {
   '사루토비 아스마 제10반 대장': { thunderclapPct: 15, stunSec: 0.7 },
   '호시가키 키사메 꼬리없는 미수': { thunderclapPct: 20, stunSec: 1 },
   '아키미치 쵸지 각성모드': { thunderclapPct: 15, stunSec: 1 },
-  '센쥬 하시라마 1대 호카게': { thunderclapPct: 15, stunSec: 1.3 },
+  '센쥬 하시라마 1대 호카게': { thunderclapPct: 15, stunSec: 1.3, mana: 100, manaPerHit: 12, manaSkill: 'nova' },
 
   // 이감(슬로우)
   '쿠레나이': { slowPct: 15, slowAmount: 0.3, slowSec: 2, damageType: 'magic' },
@@ -69,11 +85,11 @@ const SHEETS_BY_NAME: Record<string, AbilitySheet> = {
   '야구라 3미의 인주력': { slowPct: 15, slowAmount: 0.35, slowSec: 2 },
 
   // 방깍
-  '우치하 마다라': { armorReduce: 11 },
+  '우치하 마다라': { armorReduce: 11, mana: 120, manaPerHit: 10, manaSkill: 'nova' },
   '우치하 오비토 윤회안': { armorReduce: 5.3 },
-  '우치하 사스케 기린': { armorReduce: 5 },
+  '우치하 사스케 기린': { armorReduce: 5, mana: 100, manaPerHit: 12, manaSkill: 'bigHit' },
   '휴우가 네지 백안': { armorReduce: 2.5 },
-  '하타케 카카시 만화경사륜안': { armorReduce: 5.3 },
+  '하타케 카카시 만화경사륜안': { armorReduce: 5.3, mana: 100, manaPerHit: 15, manaSkill: 'execute' },
   '모모치 자부자': { armorReduce: 2.5 },
 
   // 삭제
@@ -85,28 +101,95 @@ const SHEETS_BY_NAME: Record<string, AbilitySheet> = {
   '하루노 사쿠라': { atkBuffPct: 45 },
   '야쿠시 카부토': { atkBuffPct: 45 },
   '우즈마키 나루토': { atkSpeedPct: 20 },
-  '나미카제 미나토 금빛섬광': { atkSpeedPct: 20 },
+  '나미카제 미나토 금빛섬광': { atkSpeedPct: 20, mana: 80, manaPerHit: 14, manaSkill: 'execute' },
 
   // 퍼센트 데미지
   '가아라 카제카게': { percentDmgPct: 2 },
   '1미 슈카쿠': { percentDmgPct: 3 },
+
+  // 스플래시 — 광역기를 쓰는 캐릭터들
+  '데이다라 아카츠키': { splashRadius: 2, splashPct: 0.5 },
+  '데이다라 예토전생': { splashRadius: 2.5, splashPct: 0.55 },
+  '가아라 반수화 상태': { splashRadius: 2.2, splashPct: 0.45, knockbackPct: 12 },
+  '우치하 이타치 아마테라스': { splashRadius: 2, splashPct: 0.6, damageType: 'magic' },
+  '킬러 비 미수화': { splashRadius: 2.4, splashPct: 0.5 },
+
+  // 멀티샷 — 분신·다중 공격
+  '나루토 나선수리검': { multishot: 2, multishotPct: 0.6 },
+  '텐텐': { multishot: 2, multishotPct: 0.5 },
+  '사이': { multishot: 1, multishotPct: 0.7 },
+  '호즈키 스이게츠': { multishot: 2, multishotPct: 0.55 },
+
+  // 크리티컬 — 한 방이 무거운 근접형
+  '록리': { critPct: 20, critMultiplier: 2.5 },
+  '마이트 가이': { critPct: 25, critMultiplier: 3 },
+  '키미마로': { critPct: 18, critMultiplier: 2.2 },
+  '휴우가 네지': { critPct: 20, critMultiplier: 2 },
+
+  // 넉백 — 밀어내는 술법
+  '테마리': { knockbackPct: 25, knockbackDistance: 2, slowPct: 10 },
+  '다루이 혈계한계 람둔': { knockbackPct: 18, knockbackDistance: 1.5, thunderclapPct: 12 },
+
 };
 
-/** Grade -> a small baseline sheet, so every unit contributes something. */
+/**
+ * Grade -> a baseline sheet, so every unit contributes something even before it
+ * gets an entry of its own. Higher grades pick up more of the kit, which is what
+ * makes a combination feel like a step up rather than just a bigger number.
+ */
 const GRADE_BASELINE: Partial<Record<Grade, AbilitySheet>> = {
-  rare: { slowPct: 5, slowAmount: 0.2, slowSec: 1.5 },
-  unique: { armorReduce: 1 },
-  legend: { armorReduce: 2, thunderclapPct: 8, stunSec: 0.5 },
-  hidden: { thunderclapPct: 10, stunSec: 0.8 },
-  jinchuriki: { slowPct: 12, slowAmount: 0.3, slowSec: 2 },
-  bijuu: { percentDmgPct: 1, armorReduce: 2 },
-  elite: { armorReduce: 3, atkSpeedPct: 10 },
-  limit: { thunderclapPct: 15, stunSec: 1, armorReduce: 3 },
-  epic: { armorReduce: 4, atkBuffPct: 10 },
-  infinity: { armorReduce: 5, deletePct: 1 },
-  creation: { armorReduce: 6, deletePct: 2, atkBuffPct: 15 },
-  special: { atkSpeedPct: 15 },
-  ruin: { deletePct: 3, armorReduce: 4 },
+  rare: { slowPct: 5, slowAmount: 0.2, slowSec: 1.5, critPct: 8 },
+  unique: { armorReduce: 1, critPct: 10, splashRadius: 1.4, splashPct: 0.25 },
+  legend: {
+    armorReduce: 2,
+    thunderclapPct: 8,
+    stunSec: 0.5,
+    critPct: 12,
+    splashRadius: 1.6,
+    splashPct: 0.3,
+  },
+  hidden: { thunderclapPct: 10, stunSec: 0.8, multishot: 1, multishotPct: 0.45 },
+  jinchuriki: { slowPct: 12, slowAmount: 0.3, slowSec: 2, knockbackPct: 10 },
+  bijuu: { percentDmgPct: 1, armorReduce: 2, splashRadius: 2, splashPct: 0.4 },
+  elite: { armorReduce: 3, atkSpeedPct: 10, critPct: 15, critMultiplier: 2.2 },
+  limit: {
+    thunderclapPct: 15,
+    stunSec: 1,
+    armorReduce: 3,
+    mana: 110,
+    manaPerHit: 10,
+    manaSkill: 'bigHit',
+  },
+  epic: {
+    armorReduce: 4,
+    atkBuffPct: 10,
+    splashRadius: 2,
+    splashPct: 0.4,
+    mana: 120,
+    manaPerHit: 9,
+    manaSkill: 'nova',
+  },
+  infinity: {
+    armorReduce: 5,
+    deletePct: 1,
+    multishot: 2,
+    multishotPct: 0.5,
+    mana: 100,
+    manaPerHit: 12,
+    manaSkill: 'execute',
+  },
+  creation: {
+    armorReduce: 6,
+    deletePct: 2,
+    atkBuffPct: 15,
+    splashRadius: 2.6,
+    splashPct: 0.6,
+    mana: 90,
+    manaPerHit: 14,
+    manaSkill: 'nova',
+  },
+  special: { atkSpeedPct: 15, critPct: 12 },
+  ruin: { deletePct: 3, armorReduce: 4, multishot: 1, multishotPct: 0.6 },
 };
 
 export function sheetFor(unit: RawUnit): AbilitySheet {
@@ -146,6 +229,42 @@ export function sheetToAbilities(sheet: AbilitySheet): Ability[] {
   }
   if (sheet.atkBuffPct) {
     abilities.push({ kind: 'auraAtk', pct: sheet.atkBuffPct, radius: AURA_RADIUS });
+  }
+  if (sheet.splashRadius) {
+    abilities.push({
+      kind: 'splash',
+      radius: sheet.splashRadius,
+      pct: sheet.splashPct ?? 0.4,
+    });
+  }
+  if (sheet.multishot) {
+    abilities.push({
+      kind: 'multishot',
+      extraTargets: sheet.multishot,
+      pct: sheet.multishotPct ?? 0.6,
+    });
+  }
+  if (sheet.critPct) {
+    abilities.push({
+      kind: 'critical',
+      chance: sheet.critPct / 100,
+      multiplier: sheet.critMultiplier ?? 2,
+    });
+  }
+  if (sheet.knockbackPct) {
+    abilities.push({
+      kind: 'knockback',
+      chance: sheet.knockbackPct / 100,
+      distance: sheet.knockbackDistance ?? 1.5,
+    });
+  }
+  if (sheet.mana && sheet.manaSkill) {
+    abilities.push({
+      kind: 'manaSkill',
+      max: sheet.mana,
+      perHit: sheet.manaPerHit ?? 10,
+      skill: sheet.manaSkill,
+    });
   }
   return abilities;
 }

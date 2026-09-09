@@ -61,6 +61,7 @@ export function addUnit(
     z: local.z + plot.origin.z,
     cooldown: 0,
     targetMob: -1,
+    mana: 0,
     buffAtkSpeedPct: 0,
     buffAtkPct: 0,
     walk: null,

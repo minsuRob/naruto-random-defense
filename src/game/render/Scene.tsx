@@ -19,6 +19,7 @@ import { SimDriver } from './SimDriver';
 import { MoveMarker, type MoveMarkerHandle } from './MoveMarker';
 import { Units } from './Units';
 import { HitFlashes } from './effects/HitFlashes';
+import { SkillBursts } from './effects/SkillBursts';
 
 /** Scene graph root. */
 export function Scene({
@@ -72,6 +73,7 @@ export function Scene({
       <MobInstances engine={engine} clock={clock} />
       <MobHealthBars engine={engine} clock={clock} />
       <HitFlashes engine={engine} />
+      <SkillBursts />
 
       <SimDriver engine={engine} clock={clock} hudSync={hudSync} />
       <CameraRig rig={rig} input={input} />

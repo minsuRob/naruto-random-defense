@@ -9,6 +9,7 @@ import { UnitPreviewCanvas } from '@/game/render/visuals/UnitPreviewCanvas';
 import { useGameStore } from '@/game/runtime/game-store';
 import { LOCAL_PLAYER } from '@/game/runtime/ui-actions';
 import { GRADE_COLORS, HudColors, hudStyles } from './hud-theme';
+import { describeAbility } from './SelectionPanel';
 
 /**
  * The opening selection window.
@@ -135,10 +136,7 @@ function AbilityList({ defId }: { defId: string }) {
     <View style={styles.abilities}>
       {def.abilities.map((ability, i) => (
         <Text key={i} style={styles.ability}>
-          • {ability.kind}
-          {'chance' in ability ? ` ${(ability.chance * 100).toFixed(0)}%` : ''}
-          {'amount' in ability ? ` ${ability.amount}` : ''}
-          {'pct' in ability ? ` ${ability.pct}%` : ''}
+          • {describeAbility(ability)}
         </Text>
       ))}
     </View>

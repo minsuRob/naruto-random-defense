@@ -1,5 +1,11 @@
-import { AURA_RADIUS, STUN_BOSS_FACTOR, armorMultiplier } from '@/game/config/balance';
+import {
+  AURA_RADIUS,
+  MANA_SKILL,
+  STUN_BOSS_FACTOR,
+  armorMultiplier,
+} from '@/game/config/balance';
 import { UNIT_DEF_BY_ID } from '@/game/data/abilities';
+import { wrapS } from './lane';
 import type { EngineEvent, GameState, UnitDef, UnitInstance } from './types';
 
 /**
@@ -85,6 +91,104 @@ function effectiveArmor(state: GameState, mobIndex: number): number {
   return state.mobs.armor[mobIndex] - state.mobs.armorReduce[mobIndex];
 }
 
+/** Raw damage a unit deals before armour and before on-hit effects. */
+function baseDamage(unit: UnitInstance, def: UnitDef): number {
+  return def.damage * (1 + unit.buffAtkPct / 100);
+}
+
+/** Apply damage through the armour curve and report whether it killed. */
+function damageMob(
+  state: GameState,
+  unit: UnitInstance,
+  mobIndex: number,
+  amount: number,
+  emit: (event: EngineEvent) => void
+): void {
+  const mobs = state.mobs;
+  const dealt = amount * armorMultiplier(effectiveArmor(state, mobIndex));
+  mobs.hp[mobIndex] -= dealt;
+  emit({
+    e: 'hit',
+    unitId: unit.id,
+    mobIndex,
+    damage: dealt,
+    killing: mobs.hp[mobIndex] <= 0,
+  });
+}
+
+/** Mobs within `radius` of a point, on the same plot. */
+function mobsNear(
+  state: GameState,
+  plot: number,
+  x: number,
+  z: number,
+  radius: number,
+  exclude: number,
+  limit = Infinity
+): number[] {
+  const mobs = state.mobs;
+  const radiusSq = radius * radius;
+  const found: number[] = [];
+  for (let i = 0; i < mobs.count && found.length < limit; i++) {
+    if (!mobs.active[i] || mobs.plot[i] !== plot || i === exclude) continue;
+    const dx = mobs.x[i] - x;
+    const dz = mobs.z[i] - z;
+    if (dx * dx + dz * dz <= radiusSq) found.push(i);
+  }
+  return found;
+}
+
+/** Shove a mob backwards along the lane. */
+function knockback(state: GameState, mobIndex: number, distance: number): void {
+  const mobs = state.mobs;
+  if (mobs.isBoss[mobIndex]) return; // bosses hold their ground
+  const lane = state.plots[mobs.plot[mobIndex]].lane;
+  const s = wrapS(mobs.s[mobIndex] - distance, lane.length);
+  mobs.s[mobIndex] = s;
+  mobs.sPrev[mobIndex] = s;
+  const p = lane.positionAt(s);
+  const origin = state.plots[mobs.plot[mobIndex]].origin;
+  mobs.x[mobIndex] = p.x + origin.x;
+  mobs.z[mobIndex] = p.z + origin.z;
+}
+
+/** A filled mana bar goes off here. */
+function castManaSkill(
+  state: GameState,
+  unit: UnitInstance,
+  def: UnitDef,
+  skill: 'nova' | 'execute' | 'bigHit',
+  mobIndex: number,
+  emit: (event: EngineEvent) => void
+): void {
+  const mobs = state.mobs;
+  emit({ e: 'skill', unitId: unit.id, skill, x: unit.x, z: unit.z });
+
+  switch (skill) {
+    case 'nova': {
+      // A burst around the unit: everything close takes a share of a big hit.
+      const hit = mobsNear(state, unit.plot, unit.x, unit.z, MANA_SKILL.novaRadius, -1);
+      for (const index of hit) {
+        damageMob(state, unit, index, baseDamage(unit, def) * MANA_SKILL.novaPct, emit);
+      }
+      break;
+    }
+    case 'execute': {
+      // Finishes anything already badly hurt; bosses are immune, as with 삭제.
+      if (mobs.isBoss[mobIndex]) break;
+      if (mobs.hp[mobIndex] / mobs.maxHp[mobIndex] <= MANA_SKILL.executeThreshold) {
+        const damage = mobs.hp[mobIndex];
+        mobs.hp[mobIndex] = 0;
+        emit({ e: 'hit', unitId: unit.id, mobIndex, damage, killing: true });
+      }
+      break;
+    }
+    case 'bigHit':
+      damageMob(state, unit, mobIndex, baseDamage(unit, def) * MANA_SKILL.bigHitPct, emit);
+      break;
+  }
+}
+
 export function resolveHit(
   state: GameState,
   unit: UnitInstance,
@@ -105,7 +209,14 @@ export function resolveHit(
     }
   }
 
-  let damage = def.damage * (1 + unit.buffAtkPct / 100);
+  let damage = baseDamage(unit, def);
+
+  for (const ability of def.abilities) {
+    if (ability.kind === 'critical' && state.rng.chance(ability.chance)) {
+      damage *= ability.multiplier;
+    }
+  }
+
   damage *= armorMultiplier(effectiveArmor(state, mobIndex));
 
   for (const ability of def.abilities) {
@@ -116,15 +227,44 @@ export function resolveHit(
 
   mobs.hp[mobIndex] -= damage;
 
+  // Splash and multishot spread the same attack; both are scaled fractions of
+  // the main hit rather than extra full attacks.
+  for (const ability of def.abilities) {
+    if (ability.kind === 'splash') {
+      const splashed = mobsNear(
+        state,
+        unit.plot,
+        mobs.x[mobIndex],
+        mobs.z[mobIndex],
+        ability.radius,
+        mobIndex
+      );
+      for (const index of splashed) {
+        damageMob(state, unit, index, baseDamage(unit, def) * ability.pct, emit);
+      }
+    }
+    if (ability.kind === 'multishot') {
+      const extra = mobsNear(
+        state,
+        unit.plot,
+        unit.x,
+        unit.z,
+        def.range,
+        mobIndex,
+        ability.extraTargets
+      );
+      for (const index of extra) {
+        damageMob(state, unit, index, baseDamage(unit, def) * ability.pct, emit);
+      }
+    }
+  }
+
   for (const ability of def.abilities) {
     switch (ability.kind) {
       case 'stun':
         if (state.rng.chance(ability.chance)) {
           const seconds = ability.seconds * (isBoss ? STUN_BOSS_FACTOR : 1);
-          mobs.stunUntil[mobIndex] = Math.max(
-            mobs.stunUntil[mobIndex],
-            state.time + seconds
-          );
+          mobs.stunUntil[mobIndex] = Math.max(mobs.stunUntil[mobIndex], state.time + seconds);
         }
         break;
       case 'slow':
@@ -140,6 +280,9 @@ export function resolveHit(
         }
         mobs.armorReduceUntil[mobIndex] = state.time + ability.seconds;
         break;
+      case 'knockback':
+        if (state.rng.chance(ability.chance)) knockback(state, mobIndex, ability.distance);
+        break;
       default:
         break;
     }
@@ -152,6 +295,16 @@ export function resolveHit(
     damage,
     killing: mobs.hp[mobIndex] <= 0,
   });
+
+  // Mana last, so the skill sees the state the attack left behind.
+  for (const ability of def.abilities) {
+    if (ability.kind !== 'manaSkill') continue;
+    unit.mana += ability.perHit;
+    if (unit.mana >= ability.max) {
+      unit.mana = 0;
+      castManaSkill(state, unit, def, ability.skill, mobIndex, emit);
+    }
+  }
 }
 
 export function updateCombat(

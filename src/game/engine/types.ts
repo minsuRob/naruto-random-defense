@@ -9,6 +9,8 @@ import type { Rng } from './rng';
 
 export type DamageType = 'phys' | 'magic';
 
+export type ManaSkill = 'nova' | 'execute' | 'bigHit';
+
 export type Ability =
   | { kind: 'stun'; chance: number; seconds: number }
   | { kind: 'slow'; chance: number; amount: number; seconds: number }
@@ -16,7 +18,17 @@ export type Ability =
   | { kind: 'delete'; chance: number }
   | { kind: 'percentDamage'; pct: number }
   | { kind: 'auraAtkSpeed'; pct: number; radius: number }
-  | { kind: 'auraAtk'; pct: number; radius: number };
+  | { kind: 'auraAtk'; pct: number; radius: number }
+  /** 스플래시 — the hit also lands on everything within the radius of the target. */
+  | { kind: 'splash'; radius: number; pct: number }
+  /** 멀티샷 — the same attack strikes this many extra targets in range. */
+  | { kind: 'multishot'; extraTargets: number; pct: number }
+  /** 크리티컬 — a chance to multiply the hit. */
+  | { kind: 'critical'; chance: number; multiplier: number }
+  /** 넉백 — shoves the mob back along the lane. */
+  | { kind: 'knockback'; chance: number; distance: number }
+  /** 마나가 차면 터지는 발동형 스킬. */
+  | { kind: 'manaSkill'; max: number; perHit: number; skill: ManaSkill };
 
 export interface UnitDef {
   id: string;
@@ -85,6 +97,8 @@ export interface UnitInstance {
   z: number;
   cooldown: number;
   targetMob: number;
+  /** Fills on every hit; a mana skill fires when it tops out. */
+  mana: number;
   buffAtkSpeedPct: number;
   buffAtkPct: number;
   /**
@@ -192,6 +206,7 @@ export type EngineEvent =
   | { e: 'roundEnd'; round: number }
   | { e: 'mobDie'; index: number; x: number; z: number; boss: boolean }
   | { e: 'hit'; unitId: number; mobIndex: number; damage: number; killing: boolean }
+  | { e: 'skill'; unitId: number; skill: ManaSkill; x: number; z: number }
   | { e: 'unitAdd'; unitId: number; defId: string; via: 'gacha' | 'combine' | 'hire' }
   | { e: 'unitRemove'; unitId: number; defId: string }
   | { e: 'mission'; rank: 'S' | 'A' | 'B' | 'C'; wood: number }
