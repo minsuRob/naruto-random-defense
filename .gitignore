@@ -41,3 +41,8 @@ example
 # generated native folders
 /ios
 /android
+
+# generated game assets (MDX->glb pipeline output, see tools/w3x)
+assets/models/generated/
+tools/w3x/out/
+dist/
