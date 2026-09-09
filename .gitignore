@@ -46,3 +46,6 @@ example
 assets/models/generated/
 tools/w3x/out/
 dist/
+
+# generated from the source map by tools/w3x (see build-visuals.mjs --stub)
+src/game/render/visuals/generated.ts

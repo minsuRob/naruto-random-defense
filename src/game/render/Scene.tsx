@@ -6,6 +6,7 @@ import { Ground } from './Ground';
 import { LaneMesh } from './LaneMesh';
 import { Markers } from './Markers';
 import { PlotGrid } from './PlotGrid';
+import { UnitPreview } from './UnitPreview';
 
 /** Scene graph root. Mobs and units join here in M2/M3. */
 export function Scene({
@@ -29,6 +30,7 @@ export function Scene({
       <LaneMesh lane={lane} />
       <PlotGrid />
       <Markers lane={lane} />
+      <UnitPreview />
 
       <CameraRig rig={rig} input={input} />
     </>

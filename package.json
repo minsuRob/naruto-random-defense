@@ -35,6 +35,7 @@
     "zustand": "^5.0.15"
   },
   "devDependencies": {
+    "@types/node": "^26.5.0",
     "@types/react": "~19.2.2",
     "@types/three": "^0.185.4",
     "mdx-m3-viewer": "^5.12.0",
@@ -49,7 +50,9 @@
     "web": "expo start --web",
     "lint": "expo lint",
     "test": "vitest run",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "assets": "node tools/w3x/units-from-w3u.mjs && node tools/w3x/recipes.mjs && node tools/w3x/mdx2glb.mjs && node tools/w3x/build-visuals.mjs",
+    "assets:stub": "node tools/w3x/build-visuals.mjs --stub"
   },
   "private": true
 }

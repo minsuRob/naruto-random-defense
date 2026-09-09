@@ -1,0 +1,2187 @@
+{
+  "scale": 0.015625,
+  "maxTexture": 512,
+  "converted": [
+    {
+      "asset": "war3mapimported-naruto-nor-nasun",
+      "file": "assets/models/generated/war3mapimported-naruto-nor-nasun.glb",
+      "mdxPath": "war3mapImported\\Naruto-Nor_Nasun.mdx",
+      "unitIds": [
+        "우즈마키-나루토__h000",
+        "우즈마키-나루토-선인모드__h001",
+        "나루토-나선수리검__h023"
+      ],
+      "bytes": 264140,
+      "geosets": 6
+    },
+    {
+      "asset": "war3mapimported-sasuke-long",
+      "file": "assets/models/generated/war3mapimported-sasuke-long.glb",
+      "mdxPath": "war3mapImported\\Sasuke_Long.mdx",
+      "unitIds": [
+        "우치하-사스케__h004",
+        "우치하-사스케-2년-후__h01V"
+      ],
+      "bytes": 259128,
+      "geosets": 7
+    },
+    {
+      "asset": "war3mapimported-sasuke-juin",
+      "file": "assets/models/generated/war3mapimported-sasuke-juin.glb",
+      "mdxPath": "war3mapImported\\%Sasuke_Juin.mdx",
+      "unitIds": [
+        "우치하-사스케-주인2__h005"
+      ],
+      "bytes": 766220,
+      "geosets": 5
+    },
+    {
+      "asset": "war3mapimported-sai-n-u",
+      "file": "assets/models/generated/war3mapimported-sai-n-u.glb",
+      "mdxPath": "war3mapImported\\Sai-N&U.mdx",
+      "unitIds": [
+        "사이__h006",
+        "사이-뿌리닌자__h09P"
+      ],
+      "bytes": 585048,
+      "geosets": 6
+    },
+    {
+      "asset": "war3mapimported-itachi-ambu",
+      "file": "assets/models/generated/war3mapimported-itachi-ambu.glb",
+      "mdxPath": "war3mapImported\\Itachi_Ambu.mdx",
+      "unitIds": [
+        "우치하-이타치-암부__h007"
+      ],
+      "bytes": 279856,
+      "geosets": 5
+    },
+    {
+      "asset": "war3mapimported-deidara",
+      "file": "assets/models/generated/war3mapimported-deidara.glb",
+      "mdxPath": "war3mapImported\\Deidara.mdx",
+      "unitIds": [
+        "데이다라-아카츠키__h008"
+      ],
+      "bytes": 72892,
+      "geosets": 2
+    },
+    {
+      "asset": "war3mapimported-temari",
+      "file": "assets/models/generated/war3mapimported-temari.glb",
+      "mdxPath": "war3mapImported\\Temari.mdx",
+      "unitIds": [
+        "테마리__h009"
+      ],
+      "bytes": 251768,
+      "geosets": 3
+    },
+    {
+      "asset": "war3mapimported-yamato",
+      "file": "assets/models/generated/war3mapimported-yamato.glb",
+      "mdxPath": "war3mapImported\\Yamato.mdx",
+      "unitIds": [
+        "야마토__h00A",
+        "야마토-호카게-직속암부__h04B"
+      ],
+      "bytes": 193352,
+      "geosets": 1
+    },
+    {
+      "asset": "war3mapimported-kakashi-ambu",
+      "file": "assets/models/generated/war3mapimported-kakashi-ambu.glb",
+      "mdxPath": "war3mapImported\\Kakashi_Ambu.mdx",
+      "unitIds": [
+        "하타케-카카시-암부__h00B"
+      ],
+      "bytes": 274496,
+      "geosets": 3
+    },
+    {
+      "asset": "war3mapimported-sakura2",
+      "file": "assets/models/generated/war3mapimported-sakura2.glb",
+      "mdxPath": "war3mapImported\\Sakura2.mdx",
+      "unitIds": [
+        "하루노-사쿠라__h00C"
+      ],
+      "bytes": 462724,
+      "geosets": 4
+    },
+    {
+      "asset": "war3mapimported-suigetsu",
+      "file": "assets/models/generated/war3mapimported-suigetsu.glb",
+      "mdxPath": "war3mapImported\\Suigetsu.mdx",
+      "unitIds": [
+        "스이게츠-아카츠키__h00F"
+      ],
+      "bytes": 95848,
+      "geosets": 3
+    },
+    {
+      "asset": "war3mapimported-hiruko",
+      "file": "assets/models/generated/war3mapimported-hiruko.glb",
+      "mdxPath": "war3mapImported\\Hiruko.mdx",
+      "unitIds": [
+        "사소리__h00H",
+        "사소리-히루코__h161"
+      ],
+      "bytes": 197368,
+      "geosets": 8
+    },
+    {
+      "asset": "war3mapimported-hashirama",
+      "file": "assets/models/generated/war3mapimported-hashirama.glb",
+      "mdxPath": "war3mapImported\\Hashirama.mdx",
+      "unitIds": [
+        "센쥬-하시라마-1대-호카게__h00K"
+      ],
+      "bytes": 115976,
+      "geosets": 2
+    },
+    {
+      "asset": "war3mapimported-tobirama-edo",
+      "file": "assets/models/generated/war3mapimported-tobirama-edo.glb",
+      "mdxPath": "war3mapImported\\Tobirama_Edo.mdx",
+      "unitIds": [
+        "센쥬-토비라마-2대-호카게__h00N"
+      ],
+      "bytes": 438616,
+      "geosets": 4
+    },
+    {
+      "asset": "war3mapimported-danzo",
+      "file": "assets/models/generated/war3mapimported-danzo.glb",
+      "mdxPath": "war3mapImported\\%Danzo.mdx",
+      "unitIds": [
+        "시무라-단조__h00O"
+      ],
+      "bytes": 513556,
+      "geosets": 9
+    },
+    {
+      "asset": "war3mapimported-killerb",
+      "file": "assets/models/generated/war3mapimported-killerb.glb",
+      "mdxPath": "war3mapImported\\Killerb.mdx",
+      "unitIds": [
+        "킬러-비-8미의-인주력__h00P"
+      ],
+      "bytes": 279244,
+      "geosets": 10
+    },
+    {
+      "asset": "war3mapimported-gamabunta",
+      "file": "assets/models/generated/war3mapimported-gamabunta.glb",
+      "mdxPath": "war3mapImported\\Gamabunta.mdx",
+      "unitIds": [
+        "가마분타-두꺼비-두목__h00R"
+      ],
+      "bytes": 132928,
+      "geosets": 4
+    },
+    {
+      "asset": "war3mapimported-garra",
+      "file": "assets/models/generated/war3mapimported-garra.glb",
+      "mdxPath": "war3mapImported\\Garra.mdx",
+      "unitIds": [
+        "가아라__h00S"
+      ],
+      "bytes": 369636,
+      "geosets": 5
+    },
+    {
+      "asset": "war3mapimported-konan-ori",
+      "file": "assets/models/generated/war3mapimported-konan-ori.glb",
+      "mdxPath": "war3mapImported\\Konan_Ori.mdx",
+      "unitIds": [
+        "코난-아카츠키__h00V",
+        "코난-천사__h05C"
+      ],
+      "bytes": 568312,
+      "geosets": 3
+    },
+    {
+      "asset": "war3mapimported-madara-l",
+      "file": "assets/models/generated/war3mapimported-madara-l.glb",
+      "mdxPath": "war3mapImported\\Madara-L.mdx",
+      "unitIds": [
+        "우치하-마다라__h00Y"
+      ],
+      "bytes": 148312,
+      "geosets": 6
+    },
+    {
+      "asset": "war3mapimported-misu-888",
+      "file": "assets/models/generated/war3mapimported-misu-888.glb",
+      "mdxPath": "war3mapImported\\Misu-888.mdx",
+      "unitIds": [
+        "8미-규우키__h010"
+      ],
+      "bytes": 146628,
+      "geosets": 2,
+      "warnings": [
+        "missing texture Textures\\AcidSplash1.blp"
+      ]
+    },
+    {
+      "asset": "war3mapimported-sasori-hidden",
+      "file": "assets/models/generated/war3mapimported-sasori-hidden.glb",
+      "mdxPath": "war3mapImported\\Sasori_Hidden.mdx",
+      "unitIds": [
+        "사소리-완전변형__h013"
+      ],
+      "bytes": 154080,
+      "geosets": 3
+    },
+    {
+      "asset": "war3mapimported-karin",
+      "file": "assets/models/generated/war3mapimported-karin.glb",
+      "mdxPath": "war3mapImported\\Karin.mdx",
+      "unitIds": [
+        "카린__h014"
+      ],
+      "bytes": 228428,
+      "geosets": 4
+    },
+    {
+      "asset": "war3mapimported-jugo",
+      "file": "assets/models/generated/war3mapimported-jugo.glb",
+      "mdxPath": "war3mapImported\\Jugo.mdx",
+      "unitIds": [
+        "쥬고__h01C",
+        "쥬고-주인화__h07R"
+      ],
+      "bytes": 248128,
+      "geosets": 6
+    },
+    {
+      "asset": "war3mapimported-tobi-s",
+      "file": "assets/models/generated/war3mapimported-tobi-s.glb",
+      "mdxPath": "war3mapImported\\tobi-S.mdx",
+      "unitIds": [
+        "토비__h01F"
+      ],
+      "bytes": 212068,
+      "geosets": 3
+    },
+    {
+      "asset": "war3mapimported-jiraiya",
+      "file": "assets/models/generated/war3mapimported-jiraiya.glb",
+      "mdxPath": "war3mapImported\\Jiraiya.mdx",
+      "unitIds": [
+        "지라이야-호걸__h01G",
+        "지라이야-전설의3닌자__h01H",
+        "지라이야-선인모드__h08G"
+      ],
+      "bytes": 292872,
+      "geosets": 9
+    },
+    {
+      "asset": "war3mapimported-katsuyu",
+      "file": "assets/models/generated/war3mapimported-katsuyu.glb",
+      "mdxPath": "war3mapImported\\Katsuyu.mdx",
+      "unitIds": [
+        "카츠유__h01I"
+      ],
+      "bytes": 19880,
+      "geosets": 1
+    },
+    {
+      "asset": "war3mapimported-tsunade",
+      "file": "assets/models/generated/war3mapimported-tsunade.glb",
+      "mdxPath": "war3mapImported\\Tsunade.mdx",
+      "unitIds": [
+        "츠나데-전설의3닌자__h01O",
+        "센쥬-츠나데-백호의-술__h04A",
+        "도박광-츠나데__h08H",
+        "도박광-츠나데-인생을-건-도박사__h08U"
+      ],
+      "bytes": 318292,
+      "geosets": 7
+    },
+    {
+      "asset": "war3mapimported-obito",
+      "file": "assets/models/generated/war3mapimported-obito.glb",
+      "mdxPath": "war3mapImported\\Obito.mdx",
+      "unitIds": [
+        "우치하-오비토-윤회안__h01Q"
+      ],
+      "bytes": 187736,
+      "geosets": 5
+    },
+    {
+      "asset": "war3mapimported-kisame-aka",
+      "file": "assets/models/generated/war3mapimported-kisame-aka.glb",
+      "mdxPath": "war3mapImported\\Kisame_Aka.mdx",
+      "unitIds": [
+        "키사메-아카츠키__h01S"
+      ],
+      "bytes": 164264,
+      "geosets": 6
+    },
+    {
+      "asset": "war3mapimported-itachi",
+      "file": "assets/models/generated/war3mapimported-itachi.glb",
+      "mdxPath": "war3mapImported\\Itachi.mdx",
+      "unitIds": [
+        "우치하-이타치-스사노오-1단계__h01X",
+        "우치하-이타치-아카츠키__h02C"
+      ],
+      "bytes": 119632,
+      "geosets": 6
+    },
+    {
+      "asset": "war3mapimported-zetsu",
+      "file": "assets/models/generated/war3mapimported-zetsu.glb",
+      "mdxPath": "war3mapImported\\Zetsu.mdx",
+      "unitIds": [
+        "제츠-아카츠키__h01Z"
+      ],
+      "bytes": 161260,
+      "geosets": 3
+    },
+    {
+      "asset": "war3mapimported-tobi",
+      "file": "assets/models/generated/war3mapimported-tobi.glb",
+      "mdxPath": "war3mapImported\\Tobi.mdx",
+      "unitIds": [
+        "토비-아카츠키__h020",
+        "토비-달의-눈-계획__h04F"
+      ],
+      "bytes": 149648,
+      "geosets": 5
+    },
+    {
+      "asset": "war3mapimported-ambu-h",
+      "file": "assets/models/generated/war3mapimported-ambu-h.glb",
+      "mdxPath": "war3mapImported\\Ambu-H.mdx",
+      "unitIds": [
+        "암부__h021"
+      ],
+      "bytes": 117900,
+      "geosets": 5
+    },
+    {
+      "asset": "war3mapimported-orochimaru",
+      "file": "assets/models/generated/war3mapimported-orochimaru.glb",
+      "mdxPath": "war3mapImported\\Orochimaru.mdx",
+      "unitIds": [
+        "오로치마루-전설의3닌자__h024"
+      ],
+      "bytes": 147468,
+      "geosets": 1
+    },
+    {
+      "asset": "war3mapimported-kabuto",
+      "file": "assets/models/generated/war3mapimported-kabuto.glb",
+      "mdxPath": "war3mapImported\\Kabuto.mdx",
+      "unitIds": [
+        "야쿠시-카부토__h027"
+      ],
+      "bytes": 231556,
+      "geosets": 3
+    },
+    {
+      "asset": "war3mapimported-asuma",
+      "file": "assets/models/generated/war3mapimported-asuma.glb",
+      "mdxPath": "war3mapImported\\Asuma.mdx",
+      "unitIds": [
+        "아스마__h029",
+        "사루토비-아스마-제10반-대장__h081"
+      ],
+      "bytes": 227916,
+      "geosets": 2,
+      "warnings": [
+        "missing texture Textures\\RibbonNE1_blue.blp"
+      ]
+    },
+    {
+      "asset": "war3mapimported-gaara-uu",
+      "file": "assets/models/generated/war3mapimported-gaara-uu.glb",
+      "mdxPath": "war3mapImported\\gaara-uu.mdx",
+      "unitIds": [
+        "가아라-반수화-상태__h02B"
+      ],
+      "bytes": 425764,
+      "geosets": 3
+    },
+    {
+      "asset": "war3mapimported-kakashi",
+      "file": "assets/models/generated/war3mapimported-kakashi.glb",
+      "mdxPath": "war3mapImported\\Kakashi.mdx",
+      "unitIds": [
+        "하타케-카카시-만화경사륜안__h02D"
+      ],
+      "bytes": 108108,
+      "geosets": 3
+    },
+    {
+      "asset": "war3mapimported-1mi",
+      "file": "assets/models/generated/war3mapimported-1mi.glb",
+      "mdxPath": "war3mapImported\\1mi.mdx",
+      "unitIds": [
+        "1미-슈카쿠__h022"
+      ],
+      "bytes": 144040,
+      "geosets": 1
+    },
+    {
+      "asset": "war3mapimported-minato-ep",
+      "file": "assets/models/generated/war3mapimported-minato-ep.glb",
+      "mdxPath": "war3mapImported\\Minato_EP.mdx",
+      "unitIds": [
+        "나미카제-미나토-금빛섬광__h028",
+        "나미카제-미나토-미수화__h02X"
+      ],
+      "bytes": 1821180,
+      "geosets": 21,
+      "warnings": [
+        "missing texture ReplaceableTextures\\TeamColor\\TeamColor09.blp",
+        "missing texture Textures\\white.blp"
+      ]
+    },
+    {
+      "asset": "war3mapimported-manda",
+      "file": "assets/models/generated/war3mapimported-manda.glb",
+      "mdxPath": "war3mapImported\\Manda.mdx",
+      "unitIds": [
+        "만다__h017"
+      ],
+      "bytes": 36400,
+      "geosets": 1
+    },
+    {
+      "asset": "war3mapimported-ino",
+      "file": "assets/models/generated/war3mapimported-ino.glb",
+      "mdxPath": "war3mapImported\\ino.mdx",
+      "unitIds": [
+        "야마나카-이노__h02Q"
+      ],
+      "bytes": 250340,
+      "geosets": 1
+    },
+    {
+      "asset": "war3mapimported-6mi-utakata",
+      "file": "assets/models/generated/war3mapimported-6mi-utakata.glb",
+      "mdxPath": "war3mapImported\\6mi_Utakata.mdx",
+      "unitIds": [
+        "우타카타-6미의-인주력__h02R",
+        "우타카타-6미의-인주력__h02Z"
+      ],
+      "bytes": 150316,
+      "geosets": 3
+    },
+    {
+      "asset": "war3mapimported-6mi",
+      "file": "assets/models/generated/war3mapimported-6mi.glb",
+      "mdxPath": "war3mapImported\\6mi.mdx",
+      "unitIds": [
+        "6미-사이켄__h02S"
+      ],
+      "bytes": 134180,
+      "geosets": 2
+    },
+    {
+      "asset": "war3mapimported-tenten",
+      "file": "assets/models/generated/war3mapimported-tenten.glb",
+      "mdxPath": "war3mapImported\\Tenten.mdx",
+      "unitIds": [
+        "텐텐__h01P"
+      ],
+      "bytes": 204860,
+      "geosets": 3
+    },
+    {
+      "asset": "war3mapimported-naruto-tail4",
+      "file": "assets/models/generated/war3mapimported-naruto-tail4.glb",
+      "mdxPath": "war3mapImported\\Naruto-tail4.mdx",
+      "unitIds": [
+        "우즈마키-나루토-꼬리4개-해방__h02V"
+      ],
+      "bytes": 235684,
+      "geosets": 4,
+      "warnings": [
+        "missing texture TerrainArt\\Dungeon\\Cave_LavaCracks.blp"
+      ]
+    },
+    {
+      "asset": "war3mapimported-2mi",
+      "file": "assets/models/generated/war3mapimported-2mi.glb",
+      "mdxPath": "war3mapImported\\2mi.mdx",
+      "unitIds": [
+        "2미-마타타비__h00D"
+      ],
+      "bytes": 192852,
+      "geosets": 2
+    },
+    {
+      "asset": "war3mapimported-choji",
+      "file": "assets/models/generated/war3mapimported-choji.glb",
+      "mdxPath": "war3mapImported\\Choji.mdx",
+      "unitIds": [
+        "아키미치-쵸지__h02Y",
+        "아키미치-쵸지-각성모드__h01U"
+      ],
+      "bytes": 250732,
+      "geosets": 3
+    },
+    {
+      "asset": "war3mapimported-kiba",
+      "file": "assets/models/generated/war3mapimported-kiba.glb",
+      "mdxPath": "war3mapImported\\Kiba.mdx",
+      "unitIds": [
+        "이누즈카-키바__h00U"
+      ],
+      "bytes": 89840,
+      "geosets": 4,
+      "warnings": [
+        "missing texture Textures\\RibbonNE1_blue.blp"
+      ]
+    },
+    {
+      "asset": "war3mapimported-sasuk-l",
+      "file": "assets/models/generated/war3mapimported-sasuk-l.glb",
+      "mdxPath": "war3mapImported\\Sasuk-L.mdx",
+      "unitIds": [
+        "우치하-사스케-스사노오-1단계__h036"
+      ],
+      "bytes": 317548,
+      "geosets": 8
+    },
+    {
+      "asset": "war3mapimported-kisame-trans",
+      "file": "assets/models/generated/war3mapimported-kisame-trans.glb",
+      "mdxPath": "war3mapImported\\Kisame-Trans.mdx",
+      "unitIds": [
+        "호시가키-키사메-완전변형__h037"
+      ],
+      "bytes": 82744,
+      "geosets": 5
+    },
+    {
+      "asset": "war3mapimported-rock-lee-u",
+      "file": "assets/models/generated/war3mapimported-rock-lee-u.glb",
+      "mdxPath": "war3mapImported\\Rock_Lee_U.mdx",
+      "unitIds": [
+        "록-리__h039",
+        "록-리-연화__h0AQ"
+      ],
+      "bytes": 186172,
+      "geosets": 3
+    },
+    {
+      "asset": "war3mapimported-hidan",
+      "file": "assets/models/generated/war3mapimported-hidan.glb",
+      "mdxPath": "war3mapImported\\Hidan.mdx",
+      "unitIds": [
+        "히단-아카츠키__h03A"
+      ],
+      "bytes": 367144,
+      "geosets": 6
+    },
+    {
+      "asset": "war3mapimported-chojuro",
+      "file": "assets/models/generated/war3mapimported-chojuro.glb",
+      "mdxPath": "war3mapImported\\Chojuro.mdx",
+      "unitIds": [
+        "쵸주로-닌자도-7인방__h03D"
+      ],
+      "bytes": 107308,
+      "geosets": 4
+    },
+    {
+      "asset": "war3mapimported-sasori-3rd",
+      "file": "assets/models/generated/war3mapimported-sasori-3rd.glb",
+      "mdxPath": "war3mapImported\\Sasori-3rd.mdx",
+      "unitIds": [
+        "사소리-아카츠키__h03E"
+      ],
+      "bytes": 460852,
+      "geosets": 4
+    },
+    {
+      "asset": "war3mapimported-hina",
+      "file": "assets/models/generated/war3mapimported-hina.glb",
+      "mdxPath": "war3mapImported\\Hina.mdx",
+      "unitIds": [
+        "휴우가-히나타__h03V"
+      ],
+      "bytes": 444900,
+      "geosets": 10
+    },
+    {
+      "asset": "war3mapimported-neji",
+      "file": "assets/models/generated/war3mapimported-neji.glb",
+      "mdxPath": "war3mapImported\\Neji.mdx",
+      "unitIds": [
+        "휴우가-네지__h03W",
+        "휴우가-네지-백안__h05O"
+      ],
+      "bytes": 222736,
+      "geosets": 3
+    },
+    {
+      "asset": "war3mapimported-madara-e",
+      "file": "assets/models/generated/war3mapimported-madara-e.glb",
+      "mdxPath": "war3mapImported\\Madara-E.mdx",
+      "unitIds": [
+        "우치하-마다라-윤회천생__h03X"
+      ],
+      "bytes": 110956,
+      "geosets": 8
+    },
+    {
+      "asset": "war3mapimported-deidaraa-edoo",
+      "file": "assets/models/generated/war3mapimported-deidaraa-edoo.glb",
+      "mdxPath": "war3mapImported\\Deidaraa-Edoo.mdx",
+      "unitIds": [
+        "데이다라-예토전생__h04D"
+      ],
+      "bytes": 149860,
+      "geosets": 4
+    },
+    {
+      "asset": "war3mapimported-10mi",
+      "file": "assets/models/generated/war3mapimported-10mi.glb",
+      "mdxPath": "war3mapImported\\10mi.mdx",
+      "unitIds": [
+        "10미-불명__h04I",
+        "완전체-10미__h05G"
+      ],
+      "bytes": 288220,
+      "geosets": 12
+    },
+    {
+      "asset": "war3mapimported-5mi",
+      "file": "assets/models/generated/war3mapimported-5mi.glb",
+      "mdxPath": "war3mapImported\\5mi.mdx",
+      "unitIds": [
+        "5미-코쿠오__h04P"
+      ],
+      "bytes": 123248,
+      "geosets": 2
+    },
+    {
+      "asset": "war3mapimported-3mi",
+      "file": "assets/models/generated/war3mapimported-3mi.glb",
+      "mdxPath": "war3mapImported\\3mi.mdx",
+      "unitIds": [
+        "3미-이소부__h04Q"
+      ],
+      "bytes": 160104,
+      "geosets": 1
+    },
+    {
+      "asset": "war3mapimported-misu-9",
+      "file": "assets/models/generated/war3mapimported-misu-9.glb",
+      "mdxPath": "war3mapImported\\Misu-9.mdx",
+      "unitIds": [
+        "9미-쿠라마__h04R"
+      ],
+      "bytes": 137596,
+      "geosets": 3,
+      "warnings": [
+        "missing texture UI\\Widgets\\Glues\\GlueScreen-RadioButton-ButtonDisabled.blp",
+        "missing texture Textures\\Shockwave10.blp"
+      ]
+    },
+    {
+      "asset": "war3mapimported-7mi",
+      "file": "assets/models/generated/war3mapimported-7mi.glb",
+      "mdxPath": "war3mapImported\\7mi.mdx",
+      "unitIds": [
+        "7미-쵸우메이__h04S"
+      ],
+      "bytes": 125504,
+      "geosets": 8
+    },
+    {
+      "asset": "war3mapimported-4mi",
+      "file": "assets/models/generated/war3mapimported-4mi.glb",
+      "mdxPath": "war3mapImported\\4mi.mdx",
+      "unitIds": [
+        "4미-손고쿠__h04T"
+      ],
+      "bytes": 160784,
+      "geosets": 1
+    },
+    {
+      "asset": "war3mapimported-haku",
+      "file": "assets/models/generated/war3mapimported-haku.glb",
+      "mdxPath": "war3mapImported\\Haku.mdx",
+      "unitIds": [
+        "하쿠__h04U"
+      ],
+      "bytes": 281952,
+      "geosets": 13
+    },
+    {
+      "asset": "war3mapimported-kurenai",
+      "file": "assets/models/generated/war3mapimported-kurenai.glb",
+      "mdxPath": "war3mapImported\\Kurenai.mdx",
+      "unitIds": [
+        "쿠레나이__h04W"
+      ],
+      "bytes": 309036,
+      "geosets": 4
+    },
+    {
+      "asset": "war3mapimported-zabuza",
+      "file": "assets/models/generated/war3mapimported-zabuza.glb",
+      "mdxPath": "war3mapImported\\Zabuza.mdx",
+      "unitIds": [
+        "자부자__h04X"
+      ],
+      "bytes": 173504,
+      "geosets": 3
+    },
+    {
+      "asset": "war3mapimported-ank",
+      "file": "assets/models/generated/war3mapimported-ank.glb",
+      "mdxPath": "war3mapImported\\Ank.mdx",
+      "unitIds": [
+        "미타라시-앙코__h04Y"
+      ],
+      "bytes": 100304,
+      "geosets": 4
+    },
+    {
+      "asset": "war3mapimported-samui",
+      "file": "assets/models/generated/war3mapimported-samui.glb",
+      "mdxPath": "war3mapImported\\Samui.mdx",
+      "unitIds": [
+        "사무이__h04Z"
+      ],
+      "bytes": 134796,
+      "geosets": 3
+    },
+    {
+      "asset": "war3mapimported-naruto-e",
+      "file": "assets/models/generated/war3mapimported-naruto-e.glb",
+      "mdxPath": "war3mapImported\\Naruto_E.mdx",
+      "unitIds": [
+        "우즈마키-나루토-미수화__h050"
+      ],
+      "bytes": 834964,
+      "geosets": 10
+    },
+    {
+      "asset": "war3mapimported-enma",
+      "file": "assets/models/generated/war3mapimported-enma.glb",
+      "mdxPath": "war3mapImported\\Enma.mdx",
+      "unitIds": [
+        "엔마-원후왕__h003"
+      ],
+      "bytes": 442896,
+      "geosets": 6
+    },
+    {
+      "asset": "war3mapimported-mangetsu",
+      "file": "assets/models/generated/war3mapimported-mangetsu.glb",
+      "mdxPath": "war3mapImported\\Mangetsu.mdx",
+      "unitIds": [
+        "호즈키-만게츠-예토전생__h04O"
+      ],
+      "bytes": 178700,
+      "geosets": 2
+    },
+    {
+      "asset": "war3mapimported-kiba-e-model",
+      "file": "assets/models/generated/war3mapimported-kiba-e-model.glb",
+      "mdxPath": "war3mapImported\\Kiba-E-Model.mdx",
+      "unitIds": [
+        "이누즈카-키바-수인화__h058"
+      ],
+      "bytes": 311900,
+      "geosets": 3
+    },
+    {
+      "asset": "war3mapimported-sarutobi",
+      "file": "assets/models/generated/war3mapimported-sarutobi.glb",
+      "mdxPath": "war3mapImported\\Sarutobi.mdx",
+      "unitIds": [
+        "사루토비-히루젠-3대-호카게__h059",
+        "사루토비-히루젠-예토전생__h08M"
+      ],
+      "bytes": 158748,
+      "geosets": 4
+    },
+    {
+      "asset": "war3mapimported-kimimaro",
+      "file": "assets/models/generated/war3mapimported-kimimaro.glb",
+      "mdxPath": "war3mapImported\\Kimimaro.mdx",
+      "unitIds": [
+        "키미마로__h05B",
+        "키미마로-주인해방__h09X"
+      ],
+      "bytes": 391812,
+      "geosets": 4
+    },
+    {
+      "asset": "war3mapimported-haku-e",
+      "file": "assets/models/generated/war3mapimported-haku-e.glb",
+      "mdxPath": "war3mapImported\\Haku-e.mdx",
+      "unitIds": [
+        "하쿠-예토전생__h05F"
+      ],
+      "bytes": 529416,
+      "geosets": 6
+    },
+    {
+      "asset": "war3mapimported-mightguy",
+      "file": "assets/models/generated/war3mapimported-mightguy.glb",
+      "mdxPath": "war3mapImported\\MightGuy.mdx",
+      "unitIds": [
+        "마이트-가이__h05K",
+        "마이트-가이-경문해제__h04E"
+      ],
+      "bytes": 99844,
+      "geosets": 4
+    },
+    {
+      "asset": "war3mapimported-sasuke-epic-m",
+      "file": "assets/models/generated/war3mapimported-sasuke-epic-m.glb",
+      "mdxPath": "war3mapImported\\Sasuke-epic-m.mdx",
+      "unitIds": [
+        "우치하-사스케-스사노오-3단계__h05V"
+      ],
+      "bytes": 469632,
+      "geosets": 8
+    },
+    {
+      "asset": "war3mapimported-kankuro",
+      "file": "assets/models/generated/war3mapimported-kankuro.glb",
+      "mdxPath": "war3mapImported\\Kankuro.mdx",
+      "unitIds": [
+        "칸쿠로__h05W",
+        "칸쿠로-흑비기-인형술사__h060"
+      ],
+      "bytes": 110016,
+      "geosets": 1
+    },
+    {
+      "asset": "war3mapimported-orochi-sage",
+      "file": "assets/models/generated/war3mapimported-orochi-sage.glb",
+      "mdxPath": "war3mapImported\\Orochi_Sage.mdx",
+      "unitIds": [
+        "오로치마루-선인모드__h061"
+      ],
+      "bytes": 159896,
+      "geosets": 2
+    },
+    {
+      "asset": "war3mapimported-hanzo-edo",
+      "file": "assets/models/generated/war3mapimported-hanzo-edo.glb",
+      "mdxPath": "war3mapImported\\Hanzo-Edo.mdx",
+      "unitIds": [
+        "한조-예토전생__h05I"
+      ],
+      "bytes": 185632,
+      "geosets": 7
+    },
+    {
+      "asset": "war3mapimported-kakashi-epic1",
+      "file": "assets/models/generated/war3mapimported-kakashi-epic1.glb",
+      "mdxPath": "war3mapImported\\Kakashi-epic1.mdx",
+      "unitIds": [
+        "하타케-카카시-닌자연합군-1대장__h05J"
+      ],
+      "bytes": 303608,
+      "geosets": 6
+    },
+    {
+      "asset": "war3mapimported-sasuke-short",
+      "file": "assets/models/generated/war3mapimported-sasuke-short.glb",
+      "mdxPath": "war3mapImported\\Sasuke_Short.mdx",
+      "unitIds": [
+        "우치하-사스케-기린__h06E"
+      ],
+      "bytes": 250892,
+      "geosets": 4
+    },
+    {
+      "asset": "war3mapimported-yamato-u01",
+      "file": "assets/models/generated/war3mapimported-yamato-u01.glb",
+      "mdxPath": "war3mapImported\\yamato-U01.mdx",
+      "unitIds": [
+        "야마토-암부__h076"
+      ],
+      "bytes": 374560,
+      "geosets": 7
+    },
+    {
+      "asset": "war3mapimported-shino",
+      "file": "assets/models/generated/war3mapimported-shino.glb",
+      "mdxPath": "war3mapImported\\Shino.mdx",
+      "unitIds": [
+        "아부라메-시노__h07A"
+      ],
+      "bytes": 233700,
+      "geosets": 1
+    },
+    {
+      "asset": "war3mapimported-chiyo",
+      "file": "assets/models/generated/war3mapimported-chiyo.glb",
+      "mdxPath": "war3mapImported\\Chiyo.mdx",
+      "unitIds": [
+        "치요할멈__h07G"
+      ],
+      "bytes": 189728,
+      "geosets": 5
+    },
+    {
+      "asset": "war3mapimported-shizune",
+      "file": "assets/models/generated/war3mapimported-shizune.glb",
+      "mdxPath": "war3mapImported\\Shizune.mdx",
+      "unitIds": [
+        "시즈네__h07Y"
+      ],
+      "bytes": 278492,
+      "geosets": 6
+    },
+    {
+      "asset": "war3mapimported-kabuchi",
+      "file": "assets/models/generated/war3mapimported-kabuchi.glb",
+      "mdxPath": "war3mapImported\\Kabuchi.mdx",
+      "unitIds": [
+        "야쿠시-카부토-전장의-지배자__h086"
+      ],
+      "bytes": 307500,
+      "geosets": 4
+    },
+    {
+      "asset": "war3mapimported-hinata-e",
+      "file": "assets/models/generated/war3mapimported-hinata-e.glb",
+      "mdxPath": "war3mapImported\\Hinata-e.mdx",
+      "unitIds": [
+        "휴우가-히나타-백안__h080"
+      ],
+      "bytes": 556972,
+      "geosets": 8
+    },
+    {
+      "asset": "war3mapimported-naruto-tail6",
+      "file": "assets/models/generated/war3mapimported-naruto-tail6.glb",
+      "mdxPath": "war3mapImported\\Naruto_tail6.mdx",
+      "unitIds": [
+        "우즈마키-나루토-꼬리6개-해방__h094"
+      ],
+      "bytes": 78636,
+      "geosets": 2
+    },
+    {
+      "asset": "war3mapimported-hashirama-shinsuusenju",
+      "file": "assets/models/generated/war3mapimported-hashirama-shinsuusenju.glb",
+      "mdxPath": "war3mapImported\\hashirama-shinsuusenju.mdx",
+      "unitIds": [
+        "센쥬-하시라마-선인모드__h097"
+      ],
+      "bytes": 527520,
+      "geosets": 2
+    },
+    {
+      "asset": "war3mapimported-gedo",
+      "file": "assets/models/generated/war3mapimported-gedo.glb",
+      "mdxPath": "war3mapImported\\Gedo.mdx",
+      "unitIds": [
+        "외도마상-미수차크라__h06L"
+      ],
+      "bytes": 597516,
+      "geosets": 6
+    },
+    {
+      "asset": "war3mapimported-itachi-susa-3",
+      "file": "assets/models/generated/war3mapimported-itachi-susa-3.glb",
+      "mdxPath": "war3mapImported\\Itachi_Susa[3].mdx",
+      "unitIds": [
+        "우치하-이타치-스사노오-3단계__h09H"
+      ],
+      "bytes": 563316,
+      "geosets": 5
+    },
+    {
+      "asset": "war3mapimported-pain",
+      "file": "assets/models/generated/war3mapimported-pain.glb",
+      "mdxPath": "war3mapImported\\Pain.mdx",
+      "unitIds": [
+        "육도-페인-천도__h06R"
+      ],
+      "bytes": 169424,
+      "geosets": 6,
+      "warnings": [
+        "missing texture UI\\Widgets\\Glues\\GlueScreen-RadioButton-ButtonDisabled.blp"
+      ]
+    },
+    {
+      "asset": "war3mapimported-jugo-trans",
+      "file": "assets/models/generated/war3mapimported-jugo-trans.glb",
+      "mdxPath": "war3mapImported\\Jugo_Trans.mdx",
+      "unitIds": [
+        "쥬고-완전-주인화__h06S"
+      ],
+      "bytes": 167816,
+      "geosets": 2
+    },
+    {
+      "asset": "war3mapimported-nagato",
+      "file": "assets/models/generated/war3mapimported-nagato.glb",
+      "mdxPath": "war3mapImported\\Nagato.mdx",
+      "unitIds": [
+        "우즈마키-나가토__h09N"
+      ],
+      "bytes": 165136,
+      "geosets": 7,
+      "warnings": [
+        "missing texture UI\\Widgets\\Glues\\GlueScreen-RadioButton-ButtonDisabled.blp"
+      ]
+    },
+    {
+      "asset": "war3mapimported-sasuke-m",
+      "file": "assets/models/generated/war3mapimported-sasuke-m.glb",
+      "mdxPath": "war3mapImported\\Sasuke-m.mdx",
+      "unitIds": [
+        "우치하-사스케-주인1__h07U"
+      ],
+      "bytes": 349064,
+      "geosets": 7
+    },
+    {
+      "asset": "war3mapimported-orochimaru-u",
+      "file": "assets/models/generated/war3mapimported-orochimaru-u.glb",
+      "mdxPath": "war3mapImported\\Orochimaru-u.mdx",
+      "unitIds": [
+        "오로치마루-아카츠키__h09Y"
+      ],
+      "bytes": 234312,
+      "geosets": 5
+    },
+    {
+      "asset": "war3mapimported-oonoki",
+      "file": "assets/models/generated/war3mapimported-oonoki.glb",
+      "mdxPath": "war3mapImported\\Oonoki.mdx",
+      "unitIds": [
+        "오오노키-3대-츠치카게__h0A0"
+      ],
+      "bytes": 180996,
+      "geosets": 3
+    },
+    {
+      "asset": "war3mapimported-temari",
+      "file": "assets/models/generated/war3mapimported-temari.glb",
+      "mdxPath": "war3mapImported\\%Temari.mdx",
+      "unitIds": [
+        "테마리-풍둔술사__h0A1"
+      ],
+      "bytes": 445448,
+      "geosets": 6
+    },
+    {
+      "asset": "war3mapimported-gamaken",
+      "file": "assets/models/generated/war3mapimported-gamaken.glb",
+      "mdxPath": "war3mapImported\\Gamaken.mdx",
+      "unitIds": [
+        "가마켄__h0AE"
+      ],
+      "bytes": 137844,
+      "geosets": 2
+    },
+    {
+      "asset": "war3mapimported-zabuza-edo",
+      "file": "assets/models/generated/war3mapimported-zabuza-edo.glb",
+      "mdxPath": "war3mapImported\\Zabuza-Edo.mdx",
+      "unitIds": [
+        "자부자-예토전생__h0AF"
+      ],
+      "bytes": 67512,
+      "geosets": 3
+    },
+    {
+      "asset": "war3mapimported-kushina",
+      "file": "assets/models/generated/war3mapimported-kushina.glb",
+      "mdxPath": "war3mapImported\\Kushina.mdx",
+      "unitIds": [
+        "우즈마키-쿠시나__h08R",
+        "우즈마키-쿠시나__h07S"
+      ],
+      "bytes": 351848,
+      "geosets": 9
+    },
+    {
+      "asset": "war3mapimported-bee-l",
+      "file": "assets/models/generated/war3mapimported-bee-l.glb",
+      "mdxPath": "war3mapImported\\Bee_L.mdx",
+      "unitIds": [
+        "킬러-비-미수화__h07L"
+      ],
+      "bytes": 194344,
+      "geosets": 10
+    },
+    {
+      "asset": "war3mapimported-gaara-e",
+      "file": "assets/models/generated/war3mapimported-gaara-e.glb",
+      "mdxPath": "war3mapImported\\Gaara-E.mdx",
+      "unitIds": [
+        "가아라-닌자연합군-연대장__h08A"
+      ],
+      "bytes": 148204,
+      "geosets": 1
+    },
+    {
+      "asset": "war3mapimported-darui",
+      "file": "assets/models/generated/war3mapimported-darui.glb",
+      "mdxPath": "war3mapImported\\Darui.mdx",
+      "unitIds": [
+        "다루이-혈계한계-람둔__h069"
+      ],
+      "bytes": 113348,
+      "geosets": 4
+    },
+    {
+      "asset": "war3mapimported-terumi",
+      "file": "assets/models/generated/war3mapimported-terumi.glb",
+      "mdxPath": "war3mapImported\\Terumi.mdx",
+      "unitIds": [
+        "테루미메이-5대-미즈카게__h085"
+      ],
+      "bytes": 145004,
+      "geosets": 3
+    },
+    {
+      "asset": "war3mapimported-killer-a-1",
+      "file": "assets/models/generated/war3mapimported-killer-a-1.glb",
+      "mdxPath": "war3mapImported\\%Killer-A_1.mdx",
+      "unitIds": [
+        "킬러-에이-4대-라이카게__h089"
+      ],
+      "bytes": 738316,
+      "geosets": 3
+    },
+    {
+      "asset": "war3mapimported-kabuto-sage",
+      "file": "assets/models/generated/war3mapimported-kabuto-sage.glb",
+      "mdxPath": "war3mapImported\\Kabuto-Sage.mdx",
+      "unitIds": [
+        "야쿠시-카부토-선인모드__h679"
+      ],
+      "bytes": 92896,
+      "geosets": 2
+    },
+    {
+      "asset": "war3mapimported-mifune",
+      "file": "assets/models/generated/war3mapimported-mifune.glb",
+      "mdxPath": "war3mapImported\\Mifune.mdx",
+      "unitIds": [
+        "미후네-사무라이-군주__h574"
+      ],
+      "bytes": 155524,
+      "geosets": 6
+    },
+    {
+      "asset": "war3mapimported-guren",
+      "file": "assets/models/generated/war3mapimported-guren.glb",
+      "mdxPath": "war3mapImported\\Guren.mdx",
+      "unitIds": [
+        "구렌-정둔술사__h05D"
+      ],
+      "bytes": 602524,
+      "geosets": 5
+    },
+    {
+      "asset": "war3mapimported-orochi-yamatanoorochi",
+      "file": "assets/models/generated/war3mapimported-orochi-yamatanoorochi.glb",
+      "mdxPath": "war3mapImported\\Orochi-Yamatanoorochi.mdx",
+      "unitIds": [
+        "오로치마루-야마타의-술__h06M"
+      ],
+      "bytes": 228472,
+      "geosets": 5
+    },
+    {
+      "asset": "war3mapimported-kurotsuchi",
+      "file": "assets/models/generated/war3mapimported-kurotsuchi.glb",
+      "mdxPath": "war3mapImported\\Kurotsuchi.mdx",
+      "unitIds": [
+        "쿠로츠치-츠치카게의-손녀__h0AC"
+      ],
+      "bytes": 134624,
+      "geosets": 1
+    },
+    {
+      "asset": "war3mapimported-hinata-e",
+      "file": "assets/models/generated/war3mapimported-hinata-e.glb",
+      "mdxPath": "war3mapImported\\Hinata-E.mdx",
+      "unitIds": [
+        "휴우가-히나타-유보쌍사권__h0B8"
+      ],
+      "bytes": 556972,
+      "geosets": 8
+    },
+    {
+      "asset": "war3mapimported-sakura-e",
+      "file": "assets/models/generated/war3mapimported-sakura-e.glb",
+      "mdxPath": "war3mapImported\\sakura-e.mdx",
+      "unitIds": [
+        "하루노-사쿠라-백호의-술__h0B9"
+      ],
+      "bytes": 270220,
+      "geosets": 4
+    },
+    {
+      "asset": "war3mapimported-sakura-slam2",
+      "file": "assets/models/generated/war3mapimported-sakura-slam2.glb",
+      "mdxPath": "war3mapImported\\@Sakura_Slam2.mdx",
+      "unitIds": [
+        "하루노-사쿠라-백호의술__n001"
+      ],
+      "bytes": 524928,
+      "geosets": 1
+    },
+    {
+      "asset": "war3mapimported-gaara-karura",
+      "file": "assets/models/generated/war3mapimported-gaara-karura.glb",
+      "mdxPath": "war3mapImported\\@Gaara_Karura.mdx",
+      "unitIds": [
+        "가아라-닌자-연합군-연대장__n03C"
+      ],
+      "bytes": 60888,
+      "geosets": 1
+    },
+    {
+      "asset": "war3mapimported-gamakichi-boom",
+      "file": "assets/models/generated/war3mapimported-gamakichi-boom.glb",
+      "mdxPath": "war3mapImported\\@Gamakichi_Boom.mdx",
+      "unitIds": [
+        "가마키치-묘목산두꺼비__n04L"
+      ],
+      "bytes": 14352,
+      "geosets": 4,
+      "warnings": [
+        "missing texture Textures\\star32.blp",
+        "missing texture Textures\\white.blp",
+        "missing texture Textures\\Shockwave1White.blp",
+        "missing texture Textures\\GenericGlow64.blp"
+      ]
+    },
+    {
+      "asset": "war3mapimported-shisui-koto",
+      "file": "assets/models/generated/war3mapimported-shisui-koto.glb",
+      "mdxPath": "war3mapImported\\@Shisui_Koto.mdx",
+      "unitIds": [
+        "우치하-시스이-스사노오-3단계__n04Q"
+      ],
+      "bytes": 121364,
+      "geosets": 2
+    },
+    {
+      "asset": "war3mapimported-kinkaku-tornado",
+      "file": "assets/models/generated/war3mapimported-kinkaku-tornado.glb",
+      "mdxPath": "war3mapImported\\@Kinkaku_Tornado.mdx",
+      "unitIds": [
+        "금은형제-킨카쿠__n04Y"
+      ],
+      "bytes": 5332,
+      "geosets": 2,
+      "warnings": [
+        "missing texture Textures\\firering1A.blp"
+      ]
+    },
+    {
+      "asset": "war3mapimported-shika-black",
+      "file": "assets/models/generated/war3mapimported-shika-black.glb",
+      "mdxPath": "war3mapImported\\@Shika_black.mdx",
+      "unitIds": [
+        "나라-시카마루-타고난-천재__n054"
+      ],
+      "bytes": 3488,
+      "geosets": 1
+    },
+    {
+      "asset": "war3mapimported-gamakichi-elder",
+      "file": "assets/models/generated/war3mapimported-gamakichi-elder.glb",
+      "mdxPath": "war3mapImported\\Gamakichi_Elder.mdx",
+      "unitIds": [
+        "가마키치-묘목산-두꺼비__h002"
+      ],
+      "bytes": 161248,
+      "geosets": 3
+    },
+    {
+      "asset": "war3mapimported-hidan-slash",
+      "file": "assets/models/generated/war3mapimported-hidan-slash.glb",
+      "mdxPath": "war3mapImported\\@Hidan_Slash.mdx",
+      "unitIds": [
+        "히단-사신화__n05D"
+      ],
+      "bytes": 13044,
+      "geosets": 2
+    },
+    {
+      "asset": "war3mapimported-naruto-laser-2",
+      "file": "assets/models/generated/war3mapimported-naruto-laser-2.glb",
+      "mdxPath": "war3mapImported\\@Naruto_Laser-2.mdx",
+      "unitIds": [
+        "메카-나루토-7610__n05I"
+      ],
+      "bytes": 3792,
+      "geosets": 2,
+      "warnings": [
+        "missing texture Textures\\Green_Glow2.blp",
+        "missing texture Textures\\GenericGlowX.blp"
+      ]
+    },
+    {
+      "asset": "war3mapimported-kisame",
+      "file": "assets/models/generated/war3mapimported-kisame.glb",
+      "mdxPath": "war3mapImported\\Kisame.mdx",
+      "unitIds": [
+        "호시가키-키사메-꼬리없는-미수__h02G"
+      ],
+      "bytes": 200656,
+      "geosets": 8
+    },
+    {
+      "asset": "war3mapimported-himawari",
+      "file": "assets/models/generated/war3mapimported-himawari.glb",
+      "mdxPath": "war3mapImported\\Himawari.mdx",
+      "unitIds": [
+        "우즈마키-히마와리__h02J"
+      ],
+      "bytes": 325468,
+      "geosets": 3
+    },
+    {
+      "asset": "war3mapimported-fuu-ll",
+      "file": "assets/models/generated/war3mapimported-fuu-ll.glb",
+      "mdxPath": "war3mapImported\\fuu-LL.mdx",
+      "unitIds": [
+        "후우-7미의-인주력__h02M"
+      ],
+      "bytes": 231180,
+      "geosets": 2
+    },
+    {
+      "asset": "war3mapimported-yukito",
+      "file": "assets/models/generated/war3mapimported-yukito.glb",
+      "mdxPath": "war3mapImported\\%Yukito.mdx",
+      "unitIds": [
+        "니이-유기토-2미의-인주력__h02O"
+      ],
+      "bytes": 859432,
+      "geosets": 5
+    },
+    {
+      "asset": "war3mapimported-3mi-yagura",
+      "file": "assets/models/generated/war3mapimported-3mi-yagura.glb",
+      "mdxPath": "war3mapImported\\3mi_Yagura.mdx",
+      "unitIds": [
+        "야구라-3미의-인주력__h02P"
+      ],
+      "bytes": 193852,
+      "geosets": 3
+    },
+    {
+      "asset": "war3mapimported-4mi-roushi",
+      "file": "assets/models/generated/war3mapimported-4mi-roushi.glb",
+      "mdxPath": "war3mapImported\\4mi_Roushi.mdx",
+      "unitIds": [
+        "로우시-4미의-인주력__h02T"
+      ],
+      "bytes": 82864,
+      "geosets": 1
+    },
+    {
+      "asset": "war3mapimported-5mi-han",
+      "file": "assets/models/generated/war3mapimported-5mi-han.glb",
+      "mdxPath": "war3mapImported\\5mi_Han.mdx",
+      "unitIds": [
+        "한-5미의-인주력__h02W"
+      ],
+      "bytes": 291664,
+      "geosets": 2
+    },
+    {
+      "asset": "war3mapimported-kurama-inf",
+      "file": "assets/models/generated/war3mapimported-kurama-inf.glb",
+      "mdxPath": "war3mapImported\\Kurama_INF.mdx",
+      "unitIds": [
+        "나루토-양의-힘-쿠라마__n05X"
+      ],
+      "bytes": 531744,
+      "geosets": 14
+    },
+    {
+      "asset": "war3mapimported-sasukerinnegan",
+      "file": "assets/models/generated/war3mapimported-sasukerinnegan.glb",
+      "mdxPath": "war3mapImported\\sasukerinnegan.mdx",
+      "unitIds": [
+        "우치하-사스케-완성체-스사노오__n061"
+      ],
+      "bytes": 17492,
+      "geosets": 2
+    },
+    {
+      "asset": "war3mapimported-shisui-inf",
+      "file": "assets/models/generated/war3mapimported-shisui-inf.glb",
+      "mdxPath": "war3mapImported\\Shisui_INF.mdx",
+      "unitIds": [
+        "우치하-시스이-완성체-스사노오__n065"
+      ],
+      "bytes": 2575304,
+      "geosets": 5
+    },
+    {
+      "asset": "war3mapimported-itachi-inf",
+      "file": "assets/models/generated/war3mapimported-itachi-inf.glb",
+      "mdxPath": "war3mapImported\\Itachi_INF.mdx",
+      "unitIds": [
+        "우치하-이타치-완성체-스사노오__n06S"
+      ],
+      "bytes": 2009904,
+      "geosets": 5
+    },
+    {
+      "asset": "war3mapimported-kakashi-inf",
+      "file": "assets/models/generated/war3mapimported-kakashi-inf.glb",
+      "mdxPath": "war3mapImported\\Kakashi_INF.mdx",
+      "unitIds": [
+        "하타케-카카시-완성체-스사노오__n06X"
+      ],
+      "bytes": 2047176,
+      "geosets": 5
+    },
+    {
+      "asset": "war3mapimported-zetsu-ep-spell1",
+      "file": "assets/models/generated/war3mapimported-zetsu-ep-spell1.glb",
+      "mdxPath": "war3mapImported\\@Zetsu_Ep_Spell1.mdx",
+      "unitIds": [
+        "소용돌이-제츠-아카츠키__n071"
+      ],
+      "bytes": 5788,
+      "geosets": 2,
+      "warnings": [
+        "missing texture Textures\\EQ_Rock2.blp"
+      ]
+    },
+    {
+      "asset": "war3mapimported-tobirama-ep-dark",
+      "file": "assets/models/generated/war3mapimported-tobirama-ep-dark.glb",
+      "mdxPath": "war3mapImported\\@Tobirama_Ep_Dark.mdx",
+      "unitIds": [
+        "센쥬-토비라마-예토전생__n072"
+      ],
+      "bytes": 7148,
+      "geosets": 6,
+      "warnings": [
+        "missing texture abilities\\Spells\\Human\\Banish\\GenericGlow2bA.blp"
+      ]
+    },
+    {
+      "asset": "war3mapimported-danzo-wind-1",
+      "file": "assets/models/generated/war3mapimported-danzo-wind-1.glb",
+      "mdxPath": "war3mapImported\\@Danzo_Wind_1.mdx",
+      "unitIds": [
+        "시무라-단조-뿌리의-수장__n078"
+      ],
+      "bytes": 55464,
+      "geosets": 2
+    },
+    {
+      "asset": "war3mapimported-momo-inf",
+      "file": "assets/models/generated/war3mapimported-momo-inf.glb",
+      "mdxPath": "war3mapImported\\Momo_Inf.mdx",
+      "unitIds": [
+        "오오츠츠키-모모시키-단을-흡수-한-자__n07A"
+      ],
+      "bytes": 569920,
+      "geosets": 20
+    },
+    {
+      "asset": "war3mapimported-sasuke-rn-slam2",
+      "file": "assets/models/generated/war3mapimported-sasuke-rn-slam2.glb",
+      "mdxPath": "war3mapImported\\@Sasuke_Rn_Slam2.mdx",
+      "unitIds": [
+        "사스케-스사노오-미수-차크라__n07C"
+      ],
+      "bytes": 1543480,
+      "geosets": 8
+    },
+    {
+      "asset": "war3mapimported-hanabi-inf-splash2",
+      "file": "assets/models/generated/war3mapimported-hanabi-inf-splash2.glb",
+      "mdxPath": "war3mapImported\\@Hanabi_Inf_Splash2.mdx",
+      "unitIds": [
+        "휴우가-하나비-꽃불의-회천__n07D"
+      ],
+      "bytes": 319532,
+      "geosets": 3
+    },
+    {
+      "asset": "war3mapimported-rikudo-sennine-spell",
+      "file": "assets/models/generated/war3mapimported-rikudo-sennine-spell.glb",
+      "mdxPath": "war3mapImported\\@Rikudo_Sennine_Spell.mdx",
+      "unitIds": [
+        "육도선인-십미의-인주력__n07H"
+      ],
+      "bytes": 66492,
+      "geosets": 2,
+      "warnings": [
+        "missing texture Textures\\LavaLump2.blp"
+      ]
+    },
+    {
+      "asset": "war3mapimported-rocklee-leaf",
+      "file": "assets/models/generated/war3mapimported-rocklee-leaf.glb",
+      "mdxPath": "war3mapImported\\@RockLee_Leaf.mdx",
+      "unitIds": [
+        "록-리-취권__n07M"
+      ],
+      "bytes": 124748,
+      "geosets": 1
+    },
+    {
+      "asset": "war3mapimported-hagoromo",
+      "file": "assets/models/generated/war3mapimported-hagoromo.glb",
+      "mdxPath": "war3mapImported\\Hagoromo.mdx",
+      "unitIds": [
+        "하고로모의-차크라__h03O",
+        "음양둔__h06V"
+      ],
+      "bytes": 466276,
+      "geosets": 5
+    },
+    {
+      "asset": "war3mapimported-obito-i",
+      "file": "assets/models/generated/war3mapimported-obito-i.glb",
+      "mdxPath": "war3mapImported\\Obito-I.mdx",
+      "unitIds": [
+        "오비토의-동력__h03P"
+      ],
+      "bytes": 245364,
+      "geosets": 2
+    },
+    {
+      "asset": "war3mapimported-itachi-ms",
+      "file": "assets/models/generated/war3mapimported-itachi-ms.glb",
+      "mdxPath": "war3mapImported\\itachi_ms.mdx",
+      "unitIds": [
+        "이타치의-동력__h03Q"
+      ],
+      "bytes": 64808,
+      "geosets": 2
+    },
+    {
+      "asset": "war3mapimported-shisui-ms",
+      "file": "assets/models/generated/war3mapimported-shisui-ms.glb",
+      "mdxPath": "war3mapImported\\Shisui_MS.mdx",
+      "unitIds": [
+        "시스이의-동력__h03R"
+      ],
+      "bytes": 68980,
+      "geosets": 2
+    },
+    {
+      "asset": "war3mapimported-inoshikacho",
+      "file": "assets/models/generated/war3mapimported-inoshikacho.glb",
+      "mdxPath": "war3mapImported\\InoshikaCho.mdx",
+      "unitIds": [
+        "이노시카쵸__h045"
+      ],
+      "bytes": 622068,
+      "geosets": 6
+    },
+    {
+      "asset": "war3mapimported-sai-e",
+      "file": "assets/models/generated/war3mapimported-sai-e.glb",
+      "mdxPath": "war3mapImported\\Sai-E.mdx",
+      "unitIds": [
+        "사이-호시탐탄__h046"
+      ],
+      "bytes": 155416,
+      "geosets": 6
+    },
+    {
+      "asset": "war3mapimported-muu",
+      "file": "assets/models/generated/war3mapimported-muu.glb",
+      "mdxPath": "war3mapImported\\Muu.mdx",
+      "unitIds": [
+        "무우-2대-츠치카게__h047"
+      ],
+      "bytes": 145536,
+      "geosets": 1
+    },
+    {
+      "asset": "war3mapimported-obito-inf",
+      "file": "assets/models/generated/war3mapimported-obito-inf.glb",
+      "mdxPath": "war3mapImported\\Obito_INF.mdx",
+      "unitIds": [
+        "우치하-오비토-육도모드__h048"
+      ],
+      "bytes": 1057220,
+      "geosets": 9,
+      "warnings": [
+        "missing texture ReplaceableTextures\\TeamGlow\\TeamGlow03.blp"
+      ]
+    },
+    {
+      "asset": "war3mapimported-kaguya-inf",
+      "file": "assets/models/generated/war3mapimported-kaguya-inf.glb",
+      "mdxPath": "war3mapImported\\Kaguya_INF.mdx",
+      "unitIds": [
+        "오오츠츠키-카구야-윤회사륜안__h049"
+      ],
+      "bytes": 678680,
+      "geosets": 4
+    },
+    {
+      "asset": "war3mapimported-oonoki-jinton-big",
+      "file": "assets/models/generated/war3mapimported-oonoki-jinton-big.glb",
+      "mdxPath": "war3mapImported\\@Oonoki_Jinton_Big.mdx",
+      "unitIds": [
+        "무우-2대-츠치카게-분열의-술__n07X"
+      ],
+      "bytes": 21856,
+      "geosets": 6,
+      "warnings": [
+        "missing texture Textures\\GenericGlowX.blp",
+        "missing texture Textures\\Shockwave1White.blp",
+        "missing texture Textures\\Shockwave10.blp",
+        "missing texture Textures\\firering1A.blp"
+      ]
+    },
+    {
+      "asset": "war3mapimported-sandpyraid",
+      "file": "assets/models/generated/war3mapimported-sandpyraid.glb",
+      "mdxPath": "war3mapImported\\@sandpyraid.mdx",
+      "unitIds": [
+        "라사-4대-카제카게__n08G"
+      ],
+      "bytes": 1740,
+      "geosets": 1,
+      "warnings": [
+        "missing texture TerrainArt\\Ruins\\Ruins_Sand.blp"
+      ]
+    },
+    {
+      "asset": "war3mapimported-killera-slash",
+      "file": "assets/models/generated/war3mapimported-killera-slash.glb",
+      "mdxPath": "war3mapImported\\@KillerA_Slash.mdx",
+      "unitIds": [
+        "킬러-에이-3대-라이카게__n08L"
+      ],
+      "bytes": 4468,
+      "geosets": 3,
+      "warnings": [
+        "missing texture Textures\\Flare.blp"
+      ]
+    },
+    {
+      "asset": "war3mapimported-sai-e-effect-summon",
+      "file": "assets/models/generated/war3mapimported-sai-e-effect-summon.glb",
+      "mdxPath": "war3mapImported\\Sai-E-Effect_Summon.mdx",
+      "unitIds": [
+        "사이-호시탐탄-인법-초신위화__h04C"
+      ],
+      "bytes": 206440,
+      "geosets": 4
+    },
+    {
+      "asset": "war3mapimported-madara-rikudo-black",
+      "file": "assets/models/generated/war3mapimported-madara-rikudo-black.glb",
+      "mdxPath": "war3mapImported\\%Madara_Rikudo_Black.mdx",
+      "unitIds": [
+        "우치하-마다라-육도모드-윤묘-변옥__h05H"
+      ],
+      "bytes": 1246932,
+      "geosets": 7
+    },
+    {
+      "asset": "war3mapimported-kakuzu-puppet-wind-fire",
+      "file": "assets/models/generated/war3mapimported-kakuzu-puppet-wind-fire.glb",
+      "mdxPath": "war3mapImported\\Kakuzu_Puppet_Wind_Fire.mdx",
+      "unitIds": [
+        "카쿠즈-완전변형-지원구-화둔__h05N",
+        "카쿠즈-완전변형-지원구-풍둔__h05P"
+      ],
+      "bytes": 362744,
+      "geosets": 17
+    },
+    {
+      "asset": "war3mapimported-kakuzu-puppet-lightning",
+      "file": "assets/models/generated/war3mapimported-kakuzu-puppet-lightning.glb",
+      "mdxPath": "war3mapImported\\Kakuzu_Puppet_Lightning.mdx",
+      "unitIds": [
+        "카쿠즈-완전변형-지원구-뇌둔__h05Q"
+      ],
+      "bytes": 506760,
+      "geosets": 6
+    },
+    {
+      "asset": "war3mapimported-toneri-inf-gudodama",
+      "file": "assets/models/generated/war3mapimported-toneri-inf-gudodama.glb",
+      "mdxPath": "war3mapImported\\@Toneri_Inf_Gudodama.mdx",
+      "unitIds": [
+        "오오츠츠키-토네리-전생안__n099"
+      ],
+      "bytes": 8700,
+      "geosets": 1
+    },
+    {
+      "asset": "war3mapimported-terumi-sp-sp2",
+      "file": "assets/models/generated/war3mapimported-terumi-sp-sp2.glb",
+      "mdxPath": "war3mapImported\\@Terumi_SP_Sp2.mdx",
+      "unitIds": [
+        "테루미메이-노처녀-히스테리__n09C"
+      ],
+      "bytes": 5624,
+      "geosets": 1,
+      "warnings": [
+        "missing texture Textures\\Wirlwinds.blp"
+      ]
+    },
+    {
+      "asset": "war3mapimported-sasuke-ep-kirin",
+      "file": "assets/models/generated/war3mapimported-sasuke-ep-kirin.glb",
+      "mdxPath": "war3mapImported\\@Sasuke_Ep_Kirin.mdx",
+      "unitIds": [
+        "우치하-사스케-영원한만화경사륜안__n09D"
+      ],
+      "bytes": 12788,
+      "geosets": 5,
+      "warnings": [
+        "missing texture abilities\\Spells\\Other\\Monsoon\\Lightning2b.blp"
+      ]
+    },
+    {
+      "asset": "war3mapimported-pakura-4",
+      "file": "assets/models/generated/war3mapimported-pakura-4.glb",
+      "mdxPath": "war3mapImported\\@Pakura_4.mdx",
+      "unitIds": [
+        "파쿠라-혈계한계-작둔__n09K"
+      ],
+      "bytes": 8344,
+      "geosets": 2,
+      "warnings": [
+        "missing texture Textures\\LightningBall.blp",
+        "missing texture Textures\\grad2d.blp"
+      ]
+    },
+    {
+      "asset": "war3mapimported-hanabi",
+      "file": "assets/models/generated/war3mapimported-hanabi.glb",
+      "mdxPath": "war3mapImported\\Hanabi.mdx",
+      "unitIds": [
+        "하나비의-백안__h065"
+      ],
+      "bytes": 444484,
+      "geosets": 12
+    },
+    {
+      "asset": "war3mapimported-kushina-bikini",
+      "file": "assets/models/generated/war3mapimported-kushina-bikini.glb",
+      "mdxPath": "war3mapImported\\Kushina_Bikini.mdx",
+      "unitIds": [
+        "우즈마키-쿠시나-9미의-인주력__h06Z"
+      ],
+      "bytes": 386548,
+      "geosets": 5
+    },
+    {
+      "asset": "war3mapimported-gaara-inf",
+      "file": "assets/models/generated/war3mapimported-gaara-inf.glb",
+      "mdxPath": "war3mapImported\\Gaara_Inf.mdx",
+      "unitIds": [
+        "사폭의-가아라-5대-카제카게__h073"
+      ],
+      "bytes": 544792,
+      "geosets": 3
+    },
+    {
+      "asset": "war3mapimported-kankuro-lim-dark",
+      "file": "assets/models/generated/war3mapimported-kankuro-lim-dark.glb",
+      "mdxPath": "war3mapImported\\@Kankuro_LIM_Dark.mdx",
+      "unitIds": [
+        "칸쿠로-닌자연합군-기습부대장__n09Y"
+      ],
+      "bytes": 13476,
+      "geosets": 3,
+      "warnings": [
+        "missing texture Textures\\GenericGlowX_Mod2.blp"
+      ]
+    },
+    {
+      "asset": "war3mapimported-killera-boom2",
+      "file": "assets/models/generated/war3mapimported-killera-boom2.glb",
+      "mdxPath": "war3mapImported\\@KillerA_Boom2.mdx",
+      "unitIds": [
+        "우치하-마다라-스사노오-쿠라마__n0A2"
+      ],
+      "bytes": 31000,
+      "geosets": 4,
+      "warnings": [
+        "missing texture Textures\\grad2d.blp",
+        "missing texture Textures\\firering4.blp",
+        "missing texture UI\\MiniMap\\ping4.blp"
+      ]
+    },
+    {
+      "asset": "war3mapimported-rasengan-ori",
+      "file": "assets/models/generated/war3mapimported-rasengan-ori.glb",
+      "mdxPath": "war3mapImported\\@Rasengan_ori.mdx",
+      "unitIds": [
+        "하타케-카카시-호카게-직속-암부__n0A6"
+      ],
+      "bytes": 171428,
+      "geosets": 8,
+      "warnings": [
+        "missing texture Textures\\white.blp",
+        "missing texture Textures\\Shockwave10.blp",
+        "missing texture Textures\\GenericGlow5.blp"
+      ]
+    },
+    {
+      "asset": "war3mapimported-madara-ep-susa-5",
+      "file": "assets/models/generated/war3mapimported-madara-ep-susa-5.glb",
+      "mdxPath": "war3mapImported\\@Madara_Ep_Susa_5.mdx",
+      "unitIds": [
+        "우치하-마다라-스사노오__n0A7"
+      ],
+      "bytes": 18560,
+      "geosets": 3,
+      "warnings": [
+        "missing texture ReplaceableTextures\\NorthrendTree\\NorthTreeBlight.blp"
+      ]
+    },
+    {
+      "asset": "war3mapimported-ino-swim",
+      "file": "assets/models/generated/war3mapimported-ino-swim.glb",
+      "mdxPath": "war3mapImported\\Ino_swim.mdx",
+      "unitIds": [
+        "야마나카-이노-심전신술__h074"
+      ],
+      "bytes": 295524,
+      "geosets": 3
+    },
+    {
+      "asset": "war3mapimported-hinata-sp",
+      "file": "assets/models/generated/war3mapimported-hinata-sp.glb",
+      "mdxPath": "war3mapImported\\Hinata_SP.mdx",
+      "unitIds": [
+        "휴우가-히나타-바캉스__h075"
+      ],
+      "bytes": 196736,
+      "geosets": 2
+    },
+    {
+      "asset": "war3mapimported-sarada-sp",
+      "file": "assets/models/generated/war3mapimported-sarada-sp.glb",
+      "mdxPath": "war3mapImported\\Sarada_SP.mdx",
+      "unitIds": [
+        "우치하-사라다-사스케의-딸__h079"
+      ],
+      "bytes": 529260,
+      "geosets": 3
+    },
+    {
+      "asset": "war3mapimported-kinshiki-dan",
+      "file": "assets/models/generated/war3mapimported-kinshiki-dan.glb",
+      "mdxPath": "war3mapImported\\Kinshiki_Dan.mdx",
+      "unitIds": [
+        "오오츠츠키-킨시키-열매-단__h07E"
+      ],
+      "bytes": 129224,
+      "geosets": 1
+    },
+    {
+      "asset": "war3mapimported-pakura-storm",
+      "file": "assets/models/generated/war3mapimported-pakura-storm.glb",
+      "mdxPath": "war3mapImported\\@Pakura-Storm.mdx",
+      "unitIds": [
+        "파쿠라-혈계한계-작둔__n0AH"
+      ],
+      "bytes": 37880,
+      "geosets": 1
+    },
+    {
+      "asset": "war3mapimported-zetsu-white",
+      "file": "assets/models/generated/war3mapimported-zetsu-white.glb",
+      "mdxPath": "war3mapImported\\Zetsu_White.mdx",
+      "unitIds": [
+        "흰-제츠__h07J"
+      ],
+      "bytes": 130028,
+      "geosets": 1
+    },
+    {
+      "asset": "war3mapimported-pain-sura-slam",
+      "file": "assets/models/generated/war3mapimported-pain-sura-slam.glb",
+      "mdxPath": "war3mapImported\\@Pain_Sura_Slam.mdx",
+      "unitIds": [
+        "우즈마키-나가토-예토전생__n0AU"
+      ],
+      "bytes": 10048,
+      "geosets": 4,
+      "warnings": [
+        "missing texture Textures\\Shadow.blp",
+        "missing texture Textures\\Black32.blp",
+        "missing texture Textures\\FelwoodRocks.blp"
+      ]
+    },
+    {
+      "asset": "war3mapimported-rikudo-sennin-sp",
+      "file": "assets/models/generated/war3mapimported-rikudo-sennin-sp.glb",
+      "mdxPath": "war3mapImported\\Rikudo_Sennin_SP.mdx",
+      "unitIds": [
+        "육도선인-십미의-인주력__h07V",
+        "육도선인-십미의-인주력-개안__h0AW"
+      ],
+      "bytes": 78872,
+      "geosets": 1
+    },
+    {
+      "asset": "war3mapimported-kakashi-epic-thelast",
+      "file": "assets/models/generated/war3mapimported-kakashi-epic-thelast.glb",
+      "mdxPath": "war3mapImported\\Kakashi_Epic_TheLast.mdx",
+      "unitIds": [
+        "하타케-카카시-the-last__h0BH"
+      ],
+      "bytes": 1265964,
+      "geosets": 14
+    },
+    {
+      "asset": "war3mapimported-naruto-fuujin",
+      "file": "assets/models/generated/war3mapimported-naruto-fuujin.glb",
+      "mdxPath": "war3mapImported\\Naruto_Fuujin.mdx",
+      "unitIds": [
+        "우즈마키-나루토-바람의-신__h0BK"
+      ],
+      "bytes": 1194248,
+      "geosets": 2
+    },
+    {
+      "asset": "war3mapimported-indra",
+      "file": "assets/models/generated/war3mapimported-indra.glb",
+      "mdxPath": "war3mapImported\\%Indra.mdx",
+      "unitIds": [
+        "오오츠츠키-인드라__h01R"
+      ],
+      "bytes": 1463496,
+      "geosets": 10
+    },
+    {
+      "asset": "war3mapimported-asura",
+      "file": "assets/models/generated/war3mapimported-asura.glb",
+      "mdxPath": "war3mapImported\\%Asura.mdx",
+      "unitIds": [
+        "오오츠츠키-아수라__h01T"
+      ],
+      "bytes": 977944,
+      "geosets": 11
+    },
+    {
+      "asset": "war3mapimported-naruto-susa",
+      "file": "assets/models/generated/war3mapimported-naruto-susa.glb",
+      "mdxPath": "war3mapImported\\Naruto_Susa.mdx",
+      "unitIds": [
+        "위장-스사노오-유일무이__h09A"
+      ],
+      "bytes": 1068404,
+      "geosets": 5
+    },
+    {
+      "asset": "war3mapimported-shisui",
+      "file": "assets/models/generated/war3mapimported-shisui.glb",
+      "mdxPath": "war3mapImported\\Shisui.mdx",
+      "unitIds": [
+        "우치하-시스이-순신__h09D"
+      ],
+      "bytes": 234752,
+      "geosets": 10
+    },
+    {
+      "asset": "war3mapimported-wood-slam-2",
+      "file": "assets/models/generated/war3mapimported-wood-slam-2.glb",
+      "mdxPath": "war3mapImported\\@Wood_Slam_2.mdx",
+      "unitIds": [
+        "우치하-오비토-지옥의-난__n0C5"
+      ],
+      "bytes": 1272804,
+      "geosets": 3
+    },
+    {
+      "asset": "war3mapimported-inf-momoshiki",
+      "file": "assets/models/generated/war3mapimported-inf-momoshiki.glb",
+      "mdxPath": "war3mapImported\\Inf_Momoshiki.mdx",
+      "unitIds": [
+        "오오츠츠키-모모시키-천인__h08D"
+      ],
+      "bytes": 503892,
+      "geosets": 10
+    },
+    {
+      "asset": "war3mapimported-slam-hinata-inf",
+      "file": "assets/models/generated/war3mapimported-slam-hinata-inf.glb",
+      "mdxPath": "war3mapImported\\@Slam_Hinata_Inf.mdx",
+      "unitIds": [
+        "휴우가-히나타-the-last__n0CC"
+      ],
+      "bytes": 207176,
+      "geosets": 3,
+      "warnings": [
+        "missing texture Textures\\RibbonNE1_White.blp"
+      ]
+    },
+    {
+      "asset": "war3mapimported-slam-lightning-hagoromo",
+      "file": "assets/models/generated/war3mapimported-slam-lightning-hagoromo.glb",
+      "mdxPath": "war3mapImported\\Slam_Lightning_Hagoromo.mdx",
+      "unitIds": [
+        "오오츠츠키-하고로모-인술의-시조__n0CJ"
+      ],
+      "bytes": 1165144,
+      "geosets": 2
+    },
+    {
+      "asset": "war3mapimported-oochchki-hamura",
+      "file": "assets/models/generated/war3mapimported-oochchki-hamura.glb",
+      "mdxPath": "war3mapImported\\Oochchki_Hamura.mdx",
+      "unitIds": [
+        "오오츠츠키-하무라-휴우가의-선조__h09O"
+      ],
+      "bytes": 397568,
+      "geosets": 8
+    },
+    {
+      "asset": "war3mapimported-slam-mitsuki-ru-dark",
+      "file": "assets/models/generated/war3mapimported-slam-mitsuki-ru-dark.glb",
+      "mdxPath": "war3mapImported\\@Slam_Mitsuki_Ru_Dark.mdx",
+      "unitIds": [
+        "미츠키-선인모드-어둠을-비추는-자__n0CW"
+      ],
+      "bytes": 552772,
+      "geosets": 4
+    },
+    {
+      "asset": "war3mapimported-sakura-inf",
+      "file": "assets/models/generated/war3mapimported-sakura-inf.glb",
+      "mdxPath": "war3mapImported\\Sakura_Inf.mdx",
+      "unitIds": [
+        "하루노-사쿠라-the-last__h0AI"
+      ],
+      "bytes": 728600,
+      "geosets": 4
+    },
+    {
+      "asset": "war3mapimported-jiraiya-ep",
+      "file": "assets/models/generated/war3mapimported-jiraiya-ep.glb",
+      "mdxPath": "war3mapImported\\Jiraiya_EP.mdx",
+      "unitIds": [
+        "지라이야-두꺼비-선인__h0AJ"
+      ],
+      "bytes": 289976,
+      "geosets": 10
+    },
+    {
+      "asset": "war3mapimported-mitsuki-ep",
+      "file": "assets/models/generated/war3mapimported-mitsuki-ep.glb",
+      "mdxPath": "war3mapImported\\Mitsuki_ep.mdx",
+      "unitIds": [
+        "미츠키-제-7반-멤버__h0AR"
+      ],
+      "bytes": 510496,
+      "geosets": 2
+    },
+    {
+      "asset": "war3mapimported-urashiki-gn-shild",
+      "file": "assets/models/generated/war3mapimported-urashiki-gn-shild.glb",
+      "mdxPath": "war3mapImported\\@Urashiki_Gn_Shild.mdx",
+      "unitIds": [
+        "오오츠츠키-우라시키-금색의-윤회안__n0D4"
+      ],
+      "bytes": 77200,
+      "geosets": 3
+    },
+    {
+      "asset": "war3mapimported-urashiki-inf-shild-black",
+      "file": "assets/models/generated/war3mapimported-urashiki-inf-shild-black.glb",
+      "mdxPath": "war3mapImported\\@Urashiki_Inf_Shild_Black.mdx",
+      "unitIds": [
+        "오오츠츠키-우라시키-시간을-다루는-자__n0D5"
+      ],
+      "bytes": 59852,
+      "geosets": 3
+    },
+    {
+      "asset": "war3mapimported-madara",
+      "file": "assets/models/generated/war3mapimported-madara.glb",
+      "mdxPath": "war3mapImported\\%Madara.mdx",
+      "unitIds": [
+        "우치하-마다라-윤회천생-개안__h0AV"
+      ],
+      "bytes": 1081016,
+      "geosets": 11
+    },
+    {
+      "asset": "war3mapimported-neji-l",
+      "file": "assets/models/generated/war3mapimported-neji-l.glb",
+      "mdxPath": "war3mapImported\\Neji_L.mdx",
+      "unitIds": [
+        "휴유가-네지__h0AX"
+      ],
+      "bytes": 1346568,
+      "geosets": 12
+    },
+    {
+      "asset": "war3mapimported-xiaozz1",
+      "file": "assets/models/generated/war3mapimported-xiaozz1.glb",
+      "mdxPath": "war3mapImported\\xiaoZZ1.mdx",
+      "unitIds": [
+        "우치하-사스케-아카츠키__h0B5"
+      ],
+      "bytes": 807492,
+      "geosets": 5
+    },
+    {
+      "asset": "war3mapimported-kinshiki-el",
+      "file": "assets/models/generated/war3mapimported-kinshiki-el.glb",
+      "mdxPath": "war3mapImported\\Kinshiki_EL.mdx",
+      "unitIds": [
+        "오오츠츠키-킨시키-충성의-철벽__h0BB"
+      ],
+      "bytes": 694740,
+      "geosets": 6
+    }
+  ],
+  "failed": [
+    {
+      "mdxPath": "war3mapImported\\@Hinata_Shield.mdx",
+      "reason": "no geosets"
+    },
+    {
+      "mdxPath": "war3mapImported\\@Ginkaku_Attack.mdx",
+      "reason": "no geosets"
+    },
+    {
+      "mdxPath": "war3mapImported\\@Naruto_Mecha_Bijuu_Canon_Effect.mdx",
+      "reason": "no geosets"
+    },
+    {
+      "mdxPath": "war3mapImported\\@Gaara_Erruption.mdx",
+      "reason": "no geosets"
+    },
+    {
+      "mdxPath": "war3mapImported\\@Sasuke_Dark_Hole.mdx",
+      "reason": "no geosets"
+    },
+    {
+      "mdxPath": "war3mapImported\\Guy_INF_Mat.mdx",
+      "reason": "no geosets"
+    },
+    {
+      "mdxPath": "war3mapImported\\@Toneri_SKill_1.mdx",
+      "reason": "no geosets"
+    },
+    {
+      "mdxPath": "war3mapImported\\@Bubble.mdx",
+      "reason": "no geosets"
+    }
+  ]
+}
