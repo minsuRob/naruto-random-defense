@@ -8,17 +8,16 @@ import {
 import { updateAuras, updateCombat, updateTargeting } from './combat';
 import {
   addUnit,
+  dispatchPakkun,
   gamble,
   hire,
   moveUnit,
-  pakkunDown,
-  pakkunGold,
-  pakkunUp,
-  pakkunWood,
+  resolveAltar,
   rollMission,
   sell,
   updateUnitWalks,
 } from './economy';
+import { grantPakkun, updatePakkuns } from './pakkun';
 import { applyCombine } from './combine';
 import { autoChoose, choose, currentPick } from './draft';
 import { despawnMob, spawnMob } from './mobs';
@@ -75,16 +74,19 @@ export function createEngine(config: GameConfig): Engine {
     for (const command of commands) {
       switch (command.t) {
         case 'PAKKUN_DOWN':
-          pakkunDown(state, command.player, emit);
+          dispatchPakkun(state, command.player, 'normal', emit);
           break;
         case 'PAKKUN_UP':
-          pakkunUp(state, command.player, emit);
+          dispatchPakkun(state, command.player, 'magic', emit);
           break;
         case 'PAKKUN_GOLD':
-          pakkunGold(state, command.player, emit);
+          dispatchPakkun(state, command.player, 'gold', emit);
           break;
         case 'PAKKUN_WOOD':
-          pakkunWood(state, command.player, emit);
+          dispatchPakkun(state, command.player, 'wood', emit);
+          break;
+        case 'PAKKUN_SEND':
+          dispatchPakkun(state, command.player, command.altar, emit, command.tokenId);
           break;
         case 'GAMBLE':
           gamble(state, command.player, command.tier, emit);
@@ -286,7 +288,9 @@ export function createEngine(config: GameConfig): Engine {
     emit({ e: 'roundEnd', round: finished });
 
     for (const player of state.players) {
-      if (player.alive) player.pakkun += PAKKUN_PER_ROUND;
+      if (!player.alive) continue;
+      grantPakkun(state, player.id, PAKKUN_PER_ROUND);
+      player.pakkun += PAKKUN_PER_ROUND;
     }
 
     rollMission(state, finished, emit);
@@ -309,6 +313,7 @@ export function createEngine(config: GameConfig): Engine {
     updateStatus();
     updateMovement(dt);
     updateUnitWalks(state, dt);
+    updatePakkuns(state, dt, resolveAltar.bind(null, state), emit);
     updateAuras(state);
     updateTargeting(state);
     updateCombat(state, dt, emit);

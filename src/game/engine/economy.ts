@@ -9,7 +9,9 @@ import {
   SELL_REFUND,
 } from '@/game/config/balance';
 import { UNITS, type Grade } from '@/game/data/units';
+import type { AltarKind } from '@/game/config/map';
 import { cellIndex, cellToLocal, findFreeCell } from './grid';
+import { countPakkun, sendPakkun } from './pakkun';
 import type { EngineEvent, GameState, UnitInstance } from './types';
 
 /**
@@ -157,76 +159,67 @@ function drawFrom(state: GameState, grades: { grade: Grade; weight: number }[]):
   return pool[state.rng.int(pool.length)];
 }
 
-/** 파쿤을 아래로: 노말 유닛 하나. */
-export function pakkunDown(
+/**
+ * Send a pakkun token to an altar. The reward lands when it gets there — see
+ * resolveAltar — so this only reports whether one could be dispatched.
+ */
+export function dispatchPakkun(
   state: GameState,
   playerId: number,
-  emit: (event: EngineEvent) => void
+  altar: AltarKind,
+  emit: (event: EngineEvent) => void,
+  tokenId?: number
 ): boolean {
-  const player = state.players[playerId];
-  if (!player || player.pakkun < 1) {
-    emit({ e: 'log', text: '파쿤이 부족합니다' });
+  if (countPakkun(state, playerId) < 1) {
+    emit({ e: 'log', text: '파쿤이 없습니다' });
     return false;
   }
-  const defId = drawFrom(state, [{ grade: 'normal', weight: 1 }]);
-  if (!defId) return false;
-  player.pakkun--;
-  return addUnit(state, playerId, defId, 'gacha', emit) !== null;
-}
-
-/** 파쿤을 위로: 노말 70% / 매직 30%. */
-export function pakkunUp(
-  state: GameState,
-  playerId: number,
-  emit: (event: EngineEvent) => void
-): boolean {
-  const player = state.players[playerId];
-  if (!player || player.pakkun < 1) {
-    emit({ e: 'log', text: '파쿤이 부족합니다' });
+  if (!sendPakkun(state, playerId, altar, tokenId)) {
+    emit({ e: 'log', text: '보낼 수 있는 파쿤이 없습니다' });
     return false;
   }
-  const defId = drawFrom(state, [
-    { grade: 'normal', weight: 0.7 },
-    { grade: 'magic', weight: 0.3 },
-  ]);
-  if (!defId) return false;
-  player.pakkun--;
-  return addUnit(state, playerId, defId, 'gacha', emit) !== null;
-}
-
-export function pakkunGold(
-  state: GameState,
-  playerId: number,
-  emit: (event: EngineEvent) => void
-): boolean {
-  const player = state.players[playerId];
-  if (!player || player.pakkun < 1) {
-    emit({ e: 'log', text: '파쿤이 부족합니다' });
-    return false;
-  }
-  player.pakkun--;
-  player.gold += PAKKUN_GOLD;
+  state.players[playerId].pakkun = countPakkun(state, playerId);
   return true;
 }
 
-/** 파쿤을 나무로: 60% 확률로 1개. */
-export function pakkunWood(
+/** What an altar gives when a token reaches it. */
+export function resolveAltar(
   state: GameState,
   playerId: number,
+  altar: AltarKind,
   emit: (event: EngineEvent) => void
-): boolean {
+): void {
   const player = state.players[playerId];
-  if (!player || player.pakkun < 1) {
-    emit({ e: 'log', text: '파쿤이 부족합니다' });
-    return false;
+  if (!player) return;
+  player.pakkun = countPakkun(state, playerId);
+
+  switch (altar) {
+    case 'normal': {
+      const defId = drawFrom(state, [{ grade: 'normal', weight: 1 }]);
+      if (defId) addUnit(state, playerId, defId, 'gacha', emit);
+      break;
+    }
+    case 'magic': {
+      const defId = drawFrom(state, [
+        { grade: 'normal', weight: 0.7 },
+        { grade: 'magic', weight: 0.3 },
+      ]);
+      if (defId) addUnit(state, playerId, defId, 'gacha', emit);
+      break;
+    }
+    case 'gold':
+      player.gold += PAKKUN_GOLD;
+      emit({ e: 'log', text: `골드 +${PAKKUN_GOLD}` });
+      break;
+    case 'wood':
+      if (state.rng.chance(PAKKUN_WOOD_CHANCE)) {
+        player.wood++;
+        emit({ e: 'log', text: '목재 +1' });
+      } else {
+        emit({ e: 'log', text: '목재 획득 실패' });
+      }
+      break;
   }
-  player.pakkun--;
-  if (state.rng.chance(PAKKUN_WOOD_CHANCE)) {
-    player.wood++;
-    return true;
-  }
-  emit({ e: 'log', text: '목재 획득 실패' });
-  return false;
 }
 
 /** 목재 도박: 1개는 노말·매직, 3개는 레어, 5개는 유니크·스페셜. */

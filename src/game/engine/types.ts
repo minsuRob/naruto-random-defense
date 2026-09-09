@@ -1,5 +1,6 @@
 import type { DifficultyDef } from '@/game/config/difficulty';
 import type { Grade } from '@/game/data/units';
+import type { AltarKind } from '@/game/config/map';
 import type { DraftState } from './draft';
 import type { Lane } from './lane';
 import type { Rng } from './rng';
@@ -100,6 +101,23 @@ export interface UnitInstance {
   } | null;
 }
 
+/**
+ * A pakkun token: the widget you are handed, sitting on the map until you walk
+ * it into an altar.
+ */
+export interface PakkunToken {
+  id: number;
+  owner: number;
+  x: number;
+  z: number;
+  /** Null while idle in the holding area. */
+  target: AltarKind | null;
+  fromX: number;
+  fromZ: number;
+  elapsed: number;
+  duration: number;
+}
+
 export interface Plot {
   id: number;
   owner: number;
@@ -155,6 +173,8 @@ export interface GameState {
   round: RoundState;
   aliveOnLane: Uint16Array;
   draft: DraftState;
+  pakkuns: PakkunToken[];
+  nextPakkunId: number;
 }
 
 export type Command =
@@ -164,7 +184,8 @@ export type Command =
   | { t: 'SELL'; player: number; unitIds: number[] }
   | { t: 'MOVE'; player: number; unitId: number; cell: { cx: number; cy: number } }
   | { t: 'COMBINE'; player: number; recipeId: string; preferIds?: number[] }
-  | { t: 'DRAFT_PICK'; player: number; optionIndex: number };
+  | { t: 'DRAFT_PICK'; player: number; optionIndex: number }
+  | { t: 'PAKKUN_SEND'; player: number; altar: AltarKind; tokenId?: number };
 
 export type EngineEvent =
   | { e: 'roundStart'; round: number }

@@ -5,12 +5,15 @@ import type { Engine } from '@/game/engine/engine';
 import type { InputController } from '@/game/input/types';
 import type { SimClock } from '@/game/runtime/clock';
 import type { HudSync } from '@/game/runtime/hud-sync';
+import type { AltarKind } from '@/game/config/map';
+import { Altars } from './Altars';
 import { Ground } from './Ground';
 import { GroundPicker } from './GroundPicker';
 import { LaneMesh } from './LaneMesh';
 import { Markers } from './Markers';
 import { MobHealthBars } from './MobHealthBars';
 import { MobInstances } from './MobInstances';
+import { PakkunTokens } from './PakkunTokens';
 import { PlotGrid } from './PlotGrid';
 import { SimDriver } from './SimDriver';
 import { MoveMarker, type MoveMarkerHandle } from './MoveMarker';
@@ -28,6 +31,7 @@ export function Scene({
   moveMarkerRef,
   onGroundCommand,
   onClearSelection,
+  onSendPakkun,
   moveMode,
 }: {
   engine: Engine;
@@ -39,6 +43,7 @@ export function Scene({
   moveMarkerRef: { current: MoveMarkerHandle | null };
   onGroundCommand: (cell: Cell, point: { x: number; z: number }) => void;
   onClearSelection: () => void;
+  onSendPakkun: (kind: AltarKind) => void;
   moveMode: boolean;
 }) {
   const lane = engine.state.plots[0].lane;
@@ -60,6 +65,8 @@ export function Scene({
         onClearSelection={onClearSelection}
         active={moveMode}
       />
+      <Altars onSend={onSendPakkun} highlight={engine.state.pakkuns.length > 0} />
+      <PakkunTokens engine={engine} />
       <Units engine={engine} onSelect={onSelectUnit} />
       <MoveMarker handleRef={moveMarkerRef} />
       <MobInstances engine={engine} clock={clock} />

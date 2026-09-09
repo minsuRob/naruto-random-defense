@@ -1,12 +1,20 @@
 import { describe, expect, it } from 'vitest';
 
-import { GAMBLE_COST, HIRE_COST, PAKKUN_WOOD_CHANCE, START_PAKKUN } from '@/game/config/balance';
+import {
+  GAMBLE_COST,
+  HIRE_COST,
+  PAKKUN_WOOD_CHANCE,
+  START_PAKKUN,
+  TICK_DT,
+} from '@/game/config/balance';
 import { DIFFICULTIES } from '@/game/config/difficulty';
-import { PLOT_CELLS } from '@/game/config/map';
+import { ALTARS, PLOT_CELLS } from '@/game/config/map';
+import { cellIndex } from './grid';
 import { UNIT_BY_ID } from '@/game/data/units';
 import { RECIPES, RECIPE_BY_ID } from '@/game/data/recipes';
 import { availability, countsFor, findSatisfiable } from './combine';
-import { addUnit, gamble, hire, pakkunDown, pakkunUp, pakkunWood, sell } from './economy';
+import { addUnit, dispatchPakkun, gamble, hire, resolveAltar, sell } from './economy';
+import { countPakkun, grantPakkun, idlePakkuns, updatePakkuns } from './pakkun';
 import { completeDraft, createEngine } from './engine';
 import type { EngineEvent } from './types';
 
@@ -16,8 +24,32 @@ function newEngine(seed = 1) {
   completeDraft(engine);
   engine.drainEvents();
   engine.state.units.clear();
-  engine.state.plots[0].occupancy.fill(0);
+  clearPlacements(engine);
   return engine;
+}
+
+/** Wipe built units but leave the altars standing. */
+function clearPlacements(engine: ReturnType<typeof createEngine>) {
+  const occupancy = engine.state.plots[0].occupancy;
+  occupancy.fill(0);
+  for (const altar of ALTARS) occupancy[cellIndex(altar.cell.cx, altar.cell.cy)] = 1;
+}
+
+/** Run until every dispatched pakkun has reached its altar. */
+function settlePakkun(engine: ReturnType<typeof createEngine>) {
+  for (let i = 0; i < 200 && engine.state.pakkuns.some((p) => p.target); i++) engine.tick();
+}
+
+/**
+ * Walk the tokens without running the rest of the simulation.
+ *
+ * The statistical cases need thousands of arrivals, and a full tick also
+ * advances rounds — the run would be long over before the sample was collected.
+ */
+function settlePakkunOnly(engine: ReturnType<typeof createEngine>, emit: (e: EngineEvent) => void) {
+  for (let i = 0; i < 200 && engine.state.pakkuns.some((p) => p.target); i++) {
+    updatePakkuns(engine.state, TICK_DT, resolveAltar.bind(null, engine.state), emit);
+  }
 }
 
 /** Collect events without touching the engine's own queue. */
@@ -26,51 +58,82 @@ function collector() {
   return { events, emit: (e: EngineEvent) => events.push(e) };
 }
 
-describe('pakkun', () => {
-  it('spends one pakkun and places a normal unit', () => {
+describe('pakkun tokens', () => {
+  it('starts with a holding pen of tokens on the map', () => {
+    const engine = newEngine();
+    expect(countPakkun(engine.state, 0)).toBe(START_PAKKUN);
+    expect(idlePakkuns(engine.state, 0)).toHaveLength(START_PAKKUN);
+  });
+
+  it('walks a token to the altar before anything is granted', () => {
     const engine = newEngine();
     const { emit } = collector();
-    expect(pakkunDown(engine.state, 0, emit)).toBe(true);
-    expect(engine.state.players[0].pakkun).toBe(START_PAKKUN - 1);
+
+    expect(dispatchPakkun(engine.state, 0, 'normal', emit)).toBe(true);
+    // Dispatched, not yet arrived: no unit exists.
+    expect(engine.state.units.size).toBe(0);
+    expect(idlePakkuns(engine.state, 0)).toHaveLength(START_PAKKUN - 1);
+
+    settlePakkun(engine);
+    expect(countPakkun(engine.state, 0)).toBe(START_PAKKUN - 1);
     expect(engine.state.units.size).toBe(1);
 
     const unit = [...engine.state.units.values()][0];
     expect(UNIT_BY_ID.get(unit.defId)?.grade).toBe('normal');
   });
 
-  it('refuses to draw without pakkun', () => {
+  it('refuses to dispatch with no tokens left', () => {
     const engine = newEngine();
-    engine.state.players[0].pakkun = 0;
+    engine.state.pakkuns.length = 0;
     const { events, emit } = collector();
-    expect(pakkunDown(engine.state, 0, emit)).toBe(false);
-    expect(events).toContainEqual({ e: 'log', text: '파쿤이 부족합니다' });
+    expect(dispatchPakkun(engine.state, 0, 'normal', emit)).toBe(false);
+    expect(events).toContainEqual({ e: 'log', text: '파쿤이 없습니다' });
   });
 
-  it('draws normal and magic on the upward pull', () => {
+  it('draws normal and magic from the upper altar', () => {
     const engine = newEngine(99);
     const { emit } = collector();
-    engine.state.players[0].pakkun = 400;
     const grades = new Set<string>();
-    for (let i = 0; i < 200; i++) {
-      pakkunUp(engine.state, 0, emit);
+
+    for (let i = 0; i < 120; i++) {
+      engine.state.pakkuns.length = 0;
+      engine.state.nextPakkunId = 1;
+      grantPakkun(engine.state, 0, 1);
+      dispatchPakkun(engine.state, 0, 'magic', emit);
+      settlePakkunOnly(engine, emit);
+
       const units = [...engine.state.units.values()];
       const last = units[units.length - 1];
       if (last) grades.add(UNIT_BY_ID.get(last.defId)!.grade);
-      // Keep the plot from filling up.
       for (const u of units) engine.state.units.delete(u.id);
-      engine.state.plots[0].occupancy.fill(0);
+      clearPlacements(engine);
     }
     expect(grades).toEqual(new Set(['normal', 'magic']));
   });
 
-  it('turns pakkun into wood at roughly the stated rate', () => {
+  it('turns tokens into wood at roughly the stated rate', () => {
     const engine = newEngine(4242);
     const { emit } = collector();
-    const trials = 4000;
-    engine.state.players[0].pakkun = trials;
+    const trials = 1500;
     let successes = 0;
-    for (let i = 0; i < trials; i++) if (pakkunWood(engine.state, 0, emit)) successes++;
+
+    for (let i = 0; i < trials; i++) {
+      const before = engine.state.players[0].wood;
+      engine.state.pakkuns.length = 0;
+      grantPakkun(engine.state, 0, 1);
+      dispatchPakkun(engine.state, 0, 'wood', emit);
+      settlePakkunOnly(engine, emit);
+      if (engine.state.players[0].wood > before) successes++;
+    }
     expect(successes / trials).toBeCloseTo(PAKKUN_WOOD_CHANCE, 1);
+  });
+
+  it('blocks the altar cells from placement', () => {
+    const engine = newEngine();
+    const occupancy = engine.state.plots[0].occupancy;
+    for (const altar of ALTARS) {
+      expect(occupancy[cellIndex(altar.cell.cx, altar.cell.cy)]).toBe(1);
+    }
   });
 });
 
@@ -110,7 +173,7 @@ describe('placement', () => {
   it('fills the plot and then refuses', () => {
     const engine = newEngine();
     const { events, emit } = collector();
-    const capacity = PLOT_CELLS * PLOT_CELLS;
+    const capacity = PLOT_CELLS * PLOT_CELLS - ALTARS.length;
     const defId = UNIT_BY_ID.keys().next().value!;
 
     for (let i = 0; i < capacity; i++) {
@@ -127,7 +190,8 @@ describe('placement', () => {
     const unit = addUnit(engine.state, 0, UNIT_BY_ID.keys().next().value!, 'gacha', emit)!;
     expect(sell(engine.state, 0, [unit.id], emit)).toBe(1);
     expect(engine.state.units.size).toBe(0);
-    expect(engine.state.plots[0].occupancy.some((v) => v === 1)).toBe(false);
+    // Only the altars remain.
+    expect(engine.state.plots[0].occupancy.reduce((n, v) => n + v, 0)).toBe(ALTARS.length);
   });
 });
 

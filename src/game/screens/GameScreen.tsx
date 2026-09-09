@@ -3,7 +3,7 @@ import { StyleSheet, Text, View } from 'react-native';
 
 import { DEFAULT_RIG_CONFIG, createCameraRig } from '@/game/camera/camera-rig';
 import type { DifficultyDef } from '@/game/config/difficulty';
-import { mapBounds } from '@/game/config/map';
+import { mapBounds, type AltarKind } from '@/game/config/map';
 import { createEngine } from '@/game/engine/engine';
 import { localToCell, type Cell } from '@/game/engine/grid';
 import { CommandCard } from '@/game/hud/CommandCard';
@@ -214,6 +214,13 @@ function Run({
     useGameStore.getState().setSelection([]);
   }, []);
 
+  const sendPakkun = useCallback(
+    (altar: AltarKind) => {
+      engine.enqueue({ t: 'PAKKUN_SEND', player: LOCAL_PLAYER, altar });
+    },
+    [engine]
+  );
+
   const lane = engine.state.plots[0].lane;
 
   return (
@@ -230,6 +237,7 @@ function Run({
             moveMarkerRef={moveMarkerRef}
             onGroundCommand={groundCommand}
             onClearSelection={clearSelection}
+            onSendPakkun={sendPakkun}
             moveMode={moveMode}
           />
         </GameCanvas>

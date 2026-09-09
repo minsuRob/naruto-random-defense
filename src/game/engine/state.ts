@@ -6,12 +6,13 @@ import {
   START_PAKKUN,
 } from '@/game/config/balance';
 import type { DifficultyDef } from '@/game/config/difficulty';
-import { plotOrigin } from '@/game/config/map';
+import { ALTARS, plotOrigin } from '@/game/config/map';
 import { BOSSES, WAVES, waveFor } from '@/game/data/waves';
 import { createDraft } from './draft';
-import { createOccupancy } from './grid';
+import { cellIndex, createOccupancy } from './grid';
 import { createLane } from './lane';
 import { createMobPool } from './mobs';
+import { grantPakkun } from './pakkun';
 import { createRng } from './rng';
 import type { GameState, MobDef, Plot } from './types';
 
@@ -74,12 +75,15 @@ export function createInitialState(config: GameConfig): { state: GameState; tabl
 
   const plots: Plot[] = [];
   for (let i = 0; i < plotCount; i++) {
+    const occupancy = createOccupancy();
+    // The altars stand on the centre cells, so nothing can be built there.
+    for (const altar of ALTARS) occupancy[cellIndex(altar.cell.cx, altar.cell.cy)] = 1;
     plots.push({
       id: i,
       owner: i,
       origin: plotOrigin(i),
       lane: createLane(),
-      occupancy: createOccupancy(),
+      occupancy,
     });
   }
 
@@ -119,7 +123,11 @@ export function createInitialState(config: GameConfig): { state: GameState; tabl
       bossAlive: false,
     },
     aliveOnLane: new Uint16Array(plotCount),
+    pakkuns: [],
+    nextPakkunId: 1,
   };
+
+  for (const player of state.players) grantPakkun(state, player.id, START_PAKKUN);
 
   return { state, tables: { mobDefs: defs, bossOffset } };
 }
