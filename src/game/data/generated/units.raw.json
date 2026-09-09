@@ -1,0 +1,7561 @@
+{
+  "source": "nrd-seaon1-7.96_Ez.w3x",
+  "byGrade": {
+    "normal": 9,
+    "epic": 45,
+    "rare": 23,
+    "unique": 30,
+    "magic": 8,
+    "hidden": 14,
+    "legend": 26,
+    "bijuu": 10,
+    "special": 18,
+    "elite": 16,
+    "limit": 17,
+    "infinity": 20,
+    "jinchuriki": 7,
+    "ruin": 4,
+    "creation": 8
+  },
+  "units": [
+    {
+      "id": "우즈마키-나루토__h000",
+      "nameKo": "우즈마키 나루토",
+      "grade": "normal",
+      "w3uId": "h000",
+      "w3uIds": [
+        "h000"
+      ],
+      "attack": {
+        "base": 19,
+        "dice": 0,
+        "sides": 1,
+        "cooldown": 2,
+        "range": 700,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.2000000476837158,
+      "abilities": [
+        "A06X",
+        "A0HK",
+        "A01R",
+        "Avul",
+        "A0NZ"
+      ],
+      "model": "war3mapImported\\Naruto-Nor_Nasun.mdl"
+    },
+    {
+      "id": "우즈마키-나루토-선인모드__h001",
+      "nameKo": "우즈마키 나루토 선인모드",
+      "grade": "epic",
+      "w3uId": "h001",
+      "w3uIds": [
+        "h001",
+        "n03S",
+        "n03T",
+        "n03U",
+        "h08Y"
+      ],
+      "attack": {
+        "base": 14999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 1.2999999523162842,
+        "range": 900,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.5,
+      "abilities": [
+        "A11R",
+        "A0M3",
+        "A040",
+        "A0EY",
+        "A08I",
+        "A0EW",
+        "A0EX",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Naruto-Nor_Nasun.mdl"
+    },
+    {
+      "id": "우치하-사스케__h004",
+      "nameKo": "우치하 사스케",
+      "grade": "normal",
+      "w3uId": "h004",
+      "w3uIds": [
+        "h004"
+      ],
+      "attack": {
+        "base": 19,
+        "dice": 0,
+        "sides": 1,
+        "cooldown": 2,
+        "range": 700,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.2000000476837158,
+      "abilities": [
+        "A06X",
+        "A0I5",
+        "A01R",
+        "Avul",
+        "A0NZ"
+      ],
+      "model": "war3mapImported\\Sasuke_Long.mdl"
+    },
+    {
+      "id": "우치하-사스케-주인2__h005",
+      "nameKo": "우치하 사스케 주인2",
+      "grade": "rare",
+      "w3uId": "h005",
+      "w3uIds": [
+        "h005"
+      ],
+      "attack": {
+        "base": 0,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0,
+        "range": 700,
+        "type": "unknown"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.2000000476837158,
+      "abilities": [
+        "A0A7",
+        "A01R",
+        "A0I3",
+        "Avul"
+      ],
+      "model": "war3mapImported\\%Sasuke_Juin.mdl"
+    },
+    {
+      "id": "사이__h006",
+      "nameKo": "사이",
+      "grade": "normal",
+      "w3uId": "h006",
+      "w3uIds": [
+        "h006"
+      ],
+      "attack": {
+        "base": 19,
+        "dice": 0,
+        "sides": 1,
+        "cooldown": 2,
+        "range": 700,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.2999999523162842,
+      "abilities": [
+        "A06X",
+        "A0I6",
+        "A0I7",
+        "A01R",
+        "Avul",
+        "A0NZ"
+      ],
+      "model": "war3mapImported\\Sai-N&U.mdl"
+    },
+    {
+      "id": "우치하-이타치-암부__h007",
+      "nameKo": "우치하 이타치 암부",
+      "grade": "rare",
+      "w3uId": "h007",
+      "w3uIds": [
+        "h007",
+        "n00G"
+      ],
+      "attack": {
+        "base": 0,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0,
+        "range": 700,
+        "type": "unknown"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.2999999523162842,
+      "abilities": [
+        "A0A7",
+        "A01R",
+        "A0IV",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Itachi_Ambu.mdl"
+    },
+    {
+      "id": "데이다라-아카츠키__h008",
+      "nameKo": "데이다라 아카츠키",
+      "grade": "unique",
+      "w3uId": "h008",
+      "w3uIds": [
+        "h008",
+        "n013"
+      ],
+      "attack": {
+        "base": 2999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0.949999988079071,
+        "range": 900,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.2999999523162842,
+      "abilities": [
+        "A0A8",
+        "A01R",
+        "A01M",
+        "A0HP",
+        "A0F7",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Deidara.mdl"
+    },
+    {
+      "id": "테마리__h009",
+      "nameKo": "테마리",
+      "grade": "magic",
+      "w3uId": "h009",
+      "w3uIds": [
+        "h009"
+      ],
+      "attack": {
+        "base": 99,
+        "dice": 0,
+        "sides": 1,
+        "cooldown": 1.75,
+        "range": 700,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 3,
+      "abilities": [
+        "A06X",
+        "A01R",
+        "A04S",
+        "A0JZ",
+        "A0JY",
+        "A00U",
+        "Avul",
+        "A0NZ"
+      ],
+      "model": "war3mapImported\\Temari.mdl"
+    },
+    {
+      "id": "야마토__h00A",
+      "nameKo": "야마토",
+      "grade": "normal",
+      "w3uId": "h00A",
+      "w3uIds": [
+        "h00A"
+      ],
+      "attack": {
+        "base": 19,
+        "dice": 0,
+        "sides": 1,
+        "cooldown": 2,
+        "range": 700,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.5,
+      "abilities": [
+        "A06X",
+        "A0IK",
+        "A0IL",
+        "A0IM",
+        "A01R",
+        "Avul",
+        "A0NZ"
+      ],
+      "model": "war3mapImported\\Yamato.mdl"
+    },
+    {
+      "id": "하타케-카카시-암부__h00B",
+      "nameKo": "하타케 카카시 암부",
+      "grade": "rare",
+      "w3uId": "h00B",
+      "w3uIds": [
+        "h00B"
+      ],
+      "attack": {
+        "base": 0,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0,
+        "range": 700,
+        "type": "unknown"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.2999999523162842,
+      "abilities": [
+        "A0A7",
+        "A01R",
+        "A0JL",
+        "A00V",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Kakashi_Ambu.mdl"
+    },
+    {
+      "id": "하루노-사쿠라__h00C",
+      "nameKo": "하루노 사쿠라",
+      "grade": "normal",
+      "w3uId": "h00C",
+      "w3uIds": [
+        "h00C"
+      ],
+      "attack": {
+        "base": 19,
+        "dice": 0,
+        "sides": 1,
+        "cooldown": 2,
+        "range": 700,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.399999976158142,
+      "abilities": [
+        "A06X",
+        "A01R",
+        "A0I8",
+        "A0I9",
+        "A0IA",
+        "Avul",
+        "A0NZ"
+      ],
+      "model": "war3mapImported\\Sakura2.mdl"
+    },
+    {
+      "id": "스이게츠-아카츠키__h00F",
+      "nameKo": "스이게츠 아카츠키",
+      "grade": "rare",
+      "w3uId": "h00F",
+      "w3uIds": [
+        "h00F"
+      ],
+      "attack": {
+        "base": 0,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0,
+        "range": 700,
+        "type": "unknown"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.1799999475479126,
+      "abilities": [
+        "A0A7",
+        "A01R",
+        "A0IC",
+        "A0ID",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Suigetsu.mdl"
+    },
+    {
+      "id": "사소리__h00H",
+      "nameKo": "사소리",
+      "grade": "normal",
+      "w3uId": "h00H",
+      "w3uIds": [
+        "h00H"
+      ],
+      "attack": {
+        "base": 19,
+        "dice": 0,
+        "sides": 1,
+        "cooldown": 2,
+        "range": 700,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.399999976158142,
+      "abilities": [
+        "A06X",
+        "A0HX",
+        "A0HY",
+        "A01R",
+        "A0NZ",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Hiruko.mdl"
+    },
+    {
+      "id": "센쥬-하시라마-1대-호카게__h00K",
+      "nameKo": "센쥬 하시라마 1대 호카게",
+      "grade": "hidden",
+      "w3uId": "h00K",
+      "w3uIds": [
+        "h00K",
+        "n01E"
+      ],
+      "attack": {
+        "base": 4999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0.8500000238418579,
+        "range": 900,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 2.5,
+      "abilities": [
+        "A10C",
+        "A0B4",
+        "A0FL",
+        "A02J",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Hashirama.mdl"
+    },
+    {
+      "id": "센쥬-토비라마-2대-호카게__h00N",
+      "nameKo": "센쥬 토비라마 2대 호카게",
+      "grade": "hidden",
+      "w3uId": "h00N",
+      "w3uIds": [
+        "h00N",
+        "n01C",
+        "n01D"
+      ],
+      "attack": {
+        "base": 4999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0.8500000238418579,
+        "range": 900,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.399999976158142,
+      "abilities": [
+        "A03G",
+        "A077",
+        "A01Y",
+        "A02G",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Tobirama_Edo.mdl"
+    },
+    {
+      "id": "시무라-단조__h00O",
+      "nameKo": "시무라 단조",
+      "grade": "hidden",
+      "w3uId": "h00O",
+      "w3uIds": [
+        "h00O",
+        "n01O"
+      ],
+      "attack": {
+        "base": 4999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0.8500000238418579,
+        "range": 900,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.399999976158142,
+      "abilities": [
+        "A171",
+        "A019",
+        "A03C",
+        "A013",
+        "Avul",
+        "A02M"
+      ],
+      "model": "war3mapImported\\%Danzo.mdl"
+    },
+    {
+      "id": "킬러-비-8미의-인주력__h00P",
+      "nameKo": "킬러 비 8미의 인주력",
+      "grade": "unique",
+      "w3uId": "h00P",
+      "w3uIds": [
+        "h00P",
+        "n00K"
+      ],
+      "attack": {
+        "base": 2999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0.699999988079071,
+        "range": 900,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.2999999523162842,
+      "abilities": [
+        "A0A8",
+        "A01R",
+        "A0BS",
+        "A08J",
+        "A0F6",
+        "A0JW",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Killerb.mdl"
+    },
+    {
+      "id": "가마분타-두꺼비-두목__h00R",
+      "nameKo": "가마분타 두꺼비 두목",
+      "grade": "legend",
+      "w3uId": "h00R",
+      "w3uIds": [
+        "h00R",
+        "n02D",
+        "n02E"
+      ],
+      "attack": {
+        "base": 5999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0.6000000238418579,
+        "range": 900,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 0.800000011920929,
+      "abilities": [
+        "A020",
+        "A0FJ",
+        "A03Y",
+        "A07D",
+        "A0FH",
+        "A0C3",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Gamabunta.mdl"
+    },
+    {
+      "id": "가아라__h00S",
+      "nameKo": "가아라",
+      "grade": "rare",
+      "w3uId": "h00S",
+      "w3uIds": [
+        "h00S",
+        "n00J"
+      ],
+      "attack": {
+        "base": 0,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0,
+        "range": 700,
+        "type": "unknown"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 0.6800000071525574,
+      "abilities": [
+        "A0A7",
+        "A01R",
+        "A0HC",
+        "A0HD",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Garra.mdl"
+    },
+    {
+      "id": "코난-아카츠키__h00V",
+      "nameKo": "코난 아카츠키",
+      "grade": "legend",
+      "w3uId": "h00V",
+      "w3uIds": [
+        "h00V",
+        "n021"
+      ],
+      "attack": {
+        "base": 2999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0.699999988079071,
+        "range": 900,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.399999976158142,
+      "abilities": [
+        "A049",
+        "A0JP",
+        "A104",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Konan_Ori.mdl"
+    },
+    {
+      "id": "우치하-마다라__h00Y",
+      "nameKo": "우치하 마다라",
+      "grade": "legend",
+      "w3uId": "h00Y",
+      "w3uIds": [
+        "h00Y",
+        "n022"
+      ],
+      "attack": {
+        "base": 6999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0.550000011920929,
+        "range": 900,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.5,
+      "abilities": [
+        "A0MI",
+        "A04Q",
+        "A0AT",
+        "A014",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Madara-L.mdl"
+    },
+    {
+      "id": "8미-규우키__h010",
+      "nameKo": "8미 규우키",
+      "grade": "bijuu",
+      "w3uId": "h010",
+      "w3uIds": [
+        "h010",
+        "n04I"
+      ],
+      "attack": {
+        "base": 14999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0.800000011920929,
+        "range": 900,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 0.800000011920929,
+      "abilities": [
+        "A11A",
+        "A020",
+        "A021",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Misu-888.mdl"
+    },
+    {
+      "id": "사소리-완전변형__h013",
+      "nameKo": "사소리 완전변형",
+      "grade": "unique",
+      "w3uId": "h013",
+      "w3uIds": [
+        "h013",
+        "n010",
+        "n011"
+      ],
+      "attack": {
+        "base": 2999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 1,
+        "range": 900,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.7000000476837158,
+      "abilities": [
+        "A0A8",
+        "A01R",
+        "A08S",
+        "A04Y",
+        "A0BD",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Sasori_Hidden.mdl"
+    },
+    {
+      "id": "카린__h014",
+      "nameKo": "카린",
+      "grade": "normal",
+      "w3uId": "h014",
+      "w3uIds": [
+        "h014"
+      ],
+      "attack": {
+        "base": 19,
+        "dice": 0,
+        "sides": 1,
+        "cooldown": 2,
+        "range": 700,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.899999976158142,
+      "abilities": [
+        "A06X",
+        "A0JD",
+        "A0JE",
+        "A01R",
+        "Avul",
+        "A0NZ"
+      ],
+      "model": "war3mapImported\\Karin.mdl"
+    },
+    {
+      "id": "쥬고__h01C",
+      "nameKo": "쥬고",
+      "grade": "magic",
+      "w3uId": "h01C",
+      "w3uIds": [
+        "h01C"
+      ],
+      "attack": {
+        "base": 99,
+        "dice": 0,
+        "sides": 1,
+        "cooldown": 1.75,
+        "range": 700,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.5,
+      "abilities": [
+        "A06X",
+        "A01R",
+        "A04S",
+        "A0J1",
+        "A0J0",
+        "Avul",
+        "A0NZ"
+      ],
+      "model": "war3mapImported\\Jugo.mdl"
+    },
+    {
+      "id": "토비__h01F",
+      "nameKo": "토비",
+      "grade": "special",
+      "w3uId": "h01F",
+      "w3uIds": [
+        "h01F"
+      ],
+      "attack": {
+        "base": 2999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 1,
+        "range": 900,
+        "type": "chaos"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 2.700000047683716,
+      "abilities": [
+        "A0S2",
+        "A0A8",
+        "A01R",
+        "A0J7",
+        "A0J6",
+        "A0GU",
+        "Avul"
+      ],
+      "model": "war3mapImported\\tobi-S.mdl"
+    },
+    {
+      "id": "지라이야-호걸__h01G",
+      "nameKo": "지라이야 호걸",
+      "grade": "unique",
+      "w3uId": "h01G",
+      "w3uIds": [
+        "h01G"
+      ],
+      "attack": {
+        "base": 2999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0.5,
+        "range": 900,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.899999976158142,
+      "abilities": [
+        "A0A8",
+        "A01R",
+        "A099",
+        "A0FW",
+        "A0J4",
+        "A0BH",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Jiraiya.mdl"
+    },
+    {
+      "id": "지라이야-전설의3닌자__h01H",
+      "nameKo": "지라이야 전설의3닌자",
+      "grade": "magic",
+      "w3uId": "h01H",
+      "w3uIds": [
+        "h01H"
+      ],
+      "attack": {
+        "base": 99,
+        "dice": 0,
+        "sides": 1,
+        "cooldown": 1.75,
+        "range": 700,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.7999999523162842,
+      "abilities": [
+        "A06X",
+        "A04S",
+        "A01R",
+        "A0J3",
+        "A0DT",
+        "Avul",
+        "A0NZ"
+      ],
+      "model": "war3mapImported\\Jiraiya.mdl"
+    },
+    {
+      "id": "카츠유__h01I",
+      "nameKo": "카츠유",
+      "grade": "rare",
+      "w3uId": "h01I",
+      "w3uIds": [
+        "h01I"
+      ],
+      "attack": {
+        "base": 399,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0,
+        "range": 700,
+        "type": "unknown"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 3,
+      "abilities": [
+        "A020",
+        "A0A7",
+        "A01R",
+        "A0XS",
+        "A0JK",
+        "A13C",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Katsuyu.mdl"
+    },
+    {
+      "id": "츠나데-전설의3닌자__h01O",
+      "nameKo": "츠나데 전설의3닌자",
+      "grade": "magic",
+      "w3uId": "h01O",
+      "w3uIds": [
+        "h01O"
+      ],
+      "attack": {
+        "base": 99,
+        "dice": 0,
+        "sides": 1,
+        "cooldown": 1.75,
+        "range": 700,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.5,
+      "abilities": [
+        "A06X",
+        "A04S",
+        "A01R",
+        "A0JC",
+        "A0JB",
+        "Avul",
+        "A0NZ"
+      ],
+      "model": "war3mapImported\\Tsunade.mdl"
+    },
+    {
+      "id": "우치하-오비토-윤회안__h01Q",
+      "nameKo": "우치하 오비토 윤회안",
+      "grade": "epic",
+      "w3uId": "h01Q",
+      "w3uIds": [
+        "h01Q",
+        "n03Q",
+        "n03R",
+        "n0BE"
+      ],
+      "attack": {
+        "base": 29999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0.550000011920929,
+        "range": 900,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.5,
+      "abilities": [
+        "A020",
+        "A0M3",
+        "A0AU",
+        "A0EL",
+        "A0C7",
+        "A009",
+        "A07W",
+        "Avul",
+        "A02C"
+      ],
+      "model": "war3mapImported\\Obito.mdl"
+    },
+    {
+      "id": "키사메-아카츠키__h01S",
+      "nameKo": "키사메 아카츠키",
+      "grade": "rare",
+      "w3uId": "h01S",
+      "w3uIds": [
+        "h01S",
+        "n00C",
+        "n00D"
+      ],
+      "attack": {
+        "base": 0,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0,
+        "range": 700,
+        "type": "unknown"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.100000023841858,
+      "abilities": [
+        "A0A7",
+        "A01R",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Kisame_Aka.mdl"
+    },
+    {
+      "id": "우치하-이타치-스사노오-1단계__h01X",
+      "nameKo": "우치하 이타치 스사노오 1단계",
+      "grade": "legend",
+      "w3uId": "h01X",
+      "w3uIds": [
+        "h01X",
+        "n01X"
+      ],
+      "attack": {
+        "base": 7499,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0.4000000059604645,
+        "range": 900,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.399999976158142,
+      "abilities": [
+        "A17N",
+        "A02Y",
+        "A00C",
+        "A0FS",
+        "A01Q",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Itachi.mdl"
+    },
+    {
+      "id": "제츠-아카츠키__h01Z",
+      "nameKo": "제츠 아카츠키",
+      "grade": "magic",
+      "w3uId": "h01Z",
+      "w3uIds": [
+        "h01Z"
+      ],
+      "attack": {
+        "base": 99,
+        "dice": 0,
+        "sides": 1,
+        "cooldown": 1.75,
+        "range": 700,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.350000023841858,
+      "abilities": [
+        "A06X",
+        "A04S",
+        "A01R",
+        "A0IY",
+        "A06F",
+        "Avul",
+        "A0NZ"
+      ],
+      "model": "war3mapImported\\Zetsu.mdl"
+    },
+    {
+      "id": "토비-아카츠키__h020",
+      "nameKo": "토비 아카츠키",
+      "grade": "rare",
+      "w3uId": "h020",
+      "w3uIds": [
+        "h020"
+      ],
+      "attack": {
+        "base": 0,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0,
+        "range": 700,
+        "type": "unknown"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.399999976158142,
+      "abilities": [
+        "A0A7",
+        "A01R",
+        "A0K0",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Tobi.mdl"
+    },
+    {
+      "id": "암부__h021",
+      "nameKo": "암부",
+      "grade": "normal",
+      "w3uId": "h021",
+      "w3uIds": [
+        "h021"
+      ],
+      "attack": {
+        "base": 19,
+        "dice": 0,
+        "sides": 1,
+        "cooldown": 2,
+        "range": 700,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.2000000476837158,
+      "abilities": [
+        "A06X",
+        "A0IJ",
+        "A0II",
+        "A01R",
+        "Avul",
+        "A0NZ"
+      ],
+      "model": "war3mapImported\\Ambu-H.mdl"
+    },
+    {
+      "id": "나루토-나선수리검__h023",
+      "nameKo": "나루토 나선수리검",
+      "grade": "rare",
+      "w3uId": "h023",
+      "w3uIds": [
+        "h023"
+      ],
+      "attack": {
+        "base": 0,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0,
+        "range": 700,
+        "type": "unknown"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.2999999523162842,
+      "abilities": [
+        "A01R",
+        "A0A7",
+        "A0FV",
+        "A0HJ",
+        "A0HI",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Naruto-Nor_Nasun.mdl"
+    },
+    {
+      "id": "오로치마루-전설의3닌자__h024",
+      "nameKo": "오로치마루 전설의3닌자",
+      "grade": "magic",
+      "w3uId": "h024",
+      "w3uIds": [
+        "h024",
+        "n000"
+      ],
+      "attack": {
+        "base": 99,
+        "dice": 0,
+        "sides": 1,
+        "cooldown": 1.75,
+        "range": 700,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.5,
+      "abilities": [
+        "A06X",
+        "A04S",
+        "A01R",
+        "A0IQ",
+        "A0IR",
+        "Avul",
+        "A0NZ"
+      ],
+      "model": "war3mapImported\\Orochimaru.mdl"
+    },
+    {
+      "id": "야쿠시-카부토__h027",
+      "nameKo": "야쿠시 카부토",
+      "grade": "normal",
+      "w3uId": "h027",
+      "w3uIds": [
+        "h027"
+      ],
+      "attack": {
+        "base": 19,
+        "dice": 0,
+        "sides": 1,
+        "cooldown": 2,
+        "range": 700,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.399999976158142,
+      "abilities": [
+        "A06X",
+        "A0JG",
+        "A0JF",
+        "A0JH",
+        "A01R",
+        "Avul",
+        "A0NZ"
+      ],
+      "model": "war3mapImported\\Kabuto.mdl"
+    },
+    {
+      "id": "아스마__h029",
+      "nameKo": "아스마",
+      "grade": "rare",
+      "w3uId": "h029",
+      "w3uIds": [
+        "h029",
+        "n00H"
+      ],
+      "attack": {
+        "base": 0,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0,
+        "range": 700,
+        "type": "unknown"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.7200000286102295,
+      "abilities": [
+        "A0A7",
+        "A01R",
+        "A0IG",
+        "A06M",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Asuma.mdl"
+    },
+    {
+      "id": "가아라-반수화-상태__h02B",
+      "nameKo": "가아라 반수화 상태",
+      "grade": "unique",
+      "w3uId": "h02B",
+      "w3uIds": [
+        "h02B",
+        "n015",
+        "n016"
+      ],
+      "attack": {
+        "base": 2999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 1,
+        "range": 900,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 0.6000000238418579,
+      "abilities": [
+        "A0A8",
+        "A01R",
+        "A024",
+        "A01P",
+        "A0AK",
+        "A0EA",
+        "Avul"
+      ],
+      "model": "war3mapImported\\gaara-uu.mdl"
+    },
+    {
+      "id": "우치하-이타치-아카츠키__h02C",
+      "nameKo": "우치하 이타치 아카츠키",
+      "grade": "unique",
+      "w3uId": "h02C",
+      "w3uIds": [
+        "h02C",
+        "n00R",
+        "n00S"
+      ],
+      "attack": {
+        "base": 2999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0.800000011920929,
+        "range": 900,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.2999999523162842,
+      "abilities": [
+        "A0A8",
+        "A01R",
+        "A0C6",
+        "A02S",
+        "A0AM",
+        "A0IU",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Itachi.mdl"
+    },
+    {
+      "id": "하타케-카카시-만화경사륜안__h02D",
+      "nameKo": "하타케 카카시 만화경사륜안",
+      "grade": "unique",
+      "w3uId": "h02D",
+      "w3uIds": [
+        "h02D"
+      ],
+      "attack": {
+        "base": 2999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0.699999988079071,
+        "range": 900,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.399999976158142,
+      "abilities": [
+        "A00F",
+        "A0A8",
+        "A01R",
+        "A04F",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Kakashi.mdl"
+    },
+    {
+      "id": "1미-슈카쿠__h022",
+      "nameKo": "1미 슈카쿠",
+      "grade": "bijuu",
+      "w3uId": "h022",
+      "w3uIds": [
+        "h022",
+        "n04B"
+      ],
+      "attack": {
+        "base": 14999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0.800000011920929,
+        "range": 900,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 0.800000011920929,
+      "abilities": [
+        "A0UF",
+        "A04D",
+        "A0EN",
+        "Avul"
+      ],
+      "model": "war3mapImported\\1mi.mdl"
+    },
+    {
+      "id": "나미카제-미나토-금빛섬광__h028",
+      "nameKo": "나미카제 미나토 금빛섬광",
+      "grade": "legend",
+      "w3uId": "h028",
+      "w3uIds": [
+        "h028",
+        "n02I",
+        "n02J"
+      ],
+      "attack": {
+        "base": 3999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0.6499999761581421,
+        "range": 900,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.2999999523162842,
+      "abilities": [
+        "A020",
+        "A0AS",
+        "A04T",
+        "A0BC",
+        "A01D",
+        "A0HL",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Minato_EP.mdl"
+    },
+    {
+      "id": "만다__h017",
+      "nameKo": "만다",
+      "grade": "rare",
+      "w3uId": "h017",
+      "w3uIds": [
+        "h017"
+      ],
+      "attack": {
+        "base": 0,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0,
+        "range": 700,
+        "type": "unknown"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 2.5,
+      "abilities": [
+        "A01R",
+        "A0A7",
+        "A0HT",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Manda.mdl"
+    },
+    {
+      "id": "야마나카-이노__h02Q",
+      "nameKo": "야마나카 이노",
+      "grade": "rare",
+      "w3uId": "h02Q",
+      "w3uIds": [
+        "h02Q"
+      ],
+      "attack": {
+        "base": 399,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0,
+        "range": 700,
+        "type": "unknown"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 0.8999999761581421,
+      "abilities": [
+        "A0A7",
+        "A01R",
+        "A0IT",
+        "A0QD",
+        "Avul"
+      ],
+      "model": "war3mapImported\\ino.mdl"
+    },
+    {
+      "id": "우타카타-6미의-인주력__h02R",
+      "nameKo": "우타카타 6미의 인주력",
+      "grade": "hidden",
+      "w3uId": "h02R",
+      "w3uIds": [
+        "h02R"
+      ],
+      "attack": {
+        "base": 4999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0.8500000238418579,
+        "range": 900,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.399999976158142,
+      "abilities": [
+        "A05X",
+        "A034",
+        "Avul"
+      ],
+      "model": "war3mapImported\\6mi_Utakata.mdl"
+    },
+    {
+      "id": "6미-사이켄__h02S",
+      "nameKo": "6미 사이켄",
+      "grade": "bijuu",
+      "w3uId": "h02S",
+      "w3uIds": [
+        "h02S",
+        "n04G"
+      ],
+      "attack": {
+        "base": 24999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0.800000011920929,
+        "range": 900,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.2000000476837158,
+      "abilities": [
+        "A063",
+        "A06H",
+        "Avul"
+      ],
+      "model": "war3mapImported\\6mi.mdl"
+    },
+    {
+      "id": "텐텐__h01P",
+      "nameKo": "텐텐",
+      "grade": "unique",
+      "w3uId": "h01P",
+      "w3uIds": [
+        "h01P",
+        "n00M",
+        "n09U"
+      ],
+      "attack": {
+        "base": 2999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0.6700000166893005,
+        "range": 900,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.399999976158142,
+      "abilities": [
+        "A0A8",
+        "A01R",
+        "A004",
+        "A0BM",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Tenten.mdl"
+    },
+    {
+      "id": "우즈마키-나루토-꼬리4개-해방__h02V",
+      "nameKo": "우즈마키 나루토 꼬리4개 해방",
+      "grade": "unique",
+      "w3uId": "h02V",
+      "w3uIds": [
+        "h02V",
+        "n014"
+      ],
+      "attack": {
+        "base": 2999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 1,
+        "range": 900,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 2,
+      "abilities": [
+        "A0A8",
+        "A01R",
+        "A038",
+        "A0HE",
+        "A0HF",
+        "A112",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Naruto-tail4.mdl"
+    },
+    {
+      "id": "2미-마타타비__h00D",
+      "nameKo": "2미 마타타비",
+      "grade": "bijuu",
+      "w3uId": "h00D",
+      "w3uIds": [
+        "h00D",
+        "n04C"
+      ],
+      "attack": {
+        "base": 79999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0.7699999809265137,
+        "range": 900,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.2000000476837158,
+      "abilities": [
+        "A05T",
+        "A03F",
+        "A048",
+        "Avul"
+      ],
+      "model": "war3mapImported\\2mi.mdl"
+    },
+    {
+      "id": "아키미치-쵸지__h02Y",
+      "nameKo": "아키미치 쵸지",
+      "grade": "magic",
+      "w3uId": "h02Y",
+      "w3uIds": [
+        "h02Y"
+      ],
+      "attack": {
+        "base": 99,
+        "dice": 0,
+        "sides": 1,
+        "cooldown": 1.75,
+        "range": 700,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.399999976158142,
+      "abilities": [
+        "A04S",
+        "A06X",
+        "A01R",
+        "A0J8",
+        "A0J9",
+        "A0JA",
+        "Avul",
+        "A0NZ"
+      ],
+      "model": "war3mapImported\\Choji.mdl"
+    },
+    {
+      "id": "이누즈카-키바__h00U",
+      "nameKo": "이누즈카 키바",
+      "grade": "rare",
+      "w3uId": "h00U",
+      "w3uIds": [
+        "h00U",
+        "n007"
+      ],
+      "attack": {
+        "base": 0,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0,
+        "range": 700,
+        "type": "unknown"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 2.5,
+      "abilities": [
+        "A0A7",
+        "A01R",
+        "A0JV",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Kiba.mdl"
+    },
+    {
+      "id": "우치하-사스케-스사노오-1단계__h036",
+      "nameKo": "우치하 사스케 스사노오 1단계",
+      "grade": "legend",
+      "w3uId": "h036",
+      "w3uIds": [
+        "h036",
+        "n027",
+        "n028"
+      ],
+      "attack": {
+        "base": 4999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0.6000000238418579,
+        "range": 900,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.5,
+      "abilities": [
+        "A02W",
+        "A00D",
+        "A0C1",
+        "A09E",
+        "A04K",
+        "A071",
+        "A0QY",
+        "A0I1",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Sasuk-L.mdl"
+    },
+    {
+      "id": "호시가키-키사메-완전변형__h037",
+      "nameKo": "호시가키 키사메 완전변형",
+      "grade": "epic",
+      "w3uId": "h037",
+      "w3uIds": [
+        "h037",
+        "n02S",
+        "n02T",
+        "n02U",
+        "n05G"
+      ],
+      "attack": {
+        "base": 14999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0.6299999952316284,
+        "range": 900,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.100000023841858,
+      "abilities": [
+        "A121",
+        "A020",
+        "A0M3",
+        "A007",
+        "A04I",
+        "A07S",
+        "A0BV",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Kisame-Trans.mdl"
+    },
+    {
+      "id": "록-리__h039",
+      "nameKo": "록 리",
+      "grade": "rare",
+      "w3uId": "h039",
+      "w3uIds": [
+        "h039"
+      ],
+      "attack": {
+        "base": 0,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0,
+        "range": 700,
+        "type": "unknown"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.2999999523162842,
+      "abilities": [
+        "A01R",
+        "A0A7",
+        "A0HR",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Rock_Lee_U.mdl"
+    },
+    {
+      "id": "히단-아카츠키__h03A",
+      "nameKo": "히단 아카츠키",
+      "grade": "unique",
+      "w3uId": "h03A",
+      "w3uIds": [
+        "h03A",
+        "n05B"
+      ],
+      "attack": {
+        "base": 2999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0.800000011920929,
+        "range": 900,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.600000023841858,
+      "abilities": [
+        "A0A8",
+        "A01R",
+        "A03Z",
+        "A02Q",
+        "A06Y",
+        "A0FA",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Hidan.mdl"
+    },
+    {
+      "id": "쵸주로-닌자도-7인방__h03D",
+      "nameKo": "쵸주로 닌자도 7인방",
+      "grade": "unique",
+      "w3uId": "h03D",
+      "w3uIds": [
+        "h03D",
+        "n018"
+      ],
+      "attack": {
+        "base": 2999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0.800000011920929,
+        "range": 900,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.7000000476837158,
+      "abilities": [
+        "A0A8",
+        "A01R",
+        "A0BU",
+        "A0AQ",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Chojuro.mdl"
+    },
+    {
+      "id": "사소리-아카츠키__h03E",
+      "nameKo": "사소리 아카츠키",
+      "grade": "hidden",
+      "w3uId": "h03E",
+      "w3uIds": [
+        "h03E",
+        "n01H",
+        "n01I"
+      ],
+      "attack": {
+        "base": 4999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0.8500000238418579,
+        "range": 900,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.350000023841858,
+      "abilities": [
+        "A0S4",
+        "A11G",
+        "A09Z",
+        "A06W",
+        "A04Z",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Sasori-3rd.mdl"
+    },
+    {
+      "id": "휴우가-히나타__h03V",
+      "nameKo": "휴우가 히나타",
+      "grade": "rare",
+      "w3uId": "h03V",
+      "w3uIds": [
+        "h03V",
+        "n00B"
+      ],
+      "attack": {
+        "base": 0,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0,
+        "range": 700,
+        "type": "unknown"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.399999976158142,
+      "abilities": [
+        "A0A7",
+        "A01R",
+        "A0K5",
+        "A0K6",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Hina.mdl"
+    },
+    {
+      "id": "휴우가-네지__h03W",
+      "nameKo": "휴우가 네지",
+      "grade": "unique",
+      "w3uId": "h03W",
+      "w3uIds": [
+        "h03W",
+        "n017"
+      ],
+      "attack": {
+        "base": 2999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 1,
+        "range": 900,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.5,
+      "abilities": [
+        "A0A8",
+        "A01R",
+        "A058",
+        "A0HM",
+        "A0HN",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Neji.mdl"
+    },
+    {
+      "id": "우치하-마다라-윤회천생__h03X",
+      "nameKo": "우치하 마다라 윤회천생",
+      "grade": "epic",
+      "w3uId": "h03X",
+      "w3uIds": [
+        "h03X",
+        "n03F"
+      ],
+      "attack": {
+        "base": 29999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0.550000011920929,
+        "range": 900,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.399999976158142,
+      "abilities": [
+        "A020",
+        "A0M3",
+        "A05A",
+        "A161",
+        "A0B0",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Madara-E.mdl"
+    },
+    {
+      "id": "센쥬-츠나데-백호의-술__h04A",
+      "nameKo": "센쥬 츠나데 백호의 술",
+      "grade": "legend",
+      "w3uId": "h04A",
+      "w3uIds": [
+        "h04A",
+        "n02H"
+      ],
+      "attack": {
+        "base": 4999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 1.2000000476837158,
+        "range": 900,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.600000023841858,
+      "abilities": [
+        "A043",
+        "A05Q",
+        "A0AF",
+        "A0IB",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Tsunade.mdl"
+    },
+    {
+      "id": "데이다라-예토전생__h04D",
+      "nameKo": "데이다라 예토전생",
+      "grade": "legend",
+      "w3uId": "h04D",
+      "w3uIds": [
+        "h04D",
+        "n025"
+      ],
+      "attack": {
+        "base": 3999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0.699999988079071,
+        "range": 900,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 0.5,
+      "abilities": [
+        "A020",
+        "A0Z8",
+        "A05N",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Deidaraa-Edoo.mdl"
+    },
+    {
+      "id": "10미-불명__h04I",
+      "nameKo": "10미 불명",
+      "grade": "bijuu",
+      "w3uId": "h04I",
+      "w3uIds": [
+        "h04I",
+        "n04K",
+        "n04U",
+        "n051",
+        "n052",
+        "n053"
+      ],
+      "attack": {
+        "base": 89999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0.699999988079071,
+        "range": 900,
+        "type": "normal"
+      },
+      "hp": 50,
+      "moveSpeed": 522,
+      "scale": 0.699999988079071,
+      "abilities": [
+        "A11B",
+        "A020",
+        "A111",
+        "A06V",
+        "Avul"
+      ],
+      "model": "war3mapImported\\10mi.mdl"
+    },
+    {
+      "id": "5미-코쿠오__h04P",
+      "nameKo": "5미 코쿠오",
+      "grade": "bijuu",
+      "w3uId": "h04P",
+      "w3uIds": [
+        "h04P",
+        "n04F"
+      ],
+      "attack": {
+        "base": 79999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0.800000011920929,
+        "range": 900,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.100000023841858,
+      "abilities": [
+        "A020",
+        "A00P",
+        "A06E",
+        "Avul"
+      ],
+      "model": "war3mapImported\\5mi.mdl"
+    },
+    {
+      "id": "3미-이소부__h04Q",
+      "nameKo": "3미 이소부",
+      "grade": "bijuu",
+      "w3uId": "h04Q",
+      "w3uIds": [
+        "h04Q",
+        "n04D"
+      ],
+      "attack": {
+        "base": 14999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0.800000011920929,
+        "range": 900,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 0.44999998807907104,
+      "abilities": [
+        "A020",
+        "A0AV",
+        "A04C",
+        "Avul"
+      ],
+      "model": "war3mapImported\\3mi.mdl"
+    },
+    {
+      "id": "9미-쿠라마__h04R",
+      "nameKo": "9미 쿠라마",
+      "grade": "bijuu",
+      "w3uId": "h04R",
+      "w3uIds": [
+        "h04R",
+        "n04J",
+        "n0BH"
+      ],
+      "attack": {
+        "base": 79999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0.800000011920929,
+        "range": 900,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.2000000476837158,
+      "abilities": [
+        "A03E",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Misu-9.mdl"
+    },
+    {
+      "id": "7미-쵸우메이__h04S",
+      "nameKo": "7미 쵸우메이",
+      "grade": "bijuu",
+      "w3uId": "h04S",
+      "w3uIds": [
+        "h04S",
+        "n04H"
+      ],
+      "attack": {
+        "base": 79999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0.800000011920929,
+        "range": 900,
+        "type": "chaos"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 2.700000047683716,
+      "abilities": [
+        "A020",
+        "A0C0",
+        "Avul"
+      ],
+      "model": "war3mapImported\\7mi.mdl"
+    },
+    {
+      "id": "4미-손고쿠__h04T",
+      "nameKo": "4미 손고쿠",
+      "grade": "bijuu",
+      "w3uId": "h04T",
+      "w3uIds": [
+        "h04T"
+      ],
+      "attack": {
+        "base": 79999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0.800000011920929,
+        "range": 900,
+        "type": "chaos"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.100000023841858,
+      "abilities": [
+        "A114",
+        "A020",
+        "A0DX",
+        "Avul"
+      ],
+      "model": "war3mapImported\\4mi.mdl"
+    },
+    {
+      "id": "하쿠__h04U",
+      "nameKo": "하쿠",
+      "grade": "rare",
+      "w3uId": "h04U",
+      "w3uIds": [
+        "h04U",
+        "n00A"
+      ],
+      "attack": {
+        "base": 0,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0,
+        "range": 700,
+        "type": "unknown"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.399999976158142,
+      "abilities": [
+        "A0A7",
+        "A01R",
+        "A0K3",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Haku.mdl"
+    },
+    {
+      "id": "쿠레나이__h04W",
+      "nameKo": "쿠레나이",
+      "grade": "unique",
+      "w3uId": "h04W",
+      "w3uIds": [
+        "h04W"
+      ],
+      "attack": {
+        "base": 2999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0.699999988079071,
+        "range": 900,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.600000023841858,
+      "abilities": [
+        "A0A8",
+        "A01R",
+        "A067",
+        "A0BJ",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Kurenai.mdl"
+    },
+    {
+      "id": "자부자__h04X",
+      "nameKo": "자부자",
+      "grade": "unique",
+      "w3uId": "h04X",
+      "w3uIds": [
+        "h04X"
+      ],
+      "attack": {
+        "base": 2999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0.6499999761581421,
+        "range": 900,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.4500000476837158,
+      "abilities": [
+        "A0A8",
+        "A01R",
+        "A0G3",
+        "A08Y",
+        "A0IX",
+        "A0F5",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Zabuza.mdl"
+    },
+    {
+      "id": "미타라시-앙코__h04Y",
+      "nameKo": "미타라시 앙코",
+      "grade": "hidden",
+      "w3uId": "h04Y",
+      "w3uIds": [
+        "h04Y",
+        "n01M"
+      ],
+      "attack": {
+        "base": 4999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0.8500000238418579,
+        "range": 900,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.2999999523162842,
+      "abilities": [
+        "A09R",
+        "A05R",
+        "A0HU",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Ank.mdl"
+    },
+    {
+      "id": "사무이__h04Z",
+      "nameKo": "사무이",
+      "grade": "unique",
+      "w3uId": "h04Z",
+      "w3uIds": [
+        "h04Z",
+        "n012"
+      ],
+      "attack": {
+        "base": 2999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0.699999988079071,
+        "range": 900,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.399999976158142,
+      "abilities": [
+        "A0A8",
+        "A01R",
+        "A09M",
+        "A0HW",
+        "A0F8",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Samui.mdl"
+    },
+    {
+      "id": "우즈마키-나루토-미수화__h050",
+      "nameKo": "우즈마키 나루토 미수화",
+      "grade": "epic",
+      "w3uId": "h050",
+      "w3uIds": [
+        "h050",
+        "n040",
+        "n041",
+        "n042"
+      ],
+      "attack": {
+        "base": 49999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0.6000000238418579,
+        "range": 900,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.600000023841858,
+      "abilities": [
+        "A0M3",
+        "A03W",
+        "A05I",
+        "A06Q",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Naruto_E.mdl"
+    },
+    {
+      "id": "엔마-원후왕__h003",
+      "nameKo": "엔마 원후왕",
+      "grade": "unique",
+      "w3uId": "h003",
+      "w3uIds": [
+        "h003",
+        "n00U"
+      ],
+      "attack": {
+        "base": 2999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0.800000011920929,
+        "range": 900,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.5,
+      "abilities": [
+        "A0A8",
+        "A01R",
+        "A09T",
+        "A06Z",
+        "A0IO",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Enma.mdl"
+    },
+    {
+      "id": "아키미치-쵸지-각성모드__h01U",
+      "nameKo": "아키미치 쵸지 각성모드",
+      "grade": "hidden",
+      "w3uId": "h01U",
+      "w3uIds": [
+        "h01U",
+        "n01J"
+      ],
+      "attack": {
+        "base": 4999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0.8500000238418579,
+        "range": 900,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.399999976158142,
+      "abilities": [
+        "A0C8",
+        "A072",
+        "A0CM",
+        "A0IH",
+        "A0XE",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Choji.mdl"
+    },
+    {
+      "id": "토비-달의-눈-계획__h04F",
+      "nameKo": "토비 달의 눈 계획",
+      "grade": "legend",
+      "w3uId": "h04F",
+      "w3uIds": [
+        "h04F",
+        "n02M"
+      ],
+      "attack": {
+        "base": 3999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0.800000011920929,
+        "range": 900,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.600000023841858,
+      "abilities": [
+        "A020",
+        "A0K2",
+        "A0VB",
+        "A16E",
+        "A033",
+        "A07Q",
+        "A09N",
+        "A059",
+        "A03T",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Tobi.mdl"
+    },
+    {
+      "id": "호즈키-만게츠-예토전생__h04O",
+      "nameKo": "호즈키 만게츠 예토전생",
+      "grade": "hidden",
+      "w3uId": "h04O",
+      "w3uIds": [
+        "h04O",
+        "n01K"
+      ],
+      "attack": {
+        "base": 8999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0.8500000238418579,
+        "range": 900,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.4500000476837158,
+      "abilities": [
+        "A0RM",
+        "A0K4",
+        "A09F",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Mangetsu.mdl"
+    },
+    {
+      "id": "이누즈카-키바-수인화__h058",
+      "nameKo": "이누즈카 키바 수인화",
+      "grade": "elite",
+      "w3uId": "h058",
+      "w3uIds": [
+        "h058",
+        "n02Q",
+        "n02R"
+      ],
+      "attack": {
+        "base": 24999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0.5,
+        "range": 900,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.7000000476837158,
+      "abilities": [
+        "A11O",
+        "A0M3",
+        "A08N",
+        "A073",
+        "A0FM",
+        "A0D7",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Kiba-E-Model.mdl"
+    },
+    {
+      "id": "사루토비-히루젠-3대-호카게__h059",
+      "nameKo": "사루토비 히루젠 3대 호카게",
+      "grade": "legend",
+      "w3uId": "h059",
+      "w3uIds": [
+        "h059"
+      ],
+      "attack": {
+        "base": 4999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0.5,
+        "range": 900,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.399999976158142,
+      "abilities": [
+        "A039",
+        "A07R",
+        "A0HV",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Sarutobi.mdl"
+    },
+    {
+      "id": "키미마로__h05B",
+      "nameKo": "키미마로",
+      "grade": "unique",
+      "w3uId": "h05B",
+      "w3uIds": [
+        "h05B",
+        "n00N",
+        "n00O"
+      ],
+      "attack": {
+        "base": 2999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0.8999999761581421,
+        "range": 900,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.7999999523162842,
+      "abilities": [
+        "A0A8",
+        "A01R",
+        "A00S",
+        "A04G",
+        "A0JU",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Kimimaro.mdl"
+    },
+    {
+      "id": "하쿠-예토전생__h05F",
+      "nameKo": "하쿠 예토전생",
+      "grade": "elite",
+      "w3uId": "h05F",
+      "w3uIds": [
+        "h05F",
+        "n032"
+      ],
+      "attack": {
+        "base": 24999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0.5,
+        "range": 900,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.5,
+      "abilities": [
+        "A0M3",
+        "A07E",
+        "A02H",
+        "A0YB",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Haku-e.mdl"
+    },
+    {
+      "id": "마이트-가이__h05K",
+      "nameKo": "마이트 가이",
+      "grade": "legend",
+      "w3uId": "h05K",
+      "w3uIds": [
+        "h05K",
+        "n01V",
+        "n01W"
+      ],
+      "attack": {
+        "base": 3999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0.4000000059604645,
+        "range": 900,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.7000000476837158,
+      "abilities": [
+        "A03I",
+        "A07M",
+        "A07J",
+        "A0NV",
+        "A0BR",
+        "A0SS",
+        "Avul"
+      ],
+      "model": "war3mapImported\\MightGuy.mdl"
+    },
+    {
+      "id": "휴우가-네지-백안__h05O",
+      "nameKo": "휴우가 네지 백안",
+      "grade": "legend",
+      "w3uId": "h05O",
+      "w3uIds": [
+        "h05O",
+        "n01T",
+        "n01U"
+      ],
+      "attack": {
+        "base": 3999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0.4000000059604645,
+        "range": 900,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.5,
+      "abilities": [
+        "A0NW",
+        "A0YE",
+        "A035",
+        "A06J",
+        "A07H",
+        "A07O",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Neji.mdl"
+    },
+    {
+      "id": "우치하-사스케-스사노오-3단계__h05V",
+      "nameKo": "우치하 사스케 스사노오 3단계",
+      "grade": "epic",
+      "w3uId": "h05V",
+      "w3uIds": [
+        "h05V",
+        "n03V",
+        "n03W",
+        "n04A",
+        "n07K"
+      ],
+      "attack": {
+        "base": 39999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0.550000011920929,
+        "range": 900,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.7000000476837158,
+      "abilities": [
+        "A0M3",
+        "A08T",
+        "A07Z",
+        "A08R",
+        "A09H",
+        "Avul",
+        "A02A"
+      ],
+      "model": "war3mapImported\\Sasuke-epic-m.mdl"
+    },
+    {
+      "id": "칸쿠로__h05W",
+      "nameKo": "칸쿠로",
+      "grade": "rare",
+      "w3uId": "h05W",
+      "w3uIds": [
+        "h05W",
+        "n00F"
+      ],
+      "attack": {
+        "base": 0,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0,
+        "range": 700,
+        "type": "unknown"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.600000023841858,
+      "abilities": [
+        "A0A7",
+        "A01R",
+        "A0JM",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Kankuro.mdl"
+    },
+    {
+      "id": "칸쿠로-흑비기-인형술사__h060",
+      "nameKo": "칸쿠로 흑비기 인형술사",
+      "grade": "unique",
+      "w3uId": "h060",
+      "w3uIds": [
+        "h060",
+        "n00Q"
+      ],
+      "attack": {
+        "base": 2999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0.699999988079071,
+        "range": 900,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.600000023841858,
+      "abilities": [
+        "A044",
+        "A084",
+        "A0JN",
+        "A0A8",
+        "A01R",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Kankuro.mdl"
+    },
+    {
+      "id": "오로치마루-선인모드__h061",
+      "nameKo": "오로치마루 선인모드",
+      "grade": "epic",
+      "w3uId": "h061",
+      "w3uIds": [
+        "h061",
+        "n03G",
+        "n03H"
+      ],
+      "attack": {
+        "base": 89999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 1.3799999952316284,
+        "range": 900,
+        "type": "chaos"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 2,
+      "abilities": [
+        "A11P",
+        "A020",
+        "A0M3",
+        "A04R",
+        "A0EE",
+        "A05O",
+        "A06R",
+        "A08B",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Orochi_Sage.mdl"
+    },
+    {
+      "id": "한조-예토전생__h05I",
+      "nameKo": "한조 예토전생",
+      "grade": "legend",
+      "w3uId": "h05I",
+      "w3uIds": [
+        "h05I"
+      ],
+      "attack": {
+        "base": 3999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0.6000000238418579,
+        "range": 900,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.399999976158142,
+      "abilities": [
+        "A0HQ",
+        "A01V",
+        "A08V",
+        "A095",
+        "A08U",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Hanzo-Edo.mdl"
+    },
+    {
+      "id": "하타케-카카시-닌자연합군-1대장__h05J",
+      "nameKo": "하타케 카카시 닌자연합군 1대장",
+      "grade": "elite",
+      "w3uId": "h05J",
+      "w3uIds": [
+        "h05J",
+        "n035",
+        "n036",
+        "n04E"
+      ],
+      "attack": {
+        "base": 29999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0.550000011920929,
+        "range": 900,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.5,
+      "abilities": [
+        "A020",
+        "A0M3",
+        "A00G",
+        "A0NJ",
+        "A091",
+        "A07K",
+        "A090",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Kakashi-epic1.mdl"
+    },
+    {
+      "id": "우치하-사스케-기린__h06E",
+      "nameKo": "우치하 사스케 기린",
+      "grade": "hidden",
+      "w3uId": "h06E",
+      "w3uIds": [
+        "h06E",
+        "n01N"
+      ],
+      "attack": {
+        "base": 4999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0.8500000238418579,
+        "range": 900,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.5,
+      "abilities": [
+        "A018",
+        "A09C",
+        "A0I4",
+        "Avul",
+        "A02O"
+      ],
+      "model": "war3mapImported\\Sasuke_Short.mdl"
+    },
+    {
+      "id": "야마토-암부__h076",
+      "nameKo": "야마토 암부",
+      "grade": "unique",
+      "w3uId": "h076",
+      "w3uIds": [
+        "h076",
+        "n00V",
+        "n00W"
+      ],
+      "attack": {
+        "base": 2999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0.6000000238418579,
+        "range": 900,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.5,
+      "abilities": [
+        "A0A8",
+        "A01R",
+        "A0A3",
+        "A0A1",
+        "A0CA",
+        "A0AH",
+        "A0Z6",
+        "Avul"
+      ],
+      "model": "war3mapImported\\yamato-U01.mdl"
+    },
+    {
+      "id": "아부라메-시노__h07A",
+      "nameKo": "아부라메 시노",
+      "grade": "rare",
+      "w3uId": "h07A",
+      "w3uIds": [
+        "h07A",
+        "n009"
+      ],
+      "attack": {
+        "base": 0,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0,
+        "range": 700,
+        "type": "unknown"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.399999976158142,
+      "abilities": [
+        "A0A7",
+        "A01R",
+        "A0IE",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Shino.mdl"
+    },
+    {
+      "id": "치요할멈__h07G",
+      "nameKo": "치요할멈",
+      "grade": "elite",
+      "w3uId": "h07G",
+      "w3uIds": [
+        "h07G",
+        "n02P",
+        "n0C0"
+      ],
+      "attack": {
+        "base": 24999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0.6499999761581421,
+        "range": 900,
+        "type": "normal"
+      },
+      "hp": 50,
+      "moveSpeed": 522,
+      "scale": 1.2999999523162842,
+      "abilities": [
+        "A020",
+        "A0M3",
+        "A0YU",
+        "A09D",
+        "A0B1",
+        "A097",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Chiyo.mdl"
+    },
+    {
+      "id": "쥬고-주인화__h07R",
+      "nameKo": "쥬고 주인화",
+      "grade": "unique",
+      "w3uId": "h07R",
+      "w3uIds": [
+        "h07R",
+        "n00L"
+      ],
+      "attack": {
+        "base": 2999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0.699999988079071,
+        "range": 900,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.5,
+      "abilities": [
+        "A0A8",
+        "A01R",
+        "A06P",
+        "A08H",
+        "A0BL",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Jugo.mdl"
+    },
+    {
+      "id": "시즈네__h07Y",
+      "nameKo": "시즈네",
+      "grade": "unique",
+      "w3uId": "h07Y",
+      "w3uIds": [
+        "h07Y",
+        "n00X"
+      ],
+      "attack": {
+        "base": 2999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0.699999988079071,
+        "range": 900,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.7000000476837158,
+      "abilities": [
+        "A0A8",
+        "A01R",
+        "A0AO",
+        "A0AN",
+        "A0AL",
+        "A0IF",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Shizune.mdl"
+    },
+    {
+      "id": "야쿠시-카부토-전장의-지배자__h086",
+      "nameKo": "야쿠시 카부토 전장의 지배자",
+      "grade": "legend",
+      "w3uId": "h086",
+      "w3uIds": [
+        "h086",
+        "n026"
+      ],
+      "attack": {
+        "base": 5999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0.6000000238418579,
+        "range": 900,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.5,
+      "abilities": [
+        "A04U",
+        "M15Q",
+        "A0JJ",
+        "A0JI",
+        "A0Q2",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Kabuchi.mdl"
+    },
+    {
+      "id": "지라이야-선인모드__h08G",
+      "nameKo": "지라이야 선인모드",
+      "grade": "legend",
+      "w3uId": "h08G",
+      "w3uIds": [
+        "h08G",
+        "n029",
+        "n02A"
+      ],
+      "attack": {
+        "base": 3499,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 1,
+        "range": 900,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 2,
+      "abilities": [
+        "A03B",
+        "A13H",
+        "A0IN",
+        "A0B5",
+        "A0B3",
+        "A0B6",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Jiraiya.mdl"
+    },
+    {
+      "id": "휴우가-히나타-백안__h080",
+      "nameKo": "휴우가 히나타 백안",
+      "grade": "unique",
+      "w3uId": "h080",
+      "w3uIds": [
+        "h080",
+        "n01A"
+      ],
+      "attack": {
+        "base": 2999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0.8500000238418579,
+        "range": 900,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.600000023841858,
+      "abilities": [
+        "A0A8",
+        "A01R",
+        "A0BA",
+        "A0B9",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Hinata-e.mdl"
+    },
+    {
+      "id": "사루토비-히루젠-예토전생__h08M",
+      "nameKo": "사루토비 히루젠 예토전생",
+      "grade": "epic",
+      "w3uId": "h08M",
+      "w3uIds": [
+        "h08M",
+        "n03P"
+      ],
+      "attack": {
+        "base": 9999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0.550000011920929,
+        "range": 900,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.5,
+      "abilities": [
+        "A11S",
+        "A0M3",
+        "A04B",
+        "A00O",
+        "A0A9",
+        "A09A",
+        "A008",
+        "A0BF",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Sarutobi.mdl"
+    },
+    {
+      "id": "우즈마키-나루토-꼬리6개-해방__h094",
+      "nameKo": "우즈마키 나루토 꼬리6개 해방",
+      "grade": "legend",
+      "w3uId": "h094",
+      "w3uIds": [
+        "h094",
+        "n02F",
+        "n02G"
+      ],
+      "attack": {
+        "base": 8999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 1,
+        "range": 900,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 2,
+      "abilities": [
+        "A0BO",
+        "A0BP",
+        "A06N",
+        "A0HG",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Naruto_tail6.mdl"
+    },
+    {
+      "id": "센쥬-하시라마-선인모드__h097",
+      "nameKo": "센쥬 하시라마 선인모드",
+      "grade": "epic",
+      "w3uId": "h097",
+      "w3uIds": [
+        "h097",
+        "h087",
+        "h0B2",
+        "h0B4",
+        "n043",
+        "n044",
+        "n07F",
+        "n07I",
+        "n0AP"
+      ],
+      "attack": {
+        "base": 89999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 1,
+        "range": 900,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.2000000476837158,
+      "abilities": [
+        "A04A",
+        "Avul"
+      ],
+      "model": "war3mapImported\\hashirama-shinsuusenju.mdl"
+    },
+    {
+      "id": "외도마상-미수차크라__h06L",
+      "nameKo": "외도마상 미수차크라",
+      "grade": "elite",
+      "w3uId": "h06L",
+      "w3uIds": [
+        "h06L",
+        "n02X",
+        "n02Y",
+        "n0BG"
+      ],
+      "attack": {
+        "base": 24999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0.550000011920929,
+        "range": 900,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1,
+      "abilities": [
+        "A0M3",
+        "A0CB",
+        "A09L",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Gedo.mdl"
+    },
+    {
+      "id": "우치하-이타치-스사노오-3단계__h09H",
+      "nameKo": "우치하 이타치 스사노오 3단계",
+      "grade": "elite",
+      "w3uId": "h09H",
+      "w3uIds": [
+        "h09H",
+        "n037",
+        "n038"
+      ],
+      "attack": {
+        "base": 24999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0.6000000238418579,
+        "range": 900,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 0.5,
+      "abilities": [
+        "A0M3",
+        "A03S",
+        "A05P",
+        "A0CT",
+        "A029",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Itachi_Susa[3].mdl"
+    },
+    {
+      "id": "육도-페인-천도__h06R",
+      "nameKo": "육도 페인 천도",
+      "grade": "unique",
+      "w3uId": "h06R",
+      "w3uIds": [
+        "h06R",
+        "n019"
+      ],
+      "attack": {
+        "base": 2999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0.800000011920929,
+        "range": 900,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.399999976158142,
+      "abilities": [
+        "A0A8",
+        "A01R",
+        "A0CP",
+        "A0J5",
+        "A0CG",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Pain.mdl"
+    },
+    {
+      "id": "쥬고-완전-주인화__h06S",
+      "nameKo": "쥬고 완전 주인화",
+      "grade": "hidden",
+      "w3uId": "h06S",
+      "w3uIds": [
+        "h06S",
+        "n01L"
+      ],
+      "attack": {
+        "base": 4999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0.8500000238418579,
+        "range": 900,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.5,
+      "abilities": [
+        "A04E",
+        "A0CQ",
+        "A0IZ",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Jugo_Trans.mdl"
+    },
+    {
+      "id": "우즈마키-나가토__h09N",
+      "nameKo": "우즈마키 나가토",
+      "grade": "legend",
+      "w3uId": "h09N",
+      "w3uIds": [
+        "h09N",
+        "n01Y",
+        "n01Z"
+      ],
+      "attack": {
+        "base": 4999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0.800000011920929,
+        "range": 900,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.399999976158142,
+      "abilities": [
+        "A0H9",
+        "A0VO",
+        "A0NU",
+        "A0D5",
+        "A0D4",
+        "A0Z9",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Nagato.mdl"
+    },
+    {
+      "id": "우치하-사스케-주인1__h07U",
+      "nameKo": "우치하 사스케 주인1",
+      "grade": "magic",
+      "w3uId": "h07U",
+      "w3uIds": [
+        "h07U"
+      ],
+      "attack": {
+        "base": 99,
+        "dice": 0,
+        "sides": 1,
+        "cooldown": 1.75,
+        "range": 700,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.2000000476837158,
+      "abilities": [
+        "A06X",
+        "A04S",
+        "A01R",
+        "A0I2",
+        "Avul",
+        "A0NZ"
+      ],
+      "model": "war3mapImported\\Sasuke-m.mdl"
+    },
+    {
+      "id": "키미마로-주인해방__h09X",
+      "nameKo": "키미마로 주인해방",
+      "grade": "legend",
+      "w3uId": "h09X",
+      "w3uIds": [
+        "h09X",
+        "n01Q",
+        "n01R",
+        "n01S"
+      ],
+      "attack": {
+        "base": 2999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0.699999988079071,
+        "range": 900,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.7999999523162842,
+      "abilities": [
+        "A00W",
+        "A09Q",
+        "A06K",
+        "A079",
+        "A0DA",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Kimimaro.mdl"
+    },
+    {
+      "id": "오로치마루-아카츠키__h09Y",
+      "nameKo": "오로치마루 아카츠키",
+      "grade": "unique",
+      "w3uId": "h09Y",
+      "w3uIds": [
+        "h09Y",
+        "n00T"
+      ],
+      "attack": {
+        "base": 2999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0.6000000238418579,
+        "range": 900,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.399999976158142,
+      "abilities": [
+        "A0A8",
+        "A01R",
+        "A0EC",
+        "A0EB",
+        "A0IP",
+        "A0AG",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Orochimaru-u.mdl"
+    },
+    {
+      "id": "오오노키-3대-츠치카게__h0A0",
+      "nameKo": "오오노키 3대 츠치카게",
+      "grade": "epic",
+      "w3uId": "h0A0",
+      "w3uIds": [
+        "h0A0",
+        "n045",
+        "n046",
+        "n047",
+        "n048",
+        "n049"
+      ],
+      "attack": {
+        "base": 14999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0.7200000286102295,
+        "range": 900,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 2,
+      "abilities": [
+        "A020",
+        "A0M3",
+        "A06C",
+        "A0GP",
+        "A118",
+        "A0GV",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Oonoki.mdl"
+    },
+    {
+      "id": "테마리-풍둔술사__h0A1",
+      "nameKo": "테마리 풍둔술사",
+      "grade": "hidden",
+      "w3uId": "h0A1",
+      "w3uIds": [
+        "h0A1",
+        "n01F",
+        "n01G"
+      ],
+      "attack": {
+        "base": 4999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0.8500000238418579,
+        "range": 900,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.399999976158142,
+      "abilities": [
+        "A0G5",
+        "A0E6",
+        "A0E5",
+        "A0RN",
+        "A0JX",
+        "Avul"
+      ],
+      "model": "war3mapImported\\%Temari.mdl"
+    },
+    {
+      "id": "가마켄__h0AE",
+      "nameKo": "가마켄",
+      "grade": "rare",
+      "w3uId": "h0AE",
+      "w3uIds": [
+        "h0AE",
+        "n00E",
+        "h01W"
+      ],
+      "attack": {
+        "base": 0,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0,
+        "range": 700,
+        "type": "unknown"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 2,
+      "abilities": [
+        "A0J2",
+        "A0A7",
+        "A01R",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Gamaken.mdl"
+    },
+    {
+      "id": "자부자-예토전생__h0AF",
+      "nameKo": "자부자 예토전생",
+      "grade": "legend",
+      "w3uId": "h0AF",
+      "w3uIds": [
+        "h0AF",
+        "n020"
+      ],
+      "attack": {
+        "base": 5999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0.75,
+        "range": 900,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.7000000476837158,
+      "abilities": [
+        "A0C9",
+        "A0F2",
+        "A0BG",
+        "A0IW",
+        "A0PX",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Zabuza-Edo.mdl"
+    },
+    {
+      "id": "사루토비-아스마-제10반-대장__h081",
+      "nameKo": "사루토비 아스마 제10반 대장",
+      "grade": "hidden",
+      "w3uId": "h081",
+      "w3uIds": [
+        "h081"
+      ],
+      "attack": {
+        "base": 4999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0.8500000238418579,
+        "range": 900,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.600000023841858,
+      "abilities": [
+        "A030",
+        "A0EV",
+        "A01B",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Asuma.mdl"
+    },
+    {
+      "id": "우즈마키-쿠시나__h08R",
+      "nameKo": "우즈마키 쿠시나",
+      "grade": "legend",
+      "w3uId": "h08R",
+      "w3uIds": [
+        "h08R",
+        "n02B",
+        "n02C"
+      ],
+      "attack": {
+        "base": 13999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0.699999988079071,
+        "range": 900,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.5,
+      "abilities": [
+        "A0R9",
+        "A0Z7",
+        "A07B",
+        "A0ET",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Kushina.mdl"
+    },
+    {
+      "id": "우즈마키-쿠시나__h07S",
+      "nameKo": "우즈마키 쿠시나",
+      "grade": "unique",
+      "w3uId": "h07S",
+      "w3uIds": [
+        "h07S",
+        "n00P"
+      ],
+      "attack": {
+        "base": 2999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0.800000011920929,
+        "range": 900,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.399999976158142,
+      "abilities": [
+        "A0A8",
+        "A01R",
+        "A031",
+        "A0JT",
+        "A0JS",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Kushina.mdl"
+    },
+    {
+      "id": "코난-천사__h05C",
+      "nameKo": "코난 천사",
+      "grade": "elite",
+      "w3uId": "h05C",
+      "w3uIds": [
+        "h05C",
+        "n02V",
+        "n02W",
+        "n0BC"
+      ],
+      "attack": {
+        "base": 19999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0.800000011920929,
+        "range": 900,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.5499999523162842,
+      "abilities": [
+        "A020",
+        "A0M3",
+        "A0C4",
+        "A0C2",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Konan_Ori.mdl"
+    },
+    {
+      "id": "킬러-비-미수화__h07L",
+      "nameKo": "킬러 비 미수화",
+      "grade": "legend",
+      "w3uId": "h07L",
+      "w3uIds": [
+        "h07L",
+        "n02N",
+        "n02O"
+      ],
+      "attack": {
+        "base": 5999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0.699999988079071,
+        "range": 900,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.100000023841858,
+      "abilities": [
+        "A0V9",
+        "A17A",
+        "A04O",
+        "A04M",
+        "A0AE",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Bee_L.mdl"
+    },
+    {
+      "id": "가아라-닌자연합군-연대장__h08A",
+      "nameKo": "가아라 닌자연합군 연대장",
+      "grade": "epic",
+      "w3uId": "h08A",
+      "w3uIds": [
+        "h08A",
+        "n075"
+      ],
+      "attack": {
+        "base": 9999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0.6499999761581421,
+        "range": 900,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.649999976158142,
+      "abilities": [
+        "A12W",
+        "A020",
+        "A10A",
+        "A0M3",
+        "A03L",
+        "A09B",
+        "A0G9",
+        "A0G8",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Gaara-E.mdl"
+    },
+    {
+      "id": "록-리-연화__h0AQ",
+      "nameKo": "록 리 연화",
+      "grade": "unique",
+      "w3uId": "h0AQ",
+      "w3uIds": [
+        "h0AQ"
+      ],
+      "attack": {
+        "base": 2999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0.699999988079071,
+        "range": 900,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.2999999523162842,
+      "abilities": [
+        "A01R",
+        "A0A8",
+        "A0CD",
+        "A0BX",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Rock_Lee_U.mdl"
+    },
+    {
+      "id": "야마토-호카게-직속암부__h04B",
+      "nameKo": "야마토 호카게 직속암부",
+      "grade": "legend",
+      "w3uId": "h04B",
+      "w3uIds": [
+        "h04B",
+        "n02L"
+      ],
+      "attack": {
+        "base": 3999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0.5,
+        "range": 900,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.5,
+      "abilities": [
+        "A006",
+        "A0FR",
+        "A0KZ",
+        "A0CY",
+        "A0CW",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Yamato.mdl"
+    },
+    {
+      "id": "마이트-가이-경문해제__h04E",
+      "nameKo": "마이트 가이 경문해제",
+      "grade": "epic",
+      "w3uId": "h04E",
+      "w3uIds": [
+        "h04E",
+        "n03I",
+        "n03J",
+        "n03K"
+      ],
+      "attack": {
+        "base": 29999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0.6499999761581421,
+        "range": 900,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.7999999523162842,
+      "abilities": [
+        "A0M3",
+        "A08L",
+        "A088",
+        "A07L",
+        "A07F",
+        "A070",
+        "Avul"
+      ],
+      "model": "war3mapImported\\MightGuy.mdl"
+    },
+    {
+      "id": "나미카제-미나토-미수화__h02X",
+      "nameKo": "나미카제 미나토 미수화",
+      "grade": "epic",
+      "w3uId": "h02X",
+      "w3uIds": [
+        "h02X",
+        "n03L",
+        "n03M",
+        "n03N",
+        "n03O"
+      ],
+      "attack": {
+        "base": 39999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0.550000011920929,
+        "range": 900,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.5,
+      "abilities": [
+        "A12U",
+        "A020",
+        "A0M3",
+        "A0CE",
+        "A05Y",
+        "A05F",
+        "A0CJ",
+        "A098",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Minato_EP.mdl"
+    },
+    {
+      "id": "다루이-혈계한계-람둔__h069",
+      "nameKo": "다루이 혈계한계 람둔",
+      "grade": "legend",
+      "w3uId": "h069",
+      "w3uIds": [
+        "h069",
+        "n023",
+        "n024"
+      ],
+      "attack": {
+        "base": 6999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0.6000000238418579,
+        "range": 900,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.2999999523162842,
+      "abilities": [
+        "A0FY",
+        "A000",
+        "A05L",
+        "A0HO",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Darui.mdl"
+    },
+    {
+      "id": "테루미메이-5대-미즈카게__h085",
+      "nameKo": "테루미메이 5대 미즈카게",
+      "grade": "elite",
+      "w3uId": "h085",
+      "w3uIds": [
+        "h085",
+        "n02Z",
+        "n030",
+        "n031"
+      ],
+      "attack": {
+        "base": 69999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 1.4500000476837158,
+        "range": 900,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.7000000476837158,
+      "abilities": [
+        "A0M3",
+        "A0FX",
+        "A0YC",
+        "A0DQ",
+        "A0DV",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Terumi.mdl"
+    },
+    {
+      "id": "킬러-에이-4대-라이카게__h089",
+      "nameKo": "킬러 에이 4대 라이카게",
+      "grade": "epic",
+      "w3uId": "h089",
+      "w3uIds": [
+        "h089",
+        "n03X",
+        "n03Y",
+        "n03Z",
+        "n05H",
+        "n076"
+      ],
+      "attack": {
+        "base": 9999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 1.4500000476837158,
+        "range": 900,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.7000000476837158,
+      "abilities": [
+        "A12X",
+        "A0M3",
+        "A0ER",
+        "A0EP",
+        "A0ES",
+        "A0DR",
+        "A0GK",
+        "Avul"
+      ],
+      "model": "war3mapImported\\%Killer-A_1.mdl"
+    },
+    {
+      "id": "우치하-사스케-2년-후__h01V",
+      "nameKo": "우치하 사스케 2년 후",
+      "grade": "unique",
+      "w3uId": "h01V",
+      "w3uIds": [
+        "h01V",
+        "n00Y",
+        "n00Z"
+      ],
+      "attack": {
+        "base": 2999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0.800000011920929,
+        "range": 900,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.2999999523162842,
+      "abilities": [
+        "A0A8",
+        "A01R",
+        "A0C5",
+        "A027",
+        "A026",
+        "A0I0",
+        "A0AJ",
+        "A169",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Sasuke_Long.mdl"
+    },
+    {
+      "id": "사소리-히루코__h161",
+      "nameKo": "사소리 히루코",
+      "grade": "rare",
+      "w3uId": "h161",
+      "w3uIds": [
+        "h161",
+        "n00I"
+      ],
+      "attack": {
+        "base": 0,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0,
+        "range": 700,
+        "type": "unknown"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.399999976158142,
+      "abilities": [
+        "A0A7",
+        "A01R",
+        "A0HZ",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Hiruko.mdl"
+    },
+    {
+      "id": "야쿠시-카부토-선인모드__h679",
+      "nameKo": "야쿠시 카부토 선인모드",
+      "grade": "epic",
+      "w3uId": "h679",
+      "w3uIds": [
+        "h679",
+        "n033",
+        "n034",
+        "n0AT",
+        "n0AV",
+        "n0B7",
+        "n0B8"
+      ],
+      "attack": {
+        "base": 24999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0.550000011920929,
+        "range": 900,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 2,
+      "abilities": [
+        "A020",
+        "A13B",
+        "AH53",
+        "A0VT",
+        "A0VS",
+        "A0GM",
+        "A045",
+        "A0M3",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Kabuto-Sage.mdl"
+    },
+    {
+      "id": "미후네-사무라이-군주__h574",
+      "nameKo": "미후네 사무라이 군주",
+      "grade": "limit",
+      "w3uId": "h574",
+      "w3uIds": [
+        "h574",
+        "n039",
+        "n03A"
+      ],
+      "attack": {
+        "base": 94999,
+        "dice": 0,
+        "sides": 1,
+        "cooldown": 0.6499999761581421,
+        "range": 900,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.600000023841858,
+      "abilities": [
+        "A11L",
+        "A020",
+        "A0M3",
+        "A0QT",
+        "A0G6",
+        "A0GE",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Mifune.mdl"
+    },
+    {
+      "id": "구렌-정둔술사__h05D",
+      "nameKo": "구렌 정둔술사",
+      "grade": "elite",
+      "w3uId": "h05D",
+      "w3uIds": [
+        "h05D",
+        "n03B",
+        "n095"
+      ],
+      "attack": {
+        "base": 19999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0.550000011920929,
+        "range": 900,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1,
+      "abilities": [
+        "A0M3",
+        "A03J",
+        "A03U",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Guren.mdl"
+    },
+    {
+      "id": "오로치마루-야마타의-술__h06M",
+      "nameKo": "오로치마루 야마타의 술",
+      "grade": "elite",
+      "w3uId": "h06M",
+      "w3uIds": [
+        "h06M"
+      ],
+      "attack": {
+        "base": 94999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0,
+        "range": 900,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.600000023841858,
+      "abilities": [
+        "A020",
+        "A0M3",
+        "A0YO",
+        "A0LU",
+        "A0GL",
+        "A08E",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Orochi-Yamatanoorochi.mdl"
+    },
+    {
+      "id": "사이-뿌리닌자__h09P",
+      "nameKo": "사이 뿌리닌자",
+      "grade": "unique",
+      "w3uId": "h09P",
+      "w3uIds": [
+        "h09P",
+        "n01B"
+      ],
+      "attack": {
+        "base": 2999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 1,
+        "range": 900,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.100000023841858,
+      "abilities": [
+        "A0HS",
+        "A0A8",
+        "A01R",
+        "A0FT",
+        "A05G",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Sai-N&U.mdl"
+    },
+    {
+      "id": "쿠로츠치-츠치카게의-손녀__h0AC",
+      "nameKo": "쿠로츠치 츠치카게의 손녀",
+      "grade": "hidden",
+      "w3uId": "h0AC",
+      "w3uIds": [
+        "h0AC",
+        "n01P"
+      ],
+      "attack": {
+        "base": 4999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0.8500000238418579,
+        "range": 900,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.350000023841858,
+      "abilities": [
+        "A0FZ",
+        "A0S9",
+        "A0JQ",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Kurotsuchi.mdl"
+    },
+    {
+      "id": "휴우가-히나타-유보쌍사권__h0B8",
+      "nameKo": "휴우가 히나타 유보쌍사권",
+      "grade": "epic",
+      "w3uId": "h0B8",
+      "w3uIds": [
+        "h0B8",
+        "n006",
+        "n0B2"
+      ],
+      "attack": {
+        "base": 79999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0.5,
+        "range": 900,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 2,
+      "abilities": [
+        "A0M3",
+        "A0H2",
+        "A0H4",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Hinata-E.mdl"
+    },
+    {
+      "id": "하루노-사쿠라-백호의-술__h0B9",
+      "nameKo": "하루노 사쿠라 백호의 술",
+      "grade": "epic",
+      "w3uId": "h0B9",
+      "w3uIds": [
+        "h0B9"
+      ],
+      "attack": {
+        "base": 29999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0.550000011920929,
+        "range": 900,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.7000000476837158,
+      "abilities": [
+        "A020",
+        "A0M3",
+        "A0GI",
+        "A09X",
+        "A08X",
+        "A07P",
+        "A080",
+        "Avul"
+      ],
+      "model": "war3mapImported\\sakura-e.mdl"
+    },
+    {
+      "id": "하루노-사쿠라-백호의술__n001",
+      "nameKo": "하루노 사쿠라 백호의술",
+      "grade": "epic",
+      "w3uId": "n001",
+      "w3uIds": [
+        "n001",
+        "n002",
+        "n003",
+        "n004"
+      ],
+      "attack": {
+        "base": 0,
+        "dice": 0,
+        "sides": 1,
+        "cooldown": 0,
+        "range": 0,
+        "type": "unknown"
+      },
+      "hp": 3,
+      "moveSpeed": 0,
+      "scale": 1.5,
+      "abilities": [
+        "Aloc"
+      ],
+      "model": "war3mapImported\\@Sakura_Slam2.mdl"
+    },
+    {
+      "id": "휴우가-네지__n005",
+      "nameKo": "휴우가 네지",
+      "grade": "limit",
+      "w3uId": "n005",
+      "w3uIds": [
+        "n005",
+        "n0D9",
+        "n0DA",
+        "n0DB"
+      ],
+      "attack": {
+        "base": 0,
+        "dice": 0,
+        "sides": 1,
+        "cooldown": 0,
+        "range": 0,
+        "type": "unknown"
+      },
+      "hp": 3,
+      "moveSpeed": 0,
+      "scale": 3,
+      "abilities": [
+        "A10W",
+        "A0UL",
+        "Aloc"
+      ],
+      "model": "war3mapImported\\@Hinata_Shield.mdl"
+    },
+    {
+      "id": "록리__n008",
+      "nameKo": "록리",
+      "grade": "rare",
+      "w3uId": "n008",
+      "w3uIds": [
+        "n008"
+      ],
+      "attack": {
+        "base": 0,
+        "dice": 0,
+        "sides": 1,
+        "cooldown": 0,
+        "range": 0,
+        "type": "unknown"
+      },
+      "hp": 3,
+      "moveSpeed": 0,
+      "scale": 2,
+      "abilities": [
+        "A042",
+        "Aloc"
+      ],
+      "model": "Abilities\\Spells\\Items\\AIil\\AIilTarget.mdl"
+    },
+    {
+      "id": "사루토비-히루젠-3대호카게__n02K",
+      "nameKo": "사루토비 히루젠 3대호카게",
+      "grade": "legend",
+      "w3uId": "n02K",
+      "w3uIds": [
+        "n02K"
+      ],
+      "attack": {
+        "base": 0,
+        "dice": 0,
+        "sides": 1,
+        "cooldown": 0,
+        "range": 0,
+        "type": "unknown"
+      },
+      "hp": 3,
+      "moveSpeed": 0,
+      "scale": 1,
+      "abilities": [
+        "Aloc",
+        "A0BK"
+      ],
+      "model": "Abilities\\Weapons\\FragDriller\\FragDriller.mdl"
+    },
+    {
+      "id": "가아라-닌자-연합군-연대장__n03C",
+      "nameKo": "가아라 닌자 연합군 연대장",
+      "grade": "epic",
+      "w3uId": "n03C",
+      "w3uIds": [
+        "n03C",
+        "n03D",
+        "n03E",
+        "n04X",
+        "n050",
+        "n0BI"
+      ],
+      "attack": {
+        "base": 0,
+        "dice": 0,
+        "sides": 1,
+        "cooldown": 0,
+        "range": 0,
+        "type": "unknown"
+      },
+      "hp": 3,
+      "moveSpeed": 0,
+      "scale": 1.5,
+      "abilities": [
+        "Aloc"
+      ],
+      "model": "war3mapImported\\@Gaara_Karura.mdl"
+    },
+    {
+      "id": "가마키치-묘목산두꺼비__n04L",
+      "nameKo": "가마키치 묘목산두꺼비",
+      "grade": "limit",
+      "w3uId": "n04L",
+      "w3uIds": [
+        "n04L",
+        "n04M",
+        "n04N",
+        "n04O"
+      ],
+      "attack": {
+        "base": 0,
+        "dice": 0,
+        "sides": 1,
+        "cooldown": 0,
+        "range": 0,
+        "type": "unknown"
+      },
+      "hp": 3,
+      "moveSpeed": 0,
+      "scale": 1,
+      "abilities": [
+        "Aloc"
+      ],
+      "model": "war3mapImported\\@Gamakichi_Boom.mdl"
+    },
+    {
+      "id": "우치하-시스이-스사노오-3단계__n04Q",
+      "nameKo": "우치하 시스이 스사노오 3단계",
+      "grade": "epic",
+      "w3uId": "n04Q",
+      "w3uIds": [
+        "n04Q",
+        "n04R",
+        "n04S",
+        "n04T",
+        "h00L",
+        "n04P",
+        "n07L"
+      ],
+      "attack": {
+        "base": 0,
+        "dice": 0,
+        "sides": 1,
+        "cooldown": 0,
+        "range": 0,
+        "type": "unknown"
+      },
+      "hp": 3,
+      "moveSpeed": 0,
+      "scale": 1,
+      "abilities": [
+        "Aloc"
+      ],
+      "model": "war3mapImported\\@Shisui_Koto.mdl"
+    },
+    {
+      "id": "금은형제-긴카쿠__n04V",
+      "nameKo": "금은형제 긴카쿠",
+      "grade": "elite",
+      "w3uId": "n04V",
+      "w3uIds": [
+        "n04V",
+        "n04W",
+        "h00M"
+      ],
+      "attack": {
+        "base": 0,
+        "dice": 0,
+        "sides": 1,
+        "cooldown": 0,
+        "range": 0,
+        "type": "unknown"
+      },
+      "hp": 3,
+      "moveSpeed": 0,
+      "scale": 1.5,
+      "abilities": [
+        "Aloc"
+      ],
+      "model": "war3mapImported\\@Ginkaku_Attack.mdl"
+    },
+    {
+      "id": "금은형제-킨카쿠__n04Y",
+      "nameKo": "금은형제 킨카쿠",
+      "grade": "elite",
+      "w3uId": "n04Y",
+      "w3uIds": [
+        "n04Y",
+        "n04Z",
+        "h00T",
+        "n0BF"
+      ],
+      "attack": {
+        "base": 0,
+        "dice": 0,
+        "sides": 1,
+        "cooldown": 0,
+        "range": 0,
+        "type": "unknown"
+      },
+      "hp": 3,
+      "moveSpeed": 0,
+      "scale": 1.100000023841858,
+      "abilities": [
+        "Aloc"
+      ],
+      "model": "war3mapImported\\@Kinkaku_Tornado.mdl"
+    },
+    {
+      "id": "나라-시카마루-타고난-천재__n054",
+      "nameKo": "나라 시카마루 타고난 천재",
+      "grade": "legend",
+      "w3uId": "n054",
+      "w3uIds": [
+        "n054",
+        "n056",
+        "h02A",
+        "n05C"
+      ],
+      "attack": {
+        "base": 0,
+        "dice": 0,
+        "sides": 1,
+        "cooldown": 0,
+        "range": 0,
+        "type": "unknown"
+      },
+      "hp": 3,
+      "moveSpeed": 0,
+      "scale": 0.699999988079071,
+      "abilities": [
+        "A075",
+        "Aloc"
+      ],
+      "model": "war3mapImported\\@Shika_black.mdl"
+    },
+    {
+      "id": "카쿠즈-아카츠키__n058",
+      "nameKo": "카쿠즈 아카츠키",
+      "grade": "rare",
+      "w3uId": "n058",
+      "w3uIds": [
+        "n058",
+        "h025"
+      ],
+      "attack": {
+        "base": 0,
+        "dice": 0,
+        "sides": 1,
+        "cooldown": 0,
+        "range": 0,
+        "type": "unknown"
+      },
+      "hp": 3,
+      "moveSpeed": 0,
+      "scale": 1,
+      "abilities": [
+        "Aloc"
+      ],
+      "model": "Abilities\\Weapons\\Bolt\\BoltImpact.mdl"
+    },
+    {
+      "id": "카쿠즈-비전인술__n059",
+      "nameKo": "카쿠즈 비전인술",
+      "grade": "unique",
+      "w3uId": "n059",
+      "w3uIds": [
+        "n059",
+        "n05A",
+        "h026"
+      ],
+      "attack": {
+        "base": 0,
+        "dice": 0,
+        "sides": 1,
+        "cooldown": 0,
+        "range": 0,
+        "type": "unknown"
+      },
+      "hp": 3,
+      "moveSpeed": 0,
+      "scale": 3,
+      "abilities": [
+        "A06T",
+        "Aloc"
+      ],
+      "model": "Abilities\\Spells\\Human\\Banish\\BanishTarget.mdl"
+    },
+    {
+      "id": "가마키치-묘목산-두꺼비__h002",
+      "nameKo": "가마키치 묘목산 두꺼비",
+      "grade": "epic",
+      "w3uId": "h002",
+      "w3uIds": [
+        "h002"
+      ],
+      "attack": {
+        "base": 9999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0.550000011920929,
+        "range": 900,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1,
+      "abilities": [
+        "A120",
+        "A020",
+        "A0M3",
+        "A012",
+        "A0TY",
+        "A011",
+        "A00Z",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Gamakichi_Elder.mdl"
+    },
+    {
+      "id": "히단-사신화__n05D",
+      "nameKo": "히단 사신화",
+      "grade": "epic",
+      "w3uId": "n05D",
+      "w3uIds": [
+        "n05D",
+        "n05E",
+        "h018",
+        "n0AJ"
+      ],
+      "attack": {
+        "base": 0,
+        "dice": 0,
+        "sides": 1,
+        "cooldown": 0,
+        "range": 0,
+        "type": "unknown"
+      },
+      "hp": 3,
+      "moveSpeed": 0,
+      "scale": 0.699999988079071,
+      "abilities": [
+        "Aloc"
+      ],
+      "model": "war3mapImported\\@Hidan_Slash.mdl"
+    },
+    {
+      "id": "나루토-양의-힘__n05F",
+      "nameKo": "나루토 양의 힘",
+      "grade": "infinity",
+      "w3uId": "n05F",
+      "w3uIds": [
+        "n05F",
+        "n05U",
+        "n05V",
+        "n05W",
+        "n06H",
+        "n06I",
+        "h030"
+      ],
+      "attack": {
+        "base": 0,
+        "dice": 0,
+        "sides": 1,
+        "cooldown": 0,
+        "range": 0,
+        "type": "unknown"
+      },
+      "hp": 3,
+      "moveSpeed": 0,
+      "scale": 1,
+      "abilities": [
+        "A0G1",
+        "A0GG",
+        "A0FK",
+        "Aloc"
+      ],
+      "model": ".mdl"
+    },
+    {
+      "id": "메카-나루토-7610__n05I",
+      "nameKo": "메카 나루토 7610",
+      "grade": "limit",
+      "w3uId": "n05I",
+      "w3uIds": [
+        "n05I",
+        "n05J",
+        "n05K",
+        "n05L",
+        "n05M",
+        "h02H"
+      ],
+      "attack": {
+        "base": 0,
+        "dice": 0,
+        "sides": 1,
+        "cooldown": 0,
+        "range": 0,
+        "type": "unknown"
+      },
+      "hp": 3,
+      "moveSpeed": 0,
+      "scale": 1,
+      "abilities": [
+        "Aloc"
+      ],
+      "model": "war3mapImported\\@Naruto_Laser-2.mdl"
+    },
+    {
+      "id": "메카-나루토-9999__n05N",
+      "nameKo": "메카 나루토 9999",
+      "grade": "limit",
+      "w3uId": "n05N",
+      "w3uIds": [
+        "n05N",
+        "n05O",
+        "h02I",
+        "n05Q",
+        "n05R"
+      ],
+      "attack": {
+        "base": 0,
+        "dice": 0,
+        "sides": 1,
+        "cooldown": 0,
+        "range": 0,
+        "type": "unknown"
+      },
+      "hp": 3,
+      "moveSpeed": 0,
+      "scale": 0.6000000238418579,
+      "abilities": [
+        "Aloc"
+      ],
+      "model": "war3mapImported\\@Naruto_Mecha_Bijuu_Canon_Effect.mdl"
+    },
+    {
+      "id": "호시가키-키사메-꼬리없는-미수__h02G",
+      "nameKo": "호시가키 키사메 꼬리없는 미수",
+      "grade": "hidden",
+      "w3uId": "h02G",
+      "w3uIds": [
+        "h02G",
+        "n05P",
+        "h07N"
+      ],
+      "attack": {
+        "base": 4999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0.8500000238418579,
+        "range": 900,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.4500000476837158,
+      "abilities": [
+        "A0BZ",
+        "A0XL",
+        "A0A4",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Kisame.mdl"
+    },
+    {
+      "id": "가아라-카제카게__n05S",
+      "nameKo": "가아라 카제카게",
+      "grade": "jinchuriki",
+      "w3uId": "n05S",
+      "w3uIds": [
+        "n05S",
+        "n05T",
+        "h02N"
+      ],
+      "attack": {
+        "base": 0,
+        "dice": 0,
+        "sides": 1,
+        "cooldown": 0,
+        "range": 0,
+        "type": "unknown"
+      },
+      "hp": 3,
+      "moveSpeed": 0,
+      "scale": 2,
+      "abilities": [
+        "Aloc"
+      ],
+      "model": "war3mapImported\\@Gaara_Erruption.mdl"
+    },
+    {
+      "id": "우즈마키-히마와리__h02J",
+      "nameKo": "우즈마키 히마와리",
+      "grade": "special",
+      "w3uId": "h02J",
+      "w3uIds": [
+        "h02J",
+        "h02K",
+        "h02L"
+      ],
+      "attack": {
+        "base": 2999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 1,
+        "range": 900,
+        "type": "chaos"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.2000000476837158,
+      "abilities": [
+        "A0RP",
+        "A0DS",
+        "A01R",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Himawari.mdl"
+    },
+    {
+      "id": "후우-7미의-인주력__h02M",
+      "nameKo": "후우 7미의 인주력",
+      "grade": "jinchuriki",
+      "w3uId": "h02M",
+      "w3uIds": [
+        "h02M",
+        "n067"
+      ],
+      "attack": {
+        "base": 3999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0.6000000238418579,
+        "range": 900,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.25,
+      "abilities": [
+        "A0LQ",
+        "A0F1",
+        "A0F3",
+        "Avul"
+      ],
+      "model": "war3mapImported\\fuu-LL.mdl"
+    },
+    {
+      "id": "니이-유기토-2미의-인주력__h02O",
+      "nameKo": "니이 유기토 2미의 인주력",
+      "grade": "jinchuriki",
+      "w3uId": "h02O",
+      "w3uIds": [
+        "h02O",
+        "n06G",
+        "n06J"
+      ],
+      "attack": {
+        "base": 3999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0.6000000238418579,
+        "range": 900,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.600000023841858,
+      "abilities": [
+        "A0V4",
+        "A0E0",
+        "A0E2",
+        "A0QU",
+        "Avul"
+      ],
+      "model": "war3mapImported\\%Yukito.mdl"
+    },
+    {
+      "id": "야구라-3미의-인주력__h02P",
+      "nameKo": "야구라 3미의 인주력",
+      "grade": "jinchuriki",
+      "w3uId": "h02P",
+      "w3uIds": [
+        "h02P",
+        "n06E",
+        "n06F"
+      ],
+      "attack": {
+        "base": 3999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0.6000000238418579,
+        "range": 900,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.2999999523162842,
+      "abilities": [
+        "A0V5",
+        "A0E7",
+        "A0E8",
+        "A0RA",
+        "Avul"
+      ],
+      "model": "war3mapImported\\3mi_Yagura.mdl"
+    },
+    {
+      "id": "로우시-4미의-인주력__h02T",
+      "nameKo": "로우시 4미의 인주력",
+      "grade": "jinchuriki",
+      "w3uId": "h02T",
+      "w3uIds": [
+        "h02T",
+        "n06B",
+        "n06C",
+        "n06D"
+      ],
+      "attack": {
+        "base": 3999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0.6000000238418579,
+        "range": 900,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.350000023841858,
+      "abilities": [
+        "A0V6",
+        "A0ED",
+        "A0EJ",
+        "Avul"
+      ],
+      "model": "war3mapImported\\4mi_Roushi.mdl"
+    },
+    {
+      "id": "한-5미의-인주력__h02W",
+      "nameKo": "한 5미의 인주력",
+      "grade": "jinchuriki",
+      "w3uId": "h02W",
+      "w3uIds": [
+        "h02W",
+        "n06A"
+      ],
+      "attack": {
+        "base": 3999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0.6000000238418579,
+        "range": 900,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.4500000476837158,
+      "abilities": [
+        "A15T",
+        "A0V7",
+        "A0EK",
+        "A0EM",
+        "Avul"
+      ],
+      "model": "war3mapImported\\5mi_Han.mdl"
+    },
+    {
+      "id": "우타카타-6미의-인주력__h02Z",
+      "nameKo": "우타카타 6미의 인주력",
+      "grade": "jinchuriki",
+      "w3uId": "h02Z",
+      "w3uIds": [
+        "h02Z",
+        "n068",
+        "n069"
+      ],
+      "attack": {
+        "base": 3999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0.6000000238418579,
+        "range": 900,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 0.7300000190734863,
+      "abilities": [
+        "A0V8",
+        "A0BN",
+        "A03M",
+        "A0EZ",
+        "Avul"
+      ],
+      "model": "war3mapImported\\6mi_Utakata.mdl"
+    },
+    {
+      "id": "나루토-양의-힘-쿠라마__n05X",
+      "nameKo": "나루토 양의 힘 - 쿠라마",
+      "grade": "infinity",
+      "w3uId": "n05X",
+      "w3uIds": [
+        "n05X",
+        "n05Y",
+        "n05Z",
+        "h031"
+      ],
+      "attack": {
+        "base": 0,
+        "dice": 0,
+        "sides": 1,
+        "cooldown": 0,
+        "range": 0,
+        "type": "unknown"
+      },
+      "hp": 3,
+      "moveSpeed": 0,
+      "scale": 0.20000000298023224,
+      "abilities": [
+        "Aloc"
+      ],
+      "model": "war3mapImported\\Kurama_INF.mdl"
+    },
+    {
+      "id": "우치하-사스케-음의-힘__n060",
+      "nameKo": "우치하 사스케 음의 힘",
+      "grade": "infinity",
+      "w3uId": "n060",
+      "w3uIds": [
+        "n060",
+        "n062",
+        "n063",
+        "n064",
+        "h033"
+      ],
+      "attack": {
+        "base": 0,
+        "dice": 0,
+        "sides": 1,
+        "cooldown": 0,
+        "range": 0,
+        "type": "unknown"
+      },
+      "hp": 3,
+      "moveSpeed": 0,
+      "scale": 1.7000000476837158,
+      "abilities": [
+        "Aloc"
+      ],
+      "model": "war3mapImported\\@Sasuke_Dark_Hole.mdl"
+    },
+    {
+      "id": "우치하-사스케-완성체-스사노오__n061",
+      "nameKo": "우치하 사스케 완성체 스사노오",
+      "grade": "infinity",
+      "w3uId": "n061",
+      "w3uIds": [
+        "n061",
+        "n066",
+        "h032",
+        "n06K",
+        "n06L",
+        "n06M",
+        "n06N",
+        "n073"
+      ],
+      "attack": {
+        "base": 0,
+        "dice": 0,
+        "sides": 1,
+        "cooldown": 0,
+        "range": 0,
+        "type": "unknown"
+      },
+      "hp": 3,
+      "moveSpeed": 0,
+      "scale": 2.5,
+      "abilities": [
+        "Aloc"
+      ],
+      "model": "war3mapImported\\sasukerinnegan.mdl"
+    },
+    {
+      "id": "우치하-시스이-완성체-스사노오__n065",
+      "nameKo": "우치하 시스이 완성체 스사노오",
+      "grade": "infinity",
+      "w3uId": "n065",
+      "w3uIds": [
+        "n065",
+        "h034",
+        "n06O",
+        "n06P",
+        "n06Q",
+        "n06R",
+        "n074"
+      ],
+      "attack": {
+        "base": 0,
+        "dice": 0,
+        "sides": 1,
+        "cooldown": 0,
+        "range": 0,
+        "type": "unknown"
+      },
+      "hp": 3,
+      "moveSpeed": 0,
+      "scale": 1.899999976158142,
+      "abilities": [
+        "Aloc"
+      ],
+      "model": "war3mapImported\\Shisui_INF.mdl"
+    },
+    {
+      "id": "우치하-이타치-완성체-스사노오__n06S",
+      "nameKo": "우치하 이타치 완성체 스사노오",
+      "grade": "infinity",
+      "w3uId": "n06S",
+      "w3uIds": [
+        "n06S",
+        "n06T",
+        "n06U",
+        "n06V",
+        "n06W",
+        "h035"
+      ],
+      "attack": {
+        "base": 0,
+        "dice": 0,
+        "sides": 1,
+        "cooldown": 0,
+        "range": 0,
+        "type": "unknown"
+      },
+      "hp": 3,
+      "moveSpeed": 0,
+      "scale": 1.899999976158142,
+      "abilities": [
+        "Aloc"
+      ],
+      "model": "war3mapImported\\Itachi_INF.mdl"
+    },
+    {
+      "id": "하타케-카카시-완성체-스사노오__n06X",
+      "nameKo": "하타케 카카시 완성체 스사노오",
+      "grade": "infinity",
+      "w3uId": "n06X",
+      "w3uIds": [
+        "n06X",
+        "n06Y",
+        "n06Z",
+        "h03B",
+        "n07N"
+      ],
+      "attack": {
+        "base": 0,
+        "dice": 0,
+        "sides": 1,
+        "cooldown": 0,
+        "range": 0,
+        "type": "unknown"
+      },
+      "hp": 3,
+      "moveSpeed": 0,
+      "scale": 1.899999976158142,
+      "abilities": [
+        "Aloc"
+      ],
+      "model": "war3mapImported\\Kakashi_INF.mdl"
+    },
+    {
+      "id": "소용돌이-제츠-아카츠키__n071",
+      "nameKo": "소용돌이 제츠 아카츠키",
+      "grade": "epic",
+      "w3uId": "n071",
+      "w3uIds": [
+        "n071",
+        "h038",
+        "n0C3",
+        "n0C4"
+      ],
+      "attack": {
+        "base": 0,
+        "dice": 0,
+        "sides": 1,
+        "cooldown": 0,
+        "range": 0,
+        "type": "unknown"
+      },
+      "hp": 3,
+      "moveSpeed": 0,
+      "scale": 3,
+      "abilities": [
+        "A10H",
+        "Aloc"
+      ],
+      "model": "war3mapImported\\@Zetsu_Ep_Spell1.mdl"
+    },
+    {
+      "id": "센쥬-토비라마-예토전생__n072",
+      "nameKo": "센쥬 토비라마 예토전생",
+      "grade": "epic",
+      "w3uId": "n072",
+      "w3uIds": [
+        "n072",
+        "n07B",
+        "n096",
+        "n0B1",
+        "n0B9",
+        "n0BA",
+        "n0BB",
+        "h095"
+      ],
+      "attack": {
+        "base": 0,
+        "dice": 0,
+        "sides": 1,
+        "cooldown": 0,
+        "range": 0,
+        "type": "unknown"
+      },
+      "hp": 3,
+      "moveSpeed": 0,
+      "scale": 3,
+      "abilities": [
+        "Aloc"
+      ],
+      "model": "war3mapImported\\@Tobirama_Ep_Dark.mdl"
+    },
+    {
+      "id": "가리-폭둔__n077",
+      "nameKo": "가리 폭둔",
+      "grade": "elite",
+      "w3uId": "n077",
+      "w3uIds": [
+        "n077",
+        "n093",
+        "n094",
+        "h05Y"
+      ],
+      "attack": {
+        "base": 0,
+        "dice": 0,
+        "sides": 1,
+        "cooldown": 0,
+        "range": 0,
+        "type": "unknown"
+      },
+      "hp": 3,
+      "moveSpeed": 0,
+      "scale": 1,
+      "abilities": [
+        "Aloc"
+      ],
+      "model": ".mdl"
+    },
+    {
+      "id": "시무라-단조-뿌리의-수장__n078",
+      "nameKo": "시무라 단조 뿌리의 수장",
+      "grade": "epic",
+      "w3uId": "n078",
+      "w3uIds": [
+        "n078",
+        "h09C",
+        "n0BZ"
+      ],
+      "attack": {
+        "base": 0,
+        "dice": 0,
+        "sides": 1,
+        "cooldown": 0,
+        "range": 0,
+        "type": "unknown"
+      },
+      "hp": 3,
+      "moveSpeed": 0,
+      "scale": 1,
+      "abilities": [
+        "Aloc"
+      ],
+      "model": "war3mapImported\\@Danzo_Wind_1.mdl"
+    },
+    {
+      "id": "오오츠츠키-모모시키-단을-연성하는-자__n079",
+      "nameKo": "오오츠츠키 모모시키 단을 연성하는 자",
+      "grade": "epic",
+      "w3uId": "n079",
+      "w3uIds": [
+        "n079",
+        "n0A0",
+        "n0A1",
+        "h078"
+      ],
+      "attack": {
+        "base": 0,
+        "dice": 0,
+        "sides": 1,
+        "cooldown": 0,
+        "range": 0,
+        "type": "unknown"
+      },
+      "hp": 3,
+      "moveSpeed": 0,
+      "scale": 1,
+      "abilities": [
+        "Aloc"
+      ],
+      "model": ".mdl"
+    },
+    {
+      "id": "오오츠츠키-모모시키-단을-흡수-한-자__n07A",
+      "nameKo": "오오츠츠키 모모시키 단을 흡수 한 자",
+      "grade": "infinity",
+      "w3uId": "n07A",
+      "w3uIds": [
+        "n07A",
+        "n0A3",
+        "n0A4",
+        "h07C"
+      ],
+      "attack": {
+        "base": 0,
+        "dice": 0,
+        "sides": 1,
+        "cooldown": 0,
+        "range": 0,
+        "type": "unknown"
+      },
+      "hp": 3,
+      "moveSpeed": 0,
+      "scale": 2.0999999046325684,
+      "abilities": [
+        "Aloc"
+      ],
+      "model": "war3mapImported\\Momo_Inf.mdl"
+    },
+    {
+      "id": "사스케-스사노오-미수-차크라__n07C",
+      "nameKo": "사스케 스사노오 미수 차크라",
+      "grade": "ruin",
+      "w3uId": "n07C",
+      "w3uIds": [
+        "n07C",
+        "n07J",
+        "n0DG",
+        "h099",
+        "n0BP",
+        "n0BQ"
+      ],
+      "attack": {
+        "base": 0,
+        "dice": 0,
+        "sides": 1,
+        "cooldown": 0,
+        "range": 0,
+        "type": "unknown"
+      },
+      "hp": 3,
+      "moveSpeed": 0,
+      "scale": 1.2999999523162842,
+      "abilities": [
+        "Aloc"
+      ],
+      "model": "war3mapImported\\@Sasuke_Rn_Slam2.mdl"
+    },
+    {
+      "id": "휴우가-하나비-꽃불의-회천__n07D",
+      "nameKo": "휴우가 하나비 꽃불의 회천",
+      "grade": "infinity",
+      "w3uId": "n07D",
+      "w3uIds": [
+        "n07D",
+        "n07E",
+        "h07T"
+      ],
+      "attack": {
+        "base": 0,
+        "dice": 0,
+        "sides": 1,
+        "cooldown": 0,
+        "range": 0,
+        "type": "unknown"
+      },
+      "hp": 3,
+      "moveSpeed": 0,
+      "scale": 10,
+      "abilities": [
+        "Aloc"
+      ],
+      "model": "war3mapImported\\@Hanabi_Inf_Splash2.mdl"
+    },
+    {
+      "id": "육도선인-십미의-인주력__n07H",
+      "nameKo": "육도선인 십미의 인주력",
+      "grade": "special",
+      "w3uId": "n07H",
+      "w3uIds": [
+        "n07H"
+      ],
+      "attack": {
+        "base": 0,
+        "dice": 0,
+        "sides": 1,
+        "cooldown": 0,
+        "range": 0,
+        "type": "unknown"
+      },
+      "hp": 3,
+      "moveSpeed": 0,
+      "scale": 0.699999988079071,
+      "abilities": [
+        "Aloc"
+      ],
+      "model": "war3mapImported\\@Rikudo_Sennine_Spell.mdl"
+    },
+    {
+      "id": "록-리-취권__n07M",
+      "nameKo": "록 리 취권",
+      "grade": "limit",
+      "w3uId": "n07M",
+      "w3uIds": [
+        "n07M",
+        "n07O",
+        "n07R",
+        "h044",
+        "n0AR",
+        "n0AS"
+      ],
+      "attack": {
+        "base": 0,
+        "dice": 0,
+        "sides": 1,
+        "cooldown": 0,
+        "range": 0,
+        "type": "unknown"
+      },
+      "hp": 3,
+      "moveSpeed": 0,
+      "scale": 0.699999988079071,
+      "abilities": [
+        "Aloc"
+      ],
+      "model": "war3mapImported\\@RockLee_Leaf.mdl"
+    },
+    {
+      "id": "코테츠__n07P",
+      "nameKo": "코테츠",
+      "grade": "rare",
+      "w3uId": "n07P",
+      "w3uIds": [
+        "n07P",
+        "h042"
+      ],
+      "attack": {
+        "base": 0,
+        "dice": 0,
+        "sides": 1,
+        "cooldown": 0,
+        "range": 0,
+        "type": "unknown"
+      },
+      "hp": 3,
+      "moveSpeed": 0,
+      "scale": 3,
+      "abilities": [
+        "A0MT",
+        "Aloc"
+      ],
+      "model": "Objects\\Spawnmodels\\Human\\HumanBlood\\HumanBloodPeasant.mdl"
+    },
+    {
+      "id": "노하라-린__n07Q",
+      "nameKo": "노하라 린",
+      "grade": "unique",
+      "w3uId": "n07Q",
+      "w3uIds": [
+        "n07Q",
+        "h043"
+      ],
+      "attack": {
+        "base": 0,
+        "dice": 0,
+        "sides": 1,
+        "cooldown": 0,
+        "range": 0,
+        "type": "unknown"
+      },
+      "hp": 3,
+      "moveSpeed": 0,
+      "scale": 2.200000047683716,
+      "abilities": [
+        "A0MU",
+        "Aloc"
+      ],
+      "model": "Objects\\Spawnmodels\\Human\\HumanBlood\\BloodElfSpellThiefBlood.mdl"
+    },
+    {
+      "id": "하고로모의-차크라__h03O",
+      "nameKo": "하고로모의 차크라",
+      "grade": "special",
+      "w3uId": "h03O",
+      "w3uIds": [
+        "h03O"
+      ],
+      "attack": {
+        "base": 2999,
+        "dice": 0,
+        "sides": 1,
+        "cooldown": 1,
+        "range": 900,
+        "type": "chaos"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 2,
+      "abilities": [
+        "A0CX",
+        "A0M1",
+        "A0M0",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Hagoromo.mdl"
+    },
+    {
+      "id": "오비토의-동력__h03P",
+      "nameKo": "오비토의 동력",
+      "grade": "special",
+      "w3uId": "h03P",
+      "w3uIds": [
+        "h03P"
+      ],
+      "attack": {
+        "base": 2999,
+        "dice": 0,
+        "sides": 1,
+        "cooldown": 1,
+        "range": 900,
+        "type": "chaos"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.7000000476837158,
+      "abilities": [
+        "A0CX",
+        "A0MO",
+        "A0LX",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Obito-I.mdl"
+    },
+    {
+      "id": "이타치의-동력__h03Q",
+      "nameKo": "이타치의 동력",
+      "grade": "special",
+      "w3uId": "h03Q",
+      "w3uIds": [
+        "h03Q"
+      ],
+      "attack": {
+        "base": 2999,
+        "dice": 0,
+        "sides": 1,
+        "cooldown": 1,
+        "range": 900,
+        "type": "chaos"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 2,
+      "abilities": [
+        "A0CX",
+        "A0LY",
+        "Avul"
+      ],
+      "model": "war3mapImported\\itachi_ms.mdl"
+    },
+    {
+      "id": "시스이의-동력__h03R",
+      "nameKo": "시스이의 동력",
+      "grade": "special",
+      "w3uId": "h03R",
+      "w3uIds": [
+        "h03R"
+      ],
+      "attack": {
+        "base": 2999,
+        "dice": 0,
+        "sides": 1,
+        "cooldown": 1,
+        "range": 900,
+        "type": "chaos"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 2,
+      "abilities": [
+        "A0CX",
+        "A0LZ",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Shisui_MS.mdl"
+    },
+    {
+      "id": "이노시카쵸__h045",
+      "nameKo": "이노시카쵸",
+      "grade": "elite",
+      "w3uId": "h045",
+      "w3uIds": [
+        "h045",
+        "n07T",
+        "n0CS"
+      ],
+      "attack": {
+        "base": 69999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0,
+        "range": 900,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.7000000476837158,
+      "abilities": [
+        "A12Q",
+        "A020",
+        "A0N5",
+        "A0N1",
+        "A0N4",
+        "A0M3",
+        "Avul"
+      ],
+      "model": "war3mapImported\\InoshikaCho.mdl"
+    },
+    {
+      "id": "사이-호시탐탄__h046",
+      "nameKo": "사이 호시탐탄",
+      "grade": "elite",
+      "w3uId": "h046",
+      "w3uIds": [
+        "h046",
+        "n07U"
+      ],
+      "attack": {
+        "base": 24999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0.550000011920929,
+        "range": 900,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.7000000476837158,
+      "abilities": [
+        "A020",
+        "A0YA",
+        "A0N8",
+        "A0N3",
+        "A0M3",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Sai-E.mdl"
+    },
+    {
+      "id": "무우-2대-츠치카게__h047",
+      "nameKo": "무우 2대 츠치카게",
+      "grade": "epic",
+      "w3uId": "h047",
+      "w3uIds": [
+        "h047",
+        "n07V",
+        "n07W"
+      ],
+      "attack": {
+        "base": 9999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 1.2999999523162842,
+        "range": 900,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.7000000476837158,
+      "abilities": [
+        "A11V",
+        "A020",
+        "A0NA",
+        "A0NB",
+        "A0NC",
+        "A0ND",
+        "A0M3",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Muu.mdl"
+    },
+    {
+      "id": "우치하-오비토-육도모드__h048",
+      "nameKo": "우치하 오비토 육도모드",
+      "grade": "infinity",
+      "w3uId": "h048",
+      "w3uIds": [
+        "h048",
+        "n07Z",
+        "n080",
+        "n081",
+        "n082",
+        "n083",
+        "n08V"
+      ],
+      "attack": {
+        "base": 69999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0.550000011920929,
+        "range": 900,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.7000000476837158,
+      "abilities": [
+        "A020",
+        "A0NL",
+        "A0NK",
+        "A0NN",
+        "A0NO",
+        "A0NM",
+        "A0NJ",
+        "A0M3",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Obito_INF.mdl"
+    },
+    {
+      "id": "오오츠츠키-카구야-윤회사륜안__h049",
+      "nameKo": "오오츠츠키 카구야 윤회사륜안",
+      "grade": "creation",
+      "w3uId": "h049",
+      "w3uIds": [
+        "h049",
+        "n084",
+        "n085",
+        "n086",
+        "n087",
+        "n088",
+        "n089",
+        "n08A",
+        "n08B",
+        "n0BD",
+        "n0C2",
+        "n0CH",
+        "n0CL",
+        "n0CO",
+        "n0CP",
+        "n0CQ"
+      ],
+      "attack": {
+        "base": 49999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0.6499999761581421,
+        "range": 900,
+        "type": "chaos"
+      },
+      "hp": 50,
+      "moveSpeed": 522,
+      "scale": 1.7000000476837158,
+      "abilities": [
+        "A020",
+        "A0O3",
+        "A0NQ",
+        "A12D",
+        "A0NT",
+        "A0NR",
+        "A0M3",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Kaguya_INF.mdl"
+    },
+    {
+      "id": "무우-2대-츠치카게-분열의-술__n07X",
+      "nameKo": "무우 2대 츠치카게 분열의 술",
+      "grade": "epic",
+      "w3uId": "n07X",
+      "w3uIds": [
+        "n07X",
+        "n07Y",
+        "h04H"
+      ],
+      "attack": {
+        "base": 0,
+        "dice": 0,
+        "sides": 1,
+        "cooldown": 0,
+        "range": 0,
+        "type": "unknown"
+      },
+      "hp": 3,
+      "moveSpeed": 0,
+      "scale": 0.800000011920929,
+      "abilities": [
+        "Aloc"
+      ],
+      "model": "war3mapImported\\@Oonoki_Jinton_Big.mdl"
+    },
+    {
+      "id": "마이트-가이-사문해제__n08C",
+      "nameKo": "마이트 가이 사문해제",
+      "grade": "infinity",
+      "w3uId": "n08C",
+      "w3uIds": [
+        "n08C",
+        "n08D",
+        "n08E",
+        "n08F",
+        "n08H",
+        "n08I",
+        "n08J",
+        "h04L"
+      ],
+      "attack": {
+        "base": 0,
+        "dice": 0,
+        "sides": 1,
+        "cooldown": 0,
+        "range": 0,
+        "type": "unknown"
+      },
+      "hp": 3,
+      "moveSpeed": 522,
+      "scale": 1.2999999523162842,
+      "abilities": [
+        "Aloc"
+      ],
+      "model": "Abilities\\Spells\\Other\\Doom\\DoomDeath.mdl"
+    },
+    {
+      "id": "라사-4대-카제카게__n08G",
+      "nameKo": "라사 4대 카제카게",
+      "grade": "epic",
+      "w3uId": "n08G",
+      "w3uIds": [
+        "n08G",
+        "n08R",
+        "n08T",
+        "n08U",
+        "h05L"
+      ],
+      "attack": {
+        "base": 0,
+        "dice": 0,
+        "sides": 1,
+        "cooldown": 0,
+        "range": 0,
+        "type": "unknown"
+      },
+      "hp": 3,
+      "moveSpeed": 0,
+      "scale": 3,
+      "abilities": [
+        "Aloc"
+      ],
+      "model": "war3mapImported\\@sandpyraid.mdl"
+    },
+    {
+      "id": "카쿠즈-완전변형__n08K",
+      "nameKo": "카쿠즈 완전변형",
+      "grade": "limit",
+      "w3uId": "n08K",
+      "w3uIds": [
+        "n08K",
+        "h05M",
+        "n08Y",
+        "n08Z",
+        "n090",
+        "n091",
+        "n092"
+      ],
+      "attack": {
+        "base": 0,
+        "dice": 0,
+        "sides": 1,
+        "cooldown": 0,
+        "range": 0,
+        "type": "unknown"
+      },
+      "hp": 3,
+      "moveSpeed": 0,
+      "scale": 2.4000000953674316,
+      "abilities": [
+        "A0OX",
+        "Aloc"
+      ],
+      "model": ".mdl"
+    },
+    {
+      "id": "킬러-에이-3대-라이카게__n08L",
+      "nameKo": "킬러 에이 3대 라이카게",
+      "grade": "epic",
+      "w3uId": "n08L",
+      "w3uIds": [
+        "n08L",
+        "h05Z",
+        "n09R"
+      ],
+      "attack": {
+        "base": 0,
+        "dice": 0,
+        "sides": 1,
+        "cooldown": 0,
+        "range": 0,
+        "type": "unknown"
+      },
+      "hp": 3,
+      "moveSpeed": 0,
+      "scale": 1,
+      "abilities": [
+        "A0PP",
+        "Aloc"
+      ],
+      "model": "war3mapImported\\@KillerA_Slash.mdl"
+    },
+    {
+      "id": "우치하-마다라-육도모드__n08M",
+      "nameKo": "우치하 마다라 육도모드",
+      "grade": "infinity",
+      "w3uId": "n08M",
+      "w3uIds": [
+        "n08M",
+        "n08N",
+        "n08O",
+        "n08P",
+        "n08Q",
+        "n08S",
+        "h05A"
+      ],
+      "attack": {
+        "base": 0,
+        "dice": 0,
+        "sides": 1,
+        "cooldown": 0,
+        "range": 0,
+        "type": "unknown"
+      },
+      "hp": 3,
+      "moveSpeed": 0,
+      "scale": 1,
+      "abilities": [
+        "Aloc"
+      ],
+      "model": ".mdl"
+    },
+    {
+      "id": "사이-호시탐탄-인법-초신위화__h04C",
+      "nameKo": "사이 호시탐탄 인법 : 초신위화",
+      "grade": "elite",
+      "w3uId": "h04C",
+      "w3uIds": [
+        "h04C"
+      ],
+      "attack": {
+        "base": 34999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0,
+        "range": 900,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.7000000476837158,
+      "abilities": [
+        "A020",
+        "A0N6",
+        "A0M3",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Sai-E-Effect_Summon.mdl"
+    },
+    {
+      "id": "가이의-각오__h04K",
+      "nameKo": "가이의 각오",
+      "grade": "special",
+      "w3uId": "h04K",
+      "w3uIds": [
+        "h04K"
+      ],
+      "attack": {
+        "base": 2999,
+        "dice": 0,
+        "sides": 1,
+        "cooldown": 1,
+        "range": 900,
+        "type": "chaos"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 0.8500000238418579,
+      "abilities": [
+        "A0CX",
+        "A0LB",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Guy_INF_Mat.mdl"
+    },
+    {
+      "id": "완전체-10미__h05G",
+      "nameKo": "완전체 10미",
+      "grade": "special",
+      "w3uId": "h05G",
+      "w3uIds": [
+        "h05G"
+      ],
+      "attack": {
+        "base": 2999,
+        "dice": 0,
+        "sides": 1,
+        "cooldown": 1,
+        "range": 900,
+        "type": "chaos"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 0.6000000238418579,
+      "abilities": [
+        "A0CX",
+        "A0MF",
+        "A0OH",
+        "A0UQ",
+        "Avul"
+      ],
+      "model": "war3mapImported\\10mi.mdl"
+    },
+    {
+      "id": "우치하-마다라-육도모드-윤묘-변옥__h05H",
+      "nameKo": "우치하 마다라 육도모드 윤묘 변옥",
+      "grade": "infinity",
+      "w3uId": "h05H",
+      "w3uIds": [
+        "h05H"
+      ],
+      "attack": {
+        "base": 4999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 1.2000000476837158,
+        "range": 900,
+        "type": "chaos"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.7000000476837158,
+      "abilities": [
+        "A020",
+        "A0UH",
+        "A0M3",
+        "Avul"
+      ],
+      "model": "war3mapImported\\%Madara_Rikudo_Black.mdl"
+    },
+    {
+      "id": "카쿠즈-완전변형-지원구-화둔__h05N",
+      "nameKo": "카쿠즈 완전변형 지원구 : 화둔",
+      "grade": "limit",
+      "w3uId": "h05N",
+      "w3uIds": [
+        "h05N"
+      ],
+      "attack": {
+        "base": 4999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 1.7000000476837158,
+        "range": 900,
+        "type": "chaos"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 3.5,
+      "abilities": [
+        "A020",
+        "A0PA",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Kakuzu_Puppet_Wind_Fire.mdl"
+    },
+    {
+      "id": "카쿠즈-완전변형-지원구-풍둔__h05P",
+      "nameKo": "카쿠즈 완전변형 지원구 : 풍둔",
+      "grade": "limit",
+      "w3uId": "h05P",
+      "w3uIds": [
+        "h05P"
+      ],
+      "attack": {
+        "base": 4999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 1.7000000476837158,
+        "range": 900,
+        "type": "chaos"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 3.5,
+      "abilities": [
+        "A020",
+        "A0P8",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Kakuzu_Puppet_Wind_Fire.mdl"
+    },
+    {
+      "id": "카쿠즈-완전변형-지원구-뇌둔__h05Q",
+      "nameKo": "카쿠즈 완전변형 지원구 : 뇌둔",
+      "grade": "limit",
+      "w3uId": "h05Q",
+      "w3uIds": [
+        "h05Q"
+      ],
+      "attack": {
+        "base": 4999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 1.7000000476837158,
+        "range": 900,
+        "type": "chaos"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 3.5,
+      "abilities": [
+        "A020",
+        "A0P9",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Kakuzu_Puppet_Lightning.mdl"
+    },
+    {
+      "id": "오오츠츠키-토네리-하무라의-자손__n097",
+      "nameKo": "오오츠츠키 토네리 하무라의 자손",
+      "grade": "epic",
+      "w3uId": "n097",
+      "w3uIds": [
+        "n097",
+        "n098",
+        "n09Q",
+        "h062"
+      ],
+      "attack": {
+        "base": 0,
+        "dice": 0,
+        "sides": 1,
+        "cooldown": 0,
+        "range": 0,
+        "type": "unknown"
+      },
+      "hp": 3,
+      "moveSpeed": 0,
+      "scale": 2,
+      "abilities": [
+        "Aloc"
+      ],
+      "model": "war3mapImported\\@Toneri_SKill_1.mdl"
+    },
+    {
+      "id": "오오츠츠키-토네리-전생안__n099",
+      "nameKo": "오오츠츠키 토네리 전생안",
+      "grade": "infinity",
+      "w3uId": "n099",
+      "w3uIds": [
+        "n099",
+        "n09A",
+        "n09B",
+        "h063"
+      ],
+      "attack": {
+        "base": 0,
+        "dice": 0,
+        "sides": 1,
+        "cooldown": 0,
+        "range": 0,
+        "type": "unknown"
+      },
+      "hp": 3,
+      "moveSpeed": 0,
+      "scale": 3.299999952316284,
+      "abilities": [
+        "Aloc"
+      ],
+      "model": "war3mapImported\\@Toneri_Inf_Gudodama.mdl"
+    },
+    {
+      "id": "테루미메이-노처녀-히스테리__n09C",
+      "nameKo": "테루미메이 노처녀 히스테리",
+      "grade": "epic",
+      "w3uId": "n09C",
+      "w3uIds": [
+        "n09C",
+        "n09E",
+        "n09J",
+        "n09M",
+        "n09N",
+        "h070"
+      ],
+      "attack": {
+        "base": 0,
+        "dice": 0,
+        "sides": 1,
+        "cooldown": 0,
+        "range": 0,
+        "type": "unknown"
+      },
+      "hp": 3,
+      "moveSpeed": 0,
+      "scale": 3.299999952316284,
+      "abilities": [
+        "Aloc"
+      ],
+      "model": "war3mapImported\\@Terumi_SP_Sp2.mdl"
+    },
+    {
+      "id": "우치하-사스케-영원한만화경사륜안__n09D",
+      "nameKo": "우치하 사스케 영원한만화경사륜안",
+      "grade": "epic",
+      "w3uId": "n09D",
+      "w3uIds": [
+        "n09D",
+        "n09F",
+        "n09G",
+        "n09H",
+        "n09I",
+        "h06Y"
+      ],
+      "attack": {
+        "base": 0,
+        "dice": 0,
+        "sides": 1,
+        "cooldown": 0,
+        "range": 0,
+        "type": "unknown"
+      },
+      "hp": 3,
+      "moveSpeed": 0,
+      "scale": 2.700000047683716,
+      "abilities": [
+        "Aloc"
+      ],
+      "model": "war3mapImported\\@Sasuke_Ep_Kirin.mdl"
+    },
+    {
+      "id": "파쿠라-혈계한계-작둔__n09K",
+      "nameKo": "파쿠라 혈계한계 작둔",
+      "grade": "epic",
+      "w3uId": "n09K",
+      "w3uIds": [
+        "n09K",
+        "n0AF",
+        "h077",
+        "n0AI"
+      ],
+      "attack": {
+        "base": 0,
+        "dice": 0,
+        "sides": 1,
+        "cooldown": 0,
+        "range": 0,
+        "type": "unknown"
+      },
+      "hp": 3,
+      "moveSpeed": 0,
+      "scale": 0.5,
+      "abilities": [
+        "A0QR",
+        "Aloc"
+      ],
+      "model": "war3mapImported\\@Pakura_4.mdl"
+    },
+    {
+      "id": "텐텐-파초선__n09L",
+      "nameKo": "텐텐 파초선",
+      "grade": "epic",
+      "w3uId": "n09L",
+      "w3uIds": [
+        "n09L",
+        "n09O",
+        "n09P",
+        "n09S",
+        "h071"
+      ],
+      "attack": {
+        "base": 0,
+        "dice": 0,
+        "sides": 1,
+        "cooldown": 0,
+        "range": 0,
+        "type": "unknown"
+      },
+      "hp": 3,
+      "moveSpeed": 0,
+      "scale": 1.7000000476837158,
+      "abilities": [
+        "A0RH",
+        "Aloc"
+      ],
+      "model": ".mdl"
+    },
+    {
+      "id": "하나비의-백안__h065",
+      "nameKo": "하나비의 백안",
+      "grade": "special",
+      "w3uId": "h065",
+      "w3uIds": [
+        "h065"
+      ],
+      "attack": {
+        "base": 2999,
+        "dice": 0,
+        "sides": 1,
+        "cooldown": 1,
+        "range": 900,
+        "type": "chaos"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.2999999523162842,
+      "abilities": [
+        "A0CX",
+        "A0PW",
+        "A10U",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Hanabi.mdl"
+    },
+    {
+      "id": "우즈마키-쿠시나-9미의-인주력__h06Z",
+      "nameKo": "우즈마키 쿠시나 9미의 인주력",
+      "grade": "epic",
+      "w3uId": "h06Z",
+      "w3uIds": [
+        "h06Z",
+        "n09V",
+        "n09W",
+        "n09X"
+      ],
+      "attack": {
+        "base": 9999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0.8500000238418579,
+        "range": 900,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.75,
+      "abilities": [
+        "A123",
+        "A0M3",
+        "A0TP",
+        "A0QZ",
+        "A0R6",
+        "A0R7",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Kushina_Bikini.mdl"
+    },
+    {
+      "id": "사폭의-가아라-5대-카제카게__h073",
+      "nameKo": "사폭의 가아라 5대 카제카게",
+      "grade": "infinity",
+      "w3uId": "h073",
+      "w3uIds": [
+        "h073",
+        "n0A5",
+        "n0AE"
+      ],
+      "attack": {
+        "base": 69999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0.7099999785423279,
+        "range": 900,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 2.700000047683716,
+      "abilities": [
+        "A020",
+        "A0RU",
+        "A0RS",
+        "A0RR",
+        "A0RT",
+        "A0M3",
+        "A10S",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Gaara_Inf.mdl"
+    },
+    {
+      "id": "칸쿠로-닌자연합군-기습부대장__n09Y",
+      "nameKo": "칸쿠로 닌자연합군 기습부대장",
+      "grade": "limit",
+      "w3uId": "n09Y",
+      "w3uIds": [
+        "n09Y",
+        "n09Z",
+        "h07B"
+      ],
+      "attack": {
+        "base": 0,
+        "dice": 0,
+        "sides": 1,
+        "cooldown": 0,
+        "range": 0,
+        "type": "unknown"
+      },
+      "hp": 3,
+      "moveSpeed": 0,
+      "scale": 1,
+      "abilities": [
+        "Aloc"
+      ],
+      "model": "war3mapImported\\@Kankuro_LIM_Dark.mdl"
+    },
+    {
+      "id": "우치하-마다라-스사노오-쿠라마__n0A2",
+      "nameKo": "우치하 마다라 스사노오 쿠라마",
+      "grade": "infinity",
+      "w3uId": "n0A2",
+      "w3uIds": [
+        "n0A2",
+        "n0AO",
+        "n0AZ",
+        "h07O"
+      ],
+      "attack": {
+        "base": 0,
+        "dice": 0,
+        "sides": 1,
+        "cooldown": 0,
+        "range": 0,
+        "type": "unknown"
+      },
+      "hp": 3,
+      "moveSpeed": 0,
+      "scale": 3.0999999046325684,
+      "abilities": [
+        "Aloc"
+      ],
+      "model": "war3mapImported\\@KillerA_Boom2.mdl"
+    },
+    {
+      "id": "하타케-카카시-호카게-직속-암부__n0A6",
+      "nameKo": "하타케 카카시 호카게 직속 암부",
+      "grade": "limit",
+      "w3uId": "n0A6",
+      "w3uIds": [
+        "n0A6",
+        "n0A9",
+        "n0AB",
+        "n0AC",
+        "h07F"
+      ],
+      "attack": {
+        "base": 0,
+        "dice": 0,
+        "sides": 1,
+        "cooldown": 0,
+        "range": 0,
+        "type": "unknown"
+      },
+      "hp": 3,
+      "moveSpeed": 0,
+      "scale": 1.2999999523162842,
+      "abilities": [
+        "A0T6",
+        "Aloc"
+      ],
+      "model": "war3mapImported\\@Rasengan_ori.mdl"
+    },
+    {
+      "id": "우치하-마다라-스사노오__n0A7",
+      "nameKo": "우치하 마다라 스사노오",
+      "grade": "epic",
+      "w3uId": "n0A7",
+      "w3uIds": [
+        "n0A7",
+        "n0A8",
+        "n0AA",
+        "n0AD",
+        "h07H"
+      ],
+      "attack": {
+        "base": 0,
+        "dice": 0,
+        "sides": 1,
+        "cooldown": 0,
+        "range": 0,
+        "type": "unknown"
+      },
+      "hp": 3,
+      "moveSpeed": 0,
+      "scale": 1.5,
+      "abilities": [
+        "Aloc"
+      ],
+      "model": "war3mapImported\\@Madara_Ep_Susa_5.mdl"
+    },
+    {
+      "id": "야마나카-이노-심전신술__h074",
+      "nameKo": "야마나카 이노 심전신술",
+      "grade": "limit",
+      "w3uId": "h074",
+      "w3uIds": [
+        "h074"
+      ],
+      "attack": {
+        "base": 24999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0.6499999761581421,
+        "range": 900,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.100000023841858,
+      "abilities": [
+        "A020",
+        "A0QB",
+        "A0QE",
+        "A0Z4",
+        "A0Q9",
+        "A0M3",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Ino_swim.mdl"
+    },
+    {
+      "id": "휴우가-히나타-바캉스__h075",
+      "nameKo": "휴우가 히나타 바캉스",
+      "grade": "special",
+      "w3uId": "h075",
+      "w3uIds": [
+        "h075"
+      ],
+      "attack": {
+        "base": 24999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0.6499999761581421,
+        "range": 900,
+        "type": "chaos"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 3.5,
+      "abilities": [
+        "A0M3",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Hinata_SP.mdl"
+    },
+    {
+      "id": "우치하-사라다-사스케의-딸__h079",
+      "nameKo": "우치하 사라다 사스케의 딸",
+      "grade": "special",
+      "w3uId": "h079",
+      "w3uIds": [
+        "h079"
+      ],
+      "attack": {
+        "base": 24999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0.6499999761581421,
+        "range": 900,
+        "type": "chaos"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.5,
+      "abilities": [
+        "A0M3",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Sarada_SP.mdl"
+    },
+    {
+      "id": "야마나카-이노-심전신술__n0AG",
+      "nameKo": "야마나카 이노 심전신술",
+      "grade": "special",
+      "w3uId": "n0AG",
+      "w3uIds": [
+        "n0AG"
+      ],
+      "attack": {
+        "base": 0,
+        "dice": 0,
+        "sides": 1,
+        "cooldown": 0,
+        "range": 0,
+        "type": "unknown"
+      },
+      "hp": 3,
+      "moveSpeed": 0,
+      "scale": 2.5,
+      "abilities": [
+        "Aloc",
+        "A0QC"
+      ],
+      "model": "Abilities\\Spells\\Human\\Invisibility\\InvisibilityTarget.mdl"
+    },
+    {
+      "id": "오오츠츠키-킨시키-열매-단__h07E",
+      "nameKo": "오오츠츠키 킨시키 열매 단",
+      "grade": "special",
+      "w3uId": "h07E",
+      "w3uIds": [
+        "h07E"
+      ],
+      "attack": {
+        "base": 2999,
+        "dice": 0,
+        "sides": 1,
+        "cooldown": 1,
+        "range": 900,
+        "type": "unknown"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 15,
+      "abilities": [
+        "A0CX",
+        "A0SA",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Kinshiki_Dan.mdl"
+    },
+    {
+      "id": "파쿠라-혈계한계-작둔__n0AH",
+      "nameKo": "파쿠라 혈계한계 작둔",
+      "grade": "limit",
+      "w3uId": "n0AH",
+      "w3uIds": [
+        "n0AH"
+      ],
+      "attack": {
+        "base": 0,
+        "dice": 0,
+        "sides": 1,
+        "cooldown": 0,
+        "range": 0,
+        "type": "unknown"
+      },
+      "hp": 3,
+      "moveSpeed": 0,
+      "scale": 0.699999988079071,
+      "abilities": [
+        "Aloc"
+      ],
+      "model": "war3mapImported\\@Pakura-Storm.mdl"
+    },
+    {
+      "id": "우치하-마다라-완성체-스사노오__n0AK",
+      "nameKo": "우치하 마다라 완성체 스사노오",
+      "grade": "infinity",
+      "w3uId": "n0AK",
+      "w3uIds": [
+        "n0AK",
+        "n0AL",
+        "n0AM",
+        "n0AN",
+        "h07I",
+        "n0B0"
+      ],
+      "attack": {
+        "base": 0,
+        "dice": 0,
+        "sides": 1,
+        "cooldown": 0,
+        "range": 0,
+        "type": "unknown"
+      },
+      "hp": 3,
+      "moveSpeed": 0,
+      "scale": 0.009999999776482582,
+      "abilities": [
+        "A16Z",
+        "Aloc"
+      ],
+      "model": ".mdl"
+    },
+    {
+      "id": "흰-제츠__h07J",
+      "nameKo": "흰 제츠",
+      "grade": "special",
+      "w3uId": "h07J",
+      "w3uIds": [
+        "h07J"
+      ],
+      "attack": {
+        "base": 2999,
+        "dice": 0,
+        "sides": 1,
+        "cooldown": 1,
+        "range": 900,
+        "type": "chaos"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.2999999523162842,
+      "abilities": [
+        "Avul"
+      ],
+      "model": "war3mapImported\\Zetsu_White.mdl"
+    },
+    {
+      "id": "호즈키-겐게츠-2대-미즈카게__n0AQ",
+      "nameKo": "호즈키 겐게츠 2대 미즈카게",
+      "grade": "epic",
+      "w3uId": "n0AQ",
+      "w3uIds": [
+        "n0AQ",
+        "h08L",
+        "n0B3"
+      ],
+      "attack": {
+        "base": 0,
+        "dice": 0,
+        "sides": 1,
+        "cooldown": 0,
+        "range": 0,
+        "type": "unknown"
+      },
+      "hp": 3,
+      "moveSpeed": 0,
+      "scale": 2.700000047683716,
+      "abilities": [
+        "A0UN",
+        "Aloc"
+      ],
+      "model": "war3mapImported\\@Bubble.mdl"
+    },
+    {
+      "id": "우즈마키-나가토-예토전생__n0AU",
+      "nameKo": "우즈마키 나가토 예토전생",
+      "grade": "epic",
+      "w3uId": "n0AU",
+      "w3uIds": [
+        "n0AU",
+        "n0AW",
+        "n0AX",
+        "n0AY",
+        "h03C",
+        "n0B4",
+        "n0B5",
+        "n0B6"
+      ],
+      "attack": {
+        "base": 0,
+        "dice": 0,
+        "sides": 1,
+        "cooldown": 0,
+        "range": 0,
+        "type": "unknown"
+      },
+      "hp": 3,
+      "moveSpeed": 0,
+      "scale": 1,
+      "abilities": [
+        "Aloc"
+      ],
+      "model": "war3mapImported\\@Pain_Sura_Slam.mdl"
+    },
+    {
+      "id": "도박광-츠나데__h08H",
+      "nameKo": "도박광 츠나데",
+      "grade": "special",
+      "w3uId": "h08H",
+      "w3uIds": [
+        "h08H"
+      ],
+      "attack": {
+        "base": 0,
+        "dice": 0,
+        "sides": 1,
+        "cooldown": 1,
+        "range": 900,
+        "type": "unknown"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 2.700000047683716,
+      "abilities": [
+        "A0UD",
+        "A05E",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Tsunade.mdl"
+    },
+    {
+      "id": "육도선인-십미의-인주력__h07V",
+      "nameKo": "육도선인 십미의 인주력",
+      "grade": "ruin",
+      "w3uId": "h07V",
+      "w3uIds": [
+        "h07V"
+      ],
+      "attack": {
+        "base": 29999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0.550000011920929,
+        "range": 900,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 2,
+      "abilities": [
+        "A020",
+        "A0B0",
+        "A162",
+        "A0YG",
+        "A0M3",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Rikudo_Sennin_SP.mdl"
+    },
+    {
+      "id": "도박광-츠나데-인생을-건-도박사__h08U",
+      "nameKo": "도박광 츠나데 인생을 건 도박사",
+      "grade": "special",
+      "w3uId": "h08U",
+      "w3uIds": [
+        "h08U"
+      ],
+      "attack": {
+        "base": 0,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 1.2000000476837158,
+        "range": 0,
+        "type": "unknown"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 2,
+      "abilities": [
+        "A020",
+        "A0G0",
+        "A16Q",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Tsunade.mdl"
+    },
+    {
+      "id": "하타케-카카시-the-last__h0BH",
+      "nameKo": "하타케 카카시 THE LAST",
+      "grade": "epic",
+      "w3uId": "h0BH",
+      "w3uIds": [
+        "h0BH",
+        "n0DH",
+        "n0DI",
+        "n0DJ"
+      ],
+      "attack": {
+        "base": 9999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0.6000000238418579,
+        "range": 900,
+        "type": "normal"
+      },
+      "hp": 55,
+      "moveSpeed": 522,
+      "scale": 2,
+      "abilities": [
+        "A129",
+        "A16K",
+        "A16L",
+        "A16M",
+        "A16N",
+        "A0M3",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Kakashi_Epic_TheLast.mdl"
+    },
+    {
+      "id": "우즈마키-나루토-바람의-신__h0BK",
+      "nameKo": "우즈마키 나루토 바람의 신",
+      "grade": "epic",
+      "w3uId": "h0BK",
+      "w3uIds": [
+        "h0BK",
+        "h0BL",
+        "n0DK",
+        "n0DL"
+      ],
+      "attack": {
+        "base": 19999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 1.399999976158142,
+        "range": 900,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.5,
+      "abilities": [
+        "A16R",
+        "A16S",
+        "A16T",
+        "A16V",
+        "A0M3",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Naruto_Fuujin.mdl"
+    },
+    {
+      "id": "오오츠츠키-인드라__h01R",
+      "nameKo": "오오츠츠키 인드라",
+      "grade": "creation",
+      "w3uId": "h01R",
+      "w3uIds": [
+        "h01R",
+        "n0BJ",
+        "n0BK",
+        "n0BL",
+        "n0BM",
+        "n0CT"
+      ],
+      "attack": {
+        "base": 74999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0.6499999761581421,
+        "range": 900,
+        "type": "chaos"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.7000000476837158,
+      "abilities": [
+        "A12B",
+        "A0TO",
+        "A020",
+        "A0M3",
+        "A0TB",
+        "A0TC",
+        "A0TD",
+        "A0TG",
+        "Avul"
+      ],
+      "model": "war3mapImported\\%Indra.mdl"
+    },
+    {
+      "id": "오오츠츠키-아수라__h01T",
+      "nameKo": "오오츠츠키 아수라",
+      "grade": "creation",
+      "w3uId": "h01T",
+      "w3uIds": [
+        "h01T",
+        "n070",
+        "n07G",
+        "n0BN"
+      ],
+      "attack": {
+        "base": 34999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0.6499999761581421,
+        "range": 900,
+        "type": "chaos"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.7999999523162842,
+      "abilities": [
+        "A020",
+        "A0M3",
+        "A03R",
+        "A0TK",
+        "A0ZA",
+        "A0Q7",
+        "A17R",
+        "A17S",
+        "Avul"
+      ],
+      "model": "war3mapImported\\%Asura.mdl"
+    },
+    {
+      "id": "음양둔__h06V",
+      "nameKo": "음양둔",
+      "grade": "special",
+      "w3uId": "h06V",
+      "w3uIds": [
+        "h06V"
+      ],
+      "attack": {
+        "base": 2999,
+        "dice": 0,
+        "sides": 1,
+        "cooldown": 1,
+        "range": 900,
+        "type": "chaos"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 2,
+      "abilities": [
+        "A0TM",
+        "A07C",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Hagoromo.mdl"
+    },
+    {
+      "id": "위장-스사노오-유일무이__h09A",
+      "nameKo": "위장 스사노오 유일무이",
+      "grade": "creation",
+      "w3uId": "h09A",
+      "w3uIds": [
+        "h09A",
+        "n0BS",
+        "n0BT",
+        "n0BU",
+        "n0BV",
+        "n0BW",
+        "n0BX"
+      ],
+      "attack": {
+        "base": 54999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0.6299999952316284,
+        "range": 900,
+        "type": "chaos"
+      },
+      "hp": 35,
+      "moveSpeed": 522,
+      "scale": 3,
+      "abilities": [
+        "A0ZR",
+        "A0ZP",
+        "A0ZO",
+        "A0ZQ",
+        "A020",
+        "A0M3",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Naruto_Susa.mdl"
+    },
+    {
+      "id": "우치하-시스이-순신__h09D",
+      "nameKo": "우치하 시스이 순신",
+      "grade": "legend",
+      "w3uId": "h09D",
+      "w3uIds": [
+        "h09D",
+        "n0BY"
+      ],
+      "attack": {
+        "base": 3999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0.6499999761581421,
+        "range": 900,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.399999976158142,
+      "abilities": [
+        "A108",
+        "A15F",
+        "A020",
+        "A02R",
+        "A101",
+        "A100",
+        "A102",
+        "A020",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Shisui.mdl"
+    },
+    {
+      "id": "우치하-오비토-지옥의-난__n0C5",
+      "nameKo": "우치하 오비토 지옥의 난",
+      "grade": "epic",
+      "w3uId": "n0C5",
+      "w3uIds": [
+        "n0C5",
+        "n0CE",
+        "h09G",
+        "n0CG",
+        "n0CN"
+      ],
+      "attack": {
+        "base": 0,
+        "dice": 0,
+        "sides": 1,
+        "cooldown": 0,
+        "range": 0,
+        "type": "unknown"
+      },
+      "hp": 3,
+      "moveSpeed": 0,
+      "scale": 1.600000023841858,
+      "abilities": [
+        "A11I",
+        "Aloc"
+      ],
+      "model": "war3mapImported\\@Wood_Slam_2.mdl"
+    },
+    {
+      "id": "오오츠츠키-모모시키-천인__h08D",
+      "nameKo": "오오츠츠키 모모시키 천인",
+      "grade": "creation",
+      "w3uId": "h08D",
+      "w3uIds": [
+        "h08D",
+        "n0C6",
+        "n0C7",
+        "n0C8",
+        "n0C9",
+        "n0CA",
+        "n0CB"
+      ],
+      "attack": {
+        "base": 74999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0.6000000238418579,
+        "range": 900,
+        "type": "chaos"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 2.299999952316284,
+      "abilities": [
+        "A020",
+        "A10L",
+        "A10K",
+        "A10M",
+        "A10N",
+        "A10O",
+        "A10P",
+        "A10Q",
+        "A020",
+        "A0M3",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Inf_Momoshiki.mdl"
+    },
+    {
+      "id": "휴우가-히나타-the-last__n0CC",
+      "nameKo": "휴우가 히나타 THE LAST",
+      "grade": "infinity",
+      "w3uId": "n0CC",
+      "w3uIds": [
+        "n0CC",
+        "n0CD",
+        "h09E"
+      ],
+      "attack": {
+        "base": 0,
+        "dice": 0,
+        "sides": 1,
+        "cooldown": 0,
+        "range": 0,
+        "type": "unknown"
+      },
+      "hp": 3,
+      "moveSpeed": 0,
+      "scale": 4,
+      "abilities": [
+        "Aloc"
+      ],
+      "model": "war3mapImported\\@Slam_Hinata_Inf.mdl"
+    },
+    {
+      "id": "오오츠츠키-하고로모-인술의-시조__n0CJ",
+      "nameKo": "오오츠츠키 하고로모 인술의 시조",
+      "grade": "creation",
+      "w3uId": "n0CJ",
+      "w3uIds": [
+        "n0CJ",
+        "n0CK",
+        "n0CM",
+        "h09M"
+      ],
+      "attack": {
+        "base": 0,
+        "dice": 0,
+        "sides": 1,
+        "cooldown": 0,
+        "range": 0,
+        "type": "unknown"
+      },
+      "hp": 3,
+      "moveSpeed": 0,
+      "scale": 1.7000000476837158,
+      "abilities": [
+        "Aloc"
+      ],
+      "model": "war3mapImported\\Slam_Lightning_Hagoromo.mdl"
+    },
+    {
+      "id": "오오츠츠키-하무라-휴우가의-선조__h09O",
+      "nameKo": "오오츠츠키 하무라 휴우가의 선조",
+      "grade": "creation",
+      "w3uId": "h09O",
+      "w3uIds": [
+        "h09O",
+        "n0CI",
+        "n0CU",
+        "n0CV"
+      ],
+      "attack": {
+        "base": 39999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0.6499999761581421,
+        "range": 900,
+        "type": "chaos"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 2.5999999046325684,
+      "abilities": [
+        "A0YK",
+        "A0LT",
+        "A0YN",
+        "A0YM",
+        "A020",
+        "A0M3",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Oochchki_Hamura.mdl"
+    },
+    {
+      "id": "미츠키-선인모드-어둠을-비추는-자__n0CW",
+      "nameKo": "미츠키 선인모드 어둠을 비추는 자",
+      "grade": "ruin",
+      "w3uId": "n0CW",
+      "w3uIds": [
+        "n0CW",
+        "h0AS"
+      ],
+      "attack": {
+        "base": 0,
+        "dice": 0,
+        "sides": 1,
+        "cooldown": 0,
+        "range": 0,
+        "type": "unknown"
+      },
+      "hp": 3,
+      "moveSpeed": 0,
+      "scale": 3,
+      "abilities": [
+        "Aloc"
+      ],
+      "model": "war3mapImported\\@Slam_Mitsuki_Ru_Dark.mdl"
+    },
+    {
+      "id": "하루노-사쿠라-the-last__h0AI",
+      "nameKo": "하루노 사쿠라 THE LAST",
+      "grade": "infinity",
+      "w3uId": "h0AI",
+      "w3uIds": [
+        "h0AI",
+        "n0CY"
+      ],
+      "attack": {
+        "base": 89999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0.699999988079071,
+        "range": 900,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.899999976158142,
+      "abilities": [
+        "A020",
+        "A0M3",
+        "A13D",
+        "A13F",
+        "A13E",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Sakura_Inf.mdl"
+    },
+    {
+      "id": "지라이야-두꺼비-선인__h0AJ",
+      "nameKo": "지라이야 두꺼비 선인",
+      "grade": "limit",
+      "w3uId": "h0AJ",
+      "w3uIds": [
+        "h0AJ"
+      ],
+      "attack": {
+        "base": 9999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0.6600000262260437,
+        "range": 900,
+        "type": "normal"
+      },
+      "hp": 50,
+      "moveSpeed": 522,
+      "scale": 2.299999952316284,
+      "abilities": [
+        "A052",
+        "A0M3",
+        "A13J",
+        "A13I",
+        "A13K",
+        "A13L",
+        "A13M",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Jiraiya_EP.mdl"
+    },
+    {
+      "id": "미츠키-제-7반-멤버__h0AR",
+      "nameKo": "미츠키 제 7반 멤버",
+      "grade": "epic",
+      "w3uId": "h0AR",
+      "w3uIds": [
+        "h0AR",
+        "n0D0",
+        "n0D1",
+        "n0D2",
+        "n0D3"
+      ],
+      "attack": {
+        "base": 54999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0.699999988079071,
+        "range": 600,
+        "type": "chaos"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.2999999523162842,
+      "abilities": [
+        "A15I",
+        "A15K",
+        "A15L",
+        "A15J",
+        "A020",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Mitsuki_ep.mdl"
+    },
+    {
+      "id": "오오츠츠키-우라시키-금색의-윤회안__n0D4",
+      "nameKo": "오오츠츠키 우라시키 금색의 윤회안",
+      "grade": "creation",
+      "w3uId": "n0D4",
+      "w3uIds": [
+        "n0D4",
+        "n0D6",
+        "n0DF",
+        "h0AZ"
+      ],
+      "attack": {
+        "base": 0,
+        "dice": 0,
+        "sides": 1,
+        "cooldown": 0,
+        "range": 0,
+        "type": "unknown"
+      },
+      "hp": 3,
+      "moveSpeed": 0,
+      "scale": 5.5,
+      "abilities": [
+        "Aloc"
+      ],
+      "model": "war3mapImported\\@Urashiki_Gn_Shild.mdl"
+    },
+    {
+      "id": "오오츠츠키-우라시키-시간을-다루는-자__n0D5",
+      "nameKo": "오오츠츠키 우라시키 시간을 다루는 자",
+      "grade": "infinity",
+      "w3uId": "n0D5",
+      "w3uIds": [
+        "n0D5",
+        "h0AY"
+      ],
+      "attack": {
+        "base": 0,
+        "dice": 0,
+        "sides": 1,
+        "cooldown": 0,
+        "range": 0,
+        "type": "unknown"
+      },
+      "hp": 3,
+      "moveSpeed": 0,
+      "scale": 4.5,
+      "abilities": [
+        "Aloc"
+      ],
+      "model": "war3mapImported\\@Urashiki_Inf_Shild_Black.mdl"
+    },
+    {
+      "id": "우치하-마다라-윤회천생-개안__h0AV",
+      "nameKo": "우치하 마다라 윤회천생-개안",
+      "grade": "epic",
+      "w3uId": "h0AV",
+      "w3uIds": [
+        "h0AV"
+      ],
+      "attack": {
+        "base": 29999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0.550000011920929,
+        "range": 900,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.7999999523162842,
+      "abilities": [
+        "A020",
+        "A0M3",
+        "A05A",
+        "A062",
+        "A0B0",
+        "Avul"
+      ],
+      "model": "war3mapImported\\%Madara.mdl"
+    },
+    {
+      "id": "육도선인-십미의-인주력-개안__h0AW",
+      "nameKo": "육도선인 십미의 인주력-개안",
+      "grade": "ruin",
+      "w3uId": "h0AW",
+      "w3uIds": [
+        "h0AW"
+      ],
+      "attack": {
+        "base": 29999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0.550000011920929,
+        "range": 900,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 2,
+      "abilities": [
+        "A020",
+        "A0B0",
+        "A0M3",
+        "A0YG",
+        "A0TT",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Rikudo_Sennin_SP.mdl"
+    },
+    {
+      "id": "휴유가-네지__h0AX",
+      "nameKo": "휴유가 네지",
+      "grade": "limit",
+      "w3uId": "h0AX",
+      "w3uIds": [
+        "h0AX"
+      ],
+      "attack": {
+        "base": 34999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0.6499999761581421,
+        "range": 900,
+        "type": "chaos"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 1.7999999523162842,
+      "abilities": [
+        "A168",
+        "A020",
+        "A035",
+        "A163",
+        "A164",
+        "A165",
+        "A166",
+        "A167",
+        "A0M3",
+        "Avul"
+      ],
+      "model": "war3mapImported\\Neji_L.mdl"
+    },
+    {
+      "id": "우치하-사스케-아카츠키__h0B5",
+      "nameKo": "우치하 사스케 아카츠키",
+      "grade": "limit",
+      "w3uId": "h0B5",
+      "w3uIds": [
+        "h0B5",
+        "n0DM",
+        "n0DN",
+        "n0DO",
+        "n0DP",
+        "n0DQ"
+      ],
+      "attack": {
+        "base": 9999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0.699999988079071,
+        "range": 900,
+        "type": "normal"
+      },
+      "hp": 100,
+      "moveSpeed": 522,
+      "scale": 2,
+      "abilities": [
+        "A00D",
+        "A17F",
+        "A17B",
+        "A17C",
+        "A17D",
+        "A17E",
+        "Avul"
+      ],
+      "model": "war3mapImported\\xiaoZZ1.mdl"
+    },
+    {
+      "id": "오오츠츠키-킨시키-충성의-철벽__h0BB",
+      "nameKo": "오오츠츠키 킨시키 충성의 철벽",
+      "grade": "epic",
+      "w3uId": "h0BB",
+      "w3uIds": [
+        "h0BB",
+        "n0DR",
+        "n0DS",
+        "n0DT",
+        "n0DU",
+        "n0DV",
+        "n0DW"
+      ],
+      "attack": {
+        "base": 9999,
+        "dice": 1,
+        "sides": 1,
+        "cooldown": 0.6800000071525574,
+        "range": 900,
+        "type": "normal"
+      },
+      "hp": 75,
+      "moveSpeed": 522,
+      "scale": 2.299999952316284,
+      "abilities": [
+        "A020",
+        "A0M3",
+        "Avul",
+        "A17G",
+        "A17H",
+        "A17I",
+        "A17J",
+        "A17K",
+        "A17L"
+      ],
+      "model": "war3mapImported\\Kinshiki_EL.mdl"
+    }
+  ]
+}

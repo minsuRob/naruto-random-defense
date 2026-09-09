@@ -1,0 +1,5426 @@
+{
+  "source": "nrd-seaon1-7.96_Ez.w3x",
+  "byCategory": {
+    "epic": 41,
+    "unique": 30,
+    "legend": 25,
+    "rare": 22,
+    "limit": 12,
+    "magic": 8,
+    "elite": 15,
+    "special": 3,
+    "normal": 1,
+    "bijuu": 10,
+    "infinity": 16,
+    "ruin": 1,
+    "creation": 1,
+    "hidden": 12
+  },
+  "recipes": [
+    {
+      "id": "r_우치하-마다라-윤회천생__h03X",
+      "resultId": "우치하-마다라-윤회천생__h03X",
+      "resultNameKo": "우치하 마다라 윤회천생",
+      "category": "epic",
+      "materials": [
+        {
+          "unitId": "토비__h01F",
+          "nameKo": "토비",
+          "grade": "special",
+          "count": 1
+        },
+        {
+          "unitId": "우즈마키-나가토__h09N",
+          "nameKo": "우즈마키 나가토",
+          "grade": "legend",
+          "count": 1
+        },
+        {
+          "unitId": "우치하-마다라__h00Y",
+          "nameKo": "우치하 마다라",
+          "grade": "legend",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A04Q"
+    },
+    {
+      "id": "r_가아라-반수화-상태__h02B",
+      "resultId": "가아라-반수화-상태__h02B",
+      "resultNameKo": "가아라 반수화 상태",
+      "category": "unique",
+      "materials": [
+        {
+          "unitId": "사소리__h00H",
+          "nameKo": "사소리",
+          "grade": "normal",
+          "count": 2
+        },
+        {
+          "unitId": "암부__h021",
+          "nameKo": "암부",
+          "grade": "normal",
+          "count": 1
+        },
+        {
+          "unitId": "쥬고__h01C",
+          "nameKo": "쥬고",
+          "grade": "magic",
+          "count": 1
+        },
+        {
+          "unitId": "가아라__h00S",
+          "nameKo": "가아라",
+          "grade": "rare",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0HC"
+    },
+    {
+      "id": "r_엔마-원후왕__h003",
+      "resultId": "엔마-원후왕__h003",
+      "resultNameKo": "엔마 원후왕",
+      "category": "unique",
+      "materials": [
+        {
+          "unitId": "사이__h006",
+          "nameKo": "사이",
+          "grade": "normal",
+          "count": 1
+        },
+        {
+          "unitId": "지라이야-전설의3닌자__h01H",
+          "nameKo": "지라이야 전설의3닌자",
+          "grade": "magic",
+          "count": 1
+        },
+        {
+          "unitId": "가아라__h00S",
+          "nameKo": "가아라",
+          "grade": "rare",
+          "count": 1
+        },
+        {
+          "unitId": "아스마__h029",
+          "nameKo": "아스마",
+          "grade": "rare",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0HD"
+    },
+    {
+      "id": "r_우즈마키-나루토-꼬리6개-해방__h094",
+      "resultId": "우즈마키-나루토-꼬리6개-해방__h094",
+      "resultNameKo": "우즈마키 나루토 꼬리6개 해방",
+      "category": "legend",
+      "materials": [
+        {
+          "unitId": "지라이야-전설의3닌자__h01H",
+          "nameKo": "지라이야 전설의3닌자",
+          "grade": "magic",
+          "count": 1
+        },
+        {
+          "unitId": "우즈마키-나루토-꼬리4개-해방__h02V",
+          "nameKo": "우즈마키 나루토 꼬리4개 해방",
+          "grade": "unique",
+          "count": 1
+        },
+        {
+          "unitId": "휴우가-히나타-백안__h080",
+          "nameKo": "휴우가 히나타 백안",
+          "grade": "unique",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0HE"
+    },
+    {
+      "id": "r_가마분타-두꺼비-두목__h00R",
+      "resultId": "가마분타-두꺼비-두목__h00R",
+      "resultNameKo": "가마분타 두꺼비 두목",
+      "category": "legend",
+      "materials": [
+        {
+          "unitId": "가마켄__h0AE",
+          "nameKo": "가마켄",
+          "grade": "rare",
+          "count": 1
+        },
+        {
+          "unitId": "가아라-반수화-상태__h02B",
+          "nameKo": "가아라 반수화 상태",
+          "grade": "unique",
+          "count": 1
+        },
+        {
+          "unitId": "우즈마키-나루토-꼬리4개-해방__h02V",
+          "nameKo": "우즈마키 나루토 꼬리4개 해방",
+          "grade": "unique",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0HF"
+    },
+    {
+      "id": "r_우즈마키-나루토-미수화__h050",
+      "resultId": "우즈마키-나루토-미수화__h050",
+      "resultNameKo": "우즈마키 나루토 미수화",
+      "category": "epic",
+      "materials": [
+        {
+          "unitId": "나미카제-미나토-금빛섬광__h028",
+          "nameKo": "나미카제 미나토 금빛섬광",
+          "grade": "legend",
+          "count": 1
+        },
+        {
+          "unitId": "우즈마키-나루토-꼬리6개-해방__h094",
+          "nameKo": "우즈마키 나루토 꼬리6개 해방",
+          "grade": "legend",
+          "count": 1
+        },
+        {
+          "unitId": "우즈마키-쿠시나__h07S",
+          "nameKo": "우즈마키 쿠시나",
+          "grade": "unique",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0HG"
+    },
+    {
+      "id": "r_우즈마키-나루토-선인모드__h001",
+      "resultId": "우즈마키-나루토-선인모드__h001",
+      "resultNameKo": "우즈마키 나루토 선인모드",
+      "category": "epic",
+      "materials": [
+        {
+          "unitId": "가마분타-두꺼비-두목__h00R",
+          "nameKo": "가마분타 두꺼비 두목",
+          "grade": "legend",
+          "count": 1
+        },
+        {
+          "unitId": "우즈마키-나루토-꼬리6개-해방__h094",
+          "nameKo": "우즈마키 나루토 꼬리6개 해방",
+          "grade": "legend",
+          "count": 1
+        },
+        {
+          "unitId": "지라이야-선인모드__h08G",
+          "nameKo": "지라이야 선인모드",
+          "grade": "legend",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0HH"
+    },
+    {
+      "id": "r_우즈마키-나루토-꼬리4개-해방__h02V",
+      "resultId": "우즈마키-나루토-꼬리4개-해방__h02V",
+      "resultNameKo": "우즈마키 나루토 꼬리4개 해방",
+      "category": "unique",
+      "materials": [
+        {
+          "unitId": "야마토__h00A",
+          "nameKo": "야마토",
+          "grade": "normal",
+          "count": 1
+        },
+        {
+          "unitId": "야쿠시-카부토__h027",
+          "nameKo": "야쿠시 카부토",
+          "grade": "normal",
+          "count": 1
+        },
+        {
+          "unitId": "나루토-나선수리검__h023",
+          "nameKo": "나루토 나선수리검",
+          "grade": "rare",
+          "count": 1
+        },
+        {
+          "unitId": "하쿠__h04U",
+          "nameKo": "하쿠",
+          "grade": "rare",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0HI"
+    },
+    {
+      "id": "r_우즈마키-쿠시나__h07S",
+      "resultId": "우즈마키-쿠시나__h07S",
+      "resultNameKo": "우즈마키 쿠시나",
+      "category": "unique",
+      "materials": [
+        {
+          "unitId": "지라이야-전설의3닌자__h01H",
+          "nameKo": "지라이야 전설의3닌자",
+          "grade": "magic",
+          "count": 1
+        },
+        {
+          "unitId": "나루토-나선수리검__h023",
+          "nameKo": "나루토 나선수리검",
+          "grade": "rare",
+          "count": 1
+        },
+        {
+          "unitId": "칸쿠로__h05W",
+          "nameKo": "칸쿠로",
+          "grade": "rare",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0HJ"
+    },
+    {
+      "id": "r_나루토-나선수리검__h023",
+      "resultId": "나루토-나선수리검__h023",
+      "resultNameKo": "나루토 나선수리검",
+      "category": "rare",
+      "materials": [
+        {
+          "unitId": "우즈마키-나루토__h000",
+          "nameKo": "우즈마키 나루토",
+          "grade": "normal",
+          "count": 1
+        },
+        {
+          "unitId": "하루노-사쿠라__h00C",
+          "nameKo": "하루노 사쿠라",
+          "grade": "normal",
+          "count": 1
+        },
+        {
+          "unitId": "카린__h014",
+          "nameKo": "카린",
+          "grade": "normal",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0HK"
+    },
+    {
+      "id": "r_나미카제-미나토-미수화__h02X",
+      "resultId": "나미카제-미나토-미수화__h02X",
+      "resultNameKo": "나미카제 미나토 미수화",
+      "category": "epic",
+      "materials": [
+        {
+          "unitId": "나미카제-미나토-금빛섬광__h028",
+          "nameKo": "나미카제 미나토 금빛섬광",
+          "grade": "legend",
+          "count": 1
+        },
+        {
+          "unitId": "사루토비-히루젠-3대호카게__n02K",
+          "nameKo": "사루토비 히루젠 3대호카게",
+          "grade": "legend",
+          "count": 1
+        },
+        {
+          "unitId": "야마토-호카게-직속암부__h04B",
+          "nameKo": "야마토 호카게 직속암부",
+          "grade": "legend",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0HL"
+    },
+    {
+      "id": "r_마이트-가이__h05K",
+      "resultId": "마이트-가이__h05K",
+      "resultNameKo": "마이트 가이",
+      "category": "legend",
+      "materials": [
+        {
+          "unitId": "록리__n008",
+          "nameKo": "록리",
+          "grade": "rare",
+          "count": 1
+        },
+        {
+          "unitId": "텐텐__h01P",
+          "nameKo": "텐텐",
+          "grade": "unique",
+          "count": 1
+        },
+        {
+          "unitId": "휴우가-네지__h03W",
+          "nameKo": "휴우가 네지",
+          "grade": "unique",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0HM"
+    },
+    {
+      "id": "r_휴우가-네지-백안__h05O",
+      "resultId": "휴우가-네지-백안__h05O",
+      "resultNameKo": "휴우가 네지 백안",
+      "category": "legend",
+      "materials": [
+        {
+          "unitId": "우치하-사스케-주인1__h07U",
+          "nameKo": "우치하 사스케 주인1",
+          "grade": "magic",
+          "count": 1
+        },
+        {
+          "unitId": "휴우가-네지__h03W",
+          "nameKo": "휴우가 네지",
+          "grade": "unique",
+          "count": 1
+        },
+        {
+          "unitId": "휴우가-히나타-백안__h080",
+          "nameKo": "휴우가 히나타 백안",
+          "grade": "unique",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0HN"
+    },
+    {
+      "id": "r_킬러-에이-4대-라이카게__h089",
+      "resultId": "킬러-에이-4대-라이카게__h089",
+      "resultNameKo": "킬러 에이 4대 라이카게",
+      "category": "epic",
+      "materials": [
+        {
+          "unitId": "쥬고-완전-주인화__h06S",
+          "nameKo": "쥬고 완전 주인화",
+          "grade": "hidden",
+          "count": 1
+        },
+        {
+          "unitId": "다루이-혈계한계-람둔__h069",
+          "nameKo": "다루이 혈계한계 람둔",
+          "grade": "legend",
+          "count": 1
+        },
+        {
+          "unitId": "킬러-비-미수화__h07L",
+          "nameKo": "킬러 비 미수화",
+          "grade": "legend",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0HO"
+    },
+    {
+      "id": "r_데이다라-예토전생__h04D",
+      "resultId": "데이다라-예토전생__h04D",
+      "resultNameKo": "데이다라 예토전생",
+      "category": "legend",
+      "materials": [
+        {
+          "unitId": "아키미치-쵸지__h02Y",
+          "nameKo": "아키미치 쵸지",
+          "grade": "magic",
+          "count": 1
+        },
+        {
+          "unitId": "우치하-이타치-암부__h007",
+          "nameKo": "우치하 이타치 암부",
+          "grade": "rare",
+          "count": 1
+        },
+        {
+          "unitId": "데이다라-아카츠키__h008",
+          "nameKo": "데이다라 아카츠키",
+          "grade": "unique",
+          "count": 1
+        },
+        {
+          "unitId": "사소리-완전변형__h013",
+          "nameKo": "사소리 완전변형",
+          "grade": "unique",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0HP"
+    },
+    {
+      "id": "r_미후네-사무라이-군주__h574",
+      "resultId": "미후네-사무라이-군주__h574",
+      "resultNameKo": "미후네 사무라이 군주",
+      "category": "limit",
+      "materials": [
+        {
+          "unitId": "칸쿠로-흑비기-인형술사__h060",
+          "nameKo": "칸쿠로 흑비기 인형술사",
+          "grade": "unique",
+          "count": 1
+        },
+        {
+          "unitId": "쵸주로-닌자도-7인방__h03D",
+          "nameKo": "쵸주로 닌자도 7인방",
+          "grade": "unique",
+          "count": 1
+        },
+        {
+          "unitId": "시무라-단조__h00O",
+          "nameKo": "시무라 단조",
+          "grade": "hidden",
+          "count": 1
+        },
+        {
+          "unitId": "한조-예토전생__h05I",
+          "nameKo": "한조 예토전생",
+          "grade": "legend",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0HQ"
+    },
+    {
+      "id": "r_록-리-연화__h0AQ",
+      "resultId": "록-리-연화__h0AQ",
+      "resultNameKo": "록 리 연화",
+      "category": "unique",
+      "materials": [
+        {
+          "unitId": "야마토__h00A",
+          "nameKo": "야마토",
+          "grade": "normal",
+          "count": 1
+        },
+        {
+          "unitId": "가아라__h00S",
+          "nameKo": "가아라",
+          "grade": "rare",
+          "count": 1
+        },
+        {
+          "unitId": "록리__n008",
+          "nameKo": "록리",
+          "grade": "rare",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0HR"
+    },
+    {
+      "id": "r_키미마로__h05B",
+      "resultId": "키미마로__h05B",
+      "resultNameKo": "키미마로",
+      "category": "unique",
+      "materials": [
+        {
+          "unitId": "우즈마키-나루토__h000",
+          "nameKo": "우즈마키 나루토",
+          "grade": "normal",
+          "count": 1
+        },
+        {
+          "unitId": "만다__h017",
+          "nameKo": "만다",
+          "grade": "rare",
+          "count": 1
+        },
+        {
+          "unitId": "우치하-사스케-주인2__h005",
+          "nameKo": "우치하 사스케 주인2",
+          "grade": "rare",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0HT"
+    },
+    {
+      "id": "r_야쿠시-카부토-전장의-지배자__h086",
+      "resultId": "야쿠시-카부토-전장의-지배자__h086",
+      "resultNameKo": "야쿠시 카부토 전장의 지배자",
+      "category": "legend",
+      "materials": [
+        {
+          "unitId": "휴우가-네지__h03W",
+          "nameKo": "휴우가 네지",
+          "grade": "unique",
+          "count": 1
+        },
+        {
+          "unitId": "미타라시-앙코__h04Y",
+          "nameKo": "미타라시 앙코",
+          "grade": "hidden",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0HU"
+    },
+    {
+      "id": "r_사루토비-히루젠-예토전생__h08M",
+      "resultId": "사루토비-히루젠-예토전생__h08M",
+      "resultNameKo": "사루토비 히루젠 예토전생",
+      "category": "epic",
+      "materials": [
+        {
+          "unitId": "센쥬-토비라마-2대-호카게__h00N",
+          "nameKo": "센쥬 토비라마 2대 호카게",
+          "grade": "hidden",
+          "count": 1
+        },
+        {
+          "unitId": "센쥬-하시라마-1대-호카게__h00K",
+          "nameKo": "센쥬 하시라마 1대 호카게",
+          "grade": "hidden",
+          "count": 1
+        },
+        {
+          "unitId": "사루토비-히루젠-3대호카게__n02K",
+          "nameKo": "사루토비 히루젠 3대호카게",
+          "grade": "legend",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0HV"
+    },
+    {
+      "id": "r_다루이-혈계한계-람둔__h069",
+      "resultId": "다루이-혈계한계-람둔__h069",
+      "resultNameKo": "다루이 혈계한계 람둔",
+      "category": "legend",
+      "materials": [
+        {
+          "unitId": "가아라-반수화-상태__h02B",
+          "nameKo": "가아라 반수화 상태",
+          "grade": "unique",
+          "count": 1
+        },
+        {
+          "unitId": "사무이__h04Z",
+          "nameKo": "사무이",
+          "grade": "unique",
+          "count": 1
+        },
+        {
+          "unitId": "하타케-카카시-만화경사륜안__h02D",
+          "nameKo": "하타케 카카시 만화경사륜안",
+          "grade": "unique",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0HW"
+    },
+    {
+      "id": "r_제츠-아카츠키__h01Z",
+      "resultId": "제츠-아카츠키__h01Z",
+      "resultNameKo": "제츠 아카츠키",
+      "category": "magic",
+      "materials": [
+        {
+          "unitId": "사소리__h00H",
+          "nameKo": "사소리",
+          "grade": "normal",
+          "count": 1
+        },
+        {
+          "unitId": "사이__h006",
+          "nameKo": "사이",
+          "grade": "normal",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0HX"
+    },
+    {
+      "id": "r_사소리-히루코__h161",
+      "resultId": "사소리-히루코__h161",
+      "resultNameKo": "사소리 히루코",
+      "category": "rare",
+      "materials": [
+        {
+          "unitId": "사소리__h00H",
+          "nameKo": "사소리",
+          "grade": "normal",
+          "count": 2
+        },
+        {
+          "unitId": "카린__h014",
+          "nameKo": "카린",
+          "grade": "normal",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0HY"
+    },
+    {
+      "id": "r_사소리-완전변형__h013",
+      "resultId": "사소리-완전변형__h013",
+      "resultNameKo": "사소리 완전변형",
+      "category": "unique",
+      "materials": [
+        {
+          "unitId": "사소리__h00H",
+          "nameKo": "사소리",
+          "grade": "normal",
+          "count": 1
+        },
+        {
+          "unitId": "사소리-히루코__h161",
+          "nameKo": "사소리 히루코",
+          "grade": "rare",
+          "count": 2
+        }
+      ],
+      "source": "w3a:A0HZ"
+    },
+    {
+      "id": "r_우치하-사스케-스사노오-1단계__h036",
+      "resultId": "우치하-사스케-스사노오-1단계__h036",
+      "resultNameKo": "우치하 사스케 스사노오 1단계",
+      "category": "legend",
+      "materials": [
+        {
+          "unitId": "우치하-사스케-2년-후__h01V",
+          "nameKo": "우치하 사스케 2년 후",
+          "grade": "unique",
+          "count": 1
+        },
+        {
+          "unitId": "쥬고-주인화__h07R",
+          "nameKo": "쥬고 주인화",
+          "grade": "unique",
+          "count": 1
+        },
+        {
+          "unitId": "쵸주로-닌자도-7인방__h03D",
+          "nameKo": "쵸주로 닌자도 7인방",
+          "grade": "unique",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0I0"
+    },
+    {
+      "id": "r_우치하-사스케-스사노오-3단계__h05V",
+      "resultId": "우치하-사스케-스사노오-3단계__h05V",
+      "resultNameKo": "우치하 사스케 스사노오 3단계",
+      "category": "epic",
+      "materials": [
+        {
+          "unitId": "우치하-사스케-기린__h06E",
+          "nameKo": "우치하 사스케 기린",
+          "grade": "hidden",
+          "count": 1
+        },
+        {
+          "unitId": "시무라-단조__h00O",
+          "nameKo": "시무라 단조",
+          "grade": "hidden",
+          "count": 1
+        },
+        {
+          "unitId": "우치하-사스케-스사노오-1단계__h036",
+          "nameKo": "우치하 사스케 스사노오 1단계",
+          "grade": "legend",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0I1"
+    },
+    {
+      "id": "r_우치하-사스케-주인2__h005",
+      "resultId": "우치하-사스케-주인2__h005",
+      "resultNameKo": "우치하 사스케 주인2",
+      "category": "rare",
+      "materials": [
+        {
+          "unitId": "야쿠시-카부토__h027",
+          "nameKo": "야쿠시 카부토",
+          "grade": "normal",
+          "count": 1
+        },
+        {
+          "unitId": "우치하-사스케-주인1__h07U",
+          "nameKo": "우치하 사스케 주인1",
+          "grade": "magic",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0I2"
+    },
+    {
+      "id": "r_쥬고-주인화__h07R",
+      "resultId": "쥬고-주인화__h07R",
+      "resultNameKo": "쥬고 주인화",
+      "category": "unique",
+      "materials": [
+        {
+          "unitId": "쥬고__h01C",
+          "nameKo": "쥬고",
+          "grade": "magic",
+          "count": 1
+        },
+        {
+          "unitId": "키사메-아카츠키__h01S",
+          "nameKo": "키사메 아카츠키",
+          "grade": "rare",
+          "count": 1
+        },
+        {
+          "unitId": "우치하-사스케-주인2__h005",
+          "nameKo": "우치하 사스케 주인2",
+          "grade": "rare",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0I3"
+    },
+    {
+      "id": "r_우치하-이타치-스사노오-3단계__h09H",
+      "resultId": "우치하-이타치-스사노오-3단계__h09H",
+      "resultNameKo": "우치하 이타치 스사노오 3단계",
+      "category": "elite",
+      "materials": [
+        {
+          "unitId": "우치하-사스케-기린__h06E",
+          "nameKo": "우치하 사스케 기린",
+          "grade": "hidden",
+          "count": 1
+        },
+        {
+          "unitId": "우치하-이타치-스사노오-1단계__h01X",
+          "nameKo": "우치하 이타치 스사노오 1단계",
+          "grade": "legend",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0I4"
+    },
+    {
+      "id": "r_우치하-사스케-주인1__h07U",
+      "resultId": "우치하-사스케-주인1__h07U",
+      "resultNameKo": "우치하 사스케 주인1",
+      "category": "magic",
+      "materials": [
+        {
+          "unitId": "우치하-사스케__h004",
+          "nameKo": "우치하 사스케",
+          "grade": "normal",
+          "count": 2
+        }
+      ],
+      "source": "w3a:A0I5"
+    },
+    {
+      "id": "r_사이-뿌리닌자__h09P",
+      "resultId": "사이-뿌리닌자__h09P",
+      "resultNameKo": "사이 뿌리닌자",
+      "category": "unique",
+      "materials": [
+        {
+          "unitId": "사이__h006",
+          "nameKo": "사이",
+          "grade": "normal",
+          "count": 1
+        },
+        {
+          "unitId": "칸쿠로__h05W",
+          "nameKo": "칸쿠로",
+          "grade": "rare",
+          "count": 1
+        },
+        {
+          "unitId": "하타케-카카시-암부__h00B",
+          "nameKo": "하타케 카카시 암부",
+          "grade": "rare",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0I6"
+    },
+    {
+      "id": "r_하타케-카카시-암부__h00B",
+      "resultId": "하타케-카카시-암부__h00B",
+      "resultNameKo": "하타케 카카시 암부",
+      "category": "rare",
+      "materials": [
+        {
+          "unitId": "사이__h006",
+          "nameKo": "사이",
+          "grade": "normal",
+          "count": 1
+        },
+        {
+          "unitId": "우즈마키-나루토__h000",
+          "nameKo": "우즈마키 나루토",
+          "grade": "normal",
+          "count": 1
+        },
+        {
+          "unitId": "우치하-사스케__h004",
+          "nameKo": "우치하 사스케",
+          "grade": "normal",
+          "count": 1
+        },
+        {
+          "unitId": "하루노-사쿠라__h00C",
+          "nameKo": "하루노 사쿠라",
+          "grade": "normal",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0I7"
+    },
+    {
+      "id": "r_야마나카-이노__h02Q",
+      "resultId": "야마나카-이노__h02Q",
+      "resultNameKo": "야마나카 이노",
+      "category": "rare",
+      "materials": [
+        {
+          "unitId": "야쿠시-카부토__h027",
+          "nameKo": "야쿠시 카부토",
+          "grade": "normal",
+          "count": 1
+        },
+        {
+          "unitId": "카린__h014",
+          "nameKo": "카린",
+          "grade": "normal",
+          "count": 1
+        },
+        {
+          "unitId": "하루노-사쿠라__h00C",
+          "nameKo": "하루노 사쿠라",
+          "grade": "normal",
+          "count": 2
+        }
+      ],
+      "source": "w3a:A0I8"
+    },
+    {
+      "id": "r_츠나데-전설의3닌자__h01O",
+      "resultId": "츠나데-전설의3닌자__h01O",
+      "resultNameKo": "츠나데 전설의3닌자",
+      "category": "magic",
+      "materials": [
+        {
+          "unitId": "하루노-사쿠라__h00C",
+          "nameKo": "하루노 사쿠라",
+          "grade": "normal",
+          "count": 2
+        }
+      ],
+      "source": "w3a:A0I9"
+    },
+    {
+      "id": "r_하루노-사쿠라-백호의술__n001",
+      "resultId": "하루노-사쿠라-백호의술__n001",
+      "resultNameKo": "하루노 사쿠라 백호의술",
+      "category": "epic",
+      "materials": [
+        {
+          "unitId": "하루노-사쿠라__h00C",
+          "nameKo": "하루노 사쿠라",
+          "grade": "normal",
+          "count": 1
+        },
+        {
+          "unitId": "센쥬-츠나데-백호의-술__h04A",
+          "nameKo": "센쥬 츠나데 백호의 술",
+          "grade": "legend",
+          "count": 1
+        },
+        {
+          "unitId": "우치하-사스케-스사노오-1단계__h036",
+          "nameKo": "우치하 사스케 스사노오 1단계",
+          "grade": "legend",
+          "count": 1
+        },
+        {
+          "unitId": "사소리-아카츠키__h03E",
+          "nameKo": "사소리 아카츠키",
+          "grade": "hidden",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0IA"
+    },
+    {
+      "id": "r_센쥬-하시라마-선인모드__h097",
+      "resultId": "센쥬-하시라마-선인모드__h097",
+      "resultNameKo": "센쥬 하시라마 선인모드",
+      "category": "epic",
+      "materials": [
+        {
+          "unitId": "츠나데-전설의3닌자__h01O",
+          "nameKo": "츠나데 전설의3닌자",
+          "grade": "magic",
+          "count": 1
+        },
+        {
+          "unitId": "센쥬-하시라마-1대-호카게__h00K",
+          "nameKo": "센쥬 하시라마 1대 호카게",
+          "grade": "hidden",
+          "count": 1
+        },
+        {
+          "unitId": "센쥬-츠나데-백호의-술__h04A",
+          "nameKo": "센쥬 츠나데 백호의 술",
+          "grade": "legend",
+          "count": 1
+        },
+        {
+          "unitId": "사루토비-히루젠-3대호카게__n02K",
+          "nameKo": "사루토비 히루젠 3대호카게",
+          "grade": "legend",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0IB"
+    },
+    {
+      "id": "r_쵸주로-닌자도-7인방__h03D",
+      "resultId": "쵸주로-닌자도-7인방__h03D",
+      "resultNameKo": "쵸주로 닌자도 7인방",
+      "category": "unique",
+      "materials": [
+        {
+          "unitId": "제츠-아카츠키__h01Z",
+          "nameKo": "제츠 아카츠키",
+          "grade": "magic",
+          "count": 1
+        },
+        {
+          "unitId": "스이게츠-아카츠키__h00F",
+          "nameKo": "스이게츠 아카츠키",
+          "grade": "rare",
+          "count": 1
+        },
+        {
+          "unitId": "키사메-아카츠키__h01S",
+          "nameKo": "키사메 아카츠키",
+          "grade": "rare",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0IC"
+    },
+    {
+      "id": "r_우치하-사스케-2년-후__h01V",
+      "resultId": "우치하-사스케-2년-후__h01V",
+      "resultNameKo": "우치하 사스케 2년 후",
+      "category": "unique",
+      "materials": [
+        {
+          "unitId": "우치하-사스케__h004",
+          "nameKo": "우치하 사스케",
+          "grade": "normal",
+          "count": 1
+        },
+        {
+          "unitId": "스이게츠-아카츠키__h00F",
+          "nameKo": "스이게츠 아카츠키",
+          "grade": "rare",
+          "count": 1
+        },
+        {
+          "unitId": "우치하-사스케-주인2__h005",
+          "nameKo": "우치하 사스케 주인2",
+          "grade": "rare",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0ID"
+    },
+    {
+      "id": "r_사무이__h04Z",
+      "resultId": "사무이__h04Z",
+      "resultNameKo": "사무이",
+      "category": "unique",
+      "materials": [
+        {
+          "unitId": "우치하-사스케-주인1__h07U",
+          "nameKo": "우치하 사스케 주인1",
+          "grade": "magic",
+          "count": 1
+        },
+        {
+          "unitId": "쥬고__h01C",
+          "nameKo": "쥬고",
+          "grade": "magic",
+          "count": 1
+        },
+        {
+          "unitId": "아부라메-시노__h07A",
+          "nameKo": "아부라메 시노",
+          "grade": "rare",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0IE"
+    },
+    {
+      "id": "r_센쥬-츠나데-백호의-술__h04A",
+      "resultId": "센쥬-츠나데-백호의-술__h04A",
+      "resultNameKo": "센쥬 츠나데 백호의 술",
+      "category": "legend",
+      "materials": [
+        {
+          "unitId": "가마켄__h0AE",
+          "nameKo": "가마켄",
+          "grade": "rare",
+          "count": 1
+        },
+        {
+          "unitId": "카츠유__h01I",
+          "nameKo": "카츠유",
+          "grade": "rare",
+          "count": 1
+        },
+        {
+          "unitId": "시즈네__h07Y",
+          "nameKo": "시즈네",
+          "grade": "unique",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0IF"
+    },
+    {
+      "id": "r_이누즈카-키바-수인화__h058",
+      "resultId": "이누즈카-키바-수인화__h058",
+      "resultNameKo": "이누즈카 키바 수인화",
+      "category": "elite",
+      "materials": [
+        {
+          "unitId": "아키미치-쵸지-각성모드__h01U",
+          "nameKo": "아키미치 쵸지 각성모드",
+          "grade": "hidden",
+          "count": 1
+        },
+        {
+          "unitId": "휴우가-네지-백안__h05O",
+          "nameKo": "휴우가 네지 백안",
+          "grade": "legend",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0IH"
+    },
+    {
+      "id": "r_테마리__h009",
+      "resultId": "테마리__h009",
+      "resultNameKo": "테마리",
+      "category": "magic",
+      "materials": [
+        {
+          "unitId": "암부__h021",
+          "nameKo": "암부",
+          "grade": "normal",
+          "count": 2
+        }
+      ],
+      "source": "w3a:A0II"
+    },
+    {
+      "id": "r_휴우가-히나타__h03V",
+      "resultId": "휴우가-히나타__h03V",
+      "resultNameKo": "휴우가 히나타",
+      "category": "rare",
+      "materials": [
+        {
+          "unitId": "암부__h021",
+          "nameKo": "암부",
+          "grade": "normal",
+          "count": 2
+        },
+        {
+          "unitId": "사이__h006",
+          "nameKo": "사이",
+          "grade": "normal",
+          "count": 1
+        },
+        {
+          "unitId": "우치하-사스케__h004",
+          "nameKo": "우치하 사스케",
+          "grade": "normal",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0IJ"
+    },
+    {
+      "id": "r_우치하-이타치-암부__h007",
+      "resultId": "우치하-이타치-암부__h007",
+      "resultNameKo": "우치하 이타치 암부",
+      "category": "rare",
+      "materials": [
+        {
+          "unitId": "야마토__h00A",
+          "nameKo": "야마토",
+          "grade": "normal",
+          "count": 2
+        },
+        {
+          "unitId": "테마리__h009",
+          "nameKo": "테마리",
+          "grade": "magic",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0IK"
+    },
+    {
+      "id": "r_지라이야-전설의3닌자__h01H",
+      "resultId": "지라이야-전설의3닌자__h01H",
+      "resultNameKo": "지라이야 전설의3닌자",
+      "category": "magic",
+      "materials": [
+        {
+          "unitId": "우즈마키-나루토__h000",
+          "nameKo": "우즈마키 나루토",
+          "grade": "normal",
+          "count": 1
+        },
+        {
+          "unitId": "야마토__h00A",
+          "nameKo": "야마토",
+          "grade": "normal",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0IL"
+    },
+    {
+      "id": "r_야마토-암부__h076",
+      "resultId": "야마토-암부__h076",
+      "resultNameKo": "야마토 암부",
+      "category": "unique",
+      "materials": [
+        {
+          "unitId": "야마토__h00A",
+          "nameKo": "야마토",
+          "grade": "normal",
+          "count": 2
+        },
+        {
+          "unitId": "이누즈카-키바__h00U",
+          "nameKo": "이누즈카 키바",
+          "grade": "rare",
+          "count": 1
+        },
+        {
+          "unitId": "하타케-카카시-암부__h00B",
+          "nameKo": "하타케 카카시 암부",
+          "grade": "rare",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0IM"
+    },
+    {
+      "id": "r_사루토비-히루젠-3대호카게__n02K",
+      "resultId": "사루토비-히루젠-3대호카게__n02K",
+      "resultNameKo": "사루토비 히루젠 3대호카게",
+      "category": "legend",
+      "materials": [
+        {
+          "unitId": "가마켄__h0AE",
+          "nameKo": "가마켄",
+          "grade": "rare",
+          "count": 1
+        },
+        {
+          "unitId": "엔마-원후왕__h003",
+          "nameKo": "엔마 원후왕",
+          "grade": "unique",
+          "count": 1
+        },
+        {
+          "unitId": "쿠레나이__h04W",
+          "nameKo": "쿠레나이",
+          "grade": "unique",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0IO"
+    },
+    {
+      "id": "r_오로치마루-야마타의-술__h06M",
+      "resultId": "오로치마루-야마타의-술__h06M",
+      "resultNameKo": "오로치마루 야마타의 술",
+      "category": "elite",
+      "materials": [
+        {
+          "unitId": "오로치마루-아카츠키__h09Y",
+          "nameKo": "오로치마루 아카츠키",
+          "grade": "unique",
+          "count": 1
+        },
+        {
+          "unitId": "우치하-이타치-스사노오-1단계__h01X",
+          "nameKo": "우치하 이타치 스사노오 1단계",
+          "grade": "legend",
+          "count": 1
+        },
+        {
+          "unitId": "키미마로__h05B",
+          "nameKo": "키미마로",
+          "grade": "unique",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0IP"
+    },
+    {
+      "id": "r_만다__h017",
+      "resultId": "만다__h017",
+      "resultNameKo": "만다",
+      "category": "rare",
+      "materials": [
+        {
+          "unitId": "우치하-사스케__h004",
+          "nameKo": "우치하 사스케",
+          "grade": "normal",
+          "count": 1
+        },
+        {
+          "unitId": "카린__h014",
+          "nameKo": "카린",
+          "grade": "normal",
+          "count": 1
+        },
+        {
+          "unitId": "오로치마루-전설의3닌자__h024",
+          "nameKo": "오로치마루 전설의3닌자",
+          "grade": "magic",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0IQ"
+    },
+    {
+      "id": "r_오로치마루-아카츠키__h09Y",
+      "resultId": "오로치마루-아카츠키__h09Y",
+      "resultNameKo": "오로치마루 아카츠키",
+      "category": "unique",
+      "materials": [
+        {
+          "unitId": "쥬고__h01C",
+          "nameKo": "쥬고",
+          "grade": "magic",
+          "count": 1
+        },
+        {
+          "unitId": "오로치마루-전설의3닌자__h024",
+          "nameKo": "오로치마루 전설의3닌자",
+          "grade": "magic",
+          "count": 1
+        },
+        {
+          "unitId": "우치하-사스케-주인1__h07U",
+          "nameKo": "우치하 사스케 주인1",
+          "grade": "magic",
+          "count": 1
+        },
+        {
+          "unitId": "지라이야-전설의3닌자__h01H",
+          "nameKo": "지라이야 전설의3닌자",
+          "grade": "magic",
+          "count": 1
+        },
+        {
+          "unitId": "츠나데-전설의3닌자__h01O",
+          "nameKo": "츠나데 전설의3닌자",
+          "grade": "magic",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0IR"
+    },
+    {
+      "id": "r_야마나카-이노-심전신술__h074",
+      "resultId": "야마나카-이노-심전신술__h074",
+      "resultNameKo": "야마나카 이노 심전신술",
+      "category": "limit",
+      "materials": [
+        {
+          "unitId": "야마나카-이노__h02Q",
+          "nameKo": "야마나카 이노",
+          "grade": "rare",
+          "count": 1
+        },
+        {
+          "unitId": "우치하-사스케-2년-후__h01V",
+          "nameKo": "우치하 사스케 2년 후",
+          "grade": "unique",
+          "count": 1
+        },
+        {
+          "unitId": "야구라-3미의-인주력__h02P",
+          "nameKo": "야구라 3미의 인주력",
+          "grade": "jinchuriki",
+          "count": 1
+        },
+        {
+          "unitId": "테마리-풍둔술사__h0A1",
+          "nameKo": "테마리 풍둔술사",
+          "grade": "hidden",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0IT"
+    },
+    {
+      "id": "r_우치하-이타치-스사노오-1단계__h01X",
+      "resultId": "우치하-이타치-스사노오-1단계__h01X",
+      "resultNameKo": "우치하 이타치 스사노오 1단계",
+      "category": "legend",
+      "materials": [
+        {
+          "unitId": "우치하-사스케-주인2__h005",
+          "nameKo": "우치하 사스케 주인2",
+          "grade": "rare",
+          "count": 1
+        },
+        {
+          "unitId": "토비-아카츠키__h020",
+          "nameKo": "토비 아카츠키",
+          "grade": "rare",
+          "count": 1
+        },
+        {
+          "unitId": "우치하-사스케-2년-후__h01V",
+          "nameKo": "우치하 사스케 2년 후",
+          "grade": "unique",
+          "count": 1
+        },
+        {
+          "unitId": "우치하-이타치-아카츠키__h02C",
+          "nameKo": "우치하 이타치 아카츠키",
+          "grade": "unique",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0IU"
+    },
+    {
+      "id": "r_우치하-이타치-아카츠키__h02C",
+      "resultId": "우치하-이타치-아카츠키__h02C",
+      "resultNameKo": "우치하 이타치 아카츠키",
+      "category": "unique",
+      "materials": [
+        {
+          "unitId": "사이__h006",
+          "nameKo": "사이",
+          "grade": "normal",
+          "count": 1
+        },
+        {
+          "unitId": "제츠-아카츠키__h01Z",
+          "nameKo": "제츠 아카츠키",
+          "grade": "magic",
+          "count": 1
+        },
+        {
+          "unitId": "우치하-이타치-암부__h007",
+          "nameKo": "우치하 이타치 암부",
+          "grade": "rare",
+          "count": 1
+        },
+        {
+          "unitId": "키사메-아카츠키__h01S",
+          "nameKo": "키사메 아카츠키",
+          "grade": "rare",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0IV"
+    },
+    {
+      "id": "r_하쿠-예토전생__h05F",
+      "resultId": "하쿠-예토전생__h05F",
+      "resultNameKo": "하쿠 예토전생",
+      "category": "elite",
+      "materials": [
+        {
+          "unitId": "우즈마키-나루토-꼬리6개-해방__h094",
+          "nameKo": "우즈마키 나루토 꼬리6개 해방",
+          "grade": "legend",
+          "count": 1
+        },
+        {
+          "unitId": "자부자-예토전생__h0AF",
+          "nameKo": "자부자 예토전생",
+          "grade": "legend",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0IW"
+    },
+    {
+      "id": "r_자부자-예토전생__h0AF",
+      "resultId": "자부자-예토전생__h0AF",
+      "resultNameKo": "자부자 예토전생",
+      "category": "legend",
+      "materials": [
+        {
+          "unitId": "하쿠__h04U",
+          "nameKo": "하쿠",
+          "grade": "rare",
+          "count": 1
+        },
+        {
+          "unitId": "자부자__h04X",
+          "nameKo": "자부자",
+          "grade": "unique",
+          "count": 1
+        },
+        {
+          "unitId": "하타케-카카시-만화경사륜안__h02D",
+          "nameKo": "하타케 카카시 만화경사륜안",
+          "grade": "unique",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0IX"
+    },
+    {
+      "id": "r_토비-아카츠키__h020",
+      "resultId": "토비-아카츠키__h020",
+      "resultNameKo": "토비 아카츠키",
+      "category": "rare",
+      "materials": [
+        {
+          "unitId": "제츠-아카츠키__h01Z",
+          "nameKo": "제츠 아카츠키",
+          "grade": "magic",
+          "count": 2
+        }
+      ],
+      "source": "w3a:A0IY"
+    },
+    {
+      "id": "r_오로치마루-선인모드__h061",
+      "resultId": "오로치마루-선인모드__h061",
+      "resultNameKo": "오로치마루 선인모드",
+      "category": "epic",
+      "materials": [
+        {
+          "unitId": "쥬고-완전-주인화__h06S",
+          "nameKo": "쥬고 완전 주인화",
+          "grade": "hidden",
+          "count": 1
+        },
+        {
+          "unitId": "호즈키-만게츠-예토전생__h04O",
+          "nameKo": "호즈키 만게츠 예토전생",
+          "grade": "hidden",
+          "count": 1
+        },
+        {
+          "unitId": "키미마로-주인해방__h09X",
+          "nameKo": "키미마로 주인해방",
+          "grade": "legend",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0IZ"
+    },
+    {
+      "id": "r_하쿠__h04U",
+      "resultId": "하쿠__h04U",
+      "resultNameKo": "하쿠",
+      "category": "rare",
+      "materials": [
+        {
+          "unitId": "암부__h021",
+          "nameKo": "암부",
+          "grade": "normal",
+          "count": 1
+        },
+        {
+          "unitId": "오로치마루-전설의3닌자__h024",
+          "nameKo": "오로치마루 전설의3닌자",
+          "grade": "magic",
+          "count": 1
+        },
+        {
+          "unitId": "쥬고__h01C",
+          "nameKo": "쥬고",
+          "grade": "magic",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0J0"
+    },
+    {
+      "id": "r_키사메-아카츠키__h01S",
+      "resultId": "키사메-아카츠키__h01S",
+      "resultNameKo": "키사메 아카츠키",
+      "category": "rare",
+      "materials": [
+        {
+          "unitId": "오로치마루-전설의3닌자__h024",
+          "nameKo": "오로치마루 전설의3닌자",
+          "grade": "magic",
+          "count": 1
+        },
+        {
+          "unitId": "쥬고__h01C",
+          "nameKo": "쥬고",
+          "grade": "magic",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0J1"
+    },
+    {
+      "id": "r_지라이야-호걸__h01G",
+      "resultId": "지라이야-호걸__h01G",
+      "resultNameKo": "지라이야 호걸",
+      "category": "unique",
+      "materials": [
+        {
+          "unitId": "오로치마루-전설의3닌자__h024",
+          "nameKo": "오로치마루 전설의3닌자",
+          "grade": "magic",
+          "count": 1
+        },
+        {
+          "unitId": "나루토-나선수리검__h023",
+          "nameKo": "나루토 나선수리검",
+          "grade": "rare",
+          "count": 1
+        },
+        {
+          "unitId": "가마켄__h0AE",
+          "nameKo": "가마켄",
+          "grade": "rare",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0J2"
+    },
+    {
+      "id": "r_가마켄__h0AE",
+      "resultId": "가마켄__h0AE",
+      "resultNameKo": "가마켄",
+      "category": "rare",
+      "materials": [
+        {
+          "unitId": "지라이야-전설의3닌자__h01H",
+          "nameKo": "지라이야 전설의3닌자",
+          "grade": "magic",
+          "count": 2
+        }
+      ],
+      "source": "w3a:A0J3"
+    },
+    {
+      "id": "r_지라이야-선인모드__h08G",
+      "resultId": "지라이야-선인모드__h08G",
+      "resultNameKo": "지라이야 선인모드",
+      "category": "legend",
+      "materials": [
+        {
+          "unitId": "가마켄__h0AE",
+          "nameKo": "가마켄",
+          "grade": "rare",
+          "count": 1
+        },
+        {
+          "unitId": "육도-페인-천도__h06R",
+          "nameKo": "육도 페인 천도",
+          "grade": "unique",
+          "count": 1
+        },
+        {
+          "unitId": "지라이야-호걸__h01G",
+          "nameKo": "지라이야 호걸",
+          "grade": "unique",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0J4"
+    },
+    {
+      "id": "r_우즈마키-나가토__h09N",
+      "resultId": "우즈마키-나가토__h09N",
+      "resultNameKo": "우즈마키 나가토",
+      "category": "legend",
+      "materials": [
+        {
+          "unitId": "나루토-나선수리검__h023",
+          "nameKo": "나루토 나선수리검",
+          "grade": "rare",
+          "count": 1
+        },
+        {
+          "unitId": "아스마__h029",
+          "nameKo": "아스마",
+          "grade": "rare",
+          "count": 1
+        },
+        {
+          "unitId": "육도-페인-천도__h06R",
+          "nameKo": "육도 페인 천도",
+          "grade": "unique",
+          "count": 1
+        },
+        {
+          "unitId": "지라이야-호걸__h01G",
+          "nameKo": "지라이야 호걸",
+          "grade": "unique",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0J5"
+    },
+    {
+      "id": "r_우치하-마다라__h00Y",
+      "resultId": "우치하-마다라__h00Y",
+      "resultNameKo": "우치하 마다라",
+      "category": "legend",
+      "materials": [
+        {
+          "unitId": "토비__h01F",
+          "nameKo": "토비",
+          "grade": "special",
+          "count": 1
+        },
+        {
+          "unitId": "사소리-히루코__h161",
+          "nameKo": "사소리 히루코",
+          "grade": "rare",
+          "count": 1
+        },
+        {
+          "unitId": "우치하-사스케-2년-후__h01V",
+          "nameKo": "우치하 사스케 2년 후",
+          "grade": "unique",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0J6"
+    },
+    {
+      "id": "r_코난-아카츠키__h00V",
+      "resultId": "코난-아카츠키__h00V",
+      "resultNameKo": "코난 아카츠키",
+      "category": "legend",
+      "materials": [
+        {
+          "unitId": "토비__h01F",
+          "nameKo": "토비",
+          "grade": "special",
+          "count": 1
+        },
+        {
+          "unitId": "우치하-이타치-아카츠키__h02C",
+          "nameKo": "우치하 이타치 아카츠키",
+          "grade": "unique",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0J7"
+    },
+    {
+      "id": "r_록리__n008",
+      "resultId": "록리__n008",
+      "resultNameKo": "록리",
+      "category": "rare",
+      "materials": [
+        {
+          "unitId": "우즈마키-나루토__h000",
+          "nameKo": "우즈마키 나루토",
+          "grade": "normal",
+          "count": 1
+        },
+        {
+          "unitId": "아키미치-쵸지__h02Y",
+          "nameKo": "아키미치 쵸지",
+          "grade": "magic",
+          "count": 1
+        },
+        {
+          "unitId": "우치하-사스케-주인1__h07U",
+          "nameKo": "우치하 사스케 주인1",
+          "grade": "magic",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0J8"
+    },
+    {
+      "id": "r_칸쿠로__h05W",
+      "resultId": "칸쿠로__h05W",
+      "resultNameKo": "칸쿠로",
+      "category": "rare",
+      "materials": [
+        {
+          "unitId": "사이__h006",
+          "nameKo": "사이",
+          "grade": "normal",
+          "count": 1
+        },
+        {
+          "unitId": "아키미치-쵸지__h02Y",
+          "nameKo": "아키미치 쵸지",
+          "grade": "magic",
+          "count": 1
+        },
+        {
+          "unitId": "테마리__h009",
+          "nameKo": "테마리",
+          "grade": "magic",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0J9"
+    },
+    {
+      "id": "r_아스마__h029",
+      "resultId": "아스마__h029",
+      "resultNameKo": "아스마",
+      "category": "rare",
+      "materials": [
+        {
+          "unitId": "아키미치-쵸지__h02Y",
+          "nameKo": "아키미치 쵸지",
+          "grade": "magic",
+          "count": 2
+        }
+      ],
+      "source": "w3a:A0JA"
+    },
+    {
+      "id": "r_육도-페인-천도__h06R",
+      "resultId": "육도-페인-천도__h06R",
+      "resultNameKo": "육도 페인 천도",
+      "category": "unique",
+      "materials": [
+        {
+          "unitId": "가마켄__h0AE",
+          "nameKo": "가마켄",
+          "grade": "rare",
+          "count": 1
+        },
+        {
+          "unitId": "오로치마루-전설의3닌자__h024",
+          "nameKo": "오로치마루 전설의3닌자",
+          "grade": "magic",
+          "count": 1
+        },
+        {
+          "unitId": "제츠-아카츠키__h01Z",
+          "nameKo": "제츠 아카츠키",
+          "grade": "magic",
+          "count": 1
+        },
+        {
+          "unitId": "츠나데-전설의3닌자__h01O",
+          "nameKo": "츠나데 전설의3닌자",
+          "grade": "magic",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0JB"
+    },
+    {
+      "id": "r_카츠유__h01I",
+      "resultId": "카츠유__h01I",
+      "resultNameKo": "카츠유",
+      "category": "rare",
+      "materials": [
+        {
+          "unitId": "츠나데-전설의3닌자__h01O",
+          "nameKo": "츠나데 전설의3닌자",
+          "grade": "magic",
+          "count": 2
+        }
+      ],
+      "source": "w3a:A0JC"
+    },
+    {
+      "id": "r_쥬고__h01C",
+      "resultId": "쥬고__h01C",
+      "resultNameKo": "쥬고",
+      "category": "magic",
+      "materials": [
+        {
+          "unitId": "카린__h014",
+          "nameKo": "카린",
+          "grade": "normal",
+          "count": 2
+        }
+      ],
+      "source": "w3a:A0JD"
+    },
+    {
+      "id": "r_스이게츠-아카츠키__h00F",
+      "resultId": "스이게츠-아카츠키__h00F",
+      "resultNameKo": "스이게츠 아카츠키",
+      "category": "rare",
+      "materials": [
+        {
+          "unitId": "우치하-사스케__h004",
+          "nameKo": "우치하 사스케",
+          "grade": "normal",
+          "count": 1
+        },
+        {
+          "unitId": "카린__h014",
+          "nameKo": "카린",
+          "grade": "normal",
+          "count": 1
+        },
+        {
+          "unitId": "쥬고__h01C",
+          "nameKo": "쥬고",
+          "grade": "magic",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0JE"
+    },
+    {
+      "id": "r_이누즈카-키바__h00U",
+      "resultId": "이누즈카-키바__h00U",
+      "resultNameKo": "이누즈카 키바",
+      "category": "rare",
+      "materials": [
+        {
+          "unitId": "사이__h006",
+          "nameKo": "사이",
+          "grade": "normal",
+          "count": 1
+        },
+        {
+          "unitId": "야쿠시-카부토__h027",
+          "nameKo": "야쿠시 카부토",
+          "grade": "normal",
+          "count": 1
+        },
+        {
+          "unitId": "테마리__h009",
+          "nameKo": "테마리",
+          "grade": "magic",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0JF"
+    },
+    {
+      "id": "r_오로치마루-전설의3닌자__h024",
+      "resultId": "오로치마루-전설의3닌자__h024",
+      "resultNameKo": "오로치마루 전설의3닌자",
+      "category": "magic",
+      "materials": [
+        {
+          "unitId": "야쿠시-카부토__h027",
+          "nameKo": "야쿠시 카부토",
+          "grade": "normal",
+          "count": 2
+        }
+      ],
+      "source": "w3a:A0JG"
+    },
+    {
+      "id": "r_아부라메-시노__h07A",
+      "resultId": "아부라메-시노__h07A",
+      "resultNameKo": "아부라메 시노",
+      "category": "rare",
+      "materials": [
+        {
+          "unitId": "사소리__h00H",
+          "nameKo": "사소리",
+          "grade": "normal",
+          "count": 2
+        },
+        {
+          "unitId": "야마토__h00A",
+          "nameKo": "야마토",
+          "grade": "normal",
+          "count": 1
+        },
+        {
+          "unitId": "야쿠시-카부토__h027",
+          "nameKo": "야쿠시 카부토",
+          "grade": "normal",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0JH"
+    },
+    {
+      "id": "r_야쿠시-카부토-선인모드__h679",
+      "resultId": "야쿠시-카부토-선인모드__h679",
+      "resultNameKo": "야쿠시 카부토 선인모드",
+      "category": "epic",
+      "materials": [
+        {
+          "unitId": "야쿠시-카부토-전장의-지배자__h086",
+          "nameKo": "야쿠시 카부토 전장의 지배자",
+          "grade": "legend",
+          "count": 1
+        },
+        {
+          "unitId": "키미마로-주인해방__h09X",
+          "nameKo": "키미마로 주인해방",
+          "grade": "legend",
+          "count": 1
+        },
+        {
+          "unitId": "우치하-이타치-아카츠키__h02C",
+          "nameKo": "우치하 이타치 아카츠키",
+          "grade": "unique",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0JI"
+    },
+    {
+      "id": "r_구렌-정둔술사__h05D",
+      "resultId": "구렌-정둔술사__h05D",
+      "resultNameKo": "구렌 정둔술사",
+      "category": "elite",
+      "materials": [
+        {
+          "unitId": "가마켄__h0AE",
+          "nameKo": "가마켄",
+          "grade": "rare",
+          "count": 1
+        },
+        {
+          "unitId": "토비-아카츠키__h020",
+          "nameKo": "토비 아카츠키",
+          "grade": "rare",
+          "count": 1
+        },
+        {
+          "unitId": "데이다라-아카츠키__h008",
+          "nameKo": "데이다라 아카츠키",
+          "grade": "unique",
+          "count": 1
+        },
+        {
+          "unitId": "야쿠시-카부토-전장의-지배자__h086",
+          "nameKo": "야쿠시 카부토 전장의 지배자",
+          "grade": "legend",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0JJ"
+    },
+    {
+      "id": "r_한조-예토전생__h05I",
+      "resultId": "한조-예토전생__h05I",
+      "resultNameKo": "한조 예토전생",
+      "category": "legend",
+      "materials": [
+        {
+          "unitId": "지라이야-전설의3닌자__h01H",
+          "nameKo": "지라이야 전설의3닌자",
+          "grade": "magic",
+          "count": 1
+        },
+        {
+          "unitId": "만다__h017",
+          "nameKo": "만다",
+          "grade": "rare",
+          "count": 1
+        },
+        {
+          "unitId": "카츠유__h01I",
+          "nameKo": "카츠유",
+          "grade": "rare",
+          "count": 1
+        },
+        {
+          "unitId": "육도-페인-천도__h06R",
+          "nameKo": "육도 페인 천도",
+          "grade": "unique",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0JK"
+    },
+    {
+      "id": "r_노하라-린__n07Q",
+      "resultId": "노하라-린__n07Q",
+      "resultNameKo": "노하라 린",
+      "category": "unique",
+      "materials": [
+        {
+          "unitId": "하루노-사쿠라__h00C",
+          "nameKo": "하루노 사쿠라",
+          "grade": "normal",
+          "count": 1
+        },
+        {
+          "unitId": "토비-아카츠키__h020",
+          "nameKo": "토비 아카츠키",
+          "grade": "rare",
+          "count": 1
+        },
+        {
+          "unitId": "하타케-카카시-암부__h00B",
+          "nameKo": "하타케 카카시 암부",
+          "grade": "rare",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0JL"
+    },
+    {
+      "id": "r_칸쿠로-흑비기-인형술사__h060",
+      "resultId": "칸쿠로-흑비기-인형술사__h060",
+      "resultNameKo": "칸쿠로 흑비기 인형술사",
+      "category": "unique",
+      "materials": [
+        {
+          "unitId": "하루노-사쿠라__h00C",
+          "nameKo": "하루노 사쿠라",
+          "grade": "normal",
+          "count": 1
+        },
+        {
+          "unitId": "테마리__h009",
+          "nameKo": "테마리",
+          "grade": "magic",
+          "count": 1
+        },
+        {
+          "unitId": "아부라메-시노__h07A",
+          "nameKo": "아부라메 시노",
+          "grade": "rare",
+          "count": 1
+        },
+        {
+          "unitId": "칸쿠로__h05W",
+          "nameKo": "칸쿠로",
+          "grade": "rare",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0JM"
+    },
+    {
+      "id": "r_치요할멈__h07G",
+      "resultId": "치요할멈__h07G",
+      "resultNameKo": "치요할멈",
+      "category": "elite",
+      "materials": [
+        {
+          "unitId": "칸쿠로-흑비기-인형술사__h060",
+          "nameKo": "칸쿠로 흑비기 인형술사",
+          "grade": "unique",
+          "count": 1
+        },
+        {
+          "unitId": "사소리-아카츠키__h03E",
+          "nameKo": "사소리 아카츠키",
+          "grade": "hidden",
+          "count": 1
+        },
+        {
+          "unitId": "테마리-풍둔술사__h0A1",
+          "nameKo": "테마리 풍둔술사",
+          "grade": "hidden",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0JN"
+    },
+    {
+      "id": "r_코난-천사__h05C",
+      "resultId": "코난-천사__h05C",
+      "resultNameKo": "코난 천사",
+      "category": "elite",
+      "materials": [
+        {
+          "unitId": "나루토-나선수리검__h023",
+          "nameKo": "나루토 나선수리검",
+          "grade": "rare",
+          "count": 1
+        },
+        {
+          "unitId": "코난-아카츠키__h00V",
+          "nameKo": "코난 아카츠키",
+          "grade": "legend",
+          "count": 1
+        },
+        {
+          "unitId": "토비-달의-눈-계획__h04F",
+          "nameKo": "토비 달의 눈 계획",
+          "grade": "legend",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0JP"
+    },
+    {
+      "id": "r_오오노키-3대-츠치카게__h0A0",
+      "resultId": "오오노키-3대-츠치카게__h0A0",
+      "resultNameKo": "오오노키 3대 츠치카게",
+      "category": "epic",
+      "materials": [
+        {
+          "unitId": "우치하-사스케-기린__h06E",
+          "nameKo": "우치하 사스케 기린",
+          "grade": "hidden",
+          "count": 1
+        },
+        {
+          "unitId": "쿠로츠치-츠치카게의-손녀__h0AC",
+          "nameKo": "쿠로츠치 츠치카게의 손녀",
+          "grade": "hidden",
+          "count": 1
+        },
+        {
+          "unitId": "데이다라-예토전생__h04D",
+          "nameKo": "데이다라 예토전생",
+          "grade": "legend",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0JQ"
+    },
+    {
+      "id": "r_우즈마키-쿠시나__h08R",
+      "resultId": "우즈마키-쿠시나__h08R",
+      "resultNameKo": "우즈마키 쿠시나",
+      "category": "legend",
+      "materials": [
+        {
+          "unitId": "사무이__h04Z",
+          "nameKo": "사무이",
+          "grade": "unique",
+          "count": 1
+        },
+        {
+          "unitId": "우즈마키-쿠시나__h07S",
+          "nameKo": "우즈마키 쿠시나",
+          "grade": "unique",
+          "count": 1
+        },
+        {
+          "unitId": "킬러-비-8미의-인주력__h00P",
+          "nameKo": "킬러 비 8미의 인주력",
+          "grade": "unique",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0JS"
+    },
+    {
+      "id": "r_나미카제-미나토-금빛섬광__h028",
+      "resultId": "나미카제-미나토-금빛섬광__h028",
+      "resultNameKo": "나미카제 미나토 금빛섬광",
+      "category": "legend",
+      "materials": [
+        {
+          "unitId": "만다__h017",
+          "nameKo": "만다",
+          "grade": "rare",
+          "count": 1
+        },
+        {
+          "unitId": "우즈마키-쿠시나__h07S",
+          "nameKo": "우즈마키 쿠시나",
+          "grade": "unique",
+          "count": 1
+        },
+        {
+          "unitId": "지라이야-호걸__h01G",
+          "nameKo": "지라이야 호걸",
+          "grade": "unique",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0JT"
+    },
+    {
+      "id": "r_키미마로-주인해방__h09X",
+      "resultId": "키미마로-주인해방__h09X",
+      "resultNameKo": "키미마로 주인해방",
+      "category": "legend",
+      "materials": [
+        {
+          "unitId": "록-리-연화__h0AQ",
+          "nameKo": "록 리 연화",
+          "grade": "unique",
+          "count": 1
+        },
+        {
+          "unitId": "쥬고-주인화__h07R",
+          "nameKo": "쥬고 주인화",
+          "grade": "unique",
+          "count": 1
+        },
+        {
+          "unitId": "키미마로__h05B",
+          "nameKo": "키미마로",
+          "grade": "unique",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0JU"
+    },
+    {
+      "id": "r_쿠레나이__h04W",
+      "resultId": "쿠레나이__h04W",
+      "resultNameKo": "쿠레나이",
+      "category": "unique",
+      "materials": [
+        {
+          "unitId": "이누즈카-키바__h00U",
+          "nameKo": "이누즈카 키바",
+          "grade": "rare",
+          "count": 1
+        },
+        {
+          "unitId": "휴우가-히나타__h03V",
+          "nameKo": "휴우가 히나타",
+          "grade": "rare",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0JV"
+    },
+    {
+      "id": "r_킬러-비-미수화__h07L",
+      "resultId": "킬러-비-미수화__h07L",
+      "resultNameKo": "킬러 비 미수화",
+      "category": "legend",
+      "materials": [
+        {
+          "unitId": "키사메-아카츠키__h01S",
+          "nameKo": "키사메 아카츠키",
+          "grade": "rare",
+          "count": 1
+        },
+        {
+          "unitId": "사무이__h04Z",
+          "nameKo": "사무이",
+          "grade": "unique",
+          "count": 1
+        },
+        {
+          "unitId": "킬러-비-8미의-인주력__h00P",
+          "nameKo": "킬러 비 8미의 인주력",
+          "grade": "unique",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0JW"
+    },
+    {
+      "id": "r_가아라-닌자연합군-연대장__h08A",
+      "resultId": "가아라-닌자연합군-연대장__h08A",
+      "resultNameKo": "가아라 닌자연합군 연대장",
+      "category": "epic",
+      "materials": [
+        {
+          "unitId": "테마리-풍둔술사__h0A1",
+          "nameKo": "테마리 풍둔술사",
+          "grade": "hidden",
+          "count": 1
+        },
+        {
+          "unitId": "가마분타-두꺼비-두목__h00R",
+          "nameKo": "가마분타 두꺼비 두목",
+          "grade": "legend",
+          "count": 1
+        },
+        {
+          "unitId": "데이다라-예토전생__h04D",
+          "nameKo": "데이다라 예토전생",
+          "grade": "legend",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0JX"
+    },
+    {
+      "id": "r_가아라__h00S",
+      "resultId": "가아라__h00S",
+      "resultNameKo": "가아라",
+      "category": "rare",
+      "materials": [
+        {
+          "unitId": "암부__h021",
+          "nameKo": "암부",
+          "grade": "normal",
+          "count": 1
+        },
+        {
+          "unitId": "테마리__h009",
+          "nameKo": "테마리",
+          "grade": "magic",
+          "count": 2
+        }
+      ],
+      "source": "w3a:A0JY"
+    },
+    {
+      "id": "r_코테츠__n07P",
+      "resultId": "코테츠__n07P",
+      "resultNameKo": "코테츠",
+      "category": "rare",
+      "materials": [
+        {
+          "unitId": "야마토__h00A",
+          "nameKo": "야마토",
+          "grade": "normal",
+          "count": 1
+        },
+        {
+          "unitId": "테마리__h009",
+          "nameKo": "테마리",
+          "grade": "magic",
+          "count": 1
+        },
+        {
+          "unitId": "아키미치-쵸지__h02Y",
+          "nameKo": "아키미치 쵸지",
+          "grade": "magic",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0JZ"
+    },
+    {
+      "id": "r_데이다라-아카츠키__h008",
+      "resultId": "데이다라-아카츠키__h008",
+      "resultNameKo": "데이다라 아카츠키",
+      "category": "unique",
+      "materials": [
+        {
+          "unitId": "아키미치-쵸지__h02Y",
+          "nameKo": "아키미치 쵸지",
+          "grade": "magic",
+          "count": 1
+        },
+        {
+          "unitId": "우치하-사스케-주인1__h07U",
+          "nameKo": "우치하 사스케 주인1",
+          "grade": "magic",
+          "count": 1
+        },
+        {
+          "unitId": "제츠-아카츠키__h01Z",
+          "nameKo": "제츠 아카츠키",
+          "grade": "magic",
+          "count": 1
+        },
+        {
+          "unitId": "토비-아카츠키__h020",
+          "nameKo": "토비 아카츠키",
+          "grade": "rare",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0K0"
+    },
+    {
+      "id": "r_우치하-오비토-윤회안__h01Q",
+      "resultId": "우치하-오비토-윤회안__h01Q",
+      "resultNameKo": "우치하 오비토 윤회안",
+      "category": "epic",
+      "materials": [
+        {
+          "unitId": "토비-달의-눈-계획__h04F",
+          "nameKo": "토비 달의 눈 계획",
+          "grade": "legend",
+          "count": 1
+        },
+        {
+          "unitId": "우즈마키-쿠시나__h08R",
+          "nameKo": "우즈마키 쿠시나",
+          "grade": "legend",
+          "count": 1
+        },
+        {
+          "unitId": "한조-예토전생__h05I",
+          "nameKo": "한조 예토전생",
+          "grade": "legend",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0K2"
+    },
+    {
+      "id": "r_자부자__h04X",
+      "resultId": "자부자__h04X",
+      "resultNameKo": "자부자",
+      "category": "unique",
+      "materials": [
+        {
+          "unitId": "하루노-사쿠라__h00C",
+          "nameKo": "하루노 사쿠라",
+          "grade": "normal",
+          "count": 1
+        },
+        {
+          "unitId": "하쿠__h04U",
+          "nameKo": "하쿠",
+          "grade": "rare",
+          "count": 1
+        },
+        {
+          "unitId": "하타케-카카시-암부__h00B",
+          "nameKo": "하타케 카카시 암부",
+          "grade": "rare",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0K3"
+    },
+    {
+      "id": "r_테루미메이-5대-미즈카게__h085",
+      "resultId": "테루미메이-5대-미즈카게__h085",
+      "resultNameKo": "테루미메이 5대 미즈카게",
+      "category": "elite",
+      "materials": [
+        {
+          "unitId": "호즈키-만게츠-예토전생__h04O",
+          "nameKo": "호즈키 만게츠 예토전생",
+          "grade": "hidden",
+          "count": 1
+        },
+        {
+          "unitId": "자부자-예토전생__h0AF",
+          "nameKo": "자부자 예토전생",
+          "grade": "legend",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0K4"
+    },
+    {
+      "id": "r_휴우가-히나타-백안__h080",
+      "resultId": "휴우가-히나타-백안__h080",
+      "resultNameKo": "휴우가 히나타 백안",
+      "category": "unique",
+      "materials": [
+        {
+          "unitId": "우즈마키-나루토__h000",
+          "nameKo": "우즈마키 나루토",
+          "grade": "normal",
+          "count": 1
+        },
+        {
+          "unitId": "록리__n008",
+          "nameKo": "록리",
+          "grade": "rare",
+          "count": 1
+        },
+        {
+          "unitId": "휴우가-히나타__h03V",
+          "nameKo": "휴우가 히나타",
+          "grade": "rare",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0K5"
+    },
+    {
+      "id": "r_휴우가-네지__h03W",
+      "resultId": "휴우가-네지__h03W",
+      "resultNameKo": "휴우가 네지",
+      "category": "unique",
+      "materials": [
+        {
+          "unitId": "사이__h006",
+          "nameKo": "사이",
+          "grade": "normal",
+          "count": 1
+        },
+        {
+          "unitId": "우즈마키-나루토__h000",
+          "nameKo": "우즈마키 나루토",
+          "grade": "normal",
+          "count": 1
+        },
+        {
+          "unitId": "록리__n008",
+          "nameKo": "록리",
+          "grade": "rare",
+          "count": 1
+        },
+        {
+          "unitId": "휴우가-히나타__h03V",
+          "nameKo": "휴우가 히나타",
+          "grade": "rare",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0K6"
+    },
+    {
+      "id": "r_우치하-시스이-스사노오-3단계__n04Q",
+      "resultId": "우치하-시스이-스사노오-3단계__n04Q",
+      "resultNameKo": "우치하 시스이 스사노오 3단계",
+      "category": "epic",
+      "materials": [
+        {
+          "unitId": "시무라-단조__h00O",
+          "nameKo": "시무라 단조",
+          "grade": "hidden",
+          "count": 1
+        },
+        {
+          "unitId": "우치하-시스이-순신__h09D",
+          "nameKo": "우치하 시스이 순신",
+          "grade": "legend",
+          "count": 1
+        },
+        {
+          "unitId": "사루토비-히루젠-3대호카게__n02K",
+          "nameKo": "사루토비 히루젠 3대호카게",
+          "grade": "legend",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A019"
+    },
+    {
+      "id": "r_센쥬-토비라마-예토전생__n072",
+      "resultId": "센쥬-토비라마-예토전생__n072",
+      "resultNameKo": "센쥬 토비라마 예토전생",
+      "category": "epic",
+      "materials": [
+        {
+          "unitId": "센쥬-토비라마-2대-호카게__h00N",
+          "nameKo": "센쥬 토비라마 2대 호카게",
+          "grade": "hidden",
+          "count": 1
+        },
+        {
+          "unitId": "나미카제-미나토-금빛섬광__h028",
+          "nameKo": "나미카제 미나토 금빛섬광",
+          "grade": "legend",
+          "count": 1
+        },
+        {
+          "unitId": "사루토비-히루젠-3대호카게__n02K",
+          "nameKo": "사루토비 히루젠 3대호카게",
+          "grade": "legend",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A03G"
+    },
+    {
+      "id": "r_카쿠즈-아카츠키__n058",
+      "resultId": "카쿠즈-아카츠키__n058",
+      "resultNameKo": "카쿠즈 아카츠키",
+      "category": "rare",
+      "materials": [
+        {
+          "unitId": "야마토__h00A",
+          "nameKo": "야마토",
+          "grade": "normal",
+          "count": 1
+        },
+        {
+          "unitId": "우즈마키-나루토__h000",
+          "nameKo": "우즈마키 나루토",
+          "grade": "normal",
+          "count": 1
+        },
+        {
+          "unitId": "제츠-아카츠키__h01Z",
+          "nameKo": "제츠 아카츠키",
+          "grade": "magic",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A06F"
+    },
+    {
+      "id": "r_카쿠즈-비전인술__n059",
+      "resultId": "카쿠즈-비전인술__n059",
+      "resultNameKo": "카쿠즈 비전인술",
+      "category": "unique",
+      "materials": [
+        {
+          "unitId": "코테츠__n07P",
+          "nameKo": "코테츠",
+          "grade": "rare",
+          "count": 1
+        },
+        {
+          "unitId": "카쿠즈-아카츠키__n058",
+          "nameKo": "카쿠즈 아카츠키",
+          "grade": "rare",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A06G"
+    },
+    {
+      "id": "r_히단-아카츠키__h03A",
+      "resultId": "히단-아카츠키__h03A",
+      "resultNameKo": "히단 아카츠키",
+      "category": "unique",
+      "materials": [
+        {
+          "unitId": "아스마__h029",
+          "nameKo": "아스마",
+          "grade": "rare",
+          "count": 1
+        },
+        {
+          "unitId": "카쿠즈-아카츠키__n058",
+          "nameKo": "카쿠즈 아카츠키",
+          "grade": "rare",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A06L"
+    },
+    {
+      "id": "r_나라-시카마루-타고난-천재__n054",
+      "resultId": "나라-시카마루-타고난-천재__n054",
+      "resultNameKo": "나라 시카마루 타고난 천재",
+      "category": "legend",
+      "materials": [
+        {
+          "unitId": "카쿠즈-비전인술__n059",
+          "nameKo": "카쿠즈 비전인술",
+          "grade": "unique",
+          "count": 1
+        },
+        {
+          "unitId": "쿠레나이__h04W",
+          "nameKo": "쿠레나이",
+          "grade": "unique",
+          "count": 1
+        },
+        {
+          "unitId": "히단-아카츠키__h03A",
+          "nameKo": "히단 아카츠키",
+          "grade": "unique",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A06Y"
+    },
+    {
+      "id": "r_이노시카쵸__h045",
+      "resultId": "이노시카쵸__h045",
+      "resultNameKo": "이노시카쵸",
+      "category": "elite",
+      "materials": [
+        {
+          "unitId": "야마나카-이노__h02Q",
+          "nameKo": "야마나카 이노",
+          "grade": "rare",
+          "count": 1
+        },
+        {
+          "unitId": "아키미치-쵸지-각성모드__h01U",
+          "nameKo": "아키미치 쵸지 각성모드",
+          "grade": "hidden",
+          "count": 1
+        },
+        {
+          "unitId": "나라-시카마루-타고난-천재__n054",
+          "nameKo": "나라 시카마루 타고난 천재",
+          "grade": "legend",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A078"
+    },
+    {
+      "id": "r_킬러-비-8미의-인주력__h00P",
+      "resultId": "킬러-비-8미의-인주력__h00P",
+      "resultNameKo": "킬러 비 8미의 인주력",
+      "category": "unique",
+      "materials": [
+        {
+          "unitId": "야마토__h00A",
+          "nameKo": "야마토",
+          "grade": "normal",
+          "count": 1
+        },
+        {
+          "unitId": "오로치마루-전설의3닌자__h024",
+          "nameKo": "오로치마루 전설의3닌자",
+          "grade": "magic",
+          "count": 1
+        },
+        {
+          "unitId": "아스마__h029",
+          "nameKo": "아스마",
+          "grade": "rare",
+          "count": 1
+        },
+        {
+          "unitId": "토비-아카츠키__h020",
+          "nameKo": "토비 아카츠키",
+          "grade": "rare",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A06M"
+    },
+    {
+      "id": "r_마이트-가이-경문해제__h04E",
+      "resultId": "마이트-가이-경문해제__h04E",
+      "resultNameKo": "마이트 가이 경문해제",
+      "category": "epic",
+      "materials": [
+        {
+          "unitId": "나루토-나선수리검__h023",
+          "nameKo": "나루토 나선수리검",
+          "grade": "rare",
+          "count": 1
+        },
+        {
+          "unitId": "호시가키-키사메-꼬리없는-미수__h02G",
+          "nameKo": "호시가키 키사메 꼬리없는 미수",
+          "grade": "hidden",
+          "count": 1
+        },
+        {
+          "unitId": "마이트-가이__h05K",
+          "nameKo": "마이트 가이",
+          "grade": "legend",
+          "count": 1
+        },
+        {
+          "unitId": "킬러-비-미수화__h07L",
+          "nameKo": "킬러 비 미수화",
+          "grade": "legend",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0BR"
+    },
+    {
+      "id": "r_호시가키-키사메-완전변형__h037",
+      "resultId": "호시가키-키사메-완전변형__h037",
+      "resultNameKo": "호시가키 키사메 완전변형",
+      "category": "epic",
+      "materials": [
+        {
+          "unitId": "호시가키-키사메-꼬리없는-미수__h02G",
+          "nameKo": "호시가키 키사메 꼬리없는 미수",
+          "grade": "hidden",
+          "count": 1
+        },
+        {
+          "unitId": "우치하-이타치-스사노오-1단계__h01X",
+          "nameKo": "우치하 이타치 스사노오 1단계",
+          "grade": "legend",
+          "count": 1
+        },
+        {
+          "unitId": "킬러-비-미수화__h07L",
+          "nameKo": "킬러 비 미수화",
+          "grade": "legend",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0BZ"
+    },
+    {
+      "id": "r_가마키치-묘목산-두꺼비__h002",
+      "resultId": "가마키치-묘목산-두꺼비__h002",
+      "resultNameKo": "가마키치 묘목산 두꺼비",
+      "category": "epic",
+      "materials": [
+        {
+          "unitId": "호즈키-만게츠-예토전생__h04O",
+          "nameKo": "호즈키 만게츠 예토전생",
+          "grade": "hidden",
+          "count": 1
+        },
+        {
+          "unitId": "가마분타-두꺼비-두목__h00R",
+          "nameKo": "가마분타 두꺼비 두목",
+          "grade": "legend",
+          "count": 1
+        },
+        {
+          "unitId": "지라이야-선인모드__h08G",
+          "nameKo": "지라이야 선인모드",
+          "grade": "legend",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0C3"
+    },
+    {
+      "id": "r_야마토-호카게-직속암부__h04B",
+      "resultId": "야마토-호카게-직속암부__h04B",
+      "resultNameKo": "야마토 호카게 직속암부",
+      "category": "legend",
+      "materials": [
+        {
+          "unitId": "만다__h017",
+          "nameKo": "만다",
+          "grade": "rare",
+          "count": 1
+        },
+        {
+          "unitId": "야마토-암부__h076",
+          "nameKo": "야마토 암부",
+          "grade": "unique",
+          "count": 1
+        },
+        {
+          "unitId": "킬러-비-8미의-인주력__h00P",
+          "nameKo": "킬러 비 8미의 인주력",
+          "grade": "unique",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0CA"
+    },
+    {
+      "id": "r_토비__h01F",
+      "resultId": "토비__h01F",
+      "resultNameKo": "토비",
+      "category": "special",
+      "materials": [
+        {
+          "unitId": "육도-페인-천도__h06R",
+          "nameKo": "육도 페인 천도",
+          "grade": "unique",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0CG"
+    },
+    {
+      "id": "r_우즈마키-나루토__h000",
+      "resultId": "우즈마키-나루토__h000",
+      "resultNameKo": "우즈마키 나루토",
+      "category": "normal",
+      "materials": [
+        {
+          "unitId": "우즈마키-히마와리__h02J",
+          "nameKo": "우즈마키 히마와리",
+          "grade": "special",
+          "count": 3
+        }
+      ],
+      "source": "w3a:A0DN"
+    },
+    {
+      "id": "r_아키미치-쵸지__h02Y",
+      "resultId": "아키미치-쵸지__h02Y",
+      "resultNameKo": "아키미치 쵸지",
+      "category": "magic",
+      "materials": [
+        {
+          "unitId": "오로치마루-전설의3닌자__h024",
+          "nameKo": "오로치마루 전설의3닌자",
+          "grade": "magic",
+          "count": 1
+        },
+        {
+          "unitId": "지라이야-전설의3닌자__h01H",
+          "nameKo": "지라이야 전설의3닌자",
+          "grade": "magic",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0DT"
+    },
+    {
+      "id": "r_7미-쵸우메이__h04S",
+      "resultId": "7미-쵸우메이__h04S",
+      "resultNameKo": "7미 쵸우메이",
+      "category": "bijuu",
+      "materials": [
+        {
+          "unitId": "후우-7미의-인주력__h02M",
+          "nameKo": "후우 7미의 인주력",
+          "grade": "jinchuriki",
+          "count": 1
+        },
+        {
+          "unitId": "센쥬-토비라마-2대-호카게__h00N",
+          "nameKo": "센쥬 토비라마 2대 호카게",
+          "grade": "hidden",
+          "count": 1
+        },
+        {
+          "unitId": "우치하-사스케-기린__h06E",
+          "nameKo": "우치하 사스케 기린",
+          "grade": "hidden",
+          "count": 1
+        },
+        {
+          "unitId": "휴우가-히나타-백안__h080",
+          "nameKo": "휴우가 히나타 백안",
+          "grade": "unique",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0LQ"
+    },
+    {
+      "id": "r_하타케-카카시-완성체-스사노오__n06X",
+      "resultId": "하타케-카카시-완성체-스사노오__n06X",
+      "resultNameKo": "하타케 카카시 완성체 스사노오",
+      "category": "infinity",
+      "materials": [
+        {
+          "unitId": "오비토의-동력__h03P",
+          "nameKo": "오비토의 동력",
+          "grade": "special",
+          "count": 1
+        },
+        {
+          "unitId": "하타케-카카시-닌자연합군-1대장__h05J",
+          "nameKo": "하타케 카카시 닌자연합군 1대장",
+          "grade": "elite",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0LX"
+    },
+    {
+      "id": "r_우치하-이타치-완성체-스사노오__n06S",
+      "resultId": "우치하-이타치-완성체-스사노오__n06S",
+      "resultNameKo": "우치하 이타치 완성체 스사노오",
+      "category": "infinity",
+      "materials": [
+        {
+          "unitId": "이타치의-동력__h03Q",
+          "nameKo": "이타치의 동력",
+          "grade": "special",
+          "count": 1
+        },
+        {
+          "unitId": "우치하-이타치-스사노오-3단계__h09H",
+          "nameKo": "우치하 이타치 스사노오 3단계",
+          "grade": "elite",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0LY"
+    },
+    {
+      "id": "r_우치하-시스이-완성체-스사노오__n065",
+      "resultId": "우치하-시스이-완성체-스사노오__n065",
+      "resultNameKo": "우치하 시스이 완성체 스사노오",
+      "category": "infinity",
+      "materials": [
+        {
+          "unitId": "시스이의-동력__h03R",
+          "nameKo": "시스이의 동력",
+          "grade": "special",
+          "count": 1
+        },
+        {
+          "unitId": "우치하-시스이-스사노오-3단계__n04Q",
+          "nameKo": "우치하 시스이 스사노오 3단계",
+          "grade": "epic",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0LZ"
+    },
+    {
+      "id": "r_나루토-양의-힘__n05F",
+      "resultId": "나루토-양의-힘__n05F",
+      "resultNameKo": "나루토 양의 힘",
+      "category": "infinity",
+      "materials": [
+        {
+          "unitId": "하고로모의-차크라__h03O",
+          "nameKo": "하고로모의 차크라",
+          "grade": "special",
+          "count": 1
+        },
+        {
+          "unitId": "우즈마키-나루토-미수화__h050",
+          "nameKo": "우즈마키 나루토 미수화",
+          "grade": "epic",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0M0"
+    },
+    {
+      "id": "r_우치하-사스케-음의-힘__n060",
+      "resultId": "우치하-사스케-음의-힘__n060",
+      "resultNameKo": "우치하 사스케 음의 힘",
+      "category": "infinity",
+      "materials": [
+        {
+          "unitId": "하고로모의-차크라__h03O",
+          "nameKo": "하고로모의 차크라",
+          "grade": "special",
+          "count": 1
+        },
+        {
+          "unitId": "우치하-사스케-스사노오-3단계__h05V",
+          "nameKo": "우치하 사스케 스사노오 3단계",
+          "grade": "epic",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0M1"
+    },
+    {
+      "id": "r_텐텐__h01P",
+      "resultId": "텐텐__h01P",
+      "resultNameKo": "텐텐",
+      "category": "unique",
+      "materials": [
+        {
+          "unitId": "암부__h021",
+          "nameKo": "암부",
+          "grade": "normal",
+          "count": 1
+        },
+        {
+          "unitId": "야마토__h00A",
+          "nameKo": "야마토",
+          "grade": "normal",
+          "count": 1
+        },
+        {
+          "unitId": "테마리__h009",
+          "nameKo": "테마리",
+          "grade": "magic",
+          "count": 1
+        },
+        {
+          "unitId": "야마나카-이노__h02Q",
+          "nameKo": "야마나카 이노",
+          "grade": "rare",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A00U"
+    },
+    {
+      "id": "r_하타케-카카시-만화경사륜안__h02D",
+      "resultId": "하타케-카카시-만화경사륜안__h02D",
+      "resultNameKo": "하타케 카카시 만화경사륜안",
+      "category": "unique",
+      "materials": [
+        {
+          "unitId": "지라이야-전설의3닌자__h01H",
+          "nameKo": "지라이야 전설의3닌자",
+          "grade": "magic",
+          "count": 1
+        },
+        {
+          "unitId": "하타케-카카시-암부__h00B",
+          "nameKo": "하타케 카카시 암부",
+          "grade": "rare",
+          "count": 1
+        },
+        {
+          "unitId": "이누즈카-키바__h00U",
+          "nameKo": "이누즈카 키바",
+          "grade": "rare",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A00V"
+    },
+    {
+      "id": "r_록-리-취권__n07M",
+      "resultId": "록-리-취권__n07M",
+      "resultNameKo": "록 리 취권",
+      "category": "limit",
+      "materials": [
+        {
+          "unitId": "오로치마루-아카츠키__h09Y",
+          "nameKo": "오로치마루 아카츠키",
+          "grade": "unique",
+          "count": 1
+        },
+        {
+          "unitId": "키미마로-주인해방__h09X",
+          "nameKo": "키미마로 주인해방",
+          "grade": "legend",
+          "count": 1
+        },
+        {
+          "unitId": "사루토비-히루젠-3대호카게__n02K",
+          "nameKo": "사루토비 히루젠 3대호카게",
+          "grade": "legend",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A00W"
+    },
+    {
+      "id": "r_히단-사신화__n05D",
+      "resultId": "히단-사신화__n05D",
+      "resultNameKo": "히단 사신화",
+      "category": "epic",
+      "materials": [
+        {
+          "unitId": "나라-시카마루-타고난-천재__n054",
+          "nameKo": "나라 시카마루 타고난 천재",
+          "grade": "legend",
+          "count": 1
+        },
+        {
+          "unitId": "코난-아카츠키__h00V",
+          "nameKo": "코난 아카츠키",
+          "grade": "legend",
+          "count": 1
+        },
+        {
+          "unitId": "아키미치-쵸지-각성모드__h01U",
+          "nameKo": "아키미치 쵸지 각성모드",
+          "grade": "hidden",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A07U"
+    },
+    {
+      "id": "r_사이-호시탐탄__h046",
+      "resultId": "사이-호시탐탄__h046",
+      "resultNameKo": "사이 호시탐탄",
+      "category": "elite",
+      "materials": [
+        {
+          "unitId": "사이-뿌리닌자__h09P",
+          "nameKo": "사이 뿌리닌자",
+          "grade": "unique",
+          "count": 1
+        },
+        {
+          "unitId": "키사메-아카츠키__h01S",
+          "nameKo": "키사메 아카츠키",
+          "grade": "rare",
+          "count": 1
+        },
+        {
+          "unitId": "호시가키-키사메-꼬리없는-미수__h02G",
+          "nameKo": "호시가키 키사메 꼬리없는 미수",
+          "grade": "hidden",
+          "count": 1
+        },
+        {
+          "unitId": "로우시-4미의-인주력__h02T",
+          "nameKo": "로우시 4미의 인주력",
+          "grade": "jinchuriki",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0HS"
+    },
+    {
+      "id": "r_무우-2대-츠치카게__h047",
+      "resultId": "무우-2대-츠치카게__h047",
+      "resultNameKo": "무우 2대 츠치카게",
+      "category": "epic",
+      "materials": [
+        {
+          "unitId": "쿠로츠치-츠치카게의-손녀__h0AC",
+          "nameKo": "쿠로츠치 츠치카게의 손녀",
+          "grade": "hidden",
+          "count": 1
+        },
+        {
+          "unitId": "미타라시-앙코__h04Y",
+          "nameKo": "미타라시 앙코",
+          "grade": "hidden",
+          "count": 1
+        },
+        {
+          "unitId": "우치하-마다라__h00Y",
+          "nameKo": "우치하 마다라",
+          "grade": "legend",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0MI"
+    },
+    {
+      "id": "r_우치하-오비토-육도모드__h048",
+      "resultId": "우치하-오비토-육도모드__h048",
+      "resultNameKo": "우치하 오비토 육도모드",
+      "category": "infinity",
+      "materials": [
+        {
+          "unitId": "오비토의-동력__h03P",
+          "nameKo": "오비토의 동력",
+          "grade": "special",
+          "count": 1
+        },
+        {
+          "unitId": "우치하-오비토-윤회안__h01Q",
+          "nameKo": "우치하 오비토 윤회안",
+          "grade": "epic",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0MO"
+    },
+    {
+      "id": "r_외도마상-미수차크라__h06L",
+      "resultId": "외도마상-미수차크라__h06L",
+      "resultNameKo": "외도마상 미수차크라",
+      "category": "elite",
+      "materials": [
+        {
+          "unitId": "휴우가-네지__h03W",
+          "nameKo": "휴우가 네지",
+          "grade": "unique",
+          "count": 1
+        },
+        {
+          "unitId": "토비__h01F",
+          "nameKo": "토비",
+          "grade": "special",
+          "count": 1
+        },
+        {
+          "unitId": "우즈마키-나가토__h09N",
+          "nameKo": "우즈마키 나가토",
+          "grade": "legend",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0NU"
+    },
+    {
+      "id": "r_하타케-카카시-닌자연합군-1대장__h05J",
+      "resultId": "하타케-카카시-닌자연합군-1대장__h05J",
+      "resultNameKo": "하타케 카카시 닌자연합군 1대장",
+      "category": "elite",
+      "materials": [
+        {
+          "unitId": "노하라-린__n07Q",
+          "nameKo": "노하라 린",
+          "grade": "unique",
+          "count": 1
+        },
+        {
+          "unitId": "엔마-원후왕__h003",
+          "nameKo": "엔마 원후왕",
+          "grade": "unique",
+          "count": 1
+        },
+        {
+          "unitId": "마이트-가이__h05K",
+          "nameKo": "마이트 가이",
+          "grade": "legend",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0NV"
+    },
+    {
+      "id": "r_휴우가-히나타-유보쌍사권__h0B8",
+      "resultId": "휴우가-히나타-유보쌍사권__h0B8",
+      "resultNameKo": "휴우가 히나타 유보쌍사권",
+      "category": "epic",
+      "materials": [
+        {
+          "unitId": "휴우가-네지-백안__h05O",
+          "nameKo": "휴우가 네지 백안",
+          "grade": "legend",
+          "count": 1
+        },
+        {
+          "unitId": "코난-아카츠키__h00V",
+          "nameKo": "코난 아카츠키",
+          "grade": "legend",
+          "count": 1
+        },
+        {
+          "unitId": "테마리-풍둔술사__h0A1",
+          "nameKo": "테마리 풍둔술사",
+          "grade": "hidden",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0NW"
+    },
+    {
+      "id": "r_토비-달의-눈-계획__h04F",
+      "resultId": "토비-달의-눈-계획__h04F",
+      "resultNameKo": "토비 달의 눈 계획",
+      "category": "legend",
+      "materials": [
+        {
+          "unitId": "우치하-사스케-주인2__h005",
+          "nameKo": "우치하 사스케 주인2",
+          "grade": "rare",
+          "count": 1
+        },
+        {
+          "unitId": "노하라-린__n07Q",
+          "nameKo": "노하라 린",
+          "grade": "unique",
+          "count": 1
+        },
+        {
+          "unitId": "육도-페인-천도__h06R",
+          "nameKo": "육도 페인 천도",
+          "grade": "unique",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0NX"
+    },
+    {
+      "id": "r_마이트-가이-사문해제__n08C",
+      "resultId": "마이트-가이-사문해제__n08C",
+      "resultNameKo": "마이트 가이 사문해제",
+      "category": "infinity",
+      "materials": [
+        {
+          "unitId": "가이의-각오__h04K",
+          "nameKo": "가이의 각오",
+          "grade": "special",
+          "count": 1
+        },
+        {
+          "unitId": "마이트-가이-경문해제__h04E",
+          "nameKo": "마이트 가이 경문해제",
+          "grade": "epic",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0LB"
+    },
+    {
+      "id": "r_우치하-마다라-육도모드__n08M",
+      "resultId": "우치하-마다라-육도모드__n08M",
+      "resultNameKo": "우치하 마다라 육도모드",
+      "category": "infinity",
+      "materials": [
+        {
+          "unitId": "완전체-10미__h05G",
+          "nameKo": "완전체 10미",
+          "grade": "special",
+          "count": 1
+        },
+        {
+          "unitId": "우치하-마다라-윤회천생__h03X",
+          "nameKo": "우치하 마다라 윤회천생",
+          "grade": "epic",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0OH"
+    },
+    {
+      "id": "r_라사-4대-카제카게__n08G",
+      "resultId": "라사-4대-카제카게__n08G",
+      "resultNameKo": "라사 4대 카제카게",
+      "category": "epic",
+      "materials": [
+        {
+          "unitId": "미타라시-앙코__h04Y",
+          "nameKo": "미타라시 앙코",
+          "grade": "hidden",
+          "count": 1
+        },
+        {
+          "unitId": "사소리-아카츠키__h03E",
+          "nameKo": "사소리 아카츠키",
+          "grade": "hidden",
+          "count": 1
+        },
+        {
+          "unitId": "가아라-카제카게__n05S",
+          "nameKo": "가아라 카제카게",
+          "grade": "jinchuriki",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0OT"
+    },
+    {
+      "id": "r_킬러-에이-3대-라이카게__n08L",
+      "resultId": "킬러-에이-3대-라이카게__n08L",
+      "resultNameKo": "킬러 에이 3대 라이카게",
+      "category": "epic",
+      "materials": [
+        {
+          "unitId": "다루이-혈계한계-람둔__h069",
+          "nameKo": "다루이 혈계한계 람둔",
+          "grade": "legend",
+          "count": 1
+        },
+        {
+          "unitId": "야쿠시-카부토-전장의-지배자__h086",
+          "nameKo": "야쿠시 카부토 전장의 지배자",
+          "grade": "legend",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0Q2"
+    },
+    {
+      "id": "r_오오츠츠키-토네리-하무라의-자손__n097",
+      "resultId": "오오츠츠키-토네리-하무라의-자손__n097",
+      "resultNameKo": "오오츠츠키 토네리 하무라의 자손",
+      "category": "epic",
+      "materials": [
+        {
+          "unitId": "사이-뿌리닌자__h09P",
+          "nameKo": "사이 뿌리닌자",
+          "grade": "unique",
+          "count": 1
+        },
+        {
+          "unitId": "휴우가-히나타-백안__h080",
+          "nameKo": "휴우가 히나타 백안",
+          "grade": "unique",
+          "count": 1
+        },
+        {
+          "unitId": "우치하-사스케-기린__h06E",
+          "nameKo": "우치하 사스케 기린",
+          "grade": "hidden",
+          "count": 1
+        },
+        {
+          "unitId": "나라-시카마루-타고난-천재__n054",
+          "nameKo": "나라 시카마루 타고난 천재",
+          "grade": "legend",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0Q3"
+    },
+    {
+      "id": "r_오오츠츠키-토네리-전생안__n099",
+      "resultId": "오오츠츠키-토네리-전생안__n099",
+      "resultNameKo": "오오츠츠키 토네리 전생안",
+      "category": "infinity",
+      "materials": [
+        {
+          "unitId": "하나비의-백안__h065",
+          "nameKo": "하나비의 백안",
+          "grade": "special",
+          "count": 1
+        },
+        {
+          "unitId": "오오츠츠키-토네리-하무라의-자손__n097",
+          "nameKo": "오오츠츠키 토네리 하무라의 자손",
+          "grade": "epic",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0PW"
+    },
+    {
+      "id": "r_가리-폭둔__n077",
+      "resultId": "가리-폭둔__n077",
+      "resultNameKo": "가리 폭둔",
+      "category": "elite",
+      "materials": [
+        {
+          "unitId": "데이다라-예토전생__h04D",
+          "nameKo": "데이다라 예토전생",
+          "grade": "legend",
+          "count": 1
+        },
+        {
+          "unitId": "자부자-예토전생__h0AF",
+          "nameKo": "자부자 예토전생",
+          "grade": "legend",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0PX"
+    },
+    {
+      "id": "r_우치하-사스케-영원한만화경사륜안__n09D",
+      "resultId": "우치하-사스케-영원한만화경사륜안__n09D",
+      "resultNameKo": "우치하 사스케 영원한만화경사륜안",
+      "category": "epic",
+      "materials": [
+        {
+          "unitId": "나루토-나선수리검__h023",
+          "nameKo": "나루토 나선수리검",
+          "grade": "rare",
+          "count": 1
+        },
+        {
+          "unitId": "우치하-이타치-아카츠키__h02C",
+          "nameKo": "우치하 이타치 아카츠키",
+          "grade": "unique",
+          "count": 1
+        },
+        {
+          "unitId": "호시가키-키사메-꼬리없는-미수__h02G",
+          "nameKo": "호시가키 키사메 꼬리없는 미수",
+          "grade": "hidden",
+          "count": 1
+        },
+        {
+          "unitId": "우치하-사스케-스사노오-1단계__h036",
+          "nameKo": "우치하 사스케 스사노오 1단계",
+          "grade": "legend",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0QY"
+    },
+    {
+      "id": "r_우즈마키-쿠시나-9미의-인주력__h06Z",
+      "resultId": "우즈마키-쿠시나-9미의-인주력__h06Z",
+      "resultNameKo": "우즈마키 쿠시나 9미의 인주력",
+      "category": "epic",
+      "materials": [
+        {
+          "unitId": "코테츠__n07P",
+          "nameKo": "코테츠",
+          "grade": "rare",
+          "count": 1
+        },
+        {
+          "unitId": "키미마로__h05B",
+          "nameKo": "키미마로",
+          "grade": "unique",
+          "count": 1
+        },
+        {
+          "unitId": "나미카제-미나토-금빛섬광__h028",
+          "nameKo": "나미카제 미나토 금빛섬광",
+          "grade": "legend",
+          "count": 1
+        },
+        {
+          "unitId": "우즈마키-쿠시나__h08R",
+          "nameKo": "우즈마키 쿠시나",
+          "grade": "legend",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0R9"
+    },
+    {
+      "id": "r_테루미메이-노처녀-히스테리__n09C",
+      "resultId": "테루미메이-노처녀-히스테리__n09C",
+      "resultNameKo": "테루미메이 노처녀 히스테리",
+      "category": "epic",
+      "materials": [
+        {
+          "unitId": "자부자__h04X",
+          "nameKo": "자부자",
+          "grade": "unique",
+          "count": 1
+        },
+        {
+          "unitId": "호즈키-만게츠-예토전생__h04O",
+          "nameKo": "호즈키 만게츠 예토전생",
+          "grade": "hidden",
+          "count": 1
+        },
+        {
+          "unitId": "가리-폭둔__n077",
+          "nameKo": "가리 폭둔",
+          "grade": "elite",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0RM"
+    },
+    {
+      "id": "r_텐텐-파초선__n09L",
+      "resultId": "텐텐-파초선__n09L",
+      "resultNameKo": "텐텐 파초선",
+      "category": "epic",
+      "materials": [
+        {
+          "unitId": "휴우가-네지__h03W",
+          "nameKo": "휴우가 네지",
+          "grade": "unique",
+          "count": 1
+        },
+        {
+          "unitId": "테마리-풍둔술사__h0A1",
+          "nameKo": "테마리 풍둔술사",
+          "grade": "hidden",
+          "count": 1
+        },
+        {
+          "unitId": "다루이-혈계한계-람둔__h069",
+          "nameKo": "다루이 혈계한계 람둔",
+          "grade": "legend",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0RN"
+    },
+    {
+      "id": "r_사폭의-가아라-5대-카제카게__h073",
+      "resultId": "사폭의-가아라-5대-카제카게__h073",
+      "resultNameKo": "사폭의 가아라 5대 카제카게",
+      "category": "infinity",
+      "materials": [
+        {
+          "unitId": "데이다라-아카츠키__h008",
+          "nameKo": "데이다라 아카츠키",
+          "grade": "unique",
+          "count": 1
+        },
+        {
+          "unitId": "쵸주로-닌자도-7인방__h03D",
+          "nameKo": "쵸주로 닌자도 7인방",
+          "grade": "unique",
+          "count": 1
+        },
+        {
+          "unitId": "테마리-풍둔술사__h0A1",
+          "nameKo": "테마리 풍둔술사",
+          "grade": "hidden",
+          "count": 1
+        },
+        {
+          "unitId": "우치하-마다라__h00Y",
+          "nameKo": "우치하 마다라",
+          "grade": "legend",
+          "count": 1
+        },
+        {
+          "unitId": "키미마로-주인해방__h09X",
+          "nameKo": "키미마로 주인해방",
+          "grade": "legend",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0RV"
+    },
+    {
+      "id": "r_시즈네__h07Y",
+      "resultId": "시즈네__h07Y",
+      "resultNameKo": "시즈네",
+      "category": "unique",
+      "materials": [
+        {
+          "unitId": "우즈마키-나루토__h000",
+          "nameKo": "우즈마키 나루토",
+          "grade": "normal",
+          "count": 1
+        },
+        {
+          "unitId": "지라이야-전설의3닌자__h01H",
+          "nameKo": "지라이야 전설의3닌자",
+          "grade": "magic",
+          "count": 1
+        },
+        {
+          "unitId": "츠나데-전설의3닌자__h01O",
+          "nameKo": "츠나데 전설의3닌자",
+          "grade": "magic",
+          "count": 1
+        },
+        {
+          "unitId": "야마나카-이노__h02Q",
+          "nameKo": "야마나카 이노",
+          "grade": "rare",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0QD"
+    },
+    {
+      "id": "r_칸쿠로-닌자연합군-기습부대장__n09Y",
+      "resultId": "칸쿠로-닌자연합군-기습부대장__n09Y",
+      "resultNameKo": "칸쿠로 닌자연합군 기습부대장",
+      "category": "limit",
+      "materials": [
+        {
+          "unitId": "키미마로__h05B",
+          "nameKo": "키미마로",
+          "grade": "unique",
+          "count": 1
+        },
+        {
+          "unitId": "데이다라-아카츠키__h008",
+          "nameKo": "데이다라 아카츠키",
+          "grade": "unique",
+          "count": 1
+        },
+        {
+          "unitId": "가아라-카제카게__n05S",
+          "nameKo": "가아라 카제카게",
+          "grade": "jinchuriki",
+          "count": 1
+        },
+        {
+          "unitId": "사소리-아카츠키__h03E",
+          "nameKo": "사소리 아카츠키",
+          "grade": "hidden",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0S4"
+    },
+    {
+      "id": "r_오오츠츠키-모모시키-단을-연성하는-자__n079",
+      "resultId": "오오츠츠키-모모시키-단을-연성하는-자__n079",
+      "resultNameKo": "오오츠츠키 모모시키 단을 연성하는 자",
+      "category": "epic",
+      "materials": [
+        {
+          "unitId": "쿠로츠치-츠치카게의-손녀__h0AC",
+          "nameKo": "쿠로츠치 츠치카게의 손녀",
+          "grade": "hidden",
+          "count": 1
+        },
+        {
+          "unitId": "다루이-혈계한계-람둔__h069",
+          "nameKo": "다루이 혈계한계 람둔",
+          "grade": "legend",
+          "count": 1
+        },
+        {
+          "unitId": "우치하-사스케-스사노오-1단계__h036",
+          "nameKo": "우치하 사스케 스사노오 1단계",
+          "grade": "legend",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0S9"
+    },
+    {
+      "id": "r_오오츠츠키-모모시키-단을-흡수-한-자__n07A",
+      "resultId": "오오츠츠키-모모시키-단을-흡수-한-자__n07A",
+      "resultNameKo": "오오츠츠키 모모시키 단을 흡수 한 자",
+      "category": "infinity",
+      "materials": [
+        {
+          "unitId": "오오츠츠키-킨시키-열매-단__h07E",
+          "nameKo": "오오츠츠키 킨시키 열매 단",
+          "grade": "special",
+          "count": 1
+        },
+        {
+          "unitId": "오오츠츠키-모모시키-단을-연성하는-자__n079",
+          "nameKo": "오오츠츠키 모모시키 단을 연성하는 자",
+          "grade": "epic",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0SA"
+    },
+    {
+      "id": "r_파쿠라-혈계한계-작둔__n09K",
+      "resultId": "파쿠라-혈계한계-작둔__n09K",
+      "resultNameKo": "파쿠라 혈계한계 작둔",
+      "category": "epic",
+      "materials": [
+        {
+          "unitId": "칸쿠로-흑비기-인형술사__h060",
+          "nameKo": "칸쿠로 흑비기 인형술사",
+          "grade": "unique",
+          "count": 1
+        },
+        {
+          "unitId": "마이트-가이__h05K",
+          "nameKo": "마이트 가이",
+          "grade": "legend",
+          "count": 1
+        },
+        {
+          "unitId": "자부자-예토전생__h0AF",
+          "nameKo": "자부자 예토전생",
+          "grade": "legend",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0SS"
+    },
+    {
+      "id": "r_하타케-카카시-호카게-직속-암부__n0A6",
+      "resultId": "하타케-카카시-호카게-직속-암부__n0A6",
+      "resultNameKo": "하타케 카카시 호카게 직속 암부",
+      "category": "limit",
+      "materials": [
+        {
+          "unitId": "노하라-린__n07Q",
+          "nameKo": "노하라 린",
+          "grade": "unique",
+          "count": 1
+        },
+        {
+          "unitId": "쥬고-완전-주인화__h06S",
+          "nameKo": "쥬고 완전 주인화",
+          "grade": "hidden",
+          "count": 1
+        },
+        {
+          "unitId": "나미카제-미나토-금빛섬광__h028",
+          "nameKo": "나미카제 미나토 금빛섬광",
+          "grade": "legend",
+          "count": 1
+        },
+        {
+          "unitId": "토비-달의-눈-계획__h04F",
+          "nameKo": "토비 달의 눈 계획",
+          "grade": "legend",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0T8"
+    },
+    {
+      "id": "r_우치하-마다라-완성체-스사노오__n0AK",
+      "resultId": "우치하-마다라-완성체-스사노오__n0AK",
+      "resultNameKo": "우치하 마다라 완성체 스사노오",
+      "category": "infinity",
+      "materials": [
+        {
+          "unitId": "완전체-10미__h05G",
+          "nameKo": "완전체 10미",
+          "grade": "special",
+          "count": 1
+        },
+        {
+          "unitId": "우치하-마다라-스사노오__n0A7",
+          "nameKo": "우치하 마다라 스사노오",
+          "grade": "epic",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0UQ"
+    },
+    {
+      "id": "r_메카-나루토-7610__n05I",
+      "resultId": "메카-나루토-7610__n05I",
+      "resultNameKo": "메카 나루토 7610",
+      "category": "limit",
+      "materials": [
+        {
+          "unitId": "우즈마키-나루토-꼬리4개-해방__h02V",
+          "nameKo": "우즈마키 나루토 꼬리4개 해방",
+          "grade": "unique",
+          "count": 1
+        },
+        {
+          "unitId": "아키미치-쵸지-각성모드__h01U",
+          "nameKo": "아키미치 쵸지 각성모드",
+          "grade": "hidden",
+          "count": 1
+        },
+        {
+          "unitId": "쥬고-완전-주인화__h06S",
+          "nameKo": "쥬고 완전 주인화",
+          "grade": "hidden",
+          "count": 1
+        },
+        {
+          "unitId": "야마토-호카게-직속암부__h04B",
+          "nameKo": "야마토 호카게 직속암부",
+          "grade": "legend",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A006"
+    },
+    {
+      "id": "r_메카-나루토-9999__n05N",
+      "resultId": "메카-나루토-9999__n05N",
+      "resultNameKo": "메카 나루토 9999",
+      "category": "limit",
+      "materials": [
+        {
+          "unitId": "우즈마키-나루토-꼬리4개-해방__h02V",
+          "nameKo": "우즈마키 나루토 꼬리4개 해방",
+          "grade": "unique",
+          "count": 1
+        },
+        {
+          "unitId": "아키미치-쵸지-각성모드__h01U",
+          "nameKo": "아키미치 쵸지 각성모드",
+          "grade": "hidden",
+          "count": 1
+        },
+        {
+          "unitId": "쥬고-완전-주인화__h06S",
+          "nameKo": "쥬고 완전 주인화",
+          "grade": "hidden",
+          "count": 1
+        },
+        {
+          "unitId": "야마토-호카게-직속암부__h04B",
+          "nameKo": "야마토 호카게 직속암부",
+          "grade": "legend",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0FR"
+    },
+    {
+      "id": "r_카쿠즈-완전변형__n08K",
+      "resultId": "카쿠즈-완전변형__n08K",
+      "resultNameKo": "카쿠즈 완전변형",
+      "category": "limit",
+      "materials": [
+        {
+          "unitId": "나루토-나선수리검__h023",
+          "nameKo": "나루토 나선수리검",
+          "grade": "rare",
+          "count": 1
+        },
+        {
+          "unitId": "카쿠즈-아카츠키__n058",
+          "nameKo": "카쿠즈 아카츠키",
+          "grade": "rare",
+          "count": 1
+        },
+        {
+          "unitId": "야마토-암부__h076",
+          "nameKo": "야마토 암부",
+          "grade": "unique",
+          "count": 1
+        },
+        {
+          "unitId": "하타케-카카시-만화경사륜안__h02D",
+          "nameKo": "하타케 카카시 만화경사륜안",
+          "grade": "unique",
+          "count": 1
+        },
+        {
+          "unitId": "니이-유기토-2미의-인주력__h02O",
+          "nameKo": "니이 유기토 2미의 인주력",
+          "grade": "jinchuriki",
+          "count": 1
+        },
+        {
+          "unitId": "후우-7미의-인주력__h02M",
+          "nameKo": "후우 7미의 인주력",
+          "grade": "jinchuriki",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0D0"
+    },
+    {
+      "id": "r_1미-슈카쿠__h022",
+      "resultId": "1미-슈카쿠__h022",
+      "resultNameKo": "1미 슈카쿠",
+      "category": "bijuu",
+      "materials": [
+        {
+          "unitId": "아부라메-시노__h07A",
+          "nameKo": "아부라메 시노",
+          "grade": "rare",
+          "count": 1
+        },
+        {
+          "unitId": "칸쿠로__h05W",
+          "nameKo": "칸쿠로",
+          "grade": "rare",
+          "count": 1
+        },
+        {
+          "unitId": "가아라-카제카게__n05S",
+          "nameKo": "가아라 카제카게",
+          "grade": "jinchuriki",
+          "count": 1
+        },
+        {
+          "unitId": "데이다라-예토전생__h04D",
+          "nameKo": "데이다라 예토전생",
+          "grade": "legend",
+          "count": 1
+        },
+        {
+          "unitId": "키미마로__h05B",
+          "nameKo": "키미마로",
+          "grade": "unique",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0V3"
+    },
+    {
+      "id": "r_2미-마타타비__h00D",
+      "resultId": "2미-마타타비__h00D",
+      "resultNameKo": "2미 마타타비",
+      "category": "bijuu",
+      "materials": [
+        {
+          "unitId": "니이-유기토-2미의-인주력__h02O",
+          "nameKo": "니이 유기토 2미의 인주력",
+          "grade": "jinchuriki",
+          "count": 1
+        },
+        {
+          "unitId": "자부자-예토전생__h0AF",
+          "nameKo": "자부자 예토전생",
+          "grade": "legend",
+          "count": 1
+        },
+        {
+          "unitId": "쿠로츠치-츠치카게의-손녀__h0AC",
+          "nameKo": "쿠로츠치 츠치카게의 손녀",
+          "grade": "hidden",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0V4"
+    },
+    {
+      "id": "r_3미-이소부__h04Q",
+      "resultId": "3미-이소부__h04Q",
+      "resultNameKo": "3미 이소부",
+      "category": "bijuu",
+      "materials": [
+        {
+          "unitId": "야구라-3미의-인주력__h02P",
+          "nameKo": "야구라 3미의 인주력",
+          "grade": "jinchuriki",
+          "count": 1
+        },
+        {
+          "unitId": "구렌-정둔술사__h05D",
+          "nameKo": "구렌 정둔술사",
+          "grade": "elite",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0V5"
+    },
+    {
+      "id": "r_4미-손고쿠__h04T",
+      "resultId": "4미-손고쿠__h04T",
+      "resultNameKo": "4미 손고쿠",
+      "category": "bijuu",
+      "materials": [
+        {
+          "unitId": "로우시-4미의-인주력__h02T",
+          "nameKo": "로우시 4미의 인주력",
+          "grade": "jinchuriki",
+          "count": 1
+        },
+        {
+          "unitId": "데이다라-예토전생__h04D",
+          "nameKo": "데이다라 예토전생",
+          "grade": "legend",
+          "count": 1
+        },
+        {
+          "unitId": "쿠로츠치-츠치카게의-손녀__h0AC",
+          "nameKo": "쿠로츠치 츠치카게의 손녀",
+          "grade": "hidden",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0V6"
+    },
+    {
+      "id": "r_5미-코쿠오__h04P",
+      "resultId": "5미-코쿠오__h04P",
+      "resultNameKo": "5미 코쿠오",
+      "category": "bijuu",
+      "materials": [
+        {
+          "unitId": "한-5미의-인주력__h02W",
+          "nameKo": "한 5미의 인주력",
+          "grade": "jinchuriki",
+          "count": 1
+        },
+        {
+          "unitId": "야마토-호카게-직속암부__h04B",
+          "nameKo": "야마토 호카게 직속암부",
+          "grade": "legend",
+          "count": 1
+        },
+        {
+          "unitId": "키미마로__h05B",
+          "nameKo": "키미마로",
+          "grade": "unique",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0V7"
+    },
+    {
+      "id": "r_6미-사이켄__h02S",
+      "resultId": "6미-사이켄__h02S",
+      "resultNameKo": "6미 사이켄",
+      "category": "bijuu",
+      "materials": [
+        {
+          "unitId": "우타카타-6미의-인주력__h02Z",
+          "nameKo": "우타카타 6미의 인주력",
+          "grade": "jinchuriki",
+          "count": 1
+        },
+        {
+          "unitId": "우즈마키-쿠시나__h08R",
+          "nameKo": "우즈마키 쿠시나",
+          "grade": "legend",
+          "count": 1
+        },
+        {
+          "unitId": "엔마-원후왕__h003",
+          "nameKo": "엔마 원후왕",
+          "grade": "unique",
+          "count": 1
+        },
+        {
+          "unitId": "코테츠__n07P",
+          "nameKo": "코테츠",
+          "grade": "rare",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0V8"
+    },
+    {
+      "id": "r_8미-규우키__h010",
+      "resultId": "8미-규우키__h010",
+      "resultNameKo": "8미 규우키",
+      "category": "bijuu",
+      "materials": [
+        {
+          "unitId": "호시가키-키사메-꼬리없는-미수__h02G",
+          "nameKo": "호시가키 키사메 꼬리없는 미수",
+          "grade": "hidden",
+          "count": 1
+        },
+        {
+          "unitId": "킬러-비-미수화__h07L",
+          "nameKo": "킬러 비 미수화",
+          "grade": "legend",
+          "count": 1
+        },
+        {
+          "unitId": "마이트-가이__h05K",
+          "nameKo": "마이트 가이",
+          "grade": "legend",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0V9"
+    },
+    {
+      "id": "r_10미-불명__h04I",
+      "resultId": "10미-불명__h04I",
+      "resultNameKo": "10미 불명",
+      "category": "bijuu",
+      "materials": [
+        {
+          "unitId": "토비-달의-눈-계획__h04F",
+          "nameKo": "토비 달의 눈 계획",
+          "grade": "legend",
+          "count": 1
+        },
+        {
+          "unitId": "센쥬-하시라마-1대-호카게__h00K",
+          "nameKo": "센쥬 하시라마 1대 호카게",
+          "grade": "hidden",
+          "count": 1
+        },
+        {
+          "unitId": "가아라-반수화-상태__h02B",
+          "nameKo": "가아라 반수화 상태",
+          "grade": "unique",
+          "count": 1
+        },
+        {
+          "unitId": "만다__h017",
+          "nameKo": "만다",
+          "grade": "rare",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0VB"
+    },
+    {
+      "id": "r_우즈마키-나가토-예토전생__n0AU",
+      "resultId": "우즈마키-나가토-예토전생__n0AU",
+      "resultNameKo": "우즈마키 나가토 예토전생",
+      "category": "epic",
+      "materials": [
+        {
+          "unitId": "우즈마키-나루토-꼬리4개-해방__h02V",
+          "nameKo": "우즈마키 나루토 꼬리4개 해방",
+          "grade": "unique",
+          "count": 1
+        },
+        {
+          "unitId": "킬러-비-8미의-인주력__h00P",
+          "nameKo": "킬러 비 8미의 인주력",
+          "grade": "unique",
+          "count": 1
+        },
+        {
+          "unitId": "우즈마키-나가토__h09N",
+          "nameKo": "우즈마키 나가토",
+          "grade": "legend",
+          "count": 1
+        },
+        {
+          "unitId": "우치하-이타치-스사노오-1단계__h01X",
+          "nameKo": "우치하 이타치 스사노오 1단계",
+          "grade": "legend",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0VO"
+    },
+    {
+      "id": "r_9미-쿠라마__h04R",
+      "resultId": "9미-쿠라마__h04R",
+      "resultNameKo": "9미 쿠라마",
+      "category": "bijuu",
+      "materials": [
+        {
+          "unitId": "우즈마키-나가토__h09N",
+          "nameKo": "우즈마키 나가토",
+          "grade": "legend",
+          "count": 1
+        },
+        {
+          "unitId": "코난-아카츠키__h00V",
+          "nameKo": "코난 아카츠키",
+          "grade": "legend",
+          "count": 1
+        },
+        {
+          "unitId": "우즈마키-나루토-꼬리4개-해방__h02V",
+          "nameKo": "우즈마키 나루토 꼬리4개 해방",
+          "grade": "unique",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0H9"
+    },
+    {
+      "id": "r_호즈키-겐게츠-2대-미즈카게__n0AQ",
+      "resultId": "호즈키-겐게츠-2대-미즈카게__n0AQ",
+      "resultNameKo": "호즈키 겐게츠 2대 미즈카게",
+      "category": "epic",
+      "materials": [
+        {
+          "unitId": "가아라-반수화-상태__h02B",
+          "nameKo": "가아라 반수화 상태",
+          "grade": "unique",
+          "count": 1
+        },
+        {
+          "unitId": "우타카타-6미의-인주력__h02Z",
+          "nameKo": "우타카타 6미의 인주력",
+          "grade": "jinchuriki",
+          "count": 1
+        },
+        {
+          "unitId": "데이다라-예토전생__h04D",
+          "nameKo": "데이다라 예토전생",
+          "grade": "legend",
+          "count": 1
+        },
+        {
+          "unitId": "한조-예토전생__h05I",
+          "nameKo": "한조 예토전생",
+          "grade": "legend",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0BN"
+    },
+    {
+      "id": "r_금은형제-킨카쿠__n04Y",
+      "resultId": "금은형제-킨카쿠__n04Y",
+      "resultNameKo": "금은형제 킨카쿠",
+      "category": "elite",
+      "materials": [
+        {
+          "unitId": "아키미치-쵸지-각성모드__h01U",
+          "nameKo": "아키미치 쵸지 각성모드",
+          "grade": "hidden",
+          "count": 1
+        },
+        {
+          "unitId": "우즈마키-나루토-꼬리6개-해방__h094",
+          "nameKo": "우즈마키 나루토 꼬리6개 해방",
+          "grade": "legend",
+          "count": 1
+        },
+        {
+          "unitId": "한조-예토전생__h05I",
+          "nameKo": "한조 예토전생",
+          "grade": "legend",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0XE"
+    },
+    {
+      "id": "r_휴우가-하나비-꽃불의-회천__n07D",
+      "resultId": "휴우가-하나비-꽃불의-회천__n07D",
+      "resultNameKo": "휴우가 하나비 꽃불의 회천",
+      "category": "infinity",
+      "materials": [
+        {
+          "unitId": "아부라메-시노__h07A",
+          "nameKo": "아부라메 시노",
+          "grade": "rare",
+          "count": 1
+        },
+        {
+          "unitId": "우즈마키-쿠시나__h08R",
+          "nameKo": "우즈마키 쿠시나",
+          "grade": "legend",
+          "count": 1
+        },
+        {
+          "unitId": "휴우가-네지-백안__h05O",
+          "nameKo": "휴우가 네지 백안",
+          "grade": "legend",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0YE"
+    },
+    {
+      "id": "r_육도선인-십미의-인주력__h07V",
+      "resultId": "육도선인-십미의-인주력__h07V",
+      "resultNameKo": "육도선인 십미의 인주력",
+      "category": "ruin",
+      "materials": [
+        {
+          "unitId": "토비__h01F",
+          "nameKo": "토비",
+          "grade": "special",
+          "count": 1
+        },
+        {
+          "unitId": "우치하-마다라__h00Y",
+          "nameKo": "우치하 마다라",
+          "grade": "legend",
+          "count": 1
+        },
+        {
+          "unitId": "우치하-사스케-스사노오-1단계__h036",
+          "nameKo": "우치하 사스케 스사노오 1단계",
+          "grade": "legend",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0GU"
+    },
+    {
+      "id": "r_도박광-츠나데-인생을-건-도박사__h08U",
+      "resultId": "도박광-츠나데-인생을-건-도박사__h08U",
+      "resultNameKo": "도박광 츠나데 인생을 건 도박사",
+      "category": "special",
+      "materials": [
+        {
+          "unitId": "오로치마루-아카츠키__h09Y",
+          "nameKo": "오로치마루 아카츠키",
+          "grade": "unique",
+          "count": 1
+        },
+        {
+          "unitId": "센쥬-츠나데-백호의-술__h04A",
+          "nameKo": "센쥬 츠나데 백호의 술",
+          "grade": "legend",
+          "count": 1
+        },
+        {
+          "unitId": "지라이야-선인모드__h08G",
+          "nameKo": "지라이야 선인모드",
+          "grade": "legend",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0IN"
+    },
+    {
+      "id": "r_우치하-마다라-스사노오__n0A7",
+      "resultId": "우치하-마다라-스사노오__n0A7",
+      "resultNameKo": "우치하 마다라 스사노오",
+      "category": "epic",
+      "materials": [
+        {
+          "unitId": "야마토-암부__h076",
+          "nameKo": "야마토 암부",
+          "grade": "unique",
+          "count": 1
+        },
+        {
+          "unitId": "우치하-마다라__h00Y",
+          "nameKo": "우치하 마다라",
+          "grade": "legend",
+          "count": 1
+        },
+        {
+          "unitId": "우즈마키-나루토-꼬리6개-해방__h094",
+          "nameKo": "우즈마키 나루토 꼬리6개 해방",
+          "grade": "legend",
+          "count": 1
+        },
+        {
+          "unitId": "토비__h01F",
+          "nameKo": "토비",
+          "grade": "special",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A0Z6"
+    },
+    {
+      "id": "r_우즈마키-나루토-바람의-신__h0BK",
+      "resultId": "우즈마키-나루토-바람의-신__h0BK",
+      "resultNameKo": "우즈마키 나루토 바람의 신",
+      "category": "epic",
+      "materials": [
+        {
+          "unitId": "우즈마키-나루토-선인모드__h001",
+          "nameKo": "우즈마키 나루토 선인모드",
+          "grade": "epic",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A16X"
+    },
+    {
+      "id": "r_하타케-카카시-the-last__h0BH",
+      "resultId": "하타케-카카시-the-last__h0BH",
+      "resultNameKo": "하타케 카카시 THE LAST",
+      "category": "epic",
+      "materials": [
+        {
+          "unitId": "시무라-단조__h00O",
+          "nameKo": "시무라 단조",
+          "grade": "hidden",
+          "count": 1
+        },
+        {
+          "unitId": "나라-시카마루-타고난-천재__n054",
+          "nameKo": "나라 시카마루 타고난 천재",
+          "grade": "legend",
+          "count": 1
+        },
+        {
+          "unitId": "지라이야-선인모드__h08G",
+          "nameKo": "지라이야 선인모드",
+          "grade": "legend",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A171"
+    },
+    {
+      "id": "r_우치하-시스이-순신__h09D",
+      "resultId": "우치하-시스이-순신__h09D",
+      "resultNameKo": "우치하 시스이 순신",
+      "category": "legend",
+      "materials": [
+        {
+          "unitId": "코난-아카츠키__h00V",
+          "nameKo": "코난 아카츠키",
+          "grade": "legend",
+          "count": 1
+        },
+        {
+          "unitId": "우치하-사스케-2년-후__h01V",
+          "nameKo": "우치하 사스케 2년 후",
+          "grade": "unique",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A104"
+    },
+    {
+      "id": "r_시무라-단조-뿌리의-수장__n078",
+      "resultId": "시무라-단조-뿌리의-수장__n078",
+      "resultNameKo": "시무라 단조 뿌리의 수장",
+      "category": "epic",
+      "materials": [
+        {
+          "unitId": "우치하-시스이-순신__h09D",
+          "nameKo": "우치하 시스이 순신",
+          "grade": "legend",
+          "count": 1
+        },
+        {
+          "unitId": "시무라-단조__h00O",
+          "nameKo": "시무라 단조",
+          "grade": "hidden",
+          "count": 1
+        },
+        {
+          "unitId": "사이-뿌리닌자__h09P",
+          "nameKo": "사이 뿌리닌자",
+          "grade": "unique",
+          "count": 1
+        },
+        {
+          "unitId": "하타케-카카시-암부__h00B",
+          "nameKo": "하타케 카카시 암부",
+          "grade": "rare",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A108"
+    },
+    {
+      "id": "r_소용돌이-제츠-아카츠키__n071",
+      "resultId": "소용돌이-제츠-아카츠키__n071",
+      "resultNameKo": "소용돌이 제츠 아카츠키",
+      "category": "epic",
+      "materials": [
+        {
+          "unitId": "센쥬-하시라마-1대-호카게__h00K",
+          "nameKo": "센쥬 하시라마 1대 호카게",
+          "grade": "hidden",
+          "count": 1
+        },
+        {
+          "unitId": "키미마로-주인해방__h09X",
+          "nameKo": "키미마로 주인해방",
+          "grade": "legend",
+          "count": 1
+        },
+        {
+          "unitId": "노하라-린__n07Q",
+          "nameKo": "노하라 린",
+          "grade": "unique",
+          "count": 1
+        },
+        {
+          "unitId": "코테츠__n07P",
+          "nameKo": "코테츠",
+          "grade": "rare",
+          "count": 1
+        },
+        {
+          "unitId": "츠나데-전설의3닌자__h01O",
+          "nameKo": "츠나데 전설의3닌자",
+          "grade": "magic",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A10C"
+    },
+    {
+      "id": "r_휴우가-히나타-the-last__n0CC",
+      "resultId": "휴우가-히나타-the-last__n0CC",
+      "resultNameKo": "휴우가 히나타 THE LAST",
+      "category": "infinity",
+      "materials": [
+        {
+          "unitId": "하나비의-백안__h065",
+          "nameKo": "하나비의 백안",
+          "grade": "special",
+          "count": 1
+        },
+        {
+          "unitId": "휴우가-히나타-유보쌍사권__h0B8",
+          "nameKo": "휴우가 히나타 유보쌍사권",
+          "grade": "epic",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A10U"
+    },
+    {
+      "id": "r_우치하-오비토-지옥의-난__n0C5",
+      "resultId": "우치하-오비토-지옥의-난__n0C5",
+      "resultNameKo": "우치하 오비토 지옥의 난",
+      "category": "epic",
+      "materials": [
+        {
+          "unitId": "사소리-아카츠키__h03E",
+          "nameKo": "사소리 아카츠키",
+          "grade": "hidden",
+          "count": 1
+        },
+        {
+          "unitId": "호즈키-만게츠-예토전생__h04O",
+          "nameKo": "호즈키 만게츠 예토전생",
+          "grade": "hidden",
+          "count": 1
+        },
+        {
+          "unitId": "토비-달의-눈-계획__h04F",
+          "nameKo": "토비 달의 눈 계획",
+          "grade": "legend",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A11G"
+    },
+    {
+      "id": "r_하루노-사쿠라-the-last__h0AI",
+      "resultId": "하루노-사쿠라-the-last__h0AI",
+      "resultNameKo": "하루노 사쿠라 THE LAST",
+      "category": "infinity",
+      "materials": [
+        {
+          "unitId": "휴우가-네지-백안__h05O",
+          "nameKo": "휴우가 네지 백안",
+          "grade": "legend",
+          "count": 1
+        },
+        {
+          "unitId": "우치하-사스케-기린__h06E",
+          "nameKo": "우치하 사스케 기린",
+          "grade": "hidden",
+          "count": 1
+        },
+        {
+          "unitId": "시즈네__h07Y",
+          "nameKo": "시즈네",
+          "grade": "unique",
+          "count": 1
+        },
+        {
+          "unitId": "야마나카-이노__h02Q",
+          "nameKo": "야마나카 이노",
+          "grade": "rare",
+          "count": 1
+        },
+        {
+          "unitId": "카츠유__h01I",
+          "nameKo": "카츠유",
+          "grade": "rare",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A13C"
+    },
+    {
+      "id": "r_지라이야-두꺼비-선인__h0AJ",
+      "resultId": "지라이야-두꺼비-선인__h0AJ",
+      "resultNameKo": "지라이야 두꺼비 선인",
+      "category": "limit",
+      "materials": [
+        {
+          "unitId": "지라이야-선인모드__h08G",
+          "nameKo": "지라이야 선인모드",
+          "grade": "legend",
+          "count": 1
+        },
+        {
+          "unitId": "코난-아카츠키__h00V",
+          "nameKo": "코난 아카츠키",
+          "grade": "legend",
+          "count": 1
+        },
+        {
+          "unitId": "아키미치-쵸지-각성모드__h01U",
+          "nameKo": "아키미치 쵸지 각성모드",
+          "grade": "hidden",
+          "count": 1
+        },
+        {
+          "unitId": "휴우가-히나타-백안__h080",
+          "nameKo": "휴우가 히나타 백안",
+          "grade": "unique",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A13H"
+    },
+    {
+      "id": "r_미츠키-제-7반-멤버__h0AR",
+      "resultId": "미츠키-제-7반-멤버__h0AR",
+      "resultNameKo": "미츠키 제 7반 멤버",
+      "category": "epic",
+      "materials": [
+        {
+          "unitId": "우치하-시스이-순신__h09D",
+          "nameKo": "우치하 시스이 순신",
+          "grade": "legend",
+          "count": 1
+        },
+        {
+          "unitId": "한조-예토전생__h05I",
+          "nameKo": "한조 예토전생",
+          "grade": "legend",
+          "count": 1
+        },
+        {
+          "unitId": "테마리-풍둔술사__h0A1",
+          "nameKo": "테마리 풍둔술사",
+          "grade": "hidden",
+          "count": 1
+        },
+        {
+          "unitId": "사소리-히루코__h161",
+          "nameKo": "사소리 히루코",
+          "grade": "rare",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A15F"
+    },
+    {
+      "id": "r_금은형제-긴카쿠__n04V",
+      "resultId": "금은형제-긴카쿠__n04V",
+      "resultNameKo": "금은형제 긴카쿠",
+      "category": "elite",
+      "materials": [
+        {
+          "unitId": "한-5미의-인주력__h02W",
+          "nameKo": "한 5미의 인주력",
+          "grade": "jinchuriki",
+          "count": 1
+        },
+        {
+          "unitId": "다루이-혈계한계-람둔__h069",
+          "nameKo": "다루이 혈계한계 람둔",
+          "grade": "legend",
+          "count": 1
+        },
+        {
+          "unitId": "킬러-비-8미의-인주력__h00P",
+          "nameKo": "킬러 비 8미의 인주력",
+          "grade": "unique",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A15T"
+    },
+    {
+      "id": "r_오오츠츠키-우라시키-시간을-다루는-자__n0D5",
+      "resultId": "오오츠츠키-우라시키-시간을-다루는-자__n0D5",
+      "resultNameKo": "오오츠츠키 우라시키 시간을 다루는 자",
+      "category": "infinity",
+      "materials": [
+        {
+          "unitId": "토비-달의-눈-계획__h04F",
+          "nameKo": "토비 달의 눈 계획",
+          "grade": "legend",
+          "count": 1
+        },
+        {
+          "unitId": "우즈마키-나루토-꼬리6개-해방__h094",
+          "nameKo": "우즈마키 나루토 꼬리6개 해방",
+          "grade": "legend",
+          "count": 1
+        },
+        {
+          "unitId": "쥬고-완전-주인화__h06S",
+          "nameKo": "쥬고 완전 주인화",
+          "grade": "hidden",
+          "count": 1
+        },
+        {
+          "unitId": "가아라__h00S",
+          "nameKo": "가아라",
+          "grade": "rare",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A16E"
+    },
+    {
+      "id": "r_오오츠츠키-우라시키-금색의-윤회안__n0D4",
+      "resultId": "오오츠츠키-우라시키-금색의-윤회안__n0D4",
+      "resultNameKo": "오오츠츠키 우라시키 금색의 윤회안",
+      "category": "creation",
+      "materials": [
+        {
+          "unitId": "오오츠츠키-우라시키-시간을-다루는-자__n0D5",
+          "nameKo": "오오츠츠키 우라시키 시간을 다루는 자",
+          "grade": "infinity",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A174"
+    },
+    {
+      "id": "r_휴유가-네지__h0AX",
+      "resultId": "휴유가-네지__h0AX",
+      "resultNameKo": "휴유가 네지",
+      "category": "limit",
+      "materials": [
+        {
+          "unitId": "킬러-비-미수화__h07L",
+          "nameKo": "킬러 비 미수화",
+          "grade": "legend",
+          "count": 1
+        },
+        {
+          "unitId": "휴우가-네지-백안__h05O",
+          "nameKo": "휴우가 네지 백안",
+          "grade": "legend",
+          "count": 1
+        },
+        {
+          "unitId": "니이-유기토-2미의-인주력__h02O",
+          "nameKo": "니이 유기토 2미의 인주력",
+          "grade": "jinchuriki",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A17A"
+    },
+    {
+      "id": "r_우치하-사스케-아카츠키__h0B5",
+      "resultId": "우치하-사스케-아카츠키__h0B5",
+      "resultNameKo": "우치하 사스케 아카츠키",
+      "category": "limit",
+      "materials": [
+        {
+          "unitId": "우치하-사스케-2년-후__h01V",
+          "nameKo": "우치하 사스케 2년 후",
+          "grade": "unique",
+          "count": 1
+        },
+        {
+          "unitId": "자부자-예토전생__h0AF",
+          "nameKo": "자부자 예토전생",
+          "grade": "legend",
+          "count": 1
+        },
+        {
+          "unitId": "야마토-호카게-직속암부__h04B",
+          "nameKo": "야마토 호카게 직속암부",
+          "grade": "legend",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A169"
+    },
+    {
+      "id": "r_오오츠츠키-킨시키-충성의-철벽__h0BB",
+      "resultId": "오오츠츠키-킨시키-충성의-철벽__h0BB",
+      "resultNameKo": "오오츠츠키 킨시키 충성의 철벽",
+      "category": "epic",
+      "materials": [
+        {
+          "unitId": "우치하-이타치-스사노오-1단계__h01X",
+          "nameKo": "우치하 이타치 스사노오 1단계",
+          "grade": "legend",
+          "count": 1
+        },
+        {
+          "unitId": "키미마로-주인해방__h09X",
+          "nameKo": "키미마로 주인해방",
+          "grade": "legend",
+          "count": 1
+        },
+        {
+          "unitId": "센쥬-토비라마-2대-호카게__h00N",
+          "nameKo": "센쥬 토비라마 2대 호카게",
+          "grade": "hidden",
+          "count": 1
+        },
+        {
+          "unitId": "아스마__h029",
+          "nameKo": "아스마",
+          "grade": "rare",
+          "count": 1
+        },
+        {
+          "unitId": "우치하-이타치-암부__h007",
+          "nameKo": "우치하 이타치 암부",
+          "grade": "rare",
+          "count": 1
+        }
+      ],
+      "source": "w3a:A17N"
+    },
+    {
+      "id": "r_우치하-사스케-기린__h06E",
+      "resultId": "우치하-사스케-기린__h06E",
+      "resultNameKo": "우치하 사스케 기린",
+      "category": "hidden",
+      "materials": [
+        {
+          "unitId": "우치하-사스케-2년-후__h01V",
+          "nameKo": "우치하 사스케 2년 후",
+          "grade": "unique",
+          "count": 1
+        },
+        {
+          "unitId": "우치하-이타치-아카츠키__h02C",
+          "nameKo": "우치하 이타치 아카츠키",
+          "grade": "unique",
+          "count": 1
+        },
+        {
+          "unitId": "우치하-사스케-주인2__h005",
+          "nameKo": "우치하 사스케 주인2",
+          "grade": "rare",
+          "count": 1
+        }
+      ],
+      "source": "script"
+    },
+    {
+      "id": "r_시무라-단조__h00O",
+      "resultId": "시무라-단조__h00O",
+      "resultNameKo": "시무라 단조",
+      "category": "hidden",
+      "materials": [
+        {
+          "unitId": "쿠레나이__h04W",
+          "nameKo": "쿠레나이",
+          "grade": "unique",
+          "count": 1
+        },
+        {
+          "unitId": "야마토-암부__h076",
+          "nameKo": "야마토 암부",
+          "grade": "unique",
+          "count": 1
+        }
+      ],
+      "source": "script"
+    },
+    {
+      "id": "r_센쥬-하시라마-1대-호카게__h00K",
+      "resultId": "센쥬-하시라마-1대-호카게__h00K",
+      "resultNameKo": "센쥬 하시라마 1대 호카게",
+      "category": "hidden",
+      "materials": [
+        {
+          "unitId": "야마토-암부__h076",
+          "nameKo": "야마토 암부",
+          "grade": "unique",
+          "count": 1
+        },
+        {
+          "unitId": "우치하-이타치-아카츠키__h02C",
+          "nameKo": "우치하 이타치 아카츠키",
+          "grade": "unique",
+          "count": 1
+        }
+      ],
+      "source": "script"
+    },
+    {
+      "id": "r_센쥬-토비라마-2대-호카게__h00N",
+      "resultId": "센쥬-토비라마-2대-호카게__h00N",
+      "resultNameKo": "센쥬 토비라마 2대 호카게",
+      "category": "hidden",
+      "materials": [
+        {
+          "unitId": "지라이야-호걸__h01G",
+          "nameKo": "지라이야 호걸",
+          "grade": "unique",
+          "count": 1
+        },
+        {
+          "unitId": "오로치마루-아카츠키__h09Y",
+          "nameKo": "오로치마루 아카츠키",
+          "grade": "unique",
+          "count": 1
+        }
+      ],
+      "source": "script"
+    },
+    {
+      "id": "r_미타라시-앙코__h04Y",
+      "resultId": "미타라시-앙코__h04Y",
+      "resultNameKo": "미타라시 앙코",
+      "category": "hidden",
+      "materials": [
+        {
+          "unitId": "오로치마루-아카츠키__h09Y",
+          "nameKo": "오로치마루 아카츠키",
+          "grade": "unique",
+          "count": 1
+        },
+        {
+          "unitId": "시즈네__h07Y",
+          "nameKo": "시즈네",
+          "grade": "unique",
+          "count": 1
+        }
+      ],
+      "source": "script"
+    },
+    {
+      "id": "r_테마리-풍둔술사__h0A1",
+      "resultId": "테마리-풍둔술사__h0A1",
+      "resultNameKo": "테마리 풍둔술사",
+      "category": "hidden",
+      "materials": [
+        {
+          "unitId": "텐텐__h01P",
+          "nameKo": "텐텐",
+          "grade": "unique",
+          "count": 1
+        },
+        {
+          "unitId": "록-리-연화__h0AQ",
+          "nameKo": "록 리 연화",
+          "grade": "unique",
+          "count": 1
+        }
+      ],
+      "source": "script"
+    },
+    {
+      "id": "r_호시가키-키사메-꼬리없는-미수__h02G",
+      "resultId": "호시가키-키사메-꼬리없는-미수__h02G",
+      "resultNameKo": "호시가키 키사메 꼬리없는 미수",
+      "category": "hidden",
+      "materials": [
+        {
+          "unitId": "록-리-연화__h0AQ",
+          "nameKo": "록 리 연화",
+          "grade": "unique",
+          "count": 1
+        },
+        {
+          "unitId": "쵸주로-닌자도-7인방__h03D",
+          "nameKo": "쵸주로 닌자도 7인방",
+          "grade": "unique",
+          "count": 1
+        }
+      ],
+      "source": "script"
+    },
+    {
+      "id": "r_호즈키-만게츠-예토전생__h04O",
+      "resultId": "호즈키-만게츠-예토전생__h04O",
+      "resultNameKo": "호즈키 만게츠 예토전생",
+      "category": "hidden",
+      "materials": [
+        {
+          "unitId": "쵸주로-닌자도-7인방__h03D",
+          "nameKo": "쵸주로 닌자도 7인방",
+          "grade": "unique",
+          "count": 1
+        },
+        {
+          "unitId": "자부자__h04X",
+          "nameKo": "자부자",
+          "grade": "unique",
+          "count": 1
+        }
+      ],
+      "source": "script"
+    },
+    {
+      "id": "r_쿠로츠치-츠치카게의-손녀__h0AC",
+      "resultId": "쿠로츠치-츠치카게의-손녀__h0AC",
+      "resultNameKo": "쿠로츠치 츠치카게의 손녀",
+      "category": "hidden",
+      "materials": [
+        {
+          "unitId": "가아라-반수화-상태__h02B",
+          "nameKo": "가아라 반수화 상태",
+          "grade": "unique",
+          "count": 1
+        },
+        {
+          "unitId": "사이-뿌리닌자__h09P",
+          "nameKo": "사이 뿌리닌자",
+          "grade": "unique",
+          "count": 1
+        }
+      ],
+      "source": "script"
+    },
+    {
+      "id": "r_사소리-아카츠키__h03E",
+      "resultId": "사소리-아카츠키__h03E",
+      "resultNameKo": "사소리 아카츠키",
+      "category": "hidden",
+      "materials": [
+        {
+          "unitId": "사소리-완전변형__h013",
+          "nameKo": "사소리 완전변형",
+          "grade": "unique",
+          "count": 1
+        },
+        {
+          "unitId": "칸쿠로-흑비기-인형술사__h060",
+          "nameKo": "칸쿠로 흑비기 인형술사",
+          "grade": "unique",
+          "count": 1
+        }
+      ],
+      "source": "script"
+    },
+    {
+      "id": "r_쥬고-완전-주인화__h06S",
+      "resultId": "쥬고-완전-주인화__h06S",
+      "resultNameKo": "쥬고 완전 주인화",
+      "category": "hidden",
+      "materials": [
+        {
+          "unitId": "쥬고-주인화__h07R",
+          "nameKo": "쥬고 주인화",
+          "grade": "unique",
+          "count": 2
+        }
+      ],
+      "source": "script"
+    },
+    {
+      "id": "r_아키미치-쵸지-각성모드__h01U",
+      "resultId": "아키미치-쵸지-각성모드__h01U",
+      "resultNameKo": "아키미치 쵸지 각성모드",
+      "category": "hidden",
+      "materials": [
+        {
+          "unitId": "아스마__h029",
+          "nameKo": "아스마",
+          "grade": "rare",
+          "count": 3
+        },
+        {
+          "unitId": "야마나카-이노__h02Q",
+          "nameKo": "야마나카 이노",
+          "grade": "rare",
+          "count": 1
+        }
+      ],
+      "source": "script"
+    },
+    {
+      "id": "r_휴우가-네지__n005",
+      "resultId": "휴우가-네지__n005",
+      "resultNameKo": "휴우가 네지",
+      "category": "limit",
+      "materials": [
+        {
+          "unitId": "킬러-비-미수화__h07L",
+          "nameKo": "킬러 비 미수화",
+          "grade": "legend",
+          "count": 1
+        },
+        {
+          "unitId": "휴우가-네지-백안__h05O",
+          "nameKo": "휴우가 네지 백안",
+          "grade": "legend",
+          "count": 1
+        },
+        {
+          "unitId": "니이-유기토-2미의-인주력__h02O",
+          "nameKo": "니이 유기토 2미의 인주력",
+          "grade": "jinchuriki",
+          "count": 1
+        }
+      ],
+      "source": "script"
+    },
+    {
+      "id": "r_도박광-츠나데__h08H",
+      "resultId": "도박광-츠나데__h08H",
+      "resultNameKo": "도박광 츠나데",
+      "category": "special",
+      "materials": [
+        {
+          "unitId": "지라이야-선인모드__h08G",
+          "nameKo": "지라이야 선인모드",
+          "grade": "legend",
+          "count": 1
+        },
+        {
+          "unitId": "센쥬-츠나데-백호의-술__h04A",
+          "nameKo": "센쥬 츠나데 백호의 술",
+          "grade": "legend",
+          "count": 1
+        },
+        {
+          "unitId": "오로치마루-아카츠키__h09Y",
+          "nameKo": "오로치마루 아카츠키",
+          "grade": "unique",
+          "count": 1
+        }
+      ],
+      "source": "script"
+    }
+  ],
+  "fuzzy": [
+    {
+      "grade": "legend",
+      "query": "사루토비 히루젠 3대 호카게",
+      "picked": "사루토비 히루젠 3대호카게",
+      "alternatives": [
+        "사루토비 히루젠 3대 호카게",
+        "사루토비 히루젠 3대호카게"
+      ]
+    },
+    {
+      "grade": "rare",
+      "query": "록 리",
+      "picked": "록리",
+      "alternatives": [
+        "록 리",
+        "록리"
+      ]
+    },
+    {
+      "grade": "rare",
+      "query": "록 리",
+      "picked": "록리",
+      "alternatives": [
+        "록 리",
+        "록리"
+      ]
+    },
+    {
+      "grade": "legend",
+      "query": "사루토비 히루젠 3대 호카게",
+      "picked": "사루토비 히루젠 3대호카게",
+      "alternatives": [
+        "사루토비 히루젠 3대 호카게",
+        "사루토비 히루젠 3대호카게"
+      ]
+    },
+    {
+      "grade": "epic",
+      "query": "하루노 사쿠라 백호의 술",
+      "picked": "하루노 사쿠라 백호의술",
+      "alternatives": [
+        "하루노 사쿠라 백호의 술",
+        "하루노 사쿠라 백호의술"
+      ]
+    },
+    {
+      "grade": "legend",
+      "query": "사루토비 히루젠 3대 호카게",
+      "picked": "사루토비 히루젠 3대호카게",
+      "alternatives": [
+        "사루토비 히루젠 3대 호카게",
+        "사루토비 히루젠 3대호카게"
+      ]
+    },
+    {
+      "grade": "legend",
+      "query": "사루토비 히루젠 3대 호카게",
+      "picked": "사루토비 히루젠 3대호카게",
+      "alternatives": [
+        "사루토비 히루젠 3대 호카게",
+        "사루토비 히루젠 3대호카게"
+      ]
+    },
+    {
+      "grade": "rare",
+      "query": "록 리",
+      "picked": "록리",
+      "alternatives": [
+        "록 리",
+        "록리"
+      ]
+    },
+    {
+      "grade": "epic",
+      "query": "가아라 닌자연합군 연대장",
+      "picked": "가아라 닌자연합군 연대장",
+      "alternatives": [
+        "가아라 닌자연합군 연대장",
+        "가아라 닌자 연합군 연대장"
+      ]
+    },
+    {
+      "grade": "rare",
+      "query": "록 리",
+      "picked": "록리",
+      "alternatives": [
+        "록 리",
+        "록리"
+      ]
+    },
+    {
+      "grade": "rare",
+      "query": "록 리",
+      "picked": "록리",
+      "alternatives": [
+        "록 리",
+        "록리"
+      ]
+    },
+    {
+      "grade": "legend",
+      "query": "사루토비 히루젠 3대 호카게",
+      "picked": "사루토비 히루젠 3대호카게",
+      "alternatives": [
+        "사루토비 히루젠 3대 호카게",
+        "사루토비 히루젠 3대호카게"
+      ]
+    },
+    {
+      "grade": "legend",
+      "query": "사루토비 히루젠 3대 호카게",
+      "picked": "사루토비 히루젠 3대호카게",
+      "alternatives": [
+        "사루토비 히루젠 3대 호카게",
+        "사루토비 히루젠 3대호카게"
+      ]
+    },
+    {
+      "grade": "legend",
+      "query": "사루토비 히루젠 3대 호카게",
+      "picked": "사루토비 히루젠 3대호카게",
+      "alternatives": [
+        "사루토비 히루젠 3대 호카게",
+        "사루토비 히루젠 3대호카게"
+      ]
+    },
+    {
+      "grade": "limit",
+      "query": "카쿠즈",
+      "picked": "카쿠즈 완전변형",
+      "alternatives": [
+        "카쿠즈 완전변형",
+        "카쿠즈 완전변형 지원구 : 화둔",
+        "카쿠즈 완전변형 지원구 : 풍둔",
+        "카쿠즈 완전변형 지원구 : 뇌둔"
+      ]
+    },
+    {
+      "grade": "limit",
+      "query": "네지",
+      "picked": "휴우가 네지",
+      "alternatives": [
+        "휴우가 네지",
+        "휴유가 네지"
+      ]
+    },
+    {
+      "grade": "special",
+      "query": "도박광",
+      "picked": "도박광 츠나데",
+      "alternatives": [
+        "도박광 츠나데",
+        "도박광 츠나데 인생을 건 도박사"
+      ]
+    },
+    {
+      "grade": "ruin",
+      "query": "육도",
+      "picked": "육도선인 십미의 인주력",
+      "alternatives": [
+        "육도선인 십미의 인주력",
+        "육도선인 십미의 인주력-개안"
+      ]
+    }
+  ],
+  "unresolved": [
+    {
+      "kind": "result",
+      "grade": "infinity",
+      "nameKo": "오오츠츠키 카구야 윤회사륜안",
+      "source": "w3a:A0MP"
+    },
+    {
+      "kind": "result",
+      "grade": "limit",
+      "nameKo": "메날(인,미)",
+      "source": "script"
+    },
+    {
+      "kind": "material",
+      "grade": "jinchuriki",
+      "nameKo": "1미~7미 인주력",
+      "count": 1,
+      "forResult": "사스케 스사노오 미수 차크라",
+      "source": "script"
+    }
+  ]
+}

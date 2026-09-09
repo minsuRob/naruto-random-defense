@@ -37,6 +37,7 @@
   "devDependencies": {
     "@types/react": "~19.2.2",
     "@types/three": "^0.185.4",
+    "mdx-m3-viewer": "^5.12.0",
     "typescript": "~6.0.3",
     "vitest": "^4.1.11"
   },
