@@ -1,56 +1,109 @@
-# Welcome to your Expo app 👋
+# 나루토 랜덤 디펜스 (R3F)
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+워크래프트 3 유즈맵 **나루토 랜덤 디펜스**를 React Three Fiber로 다시 만든 것.
+웹 우선이고, 모바일(Expo / expo-gl)로 넘어갈 수 있는 구조로 짜여 있다.
 
-## Get started
+몹은 시작 게이트에서 나와 진영 둘레를 **한 바퀴씩 계속 돈다**. 빠져나가는
+출구가 없으므로, 라인에 남은 몹 수가 **데스카운트**를 넘기면 그 순간 패배다.
 
-1. Install dependencies
-
-   ```bash
-   npm install
-   ```
-
-2. Start the app
-
-   ```bash
-   npx expo start
-   ```
-
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
+## 실행
 
 ```bash
-npm run reset-project
+npm install
+npm run web
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+`http://localhost:8081` (또는 `--port`로 지정한 포트)에서 타이틀 화면이 열리고,
+난이도를 고르면 `/game`으로 들어간다.
 
-### Other setup steps
+## 조작
 
-- To set up ESLint for linting, run `npx expo lint`, or follow our guide on ["Using ESLint and Prettier"](https://docs.expo.dev/guides/using-eslint/)
-- If you'd like to set up unit testing, follow our guide on ["Unit Testing with Jest"](https://docs.expo.dev/develop/unit-testing/)
-- Learn more about the TypeScript setup in this template in our guide on ["Using TypeScript"](https://docs.expo.dev/guides/typescript/)
+| | |
+|---|---|
+| 카메라 이동 | 방향키 · 화면 가장자리 · 휠클릭 드래그 · 미니맵 클릭 |
+| 줌 | 휠 · `-` / `=` |
+| 시점 복귀 | `Space` 또는 `H` |
+| 유닛 선택 | 좌클릭 (Shift로 추가 선택) |
+| 유닛 이동 | 우클릭, 또는 `M` 후 클릭 |
+| 일시정지 | `P` |
 
-## Learn more
+커맨드 카드(우하단)는 워크래프트 배치를 따른다.
 
-To learn more about developing your project with Expo, look at the following resources:
+```
+Q 파쿤↓ 노말      W 파쿤↑ 노말+매직   E 파쿤→100골드    R 파쿤→목재 60%
+T 도박 ▸ (Q 1목재 / W 3목재 / E 5목재)   Z 용병 노말   X 용병 매직   B 조합 도감
+S 판매            M 이동              C 조합            Esc 취소
+```
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+`B`로 여는 **조합 도감**은 등급별 탭, 재료 보유/부족 표시, 결과 유닛 3D
+미리보기, 조건을 만족하면 바로 눌러지는 조합 버튼을 갖고 있다. 유닛을 선택하고
+`C`를 누르면 그 유닛이 재료인 조합만 걸러서 열린다.
 
-## Join the community
+## 원본 맵에서 데이터·에셋 가져오기
 
-Join our community of developers creating universal apps.
+게임 데이터와 3D 모델은 **본인이 가진 `.w3x` 맵 파일**에서 뽑아 쓴다. 맵 파일도
+변환 결과물도 저장소에 들어가지 않는다(`.gitignore`).
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+```bash
+node tools/w3x/units-from-w3u.mjs --map ~/Downloads/nrd-seaon1-7.96_Ez.w3x
+node tools/w3x/recipes.mjs
+node tools/w3x/mdx2glb.mjs
+node tools/w3x/build-visuals.mjs
+# 위 네 단계를 한 번에
+npm run assets
+```
+
+| 스크립트 | 하는 일 |
+|---|---|
+| `units-from-w3u.mjs` | `war3map.w3u`에서 유닛 255종(등급·공격력·쿨다운·사거리·모델)과 라운드 몹 1~100, 보스 29종 |
+| `recipes.mjs` | `war3map.w3a`의 조합 능력 툴팁과 스크립트 문자열에서 조합식 197개 |
+| `mdx2glb.mjs` | MDX → glb 변환(정적 포즈), BLP → PNG |
+| `build-visuals.mjs` | 유닛 → 모델 매핑 테이블 생성 |
+
+맵 없이 받은 체크아웃은 `npm run assets:stub`으로 빈 매핑을 만들면 된다. 모델이
+없는 유닛은 등급 색 프리미티브로 대체되므로 게임은 그대로 돌아간다.
+
+## 구조
+
+```
+src/game/
+  engine/      순수 TypeScript 시뮬레이션 (React·three 없음, 20Hz 고정 틱)
+  runtime/     엔진 ↔ React 경계 (zustand 스토어, 클럭, HUD 동기화)
+  render/      R3F 씬. GameCanvas는 웹/네이티브 분리
+  input/       InputController 인터페이스 + 웹(DOM)·네이티브(제스처) 구현
+  camera/      WC3식 고정 피치 팬/줌 리그
+  hud/         RN 프리미티브 HUD (상단바, 커맨드 카드, 미니맵, 조합 도감)
+  data/        원본 맵에서 추출한 테이블 + 능력 시트
+tools/w3x/     맵 추출·변환 파이프라인 (Node)
+```
+
+**엔진과 뷰의 경계**: 매 틱 변하는 값(몹 위치·체력·카메라)은 typed array와 ref로
+두고 `useFrame`에서 직접 읽는다. 텍스트로 보이는 값만 zustand에 10Hz로 발행한다.
+그래서 HUD가 초당 20번 다시 그려지지 않는다.
+
+**결정론**: 모든 난수는 `state.rng`(mulberry32)를 거친다. 같은 시드·같은 명령열이면
+3000틱 뒤까지 상태가 일치한다(테스트로 확인).
+
+## 검사
+
+```bash
+npm test        # 엔진·데이터·변환기 (93개)
+npm run typecheck
+npx expo export -p web
+```
+
+`npm test`에는 밸런스 스모크 테스트가 들어 있다. 매 라운드 자원을 다 쓰는
+플레이어를 시뮬레이션해서, 이지 40~55라운드 / 하드 ~36 / 헬 ~26 근처에 도달하는지
+본다. 규칙 단위 테스트로는 잡히지 않는 "숫자가 게임이 되는가"를 확인하는 자리다.
+
+## 아직 안 된 것
+
+- MDX 변환은 정적 바인드 포즈까지. Stand/Walk/Attack 스키닝 애니메이션은 다음 단계.
+- 네이티브는 제스처 입력과 캔버스까지 준비돼 있고 실기기 검증은 아직.
+- 미니맵 네이티브 구현은 자리만 잡혀 있다(웹은 Canvas 2D).
+- 인주력은 조합 대상이 아니라 S랭크 임무 보상으로만 나온다(원본과 동일).
+
+## 저작권
+
+원본 맵의 모델·텍스처·수치는 개인 학습용으로만 사용한다. 변환 스크립트만
+저장소에 있고, 맵 파일과 변환 결과물은 포함하지 않는다.
