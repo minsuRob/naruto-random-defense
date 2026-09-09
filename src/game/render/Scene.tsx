@@ -1,20 +1,36 @@
-/**
- * Scene graph root. M0 is a placeholder: lights + a box so we can prove the
- * canvas, the route and the bundler pipeline all work before the game exists.
- */
-export function Scene() {
+import { CameraRig } from '@/game/camera/CameraRig';
+import type { CameraRig as Rig } from '@/game/camera/camera-rig';
+import type { Lane } from '@/game/engine/lane';
+import type { InputController } from '@/game/input/types';
+import { Ground } from './Ground';
+import { LaneMesh } from './LaneMesh';
+import { Markers } from './Markers';
+import { PlotGrid } from './PlotGrid';
+
+/** Scene graph root. Mobs and units join here in M2/M3. */
+export function Scene({
+  lane,
+  rig,
+  input,
+}: {
+  lane: Lane;
+  rig: Rig;
+  input: InputController;
+}) {
   return (
     <>
-      <ambientLight intensity={0.6} />
-      <directionalLight position={[8, 14, 6]} intensity={1.6} castShadow />
-      <mesh position={[0, 1, 0]}>
-        <boxGeometry args={[2, 2, 2]} />
-        <meshStandardMaterial color="#e8a33d" />
-      </mesh>
-      <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, 0, 0]}>
-        <planeGeometry args={[40, 40]} />
-        <meshStandardMaterial color="#2f4a2b" />
-      </mesh>
+      <color attach="background" args={['#0b0d10']} />
+      <fog attach="fog" args={['#0b0d10', 40, 90]} />
+      <ambientLight intensity={0.65} />
+      <hemisphereLight args={['#9fb8d0', '#2a2f22', 0.5]} />
+      <directionalLight position={[12, 20, 8]} intensity={1.5} />
+
+      <Ground />
+      <LaneMesh lane={lane} />
+      <PlotGrid />
+      <Markers lane={lane} />
+
+      <CameraRig rig={rig} input={input} />
     </>
   );
 }
