@@ -1,5 +1,7 @@
 'use no memo';
 
+// drei declares a "react-native" entry, so Metro picks its native build on
+// device and the DOM build on web from this one import path.
 import { useAnimations, useGLTF } from '@react-three/drei';
 import { Asset } from 'expo-asset';
 import { Suspense, useEffect, useMemo, useRef } from 'react';

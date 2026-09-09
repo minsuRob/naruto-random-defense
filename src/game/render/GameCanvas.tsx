@@ -2,7 +2,10 @@ import { Canvas } from '@react-three/fiber/native';
 import type { ReactNode } from 'react';
 
 /**
- * Native canvas (expo-gl backed). Kept deliberately close to GameCanvas.web.tsx:
+ * Native canvas (expo-gl backed). The import path is explicit even though
+ * @react-three/fiber's "react-native" field would resolve it, because the two
+ * Canvas components take different props. Kept deliberately close to
+ * GameCanvas.web.tsx:
  * only the import path and the sizing style differ. Note `dpr` is Omit-ed from the
  * native CanvasProps — expo-gl sizes the drawing buffer itself, so the mobile
  * perf levers are scene complexity and pixel work, not a DPR clamp.
