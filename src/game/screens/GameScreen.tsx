@@ -10,6 +10,7 @@ import { CommandCard } from '@/game/hud/CommandCard';
 import { DraftOverlay } from '@/game/hud/DraftOverlay';
 import { EventLog } from '@/game/hud/EventLog';
 import { GameOverOverlay } from '@/game/hud/GameOverOverlay';
+import { HelpOverlay } from '@/game/hud/HelpOverlay';
 import { Minimap } from '@/game/hud/Minimap';
 import { PauseMenu } from '@/game/hud/PauseMenu';
 import { PlayerPanel } from '@/game/hud/PlayerPanel';
@@ -79,6 +80,7 @@ function Run({
 }) {
   const hostRef = useRef<View | null>(null);
   const moveMarkerRef = useRef<MoveMarkerHandle | null>(null);
+  const [helpOpen, setHelpOpen] = useState(false);
 
   // These own identity (listeners, smoothed state, typed arrays), so they must
   // be created exactly once — see useConstant on why useMemo is not enough.
@@ -117,6 +119,9 @@ function Run({
           useGameStore.getState().setPaused(paused);
           break;
         }
+        case 'HELP':
+          setHelpOpen((open) => !open);
+          break;
         case 'CYCLE':
           cycleSelection(engine, LOCAL_PLAYER);
           break;
@@ -270,7 +275,7 @@ function Run({
             <CommandCard engine={engine} />
             <Text style={styles.hint}>
               좌클릭·드래그 선택 · Shift 추가 · Ctrl 동일유닛 · 우클릭 이동{'\n'}
-              Ctrl+숫자 부대지정 · 숫자 호출 · Tab 순환 · F1 전체{'\n'}
+              Ctrl+숫자 부대지정 · 숫자 호출 · Tab 순환 · F2 전체 · F1 도움말{'\n'}
               방향키·가장자리 이동 · 휠 줌 · Space 복귀 · P 일시정지
             </Text>
           </View>
@@ -279,6 +284,7 @@ function Run({
         <SelectionBox input={input} />
         <DraftOverlay engine={engine} />
         <ComboBookModal engine={engine} />
+        <HelpOverlay open={helpOpen} onClose={() => setHelpOpen(false)} />
         <PauseMenu onResume={togglePause} />
         <GameOverOverlay onRestart={onRestart} />
       </View>

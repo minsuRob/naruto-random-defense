@@ -1,9 +1,11 @@
+import { useEffect, useState } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
 import { UNIT_DEF_BY_ID } from '@/game/data/abilities';
 import type { Ability } from '@/game/engine/types';
 import { GRADE_LABEL, UNIT_BY_ID } from '@/game/data/units';
 import { useGameStore } from '@/game/runtime/game-store';
+import { getViewHandle } from '@/game/runtime/view-handle';
 import { GRADE_COLORS, HudColors, hudStyles } from './hud-theme';
 
 /**
@@ -48,6 +50,8 @@ export function SelectionPanel() {
         <Stat label="타입" value={def.damageType === 'magic' ? '마법' : '물리'} />
       </View>
 
+      <ManaBar defId={primary.defId} unitId={primary.id} />
+
       {def.abilities.length > 0 && (
         <View style={styles.abilities}>
           {def.abilities.map((ability, i) => (
@@ -57,6 +61,42 @@ export function SelectionPanel() {
           ))}
         </View>
       )}
+    </View>
+  );
+}
+
+/**
+ * Mana fill for units that have a skill.
+ *
+ * Read straight off the engine every frame — it changes on every hit, and
+ * publishing it through the store would re-render the HUD constantly.
+ */
+function ManaBar({ defId, unitId }: { defId: string; unitId: number }) {
+  const def = UNIT_DEF_BY_ID.get(defId);
+  const mana = def?.abilities.find((a) => a.kind === 'manaSkill');
+  const [value, setValue] = useState(0);
+
+  useEffect(() => {
+    if (!mana) return;
+    const id = setInterval(() => {
+      const unit = getViewHandle().engine?.state.units.get(unitId);
+      setValue(unit?.mana ?? 0);
+    }, 100);
+    return () => clearInterval(id);
+  }, [mana, unitId]);
+
+  if (!mana || mana.kind !== 'manaSkill') return null;
+  const pct = Math.min(100, (value / mana.max) * 100);
+
+  return (
+    <View style={styles.manaRow}>
+      <Text style={hudStyles.label}>마나</Text>
+      <View style={styles.manaTrack}>
+        <View style={[styles.manaFill, { width: `${pct}%` }]} />
+      </View>
+      <Text style={styles.manaText}>
+        {Math.round(value)} / {mana.max}
+      </Text>
     </View>
   );
 }
@@ -127,6 +167,16 @@ const styles = StyleSheet.create({
   stats: { flexDirection: 'row', flexWrap: 'wrap', gap: 10 },
   stat: { minWidth: 54, gap: 1 },
   statValue: { color: HudColors.text, fontSize: 13, fontWeight: '600' },
+  manaRow: { flexDirection: 'row', alignItems: 'center', gap: 6 },
+  manaTrack: {
+    flex: 1,
+    height: 6,
+    borderRadius: 3,
+    backgroundColor: '#1a1e24',
+    overflow: 'hidden',
+  },
+  manaFill: { height: '100%', backgroundColor: '#4aa3ff' },
+  manaText: { color: HudColors.textFaint, fontSize: 10 },
   abilities: { gap: 2, borderTopWidth: 1, borderTopColor: HudColors.border, paddingTop: 6 },
   ability: { color: HudColors.textDim, fontSize: 11, lineHeight: 15 },
 });

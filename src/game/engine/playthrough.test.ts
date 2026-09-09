@@ -13,6 +13,8 @@ import { completeDraft, createEngine, type Engine } from './engine';
  * Not a unit test of any one rule — it is the check that the pieces add up to a
  * game. A run that dies on round 3 or one that never dies both mean the numbers
  * are wrong, and neither shows up in the rule-level tests.
+ *
+ * Measured across six seeds: 이지 47-57, 하드 41-53, 헬 35-41.
  */
 
 /** Spend everything available each round, and combine whatever is completable. */

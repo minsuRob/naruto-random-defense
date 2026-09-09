@@ -24,6 +24,7 @@ export type Hotkey =
   | 'CANCEL'
   | 'CYCLE'
   | 'SELECT_ALL'
+  | 'HELP'
   | 'CENTER'
   | 'PAUSE'
   | 'ZOOM_IN'
