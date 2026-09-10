@@ -8,21 +8,28 @@ import type { Lane } from '@/game/engine/lane';
  * The lane ribbon: a closed triangle strip built by offsetting the centreline
  * left and right by half the lane width, plus chevrons showing travel direction.
  */
-export function LaneMesh({ lane }: { lane: Lane }) {
+export function LaneMesh({ lane, dim = false }: { lane: Lane; dim?: boolean }) {
   const geometry = useMemo(() => buildRibbon(lane, LANE_WIDTH), [lane]);
   const chevrons = useMemo(() => buildChevrons(lane), [lane]);
 
   return (
     <group>
       <mesh geometry={geometry} position={[0, 0.02, 0]} receiveShadow>
-        <meshStandardMaterial color="#6b5b3e" roughness={0.95} side={DoubleSide} />
+        <meshStandardMaterial
+          color={dim ? '#443c30' : '#6b5b3e'}
+          roughness={0.95}
+          side={DoubleSide}
+        />
       </mesh>
-      {chevrons.map((c, i) => (
-        <mesh key={i} position={[c.x, 0.04, c.z]} rotation={[-Math.PI / 2, 0, c.angle]}>
-          <planeGeometry args={[0.3, 0.46]} />
-          <meshBasicMaterial color="#c9b183" transparent opacity={0.3} />
-        </mesh>
-      ))}
+      {/* No direction arrows on a lane nobody walks — they would promise
+          movement that never comes. */}
+      {!dim &&
+        chevrons.map((c, i) => (
+          <mesh key={i} position={[c.x, 0.04, c.z]} rotation={[-Math.PI / 2, 0, c.angle]}>
+            <planeGeometry args={[0.3, 0.46]} />
+            <meshBasicMaterial color="#c9b183" transparent opacity={0.3} />
+          </mesh>
+        ))}
     </group>
   );
 }

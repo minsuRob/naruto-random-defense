@@ -22,6 +22,11 @@ export function buildSpawnQueue(state: GameState, tables: GameTables, round: num
   const waveDefIndex = Math.min(round, tables.bossOffset) - 1;
 
   for (const plot of state.plots) {
+    // An island with no player never sees a mob. Everything downstream — the
+    // lane counter, the death count, bounties — already tolerates owner -1;
+    // this is the line that keeps the three empty islands empty.
+    if (plot.owner < 0) continue;
+
     for (let i = 0; i < MOBS_PER_WAVE; i++) {
       queue.push({
         at: i * SPAWN_INTERVAL,

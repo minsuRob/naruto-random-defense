@@ -3,8 +3,9 @@
 import { useEffect, useRef } from 'react';
 
 import { groundFrustum } from '@/game/camera/frustum';
-import { PLOT_HALF, mapBounds } from '@/game/config/map';
-import type { Lane } from '@/game/engine/lane';
+import { ALTARS, PLAZA_HALF, PLOT_HALF, mapBounds } from '@/game/config/map';
+import type { Plot } from '@/game/engine/types';
+import { ALTAR_COLOR } from '@/game/render/palette';
 import { getViewHandle } from '@/game/runtime/view-handle';
 import { createMinimapProjection } from './minimap-math';
 
@@ -19,7 +20,13 @@ const FRAME_MS = 33;
  * per-frame draw cost (and the fill cost on mobile) to show a few hundred dots,
  * and clicking to pan needs the inverse transform either way.
  */
-export function Minimap({ lane, plotCount = 1 }: { lane: Lane; plotCount?: number }) {
+export function Minimap({
+  plots,
+  localPlotId,
+}: {
+  plots: readonly Plot[];
+  localPlotId: number;
+}) {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
 
   useEffect(() => {
@@ -28,7 +35,7 @@ export function Minimap({ lane, plotCount = 1 }: { lane: Lane; plotCount?: numbe
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
-    const bounds = mapBounds(plotCount);
+    const bounds = mapBounds();
     const proj = createMinimapProjection(bounds, SIZE, SIZE);
     const dpr = Math.min(window.devicePixelRatio || 1, 2);
     canvas.width = SIZE * dpr;
@@ -41,7 +48,7 @@ export function Minimap({ lane, plotCount = 1 }: { lane: Lane; plotCount?: numbe
     staticLayer.height = SIZE * dpr;
     const sctx = staticLayer.getContext('2d')!;
     sctx.scale(dpr, dpr);
-    drawStatic(sctx, proj, lane);
+    drawStatic(sctx, proj, plots, localPlotId);
 
     const frustum: { x: number; z: number }[] = [];
     let raf = 0;
@@ -104,13 +111,13 @@ export function Minimap({ lane, plotCount = 1 }: { lane: Lane; plotCount?: numbe
     };
     raf = requestAnimationFrame(render);
     return () => cancelAnimationFrame(raf);
-  }, [lane, plotCount]);
+  }, [plots, localPlotId]);
 
   /** Click or drag anywhere on the minimap to move the camera there. */
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
-    const bounds = mapBounds(plotCount);
+    const bounds = mapBounds();
     const proj = createMinimapProjection(bounds, SIZE, SIZE);
     let dragging = false;
 
@@ -138,7 +145,7 @@ export function Minimap({ lane, plotCount = 1 }: { lane: Lane; plotCount?: numbe
       canvas.removeEventListener('pointermove', move);
       canvas.removeEventListener('pointerup', up);
     };
-  }, [plotCount]);
+  }, []);
 
   return (
     <canvas
@@ -156,45 +163,96 @@ export function Minimap({ lane, plotCount = 1 }: { lane: Lane; plotCount?: numbe
   );
 }
 
+/**
+ * The four islands and the plaza they surround. Drawn once per mount: at this
+ * scale (about 3.5 px per world unit) the whole map is 180 px, so the layout is
+ * the thing that tells you where you are.
+ */
 function drawStatic(
   ctx: CanvasRenderingContext2D,
   proj: ReturnType<typeof createMinimapProjection>,
-  lane: Lane
+  plots: readonly Plot[],
+  localPlotId: number
 ) {
   ctx.fillStyle = '#0e1116';
   ctx.fillRect(0, 0, SIZE, SIZE);
 
-  // Plot slab.
-  const [px0, py0] = proj.worldToMap(-PLOT_HALF, -PLOT_HALF);
-  const [px1, py1] = proj.worldToMap(PLOT_HALF, PLOT_HALF);
-  ctx.fillStyle = '#243021';
-  ctx.fillRect(px0, py0, px1 - px0, py1 - py0);
-
-  // Lane loop.
-  ctx.beginPath();
-  const count = lane.samples.length / 2;
-  for (let i = 0; i < count; i++) {
-    const [x, y] = proj.worldToMap(lane.samples[i * 2], lane.samples[i * 2 + 1]);
-    if (i === 0) ctx.moveTo(x, y);
-    else ctx.lineTo(x, y);
-  }
-  ctx.closePath();
-  ctx.strokeStyle = '#8a7550';
-  ctx.lineWidth = 2;
-  ctx.stroke();
-
-  // Gates.
-  const gate = (s: number, color: string, r: number) => {
-    const p = lane.positionAt(s);
-    const [x, y] = proj.worldToMap(p.x, p.z);
-    ctx.beginPath();
-    ctx.arc(x, y, r, 0, Math.PI * 2);
-    ctx.fillStyle = color;
-    ctx.fill();
+  const rect = (x0: number, z0: number, x1: number, z1: number) => {
+    const [px0, py0] = proj.worldToMap(x0, z0);
+    const [px1, py1] = proj.worldToMap(x1, z1);
+    return [px0, py0, px1 - px0, py1 - py0] as const;
   };
-  gate(lane.spawnS, '#e8e3d4', 3.5);
-  gate(lane.leftBossS, '#e8862c', 3);
-  gate(lane.rightBossS, '#e8862c', 3);
+
+  // The shared plaza, and the four altars in it.
+  ctx.fillStyle = '#2f333b';
+  ctx.fillRect(...rect(-PLAZA_HALF, -PLAZA_HALF, PLAZA_HALF, PLAZA_HALF));
+  for (const altar of ALTARS) {
+    const [x, y] = proj.worldToMap(altar.pos.x, altar.pos.z);
+    ctx.beginPath();
+    ctx.arc(x, y, 2, 0, Math.PI * 2);
+    ctx.fillStyle = ALTAR_COLOR[altar.kind];
+    ctx.fill();
+  }
+
+  for (const plot of plots) {
+    const mine = plot.id === localPlotId;
+    const { origin, lane } = plot;
+
+    ctx.fillStyle = mine ? '#243021' : '#191d17';
+    ctx.fillRect(
+      ...rect(
+        origin.x - PLOT_HALF,
+        origin.z - PLOT_HALF,
+        origin.x + PLOT_HALF,
+        origin.z + PLOT_HALF
+      )
+    );
+
+    // Lane samples are plot-local, like everything else about a lane.
+    ctx.beginPath();
+    const count = lane.samples.length / 2;
+    for (let i = 0; i < count; i++) {
+      const [x, y] = proj.worldToMap(
+        lane.samples[i * 2] + origin.x,
+        lane.samples[i * 2 + 1] + origin.z
+      );
+      if (i === 0) ctx.moveTo(x, y);
+      else ctx.lineTo(x, y);
+    }
+    ctx.closePath();
+    ctx.strokeStyle = mine ? '#8a7550' : '#4c4334';
+    ctx.lineWidth = mine ? 2 : 1;
+    ctx.stroke();
+
+    const gate = (s: number, color: string, r: number) => {
+      const p = lane.positionAt(s);
+      const [x, y] = proj.worldToMap(p.x + origin.x, p.z + origin.z);
+      ctx.beginPath();
+      ctx.arc(x, y, r, 0, Math.PI * 2);
+      ctx.fillStyle = color;
+      ctx.fill();
+    };
+    if (mine) {
+      gate(lane.spawnS, '#e8e3d4', 3.5);
+      gate(lane.leftBossS, '#e8862c', 3);
+      gate(lane.rightBossS, '#e8862c', 3);
+    }
+  }
+
+  // Which one is mine. A glyph would be unreadable at 35 px a side.
+  const local = plots.find((p) => p.id === localPlotId);
+  if (local) {
+    ctx.strokeStyle = '#4aa3ff';
+    ctx.lineWidth = 1;
+    ctx.strokeRect(
+      ...rect(
+        local.origin.x - PLOT_HALF,
+        local.origin.z - PLOT_HALF,
+        local.origin.x + PLOT_HALF,
+        local.origin.z + PLOT_HALF
+      )
+    );
+  }
 
   // Map border.
   ctx.strokeStyle = '#2b3038';

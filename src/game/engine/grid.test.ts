@@ -1,13 +1,15 @@
 import { describe, expect, it } from 'vitest';
 
-import { PLOT_CELLS, PLOT_HALF } from '@/game/config/map';
+import { PLOT_CELLS, PLOT_COUNT, PLOT_HALF, plotOrigin } from '@/game/config/map';
 import {
   CELL_COUNT,
   cellIndex,
   cellToLocal,
+  cellToWorld,
   createOccupancy,
   findFreeCell,
   localToCell,
+  worldToCell,
 } from './grid';
 
 describe('grid', () => {
@@ -18,7 +20,7 @@ describe('grid', () => {
     expect(last.z).toBeCloseTo(PLOT_HALF - 0.5, 10);
   });
 
-  it('round-trips every cell through world space', () => {
+  it('round-trips every cell through plot-local space', () => {
     for (let cy = 0; cy < PLOT_CELLS; cy++) {
       for (let cx = 0; cx < PLOT_CELLS; cx++) {
         const p = cellToLocal(cx, cy);
@@ -67,5 +69,44 @@ describe('grid', () => {
       occ[idx] = 1;
     }
     expect(seen.size).toBe(CELL_COUNT);
+  });
+});
+
+/**
+ * The bridge between world picking and the plot-local grid.
+ *
+ * Every click in the game goes through this pair. The plot-local round trip
+ * above would keep passing even if every one of those clicks landed on the
+ * wrong island — only an off-origin plot exposes a missing `- origin`.
+ */
+describe('world <-> cell', () => {
+  it('round-trips every cell of every island', () => {
+    for (let plot = 0; plot < PLOT_COUNT; plot++) {
+      const origin = plotOrigin(plot);
+      for (let cy = 0; cy < PLOT_CELLS; cy++) {
+        for (let cx = 0; cx < PLOT_CELLS; cx++) {
+          const p = cellToWorld(origin, cx, cy);
+          expect(worldToCell(origin, p.x, p.z)).toEqual({ cx, cy });
+        }
+      }
+    }
+  });
+
+  it('claims nothing outside its own island', () => {
+    const mine = plotOrigin(0);
+    // The plaza belongs to no island.
+    expect(worldToCell(mine, 0, 0)).toBeNull();
+    // Nor does anyone else's ground.
+    for (let other = 1; other < PLOT_COUNT; other++) {
+      const theirs = plotOrigin(other);
+      expect(worldToCell(mine, theirs.x, theirs.z)).toBeNull();
+      expect(worldToCell(theirs, mine.x, mine.z)).toBeNull();
+    }
+  });
+
+  it('is the identity on a plot at the origin', () => {
+    // Which is exactly why the old world-as-local calls looked correct.
+    const origin = { x: 0, z: 0 };
+    expect(cellToWorld(origin, 3, 7)).toEqual(cellToLocal(3, 7));
   });
 });

@@ -5,18 +5,25 @@ import { CELL_SIZE, PLOT_CELLS, PLOT_HALF } from '@/game/config/map';
 
 /**
  * The placement plot: a slab plus the cell grid units snap to.
+ *
+ * `dim` is an island nobody is playing. It stays legible as a place, but
+ * nothing about it should invite a click.
  */
-export function PlotGrid() {
+export function PlotGrid({ dim = false }: { dim?: boolean }) {
   const gridGeometry = useMemo(() => buildGrid(), []);
 
   return (
     <group>
       <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, 0.01, 0]} receiveShadow>
         <planeGeometry args={[PLOT_CELLS * CELL_SIZE, PLOT_CELLS * CELL_SIZE]} />
-        <meshStandardMaterial color="#3b4a33" roughness={1} />
+        <meshStandardMaterial color={dim ? '#262b22' : '#3b4a33'} roughness={1} />
       </mesh>
       <lineSegments geometry={gridGeometry} position={[0, 0.03, 0]}>
-        <lineBasicMaterial color="#5f7350" transparent opacity={0.55} />
+        <lineBasicMaterial
+          color={dim ? '#454b3e' : '#5f7350'}
+          transparent
+          opacity={dim ? 0.15 : 0.55}
+        />
       </lineSegments>
     </group>
   );

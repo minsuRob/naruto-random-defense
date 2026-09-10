@@ -41,6 +41,34 @@ export function localToCell(x: number, z: number): Cell | null {
 }
 
 /**
+ * The world <-> cell pair.
+ *
+ * Everything that picks (a raycast onto the ground, a pointer hit) works in
+ * world space, while the grid above is plot-local. These two are the only
+ * sanctioned bridge; passing a world coordinate straight into `localToCell`
+ * silently works for a plot at the origin and silently fails for every other.
+ */
+
+/** Cell of the plot at `origin` containing a world point, or null if outside it. */
+export function worldToCell(
+  origin: { x: number; z: number },
+  x: number,
+  z: number
+): Cell | null {
+  return localToCell(x - origin.x, z - origin.z);
+}
+
+/** Centre of a cell of the plot at `origin`, in world units. */
+export function cellToWorld(
+  origin: { x: number; z: number },
+  cx: number,
+  cy: number
+): { x: number; z: number } {
+  const local = cellToLocal(cx, cy);
+  return { x: local.x + origin.x, z: local.z + origin.z };
+}
+
+/**
  * First free cell, filling from the outside in.
  *
  * The lane runs around the plot, so the outer ring is the only place a new unit

@@ -6,7 +6,8 @@ import { Vector3, type Camera } from 'three';
  *
  * A ray that points at or above the horizon never hits the plane, so it is
  * clamped to `maxDistance` — otherwise a shallow camera would blow the polygon
- * out to infinity.
+ * out to infinity. Keep it well past the rig's own zoom ceiling, or the minimap
+ * quietly draws a smaller box than the player can actually see.
  */
 const NDC_CORNERS: [number, number][] = [
   [-1, 1],
@@ -21,7 +22,7 @@ const origin = new Vector3();
 export function groundFrustum(
   camera: Camera,
   out: { x: number; z: number }[],
-  maxDistance = 60
+  maxDistance = 200
 ): { x: number; z: number }[] {
   camera.getWorldPosition(origin);
 

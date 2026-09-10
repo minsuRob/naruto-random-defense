@@ -15,10 +15,9 @@ const ALTAR_KEY: Record<AltarKind, string> = {
 /**
  * The setup window before round 1.
  *
- * This is where a run actually begins: you are handed pakkun and nothing else,
- * and what you send them into decides the opening. A banner rather than a modal
- * on purpose — the altars are on the map behind it and you need to be able to
- * click them while this is up.
+ * A single strip rather than a panel: the thing it is telling you about is the
+ * plaza directly behind it, and a banner deep enough to cover the plaza would
+ * hide the altars during the one stretch of the game that is only about them.
  */
 export function PrepBanner() {
   const phase = useGameStore((s) => s.hud.phase);
@@ -29,23 +28,20 @@ export function PrepBanner() {
 
   return (
     <View style={styles.wrap}>
-      <View style={[hudStyles.panel, styles.panel]}>
-        <View style={styles.headline}>
-          <Text style={styles.title}>준비 시간</Text>
-          <Text style={styles.timer}>{prepLeft}초</Text>
-        </View>
+      <View style={[hudStyles.panel, styles.strip]}>
+        <Text style={styles.title}>준비</Text>
+        <Text style={styles.timer}>{prepLeft}초</Text>
         <Text style={styles.lead}>
-          파쿤 {pakkun}마리를 제단으로 보내 유닛을 받으세요. 제단을 클릭하거나 Q·W·E·R.
+          가운데 광장의 파쿤 {pakkun}마리를 네 방향 중 하나로 보내세요
         </Text>
-        <View style={styles.altars}>
-          {ALTARS.map((altar) => (
-            <View key={altar.kind} style={styles.altar}>
-              <Text style={styles.key}>{ALTAR_KEY[altar.kind]}</Text>
-              <Text style={styles.altarName}>{altar.nameKo}</Text>
-              <Text style={styles.altarHint}>{altar.hint}</Text>
-            </View>
-          ))}
-        </View>
+        {ALTARS.map((altar) => (
+          <View key={altar.kind} style={styles.altar}>
+            <Text style={styles.key}>{ALTAR_KEY[altar.kind]}</Text>
+            <Text style={styles.altarName}>
+              {altar.arrow} {altar.hint}
+            </Text>
+          </View>
+        ))}
       </View>
     </View>
   );
@@ -54,30 +50,27 @@ export function PrepBanner() {
 const styles = StyleSheet.create({
   wrap: {
     position: 'absolute',
-    top: 74,
+    top: 70,
     left: 0,
     right: 0,
     alignItems: 'center',
     // The altars are on the map behind this; clicks have to reach them.
     pointerEvents: 'none',
   },
-  panel: { padding: 12, gap: 8, alignItems: 'center', maxWidth: 560 },
-  headline: { flexDirection: 'row', alignItems: 'baseline', gap: 10 },
-  title: { color: HudColors.text, fontSize: 17, fontWeight: '800' },
-  timer: { color: HudColors.accent, fontSize: 17, fontWeight: '800' },
-  lead: { color: HudColors.textDim, fontSize: 12, textAlign: 'center' },
-  altars: { flexDirection: 'row', gap: 8 },
-  altar: {
-    minWidth: 104,
-    gap: 1,
-    paddingHorizontal: 8,
-    paddingVertical: 6,
-    borderRadius: 6,
-    borderWidth: 1,
-    borderColor: HudColors.border,
-    backgroundColor: '#161a20',
+  strip: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    flexWrap: 'wrap',
+    justifyContent: 'center',
+    gap: 10,
+    paddingHorizontal: 12,
+    paddingVertical: 7,
+    maxWidth: '94%',
   },
+  title: { color: HudColors.text, fontSize: 13, fontWeight: '800' },
+  timer: { color: HudColors.accent, fontSize: 15, fontWeight: '800' },
+  lead: { color: HudColors.textDim, fontSize: 11 },
+  altar: { flexDirection: 'row', alignItems: 'baseline', gap: 4 },
   key: { color: HudColors.gold, fontSize: 10, fontWeight: '800' },
-  altarName: { color: HudColors.text, fontSize: 12, fontWeight: '700' },
-  altarHint: { color: HudColors.textFaint, fontSize: 10 },
+  altarName: { color: HudColors.text, fontSize: 11 },
 });

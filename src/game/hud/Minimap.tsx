@@ -1,6 +1,6 @@
 import { StyleSheet, View } from 'react-native';
 
-import type { Lane } from '@/game/engine/lane';
+import type { Plot } from '@/game/engine/types';
 
 /**
  * Native minimap placeholder.
@@ -8,7 +8,7 @@ import type { Lane } from '@/game/engine/lane';
  * The projection math in ./minimap-math.ts is platform-neutral and already
  * unit-tested, so the M5 pass only has to draw with Skia instead of Canvas 2D.
  */
-export function Minimap(_props: { lane: Lane; plotCount?: number }) {
+export function Minimap(_props: { plots: readonly Plot[]; localPlotId: number }) {
   return <View style={styles.root} />;
 }
 

@@ -1,7 +1,7 @@
 import { Vector3, type Camera } from 'three';
 
 import { PLOT_CELLS } from '@/game/config/map';
-import { cellIndex, isInsidePlot } from '@/game/engine/grid';
+import { cellIndex, isInsidePlot, worldToCell, type Cell } from '@/game/engine/grid';
 import type { Engine } from '@/game/engine/engine';
 import type { BoxSelect } from '@/game/input/types';
 import { useGameStore } from './game-store';
@@ -15,6 +15,25 @@ import { useGameStore } from './game-store';
  */
 
 const projected = new Vector3();
+
+/**
+ * The cell of the player's own island under a world point, or null anywhere
+ * else on the map.
+ *
+ * Picking works in world space and the placement grid is plot-local, so every
+ * click has to come through here. Null is the honest answer for the plaza and
+ * for someone else's island: units cannot leave their own island, so there is
+ * no order to give.
+ */
+export function plotCellAt(
+  engine: Engine,
+  playerId: number,
+  x: number,
+  z: number
+): Cell | null {
+  const plot = engine.state.plots.find((p) => p.owner === playerId);
+  return plot ? worldToCell(plot.origin, x, z) : null;
+}
 
 /** Units whose screen position falls inside the dragged rectangle. */
 export function unitsInBox(

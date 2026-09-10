@@ -13,7 +13,7 @@ import { UNIT_BY_ID } from '@/game/data/units';
 import { RECIPES, RECIPE_BY_ID } from '@/game/data/recipes';
 import { availability, countsFor, findSatisfiable } from './combine';
 import { addUnit, dispatchPakkun, gamble, hire, resolveAltar, sell } from './economy';
-import { countPakkun, grantPakkun, idlePakkuns, updatePakkuns } from './pakkun';
+import { altarPosition, countPakkun, grantPakkun, idlePakkuns, updatePakkuns } from './pakkun';
 import { createEngine, skipPrep } from './engine';
 import type { EngineEvent } from './types';
 
@@ -28,11 +28,9 @@ function newEngine(seed = 1) {
 
 const START_PAKKUN = DIFFICULTIES.easy.startPakkun;
 
-/** Wipe built units but leave the altars standing. */
+/** Wipe built units. The altars are off in the plaza, so nothing is reserved. */
 function clearPlacements(engine: ReturnType<typeof createEngine>) {
-  const occupancy = engine.state.plots[0].occupancy;
-  occupancy.fill(0);
-  for (const altar of ALTARS) occupancy[cellIndex(altar.cell.cx, altar.cell.cy)] = 1;
+  engine.state.plots[0].occupancy.fill(0);
 }
 
 /** Run until every dispatched pakkun has reached its altar. */
@@ -128,11 +126,24 @@ describe('pakkun tokens', () => {
     expect(successes / trials).toBeCloseTo(PAKKUN_WOOD_CHANCE, 1);
   });
 
-  it('blocks the altar cells from placement', () => {
+  it('leaves the whole island buildable — the altars are out in the plaza', () => {
+    const engine = createEngine({ difficulty: DIFFICULTIES.easy, seed: 1 });
+    for (const plot of engine.state.plots) {
+      expect(plot.occupancy.every((v) => v === 0)).toBe(true);
+    }
+  });
+
+  it('sends every player to the same altars, and the walk is worth watching', () => {
     const engine = newEngine();
-    const occupancy = engine.state.plots[0].occupancy;
     for (const altar of ALTARS) {
-      expect(occupancy[cellIndex(altar.cell.cx, altar.cell.cy)]).toBe(1);
+      // The plaza belongs to nobody, so an altar is one world point.
+      expect(altarPosition(altar.kind)).toEqual(altar.pos);
+
+      const fresh = newEngine();
+      dispatchPakkun(fresh.state, 0, altar.kind, () => {});
+      const walking = fresh.state.pakkuns.find((p) => p.target === altar.kind)!;
+      expect(walking.duration).toBeGreaterThan(0.4);
+      expect(walking.duration).toBeLessThan(1.6);
     }
   });
 });
@@ -173,7 +184,7 @@ describe('placement', () => {
   it('fills the plot and then refuses', () => {
     const engine = newEngine();
     const { events, emit } = collector();
-    const capacity = PLOT_CELLS * PLOT_CELLS - ALTARS.length;
+    const capacity = PLOT_CELLS * PLOT_CELLS;
     const defId = UNIT_BY_ID.keys().next().value!;
 
     for (let i = 0; i < capacity; i++) {
@@ -190,8 +201,7 @@ describe('placement', () => {
     const unit = addUnit(engine.state, 0, UNIT_BY_ID.keys().next().value!, 'gacha', emit)!;
     expect(sell(engine.state, 0, [unit.id], emit)).toBe(1);
     expect(engine.state.units.size).toBe(0);
-    // Only the altars remain.
-    expect(engine.state.plots[0].occupancy.reduce((n, v) => n + v, 0)).toBe(ALTARS.length);
+    expect(engine.state.plots[0].occupancy.reduce((n, v) => n + v, 0)).toBe(0);
   });
 });
 

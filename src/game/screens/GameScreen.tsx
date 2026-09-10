@@ -5,7 +5,7 @@ import { DEFAULT_RIG_CONFIG, createCameraRig } from '@/game/camera/camera-rig';
 import type { DifficultyDef } from '@/game/config/difficulty';
 import { mapBounds, type AltarKind } from '@/game/config/map';
 import { createEngine } from '@/game/engine/engine';
-import { localToCell, type Cell } from '@/game/engine/grid';
+import type { Cell } from '@/game/engine/grid';
 import { CommandCard } from '@/game/hud/CommandCard';
 import { EventLog } from '@/game/hud/EventLog';
 import { GameOverOverlay } from '@/game/hud/GameOverOverlay';
@@ -33,6 +33,7 @@ import {
   assignControlGroup,
   cycleSelection,
   moveSelection,
+  plotCellAt,
   recallControlGroup,
   selectAll,
   selectSameType,
@@ -88,8 +89,26 @@ function Run({
   const clock = useConstant(createSimClock);
   const hudSync = useConstant(() => createHudSync(engine));
   const input = useConstant(createInputController);
+
+  // The island this seat plays. Everything that used to assume "plot 0 at the
+  // world origin" now goes through it.
+  const localPlot =
+    engine.state.plots.find((p) => p.owner === LOCAL_PLAYER) ?? engine.state.plots[0];
+
   const rig = useConstant(() =>
-    createCameraRig({ ...DEFAULT_RIG_CONFIG, bounds: mapBounds(1) })
+    createCameraRig({
+      ...DEFAULT_RIG_CONFIG,
+      bounds: mapBounds(),
+      // Open between your base and the plaza rather than on either: the run
+      // starts with pakkun in the middle and nothing built at home, and you
+      // need to see both to make the first move.
+      //
+      // Biased toward the base rather than the midpoint, because a 55° pitch
+      // shows about 1.7x as much ground away from the camera as toward it —
+      // aiming at the geometric centre clips the near edge of your own island.
+      initialTarget: { x: localPlot.origin.x * 0.55, z: localPlot.origin.z * 0.78 },
+      initialDistance: 30,
+    })
   );
 
   const comboBookOpen = useGameStore((s) => s.comboBook.open);
@@ -110,7 +129,8 @@ function Run({
     const offHotkey = input.onHotkey((key) => {
       switch (key) {
         case 'CENTER':
-          rig.centerOn(0, 0);
+          // Back to my base, at playing zoom.
+          rig.centerOn(localPlot.origin.x, localPlot.origin.z, 22);
           break;
         case 'ZOOM_IN':
           rig.zoomBy(1 / 1.2);
@@ -166,7 +186,9 @@ function Run({
         height: rect.height,
       });
       if (!ground) return;
-      const cell = localToCell(ground.x, ground.z);
+      // Null for the plaza and for anyone else's island — a unit cannot leave
+      // its own ground, so there is no order to give and no marker to show.
+      const cell = plotCellAt(engine, LOCAL_PLAYER, ground.x, ground.z);
       if (!cell) return;
 
       moveSelection(engine, LOCAL_PLAYER, cell);
@@ -188,7 +210,7 @@ function Run({
       clearEffectBus();
       clearViewHandle();
     };
-  }, [clock, engine, hudSync, input, rig]);
+  }, [clock, engine, hudSync, input, localPlot, rig]);
 
   // The combo book owns the keyboard while it is open, apart from B and Esc.
   useEffect(() => {
@@ -233,7 +255,6 @@ function Run({
     [engine]
   );
 
-  const lane = engine.state.plots[0].lane;
 
   return (
     <View ref={hostRef} style={styles.root}>
@@ -250,6 +271,7 @@ function Run({
             onGroundCommand={groundCommand}
             onClearSelection={clearSelection}
             onSendPakkun={sendPakkun}
+            localPlotId={localPlot.id}
             moveMode={moveMode}
           />
         </GameCanvas>
@@ -269,7 +291,7 @@ function Run({
         <View style={styles.bottomBar}>
           <View style={styles.bottomLeft}>
             <EventLog />
-            <Minimap lane={lane} />
+            <Minimap plots={engine.state.plots} localPlotId={localPlot.id} />
           </View>
 
           <View style={styles.bottomCenter}>

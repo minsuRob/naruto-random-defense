@@ -39,13 +39,13 @@ export function CommandCard({ engine }: { engine: Engine }) {
         { key: 'GAMBLE_5', label: 'E', hint: `도박 ${GAMBLE_COST[5]}목`, enabled: wood >= GAMBLE_COST[5] },
         { key: 'CANCEL', label: 'Esc', hint: '취소', enabled: true },
       ]
-    : // Ordered like the altars are laid out on the plot, so the row is a map of
+    : // The four altars stand on the axes of the plaza, so the row is a map of
       // the four directions a pakkun can be sent rather than an arbitrary list.
       [
-        { key: 'PAKKUN_UP', label: 'Q', hint: '↖ 노말+매직', enabled: pakkun > 0 },
-        { key: 'PAKKUN_GOLD', label: 'W', hint: `↗ 골드 ${PAKKUN_GOLD}`, enabled: pakkun > 0 },
-        { key: 'PAKKUN_DOWN', label: 'E', hint: '↙ 노말', enabled: pakkun > 0 },
-        { key: 'PAKKUN_WOOD', label: 'R', hint: '↘ 목재 60%', enabled: pakkun > 0 },
+        { key: 'PAKKUN_UP', label: 'Q', hint: '↑ 노말+매직', enabled: pakkun > 0 },
+        { key: 'PAKKUN_GOLD', label: 'W', hint: `→ 골드 ${PAKKUN_GOLD}`, enabled: pakkun > 0 },
+        { key: 'PAKKUN_DOWN', label: 'E', hint: '↓ 노말', enabled: pakkun > 0 },
+        { key: 'PAKKUN_WOOD', label: 'R', hint: '← 목재 60%', enabled: pakkun > 0 },
       ];
 
   const middleRow: Slot[] = [

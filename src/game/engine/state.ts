@@ -6,9 +6,9 @@ import {
   PREP_SECONDS,
 } from '@/game/config/balance';
 import type { DifficultyDef } from '@/game/config/difficulty';
-import { ALTARS, plotOrigin } from '@/game/config/map';
+import { PLOT_COUNT, plotOrigin } from '@/game/config/map';
 import { BOSSES, WAVES, waveFor } from '@/game/data/waves';
-import { cellIndex, createOccupancy } from './grid';
+import { createOccupancy } from './grid';
 import { createLane } from './lane';
 import { createMobPool } from './mobs';
 import { grantPakkun } from './pakkun';
@@ -18,8 +18,11 @@ import type { GameState, MobDef, Plot } from './types';
 export interface GameConfig {
   difficulty: DifficultyDef;
   seed: number;
-  /** v1 renders one plot; the engine is written for several. */
-  plotCount?: number;
+  /**
+   * How many of the four islands have a player. v1 is 1; the other three are
+   * drawn but stay empty, and co-op only has to raise this.
+   */
+  playerCount?: number;
 }
 
 /**
@@ -69,20 +72,19 @@ export interface GameTables {
 }
 
 export function createInitialState(config: GameConfig): { state: GameState; tables: GameTables } {
-  const plotCount = config.plotCount ?? 1;
+  const playerCount = config.playerCount ?? 1;
   const { defs, bossOffset } = buildMobDefs(config.difficulty);
 
+  // Every island exists; only the first `playerCount` of them have an owner.
+  // An unowned plot has owner -1, which the engine already reads as "skip".
   const plots: Plot[] = [];
-  for (let i = 0; i < plotCount; i++) {
-    const occupancy = createOccupancy();
-    // The altars stand on the centre cells, so nothing can be built there.
-    for (const altar of ALTARS) occupancy[cellIndex(altar.cell.cx, altar.cell.cy)] = 1;
+  for (let i = 0; i < PLOT_COUNT; i++) {
     plots.push({
       id: i,
-      owner: i,
+      owner: i < playerCount ? i : -1,
       origin: plotOrigin(i),
       lane: createLane(),
-      occupancy,
+      occupancy: createOccupancy(),
     });
   }
 
@@ -95,8 +97,8 @@ export function createInitialState(config: GameConfig): { state: GameState; tabl
     difficulty: config.difficulty,
     over: false,
     outcome: null,
-    players: plots.map((p) => ({
-      id: p.owner,
+    players: Array.from({ length: playerCount }, (_, id) => ({
+      id,
       gold: 0,
       wood: config.difficulty.startWood,
       pakkun: config.difficulty.startPakkun,
@@ -122,7 +124,7 @@ export function createInitialState(config: GameConfig): { state: GameState; tabl
       spawned: 0,
       bossAlive: false,
     },
-    aliveOnLane: new Uint16Array(plotCount),
+    aliveOnLane: new Uint16Array(PLOT_COUNT),
     pakkuns: [],
     nextPakkunId: 1,
   };

@@ -36,6 +36,10 @@ export function HelpOverlay({ open, onClose }: { open: boolean; onClose: () => v
               시작하면 난이도에 따른 파쿤과 목재를 받습니다. 준비 시간 {PREP_SECONDS}초 안에
               파쿤을 제단으로 보내 첫 유닛을 마련하세요.
             </Line>
+            <Line>
+              진영 넷이 가운데 광장을 둘러싸고 있습니다. 지금은 내 진영(남서쪽)에만 몹이
+              돌고, 나머지 셋은 협동용으로 비워둔 자리입니다.
+            </Line>
             <Line>몹은 시작 게이트에서 나와 진영 둘레를 계속 돕니다. 빠져나가는 출구가 없습니다.</Line>
             <Line>라인에 남은 몹 수가 데스카운트를 넘기면 그 자리에서 패배합니다.</Line>
             <Line>라운드 1~9는 30초, 10부터 42초입니다. 끝자리 0은 서쪽, 3은 동쪽 게이트에서 보스가 나옵니다.</Line>
@@ -43,8 +47,8 @@ export function HelpOverlay({ open, onClose }: { open: boolean; onClose: () => v
 
           <Section title="파쿤 (위젯)">
             <Line>
-              파쿤은 진영 남쪽에 실체로 서 있습니다. 제단으로 보내야 결과가 나옵니다. 라운드가
-              끝날 때마다 난이도만큼 더 들어옵니다.
+              파쿤은 가운데 광장 받침대 위, 내 진영 쪽 사분면에 실체로 서 있습니다. 제단으로
+              보내야 결과가 나옵니다. 라운드가 끝날 때마다 난이도만큼 더 들어옵니다.
             </Line>
             {ALTARS.map((altar) => (
               <Line key={altar.kind}>
@@ -54,8 +58,8 @@ export function HelpOverlay({ open, onClose }: { open: boolean; onClose: () => v
               </Line>
             ))}
             <Line>
-              제단 넷은 진영 한가운데에 2×2로 서 있습니다. Q W E R 는 그 배치 그대로 —
-              왼쪽 위·오른쪽 위·왼쪽 아래·오른쪽 아래 — 이고, 제단을 직접 클릭해도 됩니다.
+              제단 넷은 광장의 위·오른쪽·아래·왼쪽에 있습니다. Q W E R 가 그대로 그
+              네 방향이고, 제단을 직접 클릭해도 됩니다.
             </Line>
           </Section>
 
@@ -80,7 +84,10 @@ export function HelpOverlay({ open, onClose }: { open: boolean; onClose: () => v
           </Section>
 
           <Section title="배치">
-            <Line>바깥쪽 칸일수록 레인에 사거리가 닿습니다. 한가운데는 제단이 차지합니다.</Line>
+            <Line>
+              바깥쪽 칸일수록 레인에 사거리가 닿습니다. 제단이 광장으로 나가면서 100칸을
+              전부 지을 수 있게 됐지만, 한가운데는 여전히 사거리가 안 닿습니다.
+            </Line>
             <Line>공버프·공속 오라는 반경 안의 아군에게만 걸립니다. 뭉쳐 두면 이득입니다.</Line>
           </Section>
         </ScrollView>

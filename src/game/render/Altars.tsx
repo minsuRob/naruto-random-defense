@@ -1,19 +1,13 @@
 import { ALTARS, type AltarKind } from '@/game/config/map';
-import { cellToLocal } from '@/game/engine/grid';
+import { ALTAR_COLOR } from './palette';
 
 /**
- * The four altars in the middle of the plot.
+ * The four altars, on the axes of the shared plaza.
  *
  * Each is a small plinth with a coloured rune ring, so it reads at a glance
- * which one a pakkun is being sent to.
+ * which one a pakkun is being sent to. The islands take the diagonals, so
+ * these four are unambiguously the four directions.
  */
-
-const ALTAR_COLOR: Record<AltarKind, string> = {
-  normal: '#c9d1d9',
-  magic: '#4aa3ff',
-  gold: '#f0c674',
-  wood: '#9fd07a',
-};
 
 export function Altars({
   onSend,
@@ -25,10 +19,9 @@ export function Altars({
   return (
     <group>
       {ALTARS.map((altar) => {
-        const local = cellToLocal(altar.cell.cx, altar.cell.cy);
         const color = ALTAR_COLOR[altar.kind];
         return (
-          <group key={altar.kind} position={[local.x, 0, local.z]}>
+          <group key={altar.kind} position={[altar.pos.x, 0, altar.pos.z]}>
             <mesh position={[0, 0.12, 0]} onClick={() => onSend(altar.kind)}>
               <cylinderGeometry args={[0.34, 0.4, 0.24, 12]} />
               <meshStandardMaterial color="#2b3038" roughness={0.9} />

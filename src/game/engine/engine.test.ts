@@ -144,16 +144,17 @@ describe('lane movement', () => {
     expect(mobs.lap[first]).toBeGreaterThanOrEqual(1);
   });
 
-  it('keeps world coordinates on the lane', () => {
+  it('keeps world coordinates on the lane, offset by the island origin', () => {
     const engine = newEngine();
     run(engine, 3);
     const mobs = engine.state.mobs;
-    const lane = engine.state.plots[0].lane;
     for (let i = 0; i < mobs.count; i++) {
       if (!mobs.active[i]) continue;
-      const expected = lane.positionAt(mobs.s[i]);
-      expect(mobs.x[i]).toBeCloseTo(expected.x, 5);
-      expect(mobs.z[i]).toBeCloseTo(expected.z, 5);
+      // The lane is plot-local; the world position is that plus the origin.
+      const plot = engine.state.plots[mobs.plot[i]];
+      const expected = plot.lane.positionAt(mobs.s[i]);
+      expect(mobs.x[i]).toBeCloseTo(expected.x + plot.origin.x, 5);
+      expect(mobs.z[i]).toBeCloseTo(expected.z + plot.origin.z, 5);
     }
   });
 });

@@ -22,6 +22,14 @@ export interface CameraRigConfig {
   /** World units per second at `startDistance`; scales with zoom. */
   panSpeed: number;
   bounds: Bounds;
+  /**
+   * Where the camera opens, and how far out. Defaults to the centre of the
+   * bounds at `startDistance`. Set rather than calling `centerOn` after
+   * construction: that only moves the goal, so the run would begin with a
+   * visible swoop across the map.
+   */
+  initialTarget?: { x: number; z: number };
+  initialDistance?: number;
   /** How far past the bounds the look-at target may travel. */
   boundsMargin: number;
   /** Exponential smoothing rate; higher snaps faster. */
@@ -32,7 +40,7 @@ export const DEFAULT_RIG_CONFIG: Omit<CameraRigConfig, 'bounds'> = {
   pitchDeg: 55,
   fov: 45,
   minDistance: 10,
-  maxDistance: 40,
+  maxDistance: 55,
   startDistance: 22,
   panSpeed: 14,
   boundsMargin: 2,
@@ -54,7 +62,8 @@ export interface CameraRig {
   panScreen(dxPixels: number, dyPixels: number, viewportHeight: number): void;
   zoomBy(factor: number): void;
   setGoalTarget(x: number, z: number): void;
-  centerOn(x: number, z: number): void;
+  /** Jump to a point, resetting the zoom (to `startDistance` unless told otherwise). */
+  centerOn(x: number, z: number, distance?: number): void;
   rotateBy(steps: number): void;
   update(dt: number): void;
   getPose(out?: CameraPose): CameraPose;
@@ -69,10 +78,11 @@ export function createCameraRig(config: CameraRigConfig): CameraRig {
   const cx = (config.bounds.minX + config.bounds.maxX) / 2;
   const cz = (config.bounds.minZ + config.bounds.maxZ) / 2;
 
-  const target = { x: cx, z: cz };
-  const goalTarget = { x: cx, z: cz };
-  let distance = config.startDistance;
-  let goalDistance = config.startDistance;
+  const start = config.initialTarget ?? { x: cx, z: cz };
+  const target = { x: start.x, z: start.z };
+  const goalTarget = { x: start.x, z: start.z };
+  let distance = config.initialDistance ?? config.startDistance;
+  let goalDistance = distance;
   let yaw = 0;
   let goalYaw = 0;
 
@@ -118,10 +128,10 @@ export function createCameraRig(config: CameraRigConfig): CameraRig {
       goalTarget.z = z;
       clampTarget();
     },
-    centerOn(x, z) {
+    centerOn(x, z, distance = config.startDistance) {
       goalTarget.x = x;
       goalTarget.z = z;
-      goalDistance = config.startDistance;
+      goalDistance = clamp(distance, config.minDistance, config.maxDistance);
       clampTarget();
     },
     rotateBy(steps) {

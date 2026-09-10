@@ -21,6 +21,10 @@ export function createHudSync(engine: Engine): HudSync {
   let lastPublish = 0;
   let lastHud: HudSnapshot | null = null;
   let lastRosterVersion = -1;
+  // Which island the HUD reports on. Resolved from the owner rather than
+  // assumed to be plot 0, so a co-op seat cannot silently read another lane.
+  const localPlot =
+    engine.state.plots.find((p) => p.owner === engine.state.players[0]?.id)?.id ?? 0;
 
   function snapshot(): HudSnapshot {
     const { state } = engine;
@@ -32,7 +36,7 @@ export function createHudSync(engine: Engine): HudSync {
       phase: round.phase,
       timeLeft: Math.max(0, Math.ceil(limit - round.elapsed)),
       prepLeft: Math.max(0, Math.ceil(round.prepLeft)),
-      aliveOnLane: state.aliveOnLane[0] ?? 0,
+      aliveOnLane: state.aliveOnLane[localPlot] ?? 0,
       deathCount: deathCountFor(state, round.number),
       gold: player?.gold ?? 0,
       wood: player?.wood ?? 0,

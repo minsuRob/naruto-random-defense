@@ -35,15 +35,21 @@ const MOB: MobDef = {
   bounty: 0,
 };
 
-/** Put a mob on the lane at a given arc length and sync its world position. */
+/**
+ * Put a mob on the lane at a given arc length and sync its world position.
+ *
+ * The lane is plot-local, so the island's origin has to be added — the same
+ * composition the engine does. Getting this wrong would make the whole bench
+ * self-consistently wrong.
+ */
 function placeMob(state: GameState, s: number, overrides: Partial<MobDef> = {}): number {
   const def = { ...MOB, ...overrides };
   const index = state.mobDefs.push(def) - 1;
   const slot = spawnMob(state.mobs, index, def, 0, s);
-  const lane = state.plots[0].lane;
-  const p = lane.positionAt(s);
-  state.mobs.x[slot] = p.x;
-  state.mobs.z[slot] = p.z;
+  const plot = state.plots[0];
+  const p = plot.lane.positionAt(s);
+  state.mobs.x[slot] = p.x + plot.origin.x;
+  state.mobs.z[slot] = p.z + plot.origin.z;
   return slot;
 }
 
@@ -51,14 +57,15 @@ function attacker(state: GameState, abilities: Ability[], damage = 100): {
   unit: UnitInstance;
   def: UnitDef;
 } {
+  const origin = state.plots[0].origin;
   const unit: UnitInstance = {
     id: 1,
     defId: 'bench',
     owner: 0,
     plot: 0,
     cell: { cx: 0, cy: 0 },
-    x: 0,
-    z: 0,
+    x: origin.x,
+    z: origin.z,
     cooldown: 0,
     targetMob: -1,
     mana: 0,
@@ -146,8 +153,9 @@ describe('knockback', () => {
     resolveHit(state, unit, def, target, emit);
     expect(state.mobs.s[target]).toBeCloseTo(7, 5);
     // The world position follows, so the renderer does not jump a frame later.
-    const p = state.plots[0].lane.positionAt(7);
-    expect(state.mobs.x[target]).toBeCloseTo(p.x, 5);
+    const plot = state.plots[0];
+    const p = plot.lane.positionAt(7);
+    expect(state.mobs.x[target]).toBeCloseTo(p.x + plot.origin.x, 5);
   });
 
   it('does not move a boss', () => {
