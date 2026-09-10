@@ -20,6 +20,7 @@
 
 ```bash
 npm install
+npm run assets:stub   # 원본 맵이 없는 체크아웃은 이걸 먼저 (아래 참고)
 npm run web
 ```
 
@@ -101,10 +102,14 @@ tools/w3x/     맵 추출·변환 파이프라인 (Node)
 **결정론**: 모든 난수는 `state.rng`(mulberry32)를 거친다. 같은 시드·같은 명령열이면
 3000틱 뒤까지 상태가 일치한다(테스트로 확인).
 
+더 깊은 설명 — 틱 파이프라인 순서, 데이터 파이프라인의 전제, 이미 밟은 지뢰들 —
+은 [ARCHITECTURE.md](ARCHITECTURE.md)에 있다. 다른 환경에서 이어받는다면 그쪽을
+먼저 읽으면 된다.
+
 ## 검사
 
 ```bash
-npm test        # 엔진·런타임·데이터·변환기 (122개)
+npm test        # 엔진·런타임·데이터·변환기 (140개)
 npm run typecheck
 npx expo export -p web
 ```
