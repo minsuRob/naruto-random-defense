@@ -279,7 +279,7 @@ function Run({
 
       <View style={styles.hud}>
         <View style={styles.topRow}>
-          <TopBar difficulty={difficulty} />
+          <TopBar difficulty={difficulty} onTogglePause={togglePause} />
           <View style={styles.spacer} />
           <View style={styles.topRight}>
             <PlayerPanel />

@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View } from 'react-native';
+import { Pressable, StyleSheet, Text, View } from 'react-native';
 
 import type { DifficultyDef } from '@/game/config/difficulty';
 import { useGameStore } from '@/game/runtime/game-store';
@@ -9,7 +9,14 @@ import { HudColors, hudStyles } from './hud-theme';
  * checks between waves. Each field subscribes on its own so a gold change does
  * not re-render the timer.
  */
-export function TopBar({ difficulty }: { difficulty: DifficultyDef }) {
+export function TopBar({
+  difficulty,
+  onTogglePause,
+}: {
+  difficulty: DifficultyDef;
+  onTogglePause: () => void;
+}) {
+  const paused = useGameStore((s) => s.paused);
   const round = useGameStore((s) => s.hud.round);
   const phase = useGameStore((s) => s.hud.phase);
   const timeLeft = useGameStore((s) => s.hud.timeLeft);
@@ -45,6 +52,10 @@ export function TopBar({ difficulty }: { difficulty: DifficultyDef }) {
       <Field label="파쿤" value={String(pakkun)} color={HudColors.pakkun} />
       <View style={styles.divider} />
       <Field label="난이도" value={difficulty.nameKo} color={HudColors.textDim} />
+      <View style={styles.divider} />
+      <Pressable style={styles.pauseButton} onPress={onTogglePause}>
+        <Text style={styles.pauseText}>{paused ? '▶' : '⏸'}</Text>
+      </Pressable>
     </View>
   );
 }
@@ -70,4 +81,14 @@ const styles = StyleSheet.create({
   },
   field: { gap: 1, minWidth: 46 },
   divider: { width: 1, alignSelf: 'stretch', backgroundColor: HudColors.border },
+  pauseButton: {
+    width: 26,
+    height: 26,
+    borderRadius: 6,
+    borderWidth: 1,
+    borderColor: HudColors.border,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  pauseText: { color: HudColors.text, fontSize: 13 },
 });
