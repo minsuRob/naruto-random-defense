@@ -46,8 +46,13 @@ export const MOB_CAPACITY = 512;
 /** Death count tightens for the last stretch, as in the original. */
 export const FINAL_STRETCH_ROUND = 80;
 
-export const START_PAKKUN = 7;
-export const PAKKUN_PER_ROUND = 2;
+/**
+ * Setup time before the first wave. You open the game holding pakkun and no
+ * defense, so there has to be a moment to spend them — this is the window the
+ * old draft screen used to occupy.
+ */
+export const PREP_SECONDS = 25;
+
 export const PAKKUN_GOLD = 100;
 export const PAKKUN_WOOD_CHANCE = 0.6;
 

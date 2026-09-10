@@ -8,9 +8,12 @@ import type { Hotkey, InputSettings } from './types';
  */
 
 export const BASE_KEYMAP: Record<string, Hotkey> = {
-  KeyQ: 'PAKKUN_DOWN',
-  KeyW: 'PAKKUN_UP',
-  KeyE: 'PAKKUN_GOLD',
+  // The four pakkun keys read in the same order as the four altars sit on the
+  // plot — top-left, top-right, bottom-left, bottom-right — so the key you press
+  // and the direction the dog trots off in are the same choice.
+  KeyQ: 'PAKKUN_UP',
+  KeyW: 'PAKKUN_GOLD',
+  KeyE: 'PAKKUN_DOWN',
   KeyR: 'PAKKUN_WOOD',
   KeyT: 'GAMBLE',
   KeyZ: 'HIRE_NORMAL',
@@ -57,7 +60,7 @@ export function resolveHotkey(
   if (settings.wasdPan) {
     if (code === 'KeyW' || code === 'KeyS' || code === 'KeyA' || code === 'KeyD') {
       if (!shift) return null;
-      if (code === 'KeyW') return 'PAKKUN_UP';
+      if (code === 'KeyW') return 'PAKKUN_GOLD';
       if (code === 'KeyS') return 'SELL';
       return null;
     }

@@ -7,13 +7,13 @@ import { mapBounds, type AltarKind } from '@/game/config/map';
 import { createEngine } from '@/game/engine/engine';
 import { localToCell, type Cell } from '@/game/engine/grid';
 import { CommandCard } from '@/game/hud/CommandCard';
-import { DraftOverlay } from '@/game/hud/DraftOverlay';
 import { EventLog } from '@/game/hud/EventLog';
 import { GameOverOverlay } from '@/game/hud/GameOverOverlay';
 import { HelpOverlay } from '@/game/hud/HelpOverlay';
 import { Minimap } from '@/game/hud/Minimap';
 import { PauseMenu } from '@/game/hud/PauseMenu';
 import { PlayerPanel } from '@/game/hud/PlayerPanel';
+import { PrepBanner } from '@/game/hud/PrepBanner';
 import { SelectionBox } from '@/game/hud/SelectionBox';
 import { SelectionPanel } from '@/game/hud/SelectionPanel';
 import { TopBar } from '@/game/hud/TopBar';
@@ -100,6 +100,11 @@ function Run({
     useGameStore.getState().reset();
     setViewHandle({ rig, input, engine });
 
+    // Publish once up front. Everything after this rides on useFrame, which
+    // does not run until the first animation frame — and never, on a hidden
+    // tab — so without this the player's first paint is a HUD full of zeros.
+    hudSync.flush(engine.drainEvents());
+
     // On web the View ref is the DOM node; on native attach() is a no-op today.
     const detach = input.attach(hostRef.current);
     const offHotkey = input.onHotkey((key) => {
@@ -183,7 +188,7 @@ function Run({
       clearEffectBus();
       clearViewHandle();
     };
-  }, [clock, engine, input, rig]);
+  }, [clock, engine, hudSync, input, rig]);
 
   // The combo book owns the keyboard while it is open, apart from B and Esc.
   useEffect(() => {
@@ -282,7 +287,7 @@ function Run({
         </View>
 
         <SelectionBox input={input} />
-        <DraftOverlay engine={engine} />
+        <PrepBanner />
         <ComboBookModal engine={engine} />
         <HelpOverlay open={helpOpen} onClose={() => setHelpOpen(false)} />
         <PauseMenu onResume={togglePause} />

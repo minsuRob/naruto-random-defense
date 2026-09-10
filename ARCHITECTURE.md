@@ -51,12 +51,12 @@ npx expo export -p web
 몹 수가 데스카운트를 넘는 순간 패배다. 그래서 "새는 걸 막는" 게임이 아니라
 "쌓이는 속도보다 빨리 죽이는" 게임이다.
 
-1. **비급서 드래프트** — 첫 웨이브 전에 랭크가 붙은 픽 4번. C(노말) → B(노말·매직)
-   → A(레어·유니크) → S(전설·히든). 매번 무작위 후보 4장 중 하나. 20초 안에 안
-   고르면 원작처럼 무작위로 정해진다. 이 넷이 시작 로스터.
+1. **초기 지급 + 준비 시간** — 난이도가 파쿤과 목재를 정한다(이지 7·19, 하드 9·19,
+   헬 11·19). 유닛은 0개로 시작하므로 `PREP_SECONDS`(25초) 동안 첫 방어선을 세운다.
+   원작의 "선택한 난이도의 초기지급 보상 …" 안내가 그대로 로그에 뜬다.
 2. **파쿤** — 카운터가 아니라 **맵 위 실체**다. 진영 남쪽 대기열에 서 있고, 제단까지
-   걸어가야 결과가 나온다(위=노말+매직, 아래=노말, 금고=골드 100, 목재소=목재 60%).
-   시작 7개, 라운드마다 +2.
+   걸어가야 결과가 나온다. 제단 넷은 진영 한가운데 2×2이고 Q·W·E·R가 그 배치 그대로다
+   (↖ 노말+매직, ↗ 골드 100, ↙ 노말, ↘ 목재 60%). 라운드마다 난이도만큼 더 들어온다.
 3. **조합** — 목재와 재료 유닛으로 상위 유닛을 만든다. 등급이 오르면 수치만 커지는
    게 아니라 스플래시·멀티샷·크리티컬·넉백·마나 스킬이 붙는다.
 4. 라운드 1~9는 30초, 10부터 42초. 끝자리 0은 서쪽 보스, 3은 동쪽 보스. 80·85는
@@ -111,7 +111,7 @@ ref에 두고 `useFrame`에서 직접 읽는다. 텍스트로 보이는 값만 z
 
 ```
 applyCommands      큐에 쌓인 명령을 도착 순서대로 — UI가 언제 넣었든 결정론 유지
-advanceRound       드래프트 카운트다운 / 라운드 경과
+advanceRound       준비 시간 카운트다운 / 라운드 경과
 flushSpawns        예약된 스폰을 시간 도달 순으로
 updateStatus       스턴·슬로우·방깍 만료
 updateMovement     s += speed·slowMul·dt, 레인을 따라 랩
@@ -131,10 +131,9 @@ checkRoundEnd      시간 종료 / 보스 처치
 - **명령은 다음 틱에 적용된다.** `enqueue` 직후에 상태를 읽으면 아직 안 바뀌어 있다.
   테스트에서 `while (player.pakkun > 2) enqueue(...)`를 돌렸다가 무한 루프로 OOM이
   났던 자리다. 반복 횟수는 미리 계산해서 넣어라.
-- **드래프트는 닫힌 틱에서 라운드를 시작하지 않는다.** `takeDraftPick`은 phase를
-  건드리지 않고, 다음 틱의 `advanceDraft`가 `'prep'`으로 넘긴다. 그래야 호출자가
-  판을 세우기 전에 첫 웨이브가 스폰되지 않는다.
-- 테스트에서 드래프트를 건너뛰려면 `completeDraft(engine)` (engine.ts에서 export).
+- **준비 시간이 다 지나야 1라운드가 시작된다.** `advanceRound`가 `prepLeft`를 깎고,
+  0이 되는 틱에 `startRound(1)`을 부른다.
+- 테스트에서 준비 시간을 건너뛰려면 `skipPrep(engine)` (engine.ts에서 export).
 
 ### 레인 (§"360도로 도는 구조")
 
@@ -215,7 +214,7 @@ npm run assets:stub   # 맵 없이 빈 매핑만
 | 라운드·보스 규칙 | `engine/rounds.ts`, `data/waves.ts` |
 | 경제(파쿤·도박·용병·판매·임무) | `engine/economy.ts`, `engine/pakkun.ts` |
 | 조합 | `engine/combine.ts`, `data/recipes.ts`, `hud/combo-book/*` |
-| 드래프트 | `engine/draft.ts`, `hud/DraftOverlay.tsx` |
+| 초기 지급·준비 시간 | `config/difficulty.ts`, `config/balance.ts`의 `PREP_SECONDS`, `hud/PrepBanner.tsx` |
 | 키 바인딩 | `input/keymap.ts` (`Hotkey` 유니온 → 키 코드) |
 | 웹 입력 동작 | `input/input-controller.web.ts` |
 | 선택 로직 | `runtime/selection.ts` |
@@ -259,7 +258,12 @@ npm run assets:stub   # 맵 없이 빈 매핑만
 9. **drei와 fiber 둘 다 package.json에 `react-native` 필드를 선언**하므로 Metro가
    네이티브 빌드를 알아서 고른다. `@react-three/fiber/native`를 명시적으로 import하는
    곳은 `GameCanvas.tsx` 하나뿐이다(props가 다르다).
-10. **heredoc 안에 백틱이 든 템플릿 리터럴을 넣지 마라** — 노드 스크립트를 생성하다
+10. **컨테이너에서 `setPointerCapture`를 무조건 부르지 마라.** 입력 컨트롤러의 리스너는
+    캔버스와 HUD를 함께 담은 컨테이너에 붙어 있다. HUD 버튼을 누른 pointerdown에서
+    캡처를 잡으면 이후 pointerup과 호환 click까지 컨테이너로 리타깃되어 **게임 안의
+    모든 버튼이 죽는다.** 캔버스에서 시작한 드래그와 휠클릭 팬일 때만 잡는다
+    (`camera-input.test.ts`가 회귀를 잡는다).
+11. **heredoc 안에 백틱이 든 템플릿 리터럴을 넣지 마라** — 노드 스크립트를 생성하다
     문자열이 조기 종료됐다. 배열 `.join("\n")`으로 우회했다.
 
 ---
@@ -268,10 +272,10 @@ npm run assets:stub   # 맵 없이 빈 매핑만
 
 | | |
 |---|---|
-| 테스트 | 13파일 140개 통과 |
+| 테스트 | 13파일 144개 통과 |
 | 타입 | `tsc --noEmit` 클린 |
 | 웹 export | `/game` 20KB, SSR 가드 정상 |
-| 밸런스 실측 (시드 6개) | 이지 47~57라운드 / 하드 41~53 / 헬 35~41 |
+| 밸런스 실측 (시드 6개) | 이지 60~66라운드 / 하드 41~60 / 헬 38~53 |
 
 커밋 메시지는 **한국어**로 쓴다(기존 히스토리 전체를 한국어로 재작성해둠).
 

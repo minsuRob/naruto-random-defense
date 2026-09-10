@@ -2,33 +2,30 @@ import { describe, expect, it } from 'vitest';
 
 import {
   MOBS_PER_WAVE,
-  PAKKUN_PER_ROUND,
+  PREP_SECONDS,
   SPAWN_INTERVAL,
-  START_PAKKUN,
   TICK_RATE,
   armorMultiplier,
   roundDuration,
 } from '@/game/config/balance';
 import { DIFFICULTIES } from '@/game/config/difficulty';
-import { completeDraft, createEngine } from './engine';
+import { createEngine, skipPrep } from './engine';
 import { countAlive } from './mobs';
 import type { EngineEvent } from './types';
 
-/** Past the opening draft, which these tests are not about. */
+/** Past the setup window, which these tests are not about. */
 function newEngine(difficultyId: 'easy' | 'hard' | 'hell' = 'easy', seed = 1) {
   const engine = createEngine({ difficulty: DIFFICULTIES[difficultyId], seed });
-  completeDraft(engine);
+  skipPrep(engine);
   engine.drainEvents();
   return engine;
 }
 
-/** The draft hands out four units; clear them for the "nobody shoots" cases. */
-function emptyEngine(difficultyId: 'easy' | 'hard' | 'hell' = 'easy', seed = 1) {
-  const engine = newEngine(difficultyId, seed);
-  engine.state.units.clear();
-  engine.state.plots[0].occupancy.fill(0);
-  return engine;
-}
+/**
+ * A run opens with no units at all, so this is the same engine — named for the
+ * cases that depend on nobody shooting back.
+ */
+const emptyEngine = newEngine;
 
 /** Run for `seconds`, collecting everything the engine emitted. */
 function run(engine: ReturnType<typeof createEngine>, seconds: number) {
@@ -42,24 +39,49 @@ function run(engine: ReturnType<typeof createEngine>, seconds: number) {
 }
 
 describe('rounds', () => {
-  it('starts at round 1 once the draft is done', () => {
+  it('holds the first wave until the setup window runs out', () => {
     const engine = createEngine({ difficulty: DIFFICULTIES.easy, seed: 1 });
-    expect(engine.state.round.phase).toBe('draft');
+    expect(engine.state.round.phase).toBe('prep');
     expect(engine.state.round.number).toBe(0);
+    expect(engine.state.units.size).toBe(0);
 
-    completeDraft(engine);
-    const draftEvents = engine.drainEvents();
-
-    expect(engine.state.draft.chosen).toHaveLength(4);
-    expect(engine.state.units.size).toBe(4);
-    expect(draftEvents.filter((e) => e.e === 'draftPick')).toHaveLength(4);
-    expect(draftEvents).toContainEqual({ e: 'draftDone' });
-
-    // Round 1 begins on the next tick, not during the draft.
+    // Most of the window passes with nothing on the lane.
+    const quiet = run(engine, PREP_SECONDS - 1);
+    expect(quiet.some((e) => e.e === 'roundStart')).toBe(false);
     expect(engine.state.round.number).toBe(0);
-    const events = run(engine, 0.05);
+    expect(engine.state.mobs.alive).toBe(0);
+
+    const events = run(engine, 1.5);
     expect(events).toContainEqual({ e: 'roundStart', round: 1 });
     expect(engine.state.round.number).toBe(1);
+  });
+
+  it('leaves enough of the window to turn the opening pakkun into a defense', () => {
+    // The whole point of the setup window: every token you are handed can reach
+    // an altar and come back as a unit before the first mob walks the lane.
+    const engine = createEngine({ difficulty: DIFFICULTIES.easy, seed: 3 });
+    const opening = engine.state.players[0].pakkun;
+    for (let i = 0; i < opening; i++) {
+      engine.enqueue({ t: 'PAKKUN_DOWN', player: 0 });
+    }
+
+    run(engine, PREP_SECONDS - 1);
+    expect(engine.state.round.number).toBe(0);
+    expect(engine.state.pakkuns).toHaveLength(0);
+    expect(engine.state.units.size).toBe(opening);
+  });
+
+  it('opens with the difficulty grant, in tokens as well as the counter', () => {
+    for (const id of ['easy', 'hard', 'hell'] as const) {
+      const difficulty = DIFFICULTIES[id];
+      const engine = createEngine({ difficulty, seed: 1 });
+      const player = engine.state.players[0];
+      expect(player.pakkun).toBe(difficulty.startPakkun);
+      expect(player.wood).toBe(difficulty.startWood);
+      expect(engine.state.pakkuns).toHaveLength(difficulty.startPakkun);
+    }
+    // Harder tiers are handed more, as the original announces.
+    expect(DIFFICULTIES.hell.startPakkun).toBeGreaterThan(DIFFICULTIES.easy.startPakkun);
   });
 
   it('runs rounds 1-9 for 30s and later rounds for 42s', () => {
@@ -75,11 +97,14 @@ describe('rounds', () => {
   });
 
   it('hands out pakkun at the end of each round', () => {
+    const { startPakkun, pakkunPerRound } = DIFFICULTIES.easy;
     const engine = newEngine();
     run(engine, 0.05);
-    expect(engine.state.players[0].pakkun).toBe(START_PAKKUN);
+    expect(engine.state.players[0].pakkun).toBe(startPakkun);
     run(engine, 31);
-    expect(engine.state.players[0].pakkun).toBe(START_PAKKUN + PAKKUN_PER_ROUND);
+    expect(engine.state.players[0].pakkun).toBe(startPakkun + pakkunPerRound);
+    // The counter and the tokens on the map never drift apart.
+    expect(engine.state.pakkuns).toHaveLength(startPakkun + pakkunPerRound);
   });
 
   it('spawns the whole wave on the spawn interval', () => {
@@ -180,7 +205,6 @@ describe('determinism', () => {
   it('two engines with the same seed stay identical', () => {
     const a = newEngine('hard', 12345);
     const b = newEngine('hard', 12345);
-    expect(a.state.draft.chosen).toEqual(b.state.draft.chosen);
     for (let i = 0; i < 3000; i++) {
       a.tick();
       b.tick();

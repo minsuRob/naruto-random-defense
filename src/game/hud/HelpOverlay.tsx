@@ -1,6 +1,12 @@
 import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 
-import { GAMBLE_COST, HIRE_COST, PAKKUN_GOLD, PAKKUN_WOOD_CHANCE } from '@/game/config/balance';
+import {
+  GAMBLE_COST,
+  HIRE_COST,
+  PAKKUN_GOLD,
+  PAKKUN_WOOD_CHANCE,
+  PREP_SECONDS,
+} from '@/game/config/balance';
 import { ALTARS } from '@/game/config/map';
 import { HudColors, hudStyles } from './hud-theme';
 
@@ -26,13 +32,20 @@ export function HelpOverlay({ open, onClose }: { open: boolean; onClose: () => v
 
         <ScrollView contentContainerStyle={styles.body}>
           <Section title="게임의 규칙">
+            <Line>
+              시작하면 난이도에 따른 파쿤과 목재를 받습니다. 준비 시간 {PREP_SECONDS}초 안에
+              파쿤을 제단으로 보내 첫 유닛을 마련하세요.
+            </Line>
             <Line>몹은 시작 게이트에서 나와 진영 둘레를 계속 돕니다. 빠져나가는 출구가 없습니다.</Line>
             <Line>라인에 남은 몹 수가 데스카운트를 넘기면 그 자리에서 패배합니다.</Line>
             <Line>라운드 1~9는 30초, 10부터 42초입니다. 끝자리 0은 서쪽, 3은 동쪽 게이트에서 보스가 나옵니다.</Line>
           </Section>
 
           <Section title="파쿤 (위젯)">
-            <Line>파쿤은 진영 남쪽에 실체로 서 있습니다. 제단으로 보내야 결과가 나옵니다.</Line>
+            <Line>
+              파쿤은 진영 남쪽에 실체로 서 있습니다. 제단으로 보내야 결과가 나옵니다. 라운드가
+              끝날 때마다 난이도만큼 더 들어옵니다.
+            </Line>
             {ALTARS.map((altar) => (
               <Line key={altar.kind}>
                 {altar.nameKo} — {altar.hint}
@@ -40,7 +53,10 @@ export function HelpOverlay({ open, onClose }: { open: boolean; onClose: () => v
                 {altar.kind === 'wood' ? ` (${PAKKUN_WOOD_CHANCE * 100}% 확률)` : ''}
               </Line>
             ))}
-            <Line>Q W E R 로 가장 가까운 파쿤을 보내거나, 제단을 직접 클릭하세요.</Line>
+            <Line>
+              제단 넷은 진영 한가운데에 2×2로 서 있습니다. Q W E R 는 그 배치 그대로 —
+              왼쪽 위·오른쪽 위·왼쪽 아래·오른쪽 아래 — 이고, 제단을 직접 클릭해도 됩니다.
+            </Line>
           </Section>
 
           <Section title="목재">
@@ -58,7 +74,7 @@ export function HelpOverlay({ open, onClose }: { open: boolean; onClose: () => v
           <Section title="조작">
             <Line>좌클릭 선택 · 드래그 박스 · Shift 추가 · Ctrl 같은 종류 전체</Line>
             <Line>우클릭 이동 — 선택한 유닛 전부가 걸어갑니다. 걷는 동안은 공격하지 않습니다.</Line>
-            <Line>Ctrl+숫자 부대 지정 · 숫자 호출 · Tab 순환 · F1 전체 선택</Line>
+            <Line>Ctrl+숫자 부대 지정 · 숫자 호출 · Tab 순환 · F2 전체 선택</Line>
             <Line>방향키·화면 가장자리 이동 · 휠 줌 · Space 시점 복귀 · P 일시정지</Line>
             <Line>B 조합 도감 · C 선택 유닛이 재료인 조합 · S 판매 · M 이동 모드</Line>
           </Section>

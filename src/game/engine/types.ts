@@ -1,7 +1,6 @@
 import type { DifficultyDef } from '@/game/config/difficulty';
 import type { Grade } from '@/game/data/units';
 import type { AltarKind } from '@/game/config/map';
-import type { DraftState } from './draft';
 import type { Lane } from './lane';
 import type { Rng } from './rng';
 
@@ -149,7 +148,7 @@ export interface Player {
   alive: boolean;
 }
 
-export type RoundPhase = 'draft' | 'prep' | 'wave' | 'ended';
+export type RoundPhase = 'prep' | 'wave' | 'ended';
 
 export interface SpawnEntry {
   at: number;
@@ -161,6 +160,8 @@ export interface SpawnEntry {
 export interface RoundState {
   number: number;
   phase: RoundPhase;
+  /** Seconds left in the setup window before round 1. */
+  prepLeft: number;
   elapsed: number;
   duration: number;
   hardLimit: number | null;
@@ -186,7 +187,6 @@ export interface GameState {
   rosterVersion: number;
   round: RoundState;
   aliveOnLane: Uint16Array;
-  draft: DraftState;
   pakkuns: PakkunToken[];
   nextPakkunId: number;
 }
@@ -198,7 +198,6 @@ export type Command =
   | { t: 'SELL'; player: number; unitIds: number[] }
   | { t: 'MOVE'; player: number; unitId: number; cell: { cx: number; cy: number } }
   | { t: 'COMBINE'; player: number; recipeId: string; preferIds?: number[] }
-  | { t: 'DRAFT_PICK'; player: number; optionIndex: number }
   | { t: 'PAKKUN_SEND'; player: number; altar: AltarKind; tokenId?: number };
 
 export type EngineEvent =
@@ -211,6 +210,4 @@ export type EngineEvent =
   | { e: 'unitRemove'; unitId: number; defId: string }
   | { e: 'mission'; rank: 'S' | 'A' | 'B' | 'C'; wood: number }
   | { e: 'log'; text: string }
-  | { e: 'draftPick'; rankKo: string; defId: string; auto: boolean }
-  | { e: 'draftDone' }
   | { e: 'gameOver'; outcome: 'win' | 'lose' };

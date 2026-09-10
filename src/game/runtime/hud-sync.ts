@@ -1,4 +1,4 @@
-import { UNIT_BY_ID } from '@/game/data/units';
+import { GRADE_LABEL, UNIT_BY_ID } from '@/game/data/units';
 import type { Engine } from '@/game/engine/engine';
 import { deathCountFor } from '@/game/engine/state';
 import type { EngineEvent, RoundPhase } from '@/game/engine/types';
@@ -31,6 +31,7 @@ export function createHudSync(engine: Engine): HudSync {
       round: round.number,
       phase: round.phase,
       timeLeft: Math.max(0, Math.ceil(limit - round.elapsed)),
+      prepLeft: Math.max(0, Math.ceil(round.prepLeft)),
       aliveOnLane: state.aliveOnLane[0] ?? 0,
       deathCount: deathCountFor(state, round.number),
       gold: player?.gold ?? 0,
@@ -63,16 +64,11 @@ export function createHudSync(engine: Engine): HudSync {
         return event.outcome === 'win' ? '클리어!' : '패배';
       case 'mission':
         return `${event.rank}랭크 임무 성공 — 목재 +${event.wood}`;
-      case 'draftPick': {
-        const def = UNIT_BY_ID.get(event.defId);
-        const how = event.auto ? '자동 선택' : '선택';
-        return `[비급서] ${event.rankKo} — ${def?.nameKo ?? event.defId} ${how}`;
-      }
-      case 'draftDone':
-        return '비급서 선택 완료 — 라운드 시작';
       case 'unitAdd': {
+        // The original prints the grade tag alongside the name, and that tag is
+        // the whole reason an altar result feels good or not.
         const def = UNIT_BY_ID.get(event.defId);
-        return def ? `${def.nameKo} 획득` : null;
+        return def ? `[${GRADE_LABEL[def.grade]}] ${def.nameKo} 획득` : null;
       }
       case 'log':
         return event.text;

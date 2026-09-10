@@ -3,7 +3,7 @@ import { describe, expect, it } from 'vitest';
 import { DIFFICULTIES } from '@/game/config/difficulty';
 import { UNIT_BY_ID } from '@/game/data/units';
 import { addUnit, moveUnit } from '@/game/engine/economy';
-import { completeDraft, createEngine } from '@/game/engine/engine';
+import { createEngine, skipPrep } from '@/game/engine/engine';
 import { unitAnimationFor } from './unit-animation';
 
 /**
@@ -13,8 +13,7 @@ import { unitAnimationFor } from './unit-animation';
 
 function engineWithUnit() {
   const engine = createEngine({ difficulty: DIFFICULTIES.easy, seed: 1 });
-  completeDraft(engine);
-  engine.state.units.clear();
+  skipPrep(engine);
   engine.state.plots[0].occupancy.fill(0);
   const defId = [...UNIT_BY_ID.keys()][0];
   const unit = addUnit(engine.state, 0, defId, 'gacha', () => {})!;

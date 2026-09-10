@@ -53,6 +53,7 @@ export function startRound(state: GameState, tables: GameTables, round: number):
   state.round = {
     number: round,
     phase: 'wave',
+    prepLeft: 0,
     elapsed: 0,
     duration: roundDuration(round),
     hardLimit: HARD_LIMIT_ROUNDS.has(round) ? HARD_LIMIT_SECONDS : null,

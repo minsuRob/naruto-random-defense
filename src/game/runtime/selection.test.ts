@@ -4,7 +4,7 @@ import { DIFFICULTIES } from '@/game/config/difficulty';
 import { PLOT_CELLS } from '@/game/config/map';
 import { UNIT_BY_ID } from '@/game/data/units';
 import { addUnit } from '@/game/engine/economy';
-import { completeDraft, createEngine, type Engine } from '@/game/engine/engine';
+import { createEngine, skipPrep, type Engine } from '@/game/engine/engine';
 import { cellIndex } from '@/game/engine/grid';
 import { useGameStore } from './game-store';
 import {
@@ -39,8 +39,7 @@ function seed(engine: Engine, count: number, defId = [...UNIT_BY_ID.keys()][0]) 
 
 function newEngine() {
   const engine = createEngine({ difficulty: DIFFICULTIES.easy, seed: 1 });
-  completeDraft(engine);
-  engine.state.units.clear();
+  skipPrep(engine);
   engine.state.plots[0].occupancy.fill(0);
   return engine;
 }

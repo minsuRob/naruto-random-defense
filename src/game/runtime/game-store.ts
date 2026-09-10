@@ -13,7 +13,9 @@ import { DEFAULT_INPUT_SETTINGS, type InputSettings } from '@/game/input/types';
 
 export interface HudSnapshot {
   round: number;
-  phase: 'draft' | 'prep' | 'wave' | 'ended';
+  phase: 'prep' | 'wave' | 'ended';
+  /** Seconds left in the setup window before round 1. */
+  prepLeft: number;
   /** Whole seconds, so the top bar only re-renders once a second. */
   timeLeft: number;
   aliveOnLane: number;
@@ -64,6 +66,7 @@ export interface GameStore {
 const EMPTY_HUD: HudSnapshot = {
   round: 0,
   phase: 'prep',
+  prepLeft: 0,
   timeLeft: 0,
   aliveOnLane: 0,
   deathCount: 0,
@@ -115,6 +118,7 @@ export function hudEquals(a: HudSnapshot, b: HudSnapshot): boolean {
   return (
     a.round === b.round &&
     a.phase === b.phase &&
+    a.prepLeft === b.prepLeft &&
     a.timeLeft === b.timeLeft &&
     a.aliveOnLane === b.aliveOnLane &&
     a.deathCount === b.deathCount &&

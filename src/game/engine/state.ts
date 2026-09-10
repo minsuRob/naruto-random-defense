@@ -3,12 +3,11 @@ import {
   MOB_HP_SCALE,
   MOB_SPEED,
   BOSS_SPEED,
-  START_PAKKUN,
+  PREP_SECONDS,
 } from '@/game/config/balance';
 import type { DifficultyDef } from '@/game/config/difficulty';
 import { ALTARS, plotOrigin } from '@/game/config/map';
 import { BOSSES, WAVES, waveFor } from '@/game/data/waves';
-import { createDraft } from './draft';
 import { cellIndex, createOccupancy } from './grid';
 import { createLane } from './lane';
 import { createMobPool } from './mobs';
@@ -99,8 +98,8 @@ export function createInitialState(config: GameConfig): { state: GameState; tabl
     players: plots.map((p) => ({
       id: p.owner,
       gold: 0,
-      wood: 0,
-      pakkun: START_PAKKUN,
+      wood: config.difficulty.startWood,
+      pakkun: config.difficulty.startPakkun,
       sMissionUsed: false,
       alive: true,
     })),
@@ -110,11 +109,12 @@ export function createInitialState(config: GameConfig): { state: GameState; tabl
     units: new Map(),
     nextUnitId: 1,
     rosterVersion: 0,
-    // The opening draft runs before any wave; rounds only start once it is done.
-    draft: createDraft(rng),
     round: {
       number: 0,
-      phase: 'draft',
+      // The run opens holding pakkun and no defense; the setup window is the
+      // chance to spend them before anything walks the lane.
+      phase: 'prep',
+      prepLeft: PREP_SECONDS,
       elapsed: 0,
       duration: 0,
       hardLimit: null,
@@ -127,7 +127,7 @@ export function createInitialState(config: GameConfig): { state: GameState; tabl
     nextPakkunId: 1,
   };
 
-  for (const player of state.players) grantPakkun(state, player.id, START_PAKKUN);
+  for (const player of state.players) grantPakkun(state, player.id, player.pakkun);
 
   return { state, tables: { mobDefs: defs, bossOffset } };
 }

@@ -39,11 +39,13 @@ export function CommandCard({ engine }: { engine: Engine }) {
         { key: 'GAMBLE_5', label: 'E', hint: `도박 ${GAMBLE_COST[5]}목`, enabled: wood >= GAMBLE_COST[5] },
         { key: 'CANCEL', label: 'Esc', hint: '취소', enabled: true },
       ]
-    : [
-        { key: 'PAKKUN_DOWN', label: 'Q', hint: '파쿤↓ 노말', enabled: pakkun > 0 },
-        { key: 'PAKKUN_UP', label: 'W', hint: '파쿤↑ 노말+매직', enabled: pakkun > 0 },
-        { key: 'PAKKUN_GOLD', label: 'E', hint: `파쿤→${PAKKUN_GOLD}골드`, enabled: pakkun > 0 },
-        { key: 'PAKKUN_WOOD', label: 'R', hint: '파쿤→목재 60%', enabled: pakkun > 0 },
+    : // Ordered like the altars are laid out on the plot, so the row is a map of
+      // the four directions a pakkun can be sent rather than an arbitrary list.
+      [
+        { key: 'PAKKUN_UP', label: 'Q', hint: '↖ 노말+매직', enabled: pakkun > 0 },
+        { key: 'PAKKUN_GOLD', label: 'W', hint: `↗ 골드 ${PAKKUN_GOLD}`, enabled: pakkun > 0 },
+        { key: 'PAKKUN_DOWN', label: 'E', hint: '↙ 노말', enabled: pakkun > 0 },
+        { key: 'PAKKUN_WOOD', label: 'R', hint: '↘ 목재 60%', enabled: pakkun > 0 },
       ];
 
   const middleRow: Slot[] = [
@@ -74,6 +76,11 @@ export function CommandCard({ engine }: { engine: Engine }) {
 
   return (
     <View style={[hudStyles.panel, styles.root]}>
+      <Text style={styles.caption}>
+        {gambling
+          ? '목재 도박 — 등급을 걸고 뽑는다'
+          : `파쿤 ${pakkun}마리 대기 — 네 방향 중 하나로 보내기`}
+      </Text>
       {[topRow, middleRow, bottomRow].map((row, rowIndex) => (
         <View key={rowIndex} style={styles.row}>
           {row.map((slot, i) => (
@@ -102,6 +109,7 @@ export function CommandCard({ engine }: { engine: Engine }) {
 
 const styles = StyleSheet.create({
   root: { padding: 6, gap: 4 },
+  caption: { color: HudColors.textDim, fontSize: 10, paddingHorizontal: 2 },
   row: { flexDirection: 'row', gap: 4 },
   slot: {
     width: 74,

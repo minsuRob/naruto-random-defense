@@ -11,7 +11,9 @@ import { HudColors, hudStyles } from './hud-theme';
  */
 export function TopBar({ difficulty }: { difficulty: DifficultyDef }) {
   const round = useGameStore((s) => s.hud.round);
+  const phase = useGameStore((s) => s.hud.phase);
   const timeLeft = useGameStore((s) => s.hud.timeLeft);
+  const prepLeft = useGameStore((s) => s.hud.prepLeft);
   const aliveOnLane = useGameStore((s) => s.hud.aliveOnLane);
   const deathCount = useGameStore((s) => s.hud.deathCount);
   const gold = useGameStore((s) => s.hud.gold);
@@ -21,11 +23,16 @@ export function TopBar({ difficulty }: { difficulty: DifficultyDef }) {
   const pressure = deathCount > 0 ? aliveOnLane / deathCount : 0;
   const laneColor =
     pressure > 0.85 ? HudColors.danger : pressure > 0.6 ? HudColors.gold : HudColors.text;
+  const preparing = phase === 'prep';
 
   return (
     <View style={[hudStyles.panel, styles.root]}>
-      <Field label="라운드" value={String(round)} />
-      <Field label="남은 시간" value={`${timeLeft}s`} />
+      <Field label="라운드" value={preparing ? '준비' : String(round)} />
+      <Field
+        label={preparing ? '시작까지' : '남은 시간'}
+        value={`${preparing ? prepLeft : timeLeft}s`}
+        color={preparing ? HudColors.accent : undefined}
+      />
       <View style={styles.divider} />
       <Field
         label="라인 / 데스카운트"

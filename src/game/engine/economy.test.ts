@@ -4,7 +4,6 @@ import {
   GAMBLE_COST,
   HIRE_COST,
   PAKKUN_WOOD_CHANCE,
-  START_PAKKUN,
   TICK_DT,
 } from '@/game/config/balance';
 import { DIFFICULTIES } from '@/game/config/difficulty';
@@ -15,18 +14,19 @@ import { RECIPES, RECIPE_BY_ID } from '@/game/data/recipes';
 import { availability, countsFor, findSatisfiable } from './combine';
 import { addUnit, dispatchPakkun, gamble, hire, resolveAltar, sell } from './economy';
 import { countPakkun, grantPakkun, idlePakkuns, updatePakkuns } from './pakkun';
-import { completeDraft, createEngine } from './engine';
+import { createEngine, skipPrep } from './engine';
 import type { EngineEvent } from './types';
 
-/** Past the opening draft, and with its picks cleared off the plot. */
+/** Past the setup window, with an empty plot. */
 function newEngine(seed = 1) {
   const engine = createEngine({ difficulty: DIFFICULTIES.easy, seed });
-  completeDraft(engine);
+  skipPrep(engine);
   engine.drainEvents();
-  engine.state.units.clear();
   clearPlacements(engine);
   return engine;
 }
+
+const START_PAKKUN = DIFFICULTIES.easy.startPakkun;
 
 /** Wipe built units but leave the altars standing. */
 function clearPlacements(engine: ReturnType<typeof createEngine>) {

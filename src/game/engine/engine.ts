@@ -1,7 +1,6 @@
 import {
   BOSS_BOUNTY_GOLD,
   BOSS_BOUNTY_WOOD,
-  PAKKUN_PER_ROUND,
   TICK_DT,
   killBounty,
 } from '@/game/config/balance';
@@ -19,7 +18,6 @@ import {
 } from './economy';
 import { grantPakkun, updatePakkuns } from './pakkun';
 import { applyCombine } from './combine';
-import { autoChoose, choose, currentPick } from './draft';
 import { despawnMob, spawnMob } from './mobs';
 import { isFinalRound, roundTimeUp, startRound } from './rounds';
 import { createInitialState, deathCountFor, type GameConfig, type GameTables } from './state';
@@ -43,20 +41,15 @@ export interface Engine {
 }
 
 /**
- * Take every remaining draft pick, so callers that only care about the defense
- * can get to round 1. Used by the tests and the balance harness; the game
- * itself goes through the selection window.
+ * End the setup window immediately, for callers that only care about the
+ * defense. Used by the tests and the balance harness; a real run spends the
+ * window sending pakkun to the altars.
  *
- * Deliberately stops the moment the draft is done — round 1 starts on the
- * caller's next tick, so nothing has spawned yet and the caller can still set
- * the board up.
+ * Deliberately stops before round 1 begins: it starts on the caller's next
+ * tick, so nothing has spawned yet and the board can still be set up.
  */
-export function completeDraft(engine: Engine, optionIndex = 0): void {
-  let guard = 0;
-  while (engine.state.draft.active && guard++ < 64) {
-    engine.enqueue({ t: 'DRAFT_PICK', player: 0, optionIndex });
-    engine.tick();
-  }
+export function skipPrep(engine: Engine): void {
+  engine.state.round.prepLeft = 0;
 }
 
 export function createEngine(config: GameConfig): Engine {
@@ -65,6 +58,15 @@ export function createEngine(config: GameConfig): Engine {
   let events: EngineEvent[] = [];
 
   const emit = (event: EngineEvent) => events.push(event);
+
+  // The original opens by announcing what the chosen difficulty handed you.
+  // Queued here so the first HUD flush carries it into the log.
+  emit({
+    e: 'log',
+    text:
+      `${config.difficulty.nameKo} 초기 지급 — 파쿤 ${config.difficulty.startPakkun}개, ` +
+      `목재 ${config.difficulty.startWood}개`,
+  });
 
   /**
    * All queued commands apply at the top of a tick, in the order they arrived,
@@ -103,52 +105,18 @@ export function createEngine(config: GameConfig): Engine {
         case 'COMBINE':
           applyCombine(state, command.player, command.recipeId, emit, command.preferIds);
           break;
-        case 'DRAFT_PICK':
-          takeDraftPick(command.optionIndex, false);
-          break;
       }
     }
     commands.length = 0;
   }
 
-  /**
-   * Resolve one draft pick and place the unit. When the draft runs out of picks
-   * the first wave starts on the next tick.
-   */
-  function takeDraftPick(optionIndex: number, auto: boolean) {
-    const pick = currentPick(state.draft);
-    if (!pick) return;
-    const rankKo = pick.rankKo;
-
-    const defId = auto ? autoChoose(state) : choose(state, optionIndex);
-    if (!defId) return;
-
-    emit({ e: 'draftPick', rankKo, defId, auto });
-    addUnit(state, 0, defId, 'gacha', emit);
-
-    // The phase is left alone here on purpose: advanceDraft flips it to 'prep'
-    // on the next tick, so the first wave never spawns inside the same tick
-    // that closed the draft.
-    if (!state.draft.active) emit({ e: 'draftDone' });
-  }
-
-  function advanceDraft(dt: number) {
-    const draft = state.draft;
-    if (!draft.active) {
-      state.round.phase = 'prep';
-      return;
-    }
-    draft.timeLeft -= dt;
-    if (draft.timeLeft <= 0) takeDraftPick(0, true);
-  }
-
   function advanceRound(dt: number) {
     const round = state.round;
-    if (round.phase === 'draft') {
-      advanceDraft(dt);
-      return;
-    }
     if (round.phase === 'prep') {
+      // The setup window runs down before anything spawns, so the opening
+      // pakkun can actually be walked to an altar and turned into a defense.
+      round.prepLeft -= dt;
+      if (round.prepLeft > 0) return;
       startRound(state, tables, 1);
       emit({ e: 'roundStart', round: 1 });
       return;
@@ -289,8 +257,9 @@ export function createEngine(config: GameConfig): Engine {
 
     for (const player of state.players) {
       if (!player.alive) continue;
-      grantPakkun(state, player.id, PAKKUN_PER_ROUND);
-      player.pakkun += PAKKUN_PER_ROUND;
+      const granted = state.difficulty.pakkunPerRound;
+      grantPakkun(state, player.id, granted);
+      player.pakkun += granted;
     }
 
     rollMission(state, finished, emit);
