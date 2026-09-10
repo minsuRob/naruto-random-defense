@@ -45,6 +45,8 @@ export function createInputController(): InputController {
   let leftDownAt: { x: number; y: number } | null = null;
   let middleDown = false;
   let boxSelect: BoxSelect | null = null;
+  /** Set only while we hold a pointer capture, so we release exactly ours. */
+  let capturedPointerId: number | null = null;
 
   const hotkeyHandlers = new Set<(k: Hotkey) => void>();
   const pointerHandlers = new Set<(p: PointerInput) => void>();
@@ -106,7 +108,18 @@ export function createInputController(): InputController {
     middleDown = false;
     leftDownAt = null;
     boxSelect = null;
+    capturedPointerId = null;
     modifiers.shift = modifiers.ctrl = modifiers.alt = false;
+  }
+
+  /**
+   * Whether an event landed on the 3D canvas rather than on a HUD panel.
+   *
+   * Every listener is on the container that holds both, so HUD events bubble
+   * through here; anything that acts on the world has to check.
+   */
+  function isOnCanvas(e: { target: EventTarget | null }): boolean {
+    return (e.target as Element | null)?.tagName === 'CANVAS';
   }
 
   function attach(host: unknown): () => void {
@@ -140,13 +153,21 @@ export function createInputController(): InputController {
       pointerY = p.y;
       // HUD panels sit above the canvas and bubble their events up here; a drag
       // that starts on one of them must not turn into a selection box.
-      const onCanvas = (e.target as Element | null)?.tagName === 'CANVAS';
+      const onCanvas = isOnCanvas(e);
       if (e.button === 0 && onCanvas) leftDownAt = { ...p };
       if (e.button === 1) {
         middleDown = true;
         e.preventDefault();
       }
-      el.setPointerCapture?.(e.pointerId);
+
+      // Capture only for gestures we actually own: a drag on the world, or a
+      // middle-drag pan. Capturing on every press would retarget the rest of
+      // the gesture — pointerup and the compatibility click alike — to this
+      // element, and every HUD button would stop responding.
+      if (onCanvas || e.button === 1) {
+        el.setPointerCapture?.(e.pointerId);
+        capturedPointerId = e.pointerId;
+      }
       emitPointer({ kind: 'down', ...p, button: e.button, ...modifierSnapshot(e) });
     };
 
@@ -172,17 +193,23 @@ export function createInputController(): InputController {
 
     const onPointerUp = (e: PointerEvent) => {
       const p = rectPoint(e);
-      el.releasePointerCapture?.(e.pointerId);
+      if (capturedPointerId === e.pointerId) {
+        el.releasePointerCapture?.(e.pointerId);
+        capturedPointerId = null;
+      }
       if (e.button === 1) middleDown = false;
       if (e.button === 0) {
         const wasBox = boxSelect;
+        const wasOnWorld = leftDownAt !== null;
         leftDownAt = null;
         boxSelect = null;
         if (!enabled) {
           // nothing
         } else if (wasBox) {
           boxHandlers.forEach((cb) => cb(wasBox, e.shiftKey));
-        } else {
+        } else if (wasOnWorld) {
+          // Only a press that began on the world is a world click; a press that
+          // began on a HUD panel belongs to that panel.
           emitPointer({ kind: 'click', ...p, button: 0, ...modifierSnapshot(e) });
         }
       }
@@ -202,13 +229,13 @@ export function createInputController(): InputController {
 
     const onContextMenu = (e: MouseEvent) => {
       e.preventDefault();
-      if (!enabled) return;
+      if (!enabled || !isOnCanvas(e)) return;
       const p = rectPoint(e);
       emitPointer({ kind: 'contextmenu', ...p, button: 2, ...modifierSnapshot(e) });
     };
 
     const onDoubleClick = (e: MouseEvent) => {
-      if (!enabled) return;
+      if (!enabled || !isOnCanvas(e)) return;
       const p = rectPoint(e);
       emitPointer({ kind: 'dblclick', ...p, button: 0, ...modifierSnapshot(e) });
     };

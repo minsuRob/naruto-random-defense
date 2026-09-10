@@ -24,11 +24,15 @@ const viewport = { width: 800, height: 450 };
 function installFakeDom() {
   const win = new EventTarget() as EventTarget & Record<string, unknown>;
   const el = new EventTarget() as EventTarget & Record<string, unknown>;
+  const captured: number[] = [];
   el.getBoundingClientRect = () => ({ left: 0, top: 0, width: viewport.width, height: viewport.height });
-  el.setPointerCapture = () => {};
-  el.releasePointerCapture = () => {};
+  el.setPointerCapture = (id: number) => captured.push(id);
+  el.releasePointerCapture = (id: number) => {
+    const i = captured.indexOf(id);
+    if (i >= 0) captured.splice(i, 1);
+  };
   (globalThis as Record<string, unknown>).window = win;
-  return { win, el };
+  return { win, el, captured };
 }
 
 function key(type: 'keydown' | 'keyup', code: string) {
@@ -41,6 +45,28 @@ function key(type: 'keydown' | 'keyup', code: string) {
     repeat: false,
     preventDefault() {},
   });
+}
+
+function pointer(
+  type: 'pointerdown' | 'pointerup',
+  tagName: string,
+  button = 0
+) {
+  const event = Object.assign(new Event(type), {
+    clientX: 400,
+    clientY: 200,
+    pointerId: 1,
+    button,
+    shiftKey: false,
+    ctrlKey: false,
+    metaKey: false,
+    altKey: false,
+    preventDefault() {},
+  });
+  // `target` is getter-only on Event and dispatchEvent fills it with the
+  // element dispatched on; shadow it so we can say what was actually hit.
+  Object.defineProperty(event, 'target', { value: { tagName }, configurable: true });
+  return event;
 }
 
 let dom: ReturnType<typeof installFakeDom>;
@@ -151,7 +177,36 @@ describe('input -> camera', () => {
     dom.win.dispatchEvent(key('keydown', 'KeyQ'));
     dom.win.dispatchEvent(key('keydown', 'KeyB'));
     dom.win.dispatchEvent(key('keydown', 'Space'));
-    expect(seen).toEqual(['PAKKUN_DOWN', 'COMBO_BOOK', 'CENTER']);
+    expect(seen).toEqual(['PAKKUN_UP', 'COMBO_BOOK', 'CENTER']);
+  });
+
+  /**
+   * Regression: the controller listens on the container that holds both the
+   * canvas and the HUD. Capturing the pointer on a HUD press retargets the rest
+   * of that gesture — pointerup and the compatibility click alike — to the
+   * container, and every button in the game stops responding.
+   */
+  it('does not capture the pointer when a press starts on the HUD', () => {
+    const input = createInputController();
+    input.attach(dom.el);
+
+    dom.el.dispatchEvent(pointer('pointerdown', 'DIV'));
+    expect(dom.captured).toEqual([]);
+
+    dom.el.dispatchEvent(pointer('pointerup', 'DIV'));
+    expect(dom.captured).toEqual([]);
+  });
+
+  it('captures the pointer for a drag that starts on the world', () => {
+    const input = createInputController();
+    input.attach(dom.el);
+
+    dom.el.dispatchEvent(pointer('pointerdown', 'CANVAS'));
+    expect(dom.captured).toEqual([1]);
+
+    // And gives it back, so the next gesture starts clean.
+    dom.el.dispatchEvent(pointer('pointerup', 'CANVAS'));
+    expect(dom.captured).toEqual([]);
   });
 
   it('remaps Q/W/E to wood tiers inside the gamble submenu', () => {
@@ -161,8 +216,8 @@ describe('input -> camera', () => {
     input.onHotkey((k) => seen.push(k));
 
     dom.win.dispatchEvent(key('keydown', 'KeyT')); // opens the submenu
-    dom.win.dispatchEvent(key('keydown', 'KeyW')); // 3 wood, not 파쿤↑
-    dom.win.dispatchEvent(key('keydown', 'KeyW')); // submenu closed, back to 파쿤↑
-    expect(seen).toEqual(['GAMBLE', 'GAMBLE_3', 'PAKKUN_UP']);
+    dom.win.dispatchEvent(key('keydown', 'KeyW')); // 3 wood, not the gold altar
+    dom.win.dispatchEvent(key('keydown', 'KeyW')); // submenu closed, back to the altar
+    expect(seen).toEqual(['GAMBLE', 'GAMBLE_3', 'PAKKUN_GOLD']);
   });
 });
